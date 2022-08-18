@@ -6,13 +6,16 @@ templateEngineOverride: njk, md
 category: resurs
 ---
 
-
-
 SQl skrivs som frågor (querys).  Du behöver välja att använda en databas för att kunna göra detta. Det förutsätter förstås att en databas finns. SQL frågor skrivs ofta med gemener för att visa kommandot, detta är dock inget krav då MySQL inte gör en skillnad på stora och små bokstäver för detta (men databasnamn är skifteskänsliga). 
 
 ```sql
 CREATE DATABASE my_database;
-USE my_database;
+```
+
+Om du följt tidigare [instruktioner](/posts/webbserver/#mysql) bör du ha en databas med tillräckliga rättigheter vid namnet `webbserver`. Använd den.
+
+```sql
+USE webbserver;
 ```
 
 {% image "./src/images/Screenshot 2022-05-16 120900.png", "Skärmdump av MySQL-klienten", "Så här kan det se ut när du skapar en ny databas och tabell." %}
@@ -38,4 +41,5 @@ DESCRIBE tabellnamn;
 1 row in set (0.00 sec)
 ```
 
-För att tabellen faktiskt ska hålla data
+För att tabellen faktiskt ska hålla data så behöver vi lägga till data.
+
