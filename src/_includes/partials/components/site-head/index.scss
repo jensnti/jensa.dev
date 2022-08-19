@@ -1,3 +1,4 @@
+@use "../../../../sass/hover-colors";
 .site-head {
     background-color: var(--color-dark);
     // background-image: url("../assets/images/img-noise-400x400.png");
@@ -12,6 +13,7 @@
         text-align: end;
         a {
             color: var(--color-light);
+            @include hover-colors.text;
         }
     }
     &__inner {

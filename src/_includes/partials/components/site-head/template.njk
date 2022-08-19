@@ -1,5 +1,5 @@
 {%- from '../nav/macro.njk' import nav -%}
-
+{% set colors = ["orange", "red", "blue", "yellow", "purple", "green"] %}
 <header class="site-head">
     <div class="site-head__inner container">
         {{ nav({
@@ -16,7 +16,7 @@
                 <ul class="site-grid__tags site-head__tags">
                     {% for tag in props.tags | sort %}
                         <li class="tag">
-                            <a href="/tagg/{{ tag | slugify }}">
+                            <a class="{{ colors | random }}" href="/tagg/{{ tag | slugify }}">
                                 {{ tag }}
                             </a>
                         </li>
