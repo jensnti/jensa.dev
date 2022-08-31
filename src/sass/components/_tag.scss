@@ -1,8 +1,11 @@
+@use "../hover-colors";
+
 .tag {
     font-size: var(--step--2);
     // text-transform: uppercase;
-    &:hover {
-        // font-weight: var(--font-weight-medium);
-        text-decoration: underline;
-    }
+    // &:hover {
+    //     // font-weight: var(--font-weight-medium);
+    //     text-decoration: underline;
+    // }
+    @include hover-colors.text;
 }
