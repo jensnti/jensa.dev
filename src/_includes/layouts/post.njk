@@ -23,11 +23,11 @@
 {% block content %}
 <main id="main-content" tabindex="-1">
     <article class="content container flow">
-        {% if date %}
+        <!-- {% if date %}
         <time class="content__date" datetime="{{ date | htmlDateString }}">
             {{ date | readableDate }}
         </time>
-        {% endif %}
+        {% endif %} -->
 
         {% if lead %}
         <p class="content__lead">{{ lead | safe }}</p>
