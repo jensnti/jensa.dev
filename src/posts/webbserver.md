@@ -14,14 +14,21 @@ Det här en introduktion till de olika delarna du behöver förbereda för att k
 
 ## Windows Subsystem for Linux
 
-WSL låter oss köra Linux under Windows. Det är i min mening helt fantastiskt och med det slipper vi dual-boot och massa annan ondska. Det är enkelt och smidigt (värdeord, relativt i sammanhanget, för alternativen är mer komplexa) och ger oss tillgång till bash i en terminal under Windows. Med WSL2 går det även att köra grafiska program om du så önskar.
+WSL låter oss köra Linux under Windows. Det är i min mening helt fantastiskt och med det slipper vi dual-boot och massa annan ondska. Det är enkelt och smidigt (värdeord, relativt i sammanhanget, för alternativen är mer komplexa) och ger dig tillgång till bash i en terminal under Windows. Med WSL2 går det även att köra grafiska program om du så önskar.
 
-Att kunna åtminstone lite bash och kunna arbeta i terminalen är viktigt för att arbeta med kod anser jag. Med WSL kan du välja vilken [Linux dist](https://en.wikipedia.org/wiki/Linux_distribution) du vill köra, men till att börja med rekommenderar jag Ubuntu (finns i Microsoft store).
+Att kunna åtminstone lite bash och kunna arbeta i terminalen är viktigt för att arbeta med kod anser jag. Det ger en ökad förståelse för datorns struktur, kommandon och funktion. Med WSL kan du välja vilken [Linux dist](https://en.wikipedia.org/wiki/Linux_distribution) du vill köra, men till att börja med rekommenderar jag Ubuntu (finns i Microsoft store).
+
+**Innan du kör igång så se till att du har kört windows update, startat om och repeterat detta ett antal gånger.**
 
 * [Installera WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
+
+När du installerar WSL/Ubuntu så var noga när du skapar en användare, glöm inte bort att sätta ett lösenord (som du kommer ihåg). 
+
+Du kan nu med fördel även passa på att installera Windows terminal, som är ett mycket trevligare alternativ än windows standard-terminal.
+
 * [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/install)
 
-När du installerar så var noga när du skapar en användare, glöm inte bort att sätta ett lösenord (som du kommer ihåg). När installationen är slutförd så behöver du uppdatera din dist (tänk windows update), kör du Ubuntu så använder du följande kommandon i terminalen.
+När installationen är slutförd så behöver du uppdatera din dist (tänk windows update), kör du Ubuntu så använder du följande kommandon i terminalen.
 
 ```bash
 sudo apt update
@@ -56,23 +63,23 @@ ls -la
 
 ## Nodejs
 
-[Node](https://nodejs.org/en/) är en javascript runtime byggd på Chrome V8s javascript motor. Med ramverket[Express](https://expressjs.com/) blir Node den webbserver (för utveckling) vi använder. Genom att använda Node får vi en koppling till att använda [Node packet manager (npm)](https://www.npmjs.com/).
+[Node](https://nodejs.org/en/) är en javascript runtime byggd på Chrome V8s javascript motor. Med ramverket [Express](https://expressjs.com/) blir Node den webbserver (för utveckling) vi använder. Tillsammans med Node så kommer vi att använda oss av [Node packet manager (npm)](https://www.npmjs.com/). NPM är en populär pakethanterare för javascript-utveckling och ett viktigt verktyg att känna till och kunna använda.
 
 För att installera och köra Node samt NPM så använder vi oss utan Node Version Manager(nvm).
 
-* [Installera Node](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl#install-nvm-nodejs-and-npm)
+* [Installera NVM och Node](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl#install-nvm-nodejs-and-npm)
 
 ## MySQL
 
-För att arbeta med databas så använder vi [MySQL](https://www.mysql.com/). SQL är ett språk för relationsdatabaser, MySQL är en hanterare för detta. Vi använder SQL som databasspråk för att det är användbart och relevant att kunna. Vi kör MySQL för att det är en av de vanligaste databaserna.
+För att arbeta med databas så använder vi [MySQL](https://www.mysql.com/). SQL är ett språk för relationsdatabaser, MySQL är en hanterare för detta. Vi använder SQL som databasspråk för att det är en introduktion till databaser och hur de fungerar. Vi kör MySQL för att det är en av de vanligaste databashanterarna.
 
-MySQL körs med en server på din eller en annan dator. Du kan sedan använda en client för att koppla upp dig till databasservern. FÖr att installera MySQL server och klient kör.
+MySQL körs med en server på din eller en annan dator. Du kan sedan använda en klient för att koppla upp dig till databasservern. FÖr att installera MySQL server och klient kör.
 
 ```bash
 sudo apt install mysql-server mysql-client
 ```
 
-WSL verkar inte starta upp MySQL servern korrekt när det startas, för att starta om/upp servern.
+WSL verkar inte starta upp MySQL servern korrekt när det startas, för att starta om/upp servern använder du följande kommando. Om det inte fungerar, testa att starta om din dator och prova sedan igen.
 
 ```bash
 sudo service mysql restart
@@ -86,20 +93,32 @@ sudo mysql -u root
 
 {% image "./src/images/Screenshot 2022-05-16 115805.png", "Skärmdump av MySQL-klienten", "Skärmdump av MySQL-klienten. Notera att trots varningen så är restarten av servern [  OK  ], vid fel så står det inte OK." %}
 
-Väl inne i MySQL klienten så börja med att skapa en databas med namnet `webbserver`.
-
-```sql
-CREATE DATABASE webbserver;
-```
-
-Sedan kör du följande kommando för att skapa en user med alla rättigheter till databasen `webbserver`. Kom ihåg att byta ut `username` och `password`.
+Väl inne i MySQL klienten så behöver du skapa en användare. Kör du följande kommando för att skapa en user med alla rättigheter, det är en fungerande lösning för lokal utveckling, men inte att rekommendera i en produktionsmiljö. Kom ihåg att byta ut `username` och `password`.
 
 ```sql
 CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON webbsever.* TO 'username'@'localhost';
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
-Anledningen att vi ger användaren rättigheter till databasen är av säkerhetsskäl och på det här sättet undviker vi att skapa en användare med alla rättigheter till allt.
+Vi kommer senare att gå igenom vad dessa kommandon faktiskt gör i SQL.
 
 När du skapat användaren så avsluta med `exit`. Du kan nu ansluta till databasen igen med din skapade användare.
+
+```bash
+mysql -u USERNAME -p
+```
+
+Väl inne i klienten så kan du prova att skapa en databas för kursen. Om det fungerar så svara klienten med ```QUERY OK```. Du kan sedan välja att visa en lista över dina databaser på servern med kommandot ```SHOW```.
+
+```sql
+CREATE DATABASE webbserver;
+SHOW databases;
+```
+
+## Avslutning
+
+Förhoppningsvis har all installation gått bra och du har nu en fungerande utvecklarmiljö. Om något har strulat så hoppas jag att du har läst felmeddelanden, upprepat och läst texterna för att hitta vad du har missat.
+
+Fortsättning följer.
+
