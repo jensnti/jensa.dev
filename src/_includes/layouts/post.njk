@@ -29,9 +29,12 @@
         </time>
         {% endif %} -->
 
-        {% if lead %}
-        <p class="content__lead">{{ lead | safe }}</p>
-        {% endif %}
+        <header class="content__header flow">
+            {% if lead %}
+            <p class="content__lead">{{ lead | safe }}</p>
+            {% endif %}
+            {{ content | toc | safe }}
+        </header>
 
         {{ content | safe }}
 
