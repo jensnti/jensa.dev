@@ -166,6 +166,10 @@ module.exports = function (eleventyConfig) {
         collectionApi.getFilteredByGlob('src/projects/*.md').reverse()
     );
 
+    eleventyConfig.addCollection('resources', (collectionApi) =>
+        collectionApi.getAll().filter((item) => item.data.category === 'resurs')
+    );
+
     eleventyConfig.addCollection('feed', (collectionApi) =>
         [...collectionApi.getFilteredByGlob('src/posts/*.md')]
             .reverse()
