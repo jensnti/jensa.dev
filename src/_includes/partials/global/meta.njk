@@ -10,6 +10,10 @@
 <meta property="og:url" content="{{ currentUrl }}"/>
 <meta property="og:description" content="{{ meta.siteDesc }}"/>
 
-<title>{{ pageTitle }}</title>
+{% if page.fileSlug == "" %}
+    <title>{{ meta.siteName }}</title>
+{% else %}
+    <title>{{ pageTitle }}</title>
+{% endif %}
 
 <link rel="canonical" href="{{ currentUrl }}"/>
