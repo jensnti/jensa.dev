@@ -1,0 +1,14 @@
+---
+
+---
+
+
+{% block content %}
+<main id="main-content" tabindex="-1">
+    <section class="content container flow">
+        {% for resource in collections.resources %}
+            {{ resource.data.title }}
+        {% endfor %}
+    </section>
+</main>
+{% endblock %}

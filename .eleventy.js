@@ -12,6 +12,8 @@ const Image = require('@11ty/eleventy-img');
 const markdownItAnchor = require('markdown-it-anchor');
 // const slugify = require('@sindresorhus/slugify');
 
+const eleventyPluginTOC = require( '@thedigitalman/eleventy-plugin-toc-a11y');
+
 // const prettier = require('prettier');
 // const imageShortcode = require('./src/shortcodes/image');
 
@@ -22,6 +24,10 @@ const markdownItAnchor = require('markdown-it-anchor');
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(rssPlugin);
     eleventyConfig.addPlugin(syntaxHighlight);
+
+    eleventyConfig.addPlugin(eleventyPluginTOC, {
+        headingText: "På den här sidan"
+    });
 
     // eleventyConfig.setDataDeepMerge(true);
 
@@ -158,6 +164,10 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addCollection('projects', (collectionApi) =>
         collectionApi.getFilteredByGlob('src/projects/*.md').reverse()
+    );
+
+    eleventyConfig.addCollection('resources', (collectionApi) =>
+        collectionApi.getAll().filter((item) => item.data.category === 'resurs')
     );
 
     eleventyConfig.addCollection('feed', (collectionApi) =>

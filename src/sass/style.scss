@@ -6,3 +6,8 @@
 [id] {
     scroll-margin-top: var(--step-5); // 1
 }
+
+.full-bleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
