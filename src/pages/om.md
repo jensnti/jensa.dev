@@ -6,7 +6,7 @@ templateEngineOverride: njk, md
 order: 2
 ---
 
-{% image "./src/images/jens.jpg", "En Jens", "Mitt fejs. Foto av Jens Andreasson." %}
+{% image "./src/images/20220720_132435.jpg", "En Jens", "Foto av Marie Malmi." %}
 
 Jag är en legitimerad lärare och arbetar på [NTI Gymnasiet Umeå](https://www.ntigymnasiet.se/umea/) sedan 2017. Tidigare har jag arbetat med vuxenutbildning på distans.
 
@@ -18,7 +18,7 @@ Vid sidan av mitt arbete och det som jag skriver om på denna sida så gillar ja
 
 ### Mitt hem
 
-Är i Umeå, Sverige. Det delas med sambo och barn.
+Är i Umeå, Sverige. Det delas med sambo och bonusbarn.
 
 ### På webben
 
@@ -35,6 +35,9 @@ För min undervisning har jag skapat en del material:
 -   [Gitbook](https://jens-andreasson.gitbook.io/)
 -   [YouTube](https://www.youtube.com/channel/UCTqbOlkdA_9q-agUM0Hh9Ag)
 
-Privat [mail](mailto:jensandreasson77@gmail.com).
 
 Är du som jag, en dinosaurie, så kan du prenumerera på den här sidans [feed](/feed.xml). Jag använder [Feedly](https://feedly.com).
+
+### Kontakt
+
+{% include "partials/components/contact.njk" %}

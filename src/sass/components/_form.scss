@@ -1,0 +1,21 @@
+.form {
+    font-size: var(--step-0);
+    &__section {
+        
+    }
+    &__label {
+
+    }
+    &__input {
+        width: 100%;
+        padding: calc(var(--step--2) / 2);
+    }
+    &__button {
+        width: 100%;
+        background-color: var(--color-dark) !important;
+        color: var(--color-light) !important;
+        &:hover {
+            color: var(--color-green) !important;
+        }
+    }
+}

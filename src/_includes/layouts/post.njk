@@ -29,12 +29,15 @@
         </time>
         {% endif %} -->
 
+        {% if pagesCheck == false %}
         <header class="content__header flow">
             {% if lead %}
             <p class="content__lead">{{ lead | safe }}</p>
             {% endif %}
             {{ content | toc | safe }}
         </header>
+        {% endif %}
+
 
         {{ content | safe }}
 
