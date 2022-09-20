@@ -35,8 +35,9 @@ För min undervisning har jag skapat en del material:
 -   [Gitbook](https://jens-andreasson.gitbook.io/)
 -   [YouTube](https://www.youtube.com/channel/UCTqbOlkdA_9q-agUM0Hh9Ag)
 
+
+Är du som jag, en dinosaurie, så kan du prenumerera på den här sidans [feed](/feed.xml). Jag använder [Feedly](https://feedly.com).
+
 ### Kontakt
 
 {% include "partials/components/contact.njk" %}
-
-Är du som jag, en dinosaurie, så kan du prenumerera på den här sidans [feed](/feed.xml). Jag använder [Feedly](https://feedly.com).
