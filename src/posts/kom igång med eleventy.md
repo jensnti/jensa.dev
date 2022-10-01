@@ -15,7 +15,11 @@ För att följa denna introduktion så kräver det att du har installerat Node, 
 
 Det är även en fördel om du har lite koll på markdown och javascript.
 
+När jag började använda Eleventy för egen del så kodade jag igenom den här [videoserien](https://egghead.io/courses/build-an-eleventy-11ty-site-from-scratch-bfd3). Det är såklart frivilligt men kan vara ett alternativ för dig som föredrar video.
+
 ## Vad är Eleventy då?
+
+{% image "./src/images/11ty-mascot.png", "11ty mascot" %}{.float-right} 
 
 Eleventy är en static site builder, eleventy bygger statiska webbsidor. Eleventy är ett verktyg som ger dig mer kontroll, bättre arbetssätt och en förbättrad utvecklingsupplevelse (Developer experience, DX) med grundläggande webbtekniker som HTML, CSS och JavaScript. Det utan att förlita sig på stora bygg eller ramverk som påverkar användarens upplevelse (User experience, UX).
 
@@ -248,62 +252,8 @@ Datafiler kan vara i formatet JSON, YAML eller JavaScript. I exemplet ovan så a
 
 Det som sker i templaten är att variabeln `navigation` fylls med data från datafilen. Med hjälp av [Nunjucks for loop](https://mozilla.github.io/nunjucks/templating.html#for) så skapas sedan en lista med länkar.
 
-### Collections
+## Avslutning och fortsättning
 
-Istället för ett innehåll skapat i datafiler så kan Eleventy skapa samlad data från innehållet på webbplatsen. Om du tillexempel skapar innehåll för en blogg så kan du använda collections för att skapa en lista med alla blogginlägg. För att testa detta så skapa en ny markdown fil i `src` och kalla den för `blog.njk`. Lägg till följande innehåll.
+Detta är en introduktion till att bygga statiska sidor med Eleventy som verktyg. Mer information och instruktioner kommer då du får lära dig att utöka innehållet på sidan.
 
-```markdown
----
-layout: base.njk
-title: Blogg
----
-Alla blogginlägg
-```
-
-Notera att filen ovan är en Nunjucks fil istället för en markdown fil. Det gör att Eleventy inte kommer att läsa in innehållet i filen som markdown utan som Nunjucks. På det sättet så kan du använda Nunjucks syntax i filen tillsammans med frontmatter.
-
-Nästa stycke kod använder [Eleventy collections](https://www.11ty.dev/docs/collections/) för att skapa en lista över alla blogposts. Det är väldigt användbart och kan användas för att skapa eller visa data.
-
-```html
-<ul>
-{% for post in collections.blog %}
-    <li>
-        <a href="{{ post.url }}">{{ post.data.title }}</a>
-    </li>
-    {{ post | log }}
-{% endfor %}
-</ul>
-```
-
-I templaten så används variabeln `collections` för att hämta data från innehållet, i det här fallet allt innehåll taggat med "blog". Med hjälp av en for loop så skapas sedan en lista med blogginlägg.
-
-Än så länge så har du bara skapat en sida för att visa en lista över alla sidor taggade med "blog". De faktiska blogginläggen som ska visas ska du skapa i en egen mapp. Skapa mappen `src/blog`. I mappen kan du sedan använda en ytterligare Eleventy funktion, mapp-datafiler. Mapp-datafiler är json filer som innehåller data som appliceras som frontmatter på alla filer i mappen. Skapa en fil i `src/blog` och kalla den för `blog.json`. Lägg till följande innehåll.
-
-```json
-{
-    "layout": "base.njk",
-    "tags": "blog"
-}
-```
-
-Det filen `blog.json` kommer att göra är att sätta layouten till `base.njk` och taggen till `blog` på alla filer i mappen. Tags kan vara en enkel sträng eller en array av strängar. Nu kan du skapa markdown filer i mappen `src/blog` och de kommer att använda layouten och taggen som du har satt i `blog.json`.
-
-Skapa en ny markdown fil i `src/blog` och kalla den för `first-post.md`. Lägg till följande innehåll.
-
-```markdown
----
-title: First post
----
-Detta är min första bloggpost.
-``` 
-
-Uppdatera nu navigationen så att du kan surfa till din blog.
-
-```json
-{
-    "title": "Blogg",
-    "url": "/blog/"
-}
-```
-
-Nu kan du testa att skapa fler blogginlägg och se att de dyker upp i listan. Om du är uppmärksam kanske du märkte att filnamnet blev `first-post`, engelska för första inlägg. Detta för att undvika svenska tecken i filnamnet. Det går såklart att lösa, men mer om det senare.
+Jag har valt att dela upp innehållet för att sidan inte skulle bli för lång. Du kan läsa mer om hur du kan utöka sidan i [Eleventy, del två](/posts/eleventy-del-tva/).

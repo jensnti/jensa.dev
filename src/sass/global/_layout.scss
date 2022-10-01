@@ -54,3 +54,13 @@ picture {
     display: grid;
     place-content: center;
 }
+
+.float-right {
+    float: right;
+    margin-inline-start: var(--step--1);
+
+    @media (max-width: var(--fluid-mid-width)) {
+        float: none;
+        margin-inline-start: 0;
+    }
+}

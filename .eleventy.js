@@ -12,7 +12,7 @@ const Image = require('@11ty/eleventy-img');
 const markdownItAnchor = require('markdown-it-anchor');
 // const slugify = require('@sindresorhus/slugify');
 
-const eleventyPluginTOC = require( '@thedigitalman/eleventy-plugin-toc-a11y');
+const eleventyPluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
 
 // const prettier = require('prettier');
 // const imageShortcode = require('./src/shortcodes/image');
@@ -26,7 +26,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(syntaxHighlight);
 
     eleventyConfig.addPlugin(eleventyPluginTOC, {
-        headingText: "På den här sidan"
+        headingText: 'På den här sidan',
     });
 
     // eleventyConfig.setDataDeepMerge(true);
@@ -58,7 +58,7 @@ module.exports = function (eleventyConfig) {
         if (typeof dateObj === 'string') {
             dateObj = parseISO(dateObj);
         }
-        return  format(dateObj, 'MMM yyyy', { locale: sv });
+        return format(dateObj, 'MMM yyyy', { locale: sv });
         // let arr = temp.split(' ');
         // return `<span>${arr[0]}</span><span> ${arr[1]} ${arr[2]}</span>`;
     };
@@ -100,9 +100,14 @@ module.exports = function (eleventyConfig) {
     const year = () => {
         return `${new Date().getFullYear()}`;
     };
-    const imageShortcode = async (src, alt, title, sizes = '100vw') => {
+    const imageShortcode = async (
+        src,
+        alt,
+        title,
+        sizes = '(min-width: 30em) 50vw, 100vw'
+    ) => {
         const metadata = await Image(src, {
-            widths: [400, 800],
+            widths: [400, 800, null],
             outputDir: './public/img/',
         });
 
@@ -185,8 +190,8 @@ module.exports = function (eleventyConfig) {
         .use(markdownItAnchor, {
             permalink: markdownItAnchor.permalink.linkInsideHeader({
                 symbol: `<span class="anchor" aria-hidden="true">#</span>`,
-                placement: 'before'
-              }),
+                placement: 'before',
+            }),
             level: [1, 2, 3],
             slugify: (s) =>
                 s
