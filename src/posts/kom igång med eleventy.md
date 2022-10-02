@@ -33,13 +33,15 @@ Markdown är fantastiskt, lär dig det, använd det. Nunjucks är en smaksak, El
 
 ## Hur?
 
-För att skapa ett projekt med Eleventy så används NPM. Du behöver skapa en ny mapp för ditt projekt och initialisera ett nytt projekt med npm där. ```npm init -y``` skapar ```package.json```.
+Skapa en ny mapp för ditt projekt och initialisera ett nytt projekt med npm där. Kommandot ```npm init -y``` skapar ```package.json```.
 
 ```bash
 mkdir 11ty-intro
 cd 11ty-intro
 npm init -y
 ```
+
+Den skapade filen ```package.json``` ser ut så här.
 
 ```json
 {
@@ -55,7 +57,7 @@ npm init -y
     "license": "ISC"
 }
 ```
-### Installera Eleventy
+### Installation
 
 För att installera Eleventy skriver du ```npm install @11ty/eleventy```. Detta kommer att installera Eleventy och lägga till det som en dependency i ```package.json```.
 

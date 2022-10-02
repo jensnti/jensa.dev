@@ -21,12 +21,89 @@ const eleventyPluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
 // const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 // const parseTransform = require('./src/transforms/parse-transform.js');
 
+const year = () => {
+    return `${new Date().getFullYear()}`;
+};
+const imageShortcode = async (
+    src,
+    alt,
+    title,
+    sizes = '(min-width: 30em) 50vw, 100vw'
+) => {
+    const metadata = await Image(src, {
+        widths: [400, 800, null],
+        outputDir: './public/img/',
+    });
+
+    const imageAttributes = {
+        alt,
+        title,
+        sizes,
+        loading: 'lazy',
+        decoding: 'async',
+    };
+
+    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+    return Image.generateHTML(metadata, imageAttributes, {
+        whitespaceMode: 'inline',
+    });
+};
+
+const readableDate = (dateObj) => {
+    if (typeof dateObj === 'string') {
+        dateObj = parseISO(dateObj);
+    }
+    return format(dateObj, 'PPP', { locale: sv });
+};
+
+const frontDate = (dateObj) => {
+    if (typeof dateObj === 'string') {
+        dateObj = parseISO(dateObj);
+    }
+    return format(dateObj, 'MMM yyyy', { locale: sv });
+    // let arr = temp.split(' ');
+    // return `<span>${arr[0]}</span><span> ${arr[1]} ${arr[2]}</span>`;
+};
+
+// https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+const htmlDateString = (dateObj) => {
+    if (typeof dateObj === 'string') {
+        dateObj = parseISO(dateObj);
+    }
+    return format(dateObj, 'yyyy-MM-dd');
+};
+
+const yearString = (dateObj) => {
+    if (typeof dateObj === 'string') {
+        dateObj = parseISO(dateObj);
+    }
+    return format(dateObj, 'yyyy');
+};
+
+const tagCountCss = (count) => {
+    const prefix = 'tag-cloud__item--';
+    if (count < 2) {
+        return `${prefix}100`;
+    } else if (count < 4) {
+        return `${prefix}200`;
+    } else {
+        return `${prefix}300`;
+    }
+};
+
+const filterTagList = (tags) => {
+    return (tags || []).filter(
+        (tag) => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1
+    );
+};
+
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(rssPlugin);
     eleventyConfig.addPlugin(syntaxHighlight);
 
     eleventyConfig.addPlugin(eleventyPluginTOC, {
         headingText: 'På den här sidan',
+        tags: ['h2', 'h3', 'h4'],
     });
 
     // eleventyConfig.setDataDeepMerge(true);
@@ -47,48 +124,6 @@ module.exports = function (eleventyConfig) {
         return demos.find((demo) => demo.data.title === title);
     });
 
-    const readableDate = (dateObj) => {
-        if (typeof dateObj === 'string') {
-            dateObj = parseISO(dateObj);
-        }
-        return format(dateObj, 'PPP', { locale: sv });
-    };
-
-    const frontDate = (dateObj) => {
-        if (typeof dateObj === 'string') {
-            dateObj = parseISO(dateObj);
-        }
-        return format(dateObj, 'MMM yyyy', { locale: sv });
-        // let arr = temp.split(' ');
-        // return `<span>${arr[0]}</span><span> ${arr[1]} ${arr[2]}</span>`;
-    };
-
-    // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-    const htmlDateString = (dateObj) => {
-        if (typeof dateObj === 'string') {
-            dateObj = parseISO(dateObj);
-        }
-        return format(dateObj, 'yyyy-MM-dd');
-    };
-
-    const yearString = (dateObj) => {
-        if (typeof dateObj === 'string') {
-            dateObj = parseISO(dateObj);
-        }
-        return format(dateObj, 'yyyy');
-    };
-
-    const tagCountCss = (count) => {
-        const prefix = 'tag-cloud__item--';
-        if (count < 2) {
-            return `${prefix}100`;
-        } else if (count < 4) {
-            return `${prefix}200`;
-        } else {
-            return `${prefix}300`;
-        }
-    };
-
     eleventyConfig.addFilter('tagCountCss', tagCountCss);
     eleventyConfig.addFilter('readableDate', readableDate);
     eleventyConfig.addFilter('frontDate', frontDate);
@@ -97,41 +132,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('linebreak', (str) => str.split(' ').join('\n'));
 
     // Shortcodes
-    const year = () => {
-        return `${new Date().getFullYear()}`;
-    };
-    const imageShortcode = async (
-        src,
-        alt,
-        title,
-        sizes = '(min-width: 30em) 50vw, 100vw'
-    ) => {
-        const metadata = await Image(src, {
-            widths: [400, 800, null],
-            outputDir: './public/img/',
-        });
 
-        const imageAttributes = {
-            alt,
-            title,
-            sizes,
-            loading: 'lazy',
-            decoding: 'async',
-        };
-
-        // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-        return Image.generateHTML(metadata, imageAttributes, {
-            whitespaceMode: 'inline',
-        });
-    };
     eleventyConfig.addShortcode('year', year);
     eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
-
-    const filterTagList = (tags) => {
-        return (tags || []).filter(
-            (tag) => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1
-        );
-    };
 
     eleventyConfig.addFilter('filterTagList', filterTagList);
 
@@ -192,7 +195,7 @@ module.exports = function (eleventyConfig) {
                 symbol: `<span class="anchor" aria-hidden="true">#</span>`,
                 placement: 'before',
             }),
-            level: [1, 2, 3],
+            level: [1, 2, 3, 4],
             slugify: (s) =>
                 s
                     .trim()
