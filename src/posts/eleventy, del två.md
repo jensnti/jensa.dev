@@ -153,3 +153,7 @@ Nu kan du använda funktionen i markdown. För att göra det så lägger du till
 För att se hur funktionen fungerar så se till att Eleventy körs (kom ihåg att du kan behöva starta om ditt start script då du gjort ändringar i ```.eleventy.js```), det gör du med ```npm start```. När du har byggt webbplatsen så kan du öppna den i webbläsaren och se att bilden fungerar som den ska. Ta fram utvecklarverktygen i webbläsaren och kolla att bilden har en storlek på 800px, då kommer du även att se den html som pluginet genererat för bilden.
 
 Detta var en kort introduktion till hur du kan använda Eleventy-img för att optimerar bilderna på din webbplats. Läs vidare i dokumentationen för att se hur du kan använda pluginet för att optimera bilderna ytterligare (Format, olika storlekar och så vidare).
+
+## Elventy och template, att skapa sidor och ärva layout
+
+TODO 🙂
