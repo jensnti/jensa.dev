@@ -1,7 +1,7 @@
 ---
 title: Eleventy, del två
 date: 2022-09-30
-tags: ['webbutveckling', 'setup', '11ty', 'wsl']
+tags: ['webbutveckling', '11ty', 'bilder']
 templateEngineOverride: njk, md
 category: resurs
 lead: Det här är fortsättningen på den första delen om Eleventy.
