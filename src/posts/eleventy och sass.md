@@ -56,6 +56,16 @@ De script du behöver är ett för att uppdatera sass när du utvecklar och ett 
     "build": "npm-run-all build:sass build:eleventy"
 ```
 
+## Eleventy config
+
+För att dra nytta av SASS tillsammans med Eleventy så behöver du konfigurera Eleventy. Det gör du i ```eleventy.js```. För att de ändringar du gör i SASS filerna ska trigga en rebuild av Eleventy så behöver du konfigurera en watch target. Det gör du genom att lägga till följande i ```eleventy.js```.
+
+```js
+eleventyConfig.addWatchTarget("./src/sass/");
+```
+
+Nu startar du Eleventy med ```npm run start``` och du bör se att din bakgrundsfärg är röd. Detta eftersom vi satt bakgrundsfärgen till röd i ```style.scss```. Ändra färgen till något annat och se att det uppdateras i din webbläsare.
+
 ## Nästa steg
 
 Du har nu en grund för att kunna använda SASS med Eleventy, du kan börja med att skriva vanlig CSS i SCSS filen. Det fungerar bra så länge, men du kan nu allt eftersom lära dig mer om SASS och dess funktioner och inludera det i din CSS.
