@@ -20,6 +20,8 @@ lead: Basen för majoriteten av alla webbsidor är någon form av centrerad layo
 
 Exemplet ovan är bara ett exempel, en start. Kopiera in den i ditt dokument och bygg vidare. Gör den din och gör den unik, men försök hålla dig till layoutens grund. Kom ihåg [Jakobs law](https://lawsofux.com/jakobs-law/).
 
+> Users spend most of their time on other sites. This means that users prefer your site to work the same way as all the other sites they already know.
+
 ### Navbar
 
 Styla texten, markera att det är navigation. Byt ut "logo" mot en faktisk logotyp.
@@ -55,10 +57,10 @@ Att placera element på varandra har ofta gjorts med ```position: relative``` ko
 
 Prova gärna att skapa en footer till den här layouten, det är en bra övning. En sidfot är dessutom något som är en självklarhet på de flesta webbsidor.
 
-Vad finns i en footer då? Surfa varsomhelst och titta.
+Vad finns i en footer då? Surfa varsomhelst och titta (eller scrolla ner).
 
 ## Avslutning
 
-Nu fick jag chansen att prova på ett koddemo här på sidan och det krävden en del extra arbete, templaten och Nunjucks macrot fungerar men det blir lite problem med CSS stilarna.
+Nu fick jag chansen att prova på ett koddemo här på sidan och det krävde en del extra arbete. Templaten och Nunjucks macrot fungerar ok, men det blir lite problem med CSS-stilarna (stilen för ```.demo-playground``` försöker återställa stilarna så att inte flera ärvs från den här sidan, använd devtools för att kolla på det).
 
 Med största sannolikhet hittar jag fler fel nästa gång... Tills dess.
