@@ -1,4 +1,8 @@
 .demo {
+    &__description {
+        margin-bottom: var(--step-1);
+    }
+
     &__close {
         position: absolute;
         top: 0;
@@ -38,12 +42,13 @@
         border: 1px solid var(--color-grey-100);
         border-top: none;
         * {
-            margin: 0;
-            padding: unset;
-            border: unset;
+            width: 100%;
+            margin: revert;
+            padding: revert;
+            border: revert;
             border-radius: unset;
-            color: unset;
-            font: unset;
+            color: unset !important;
+            font: revert;
         }
     }
 }
