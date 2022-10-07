@@ -12,10 +12,11 @@
 <script>{{- javascript | safe }}</script>
 {%- endif -%}
 
+<section class="demo__description flow">
 {% if not hideDescription %}
 {{ description | safe }}
 {% endif %}
-
+</section>
 
 <div class="demo__code">
 {% if html %}
