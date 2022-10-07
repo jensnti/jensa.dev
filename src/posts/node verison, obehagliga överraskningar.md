@@ -9,7 +9,7 @@ Det här är en kort kom ihåg anteckning om en obehaglig överraskning jag fick
 
 ## Problem
 
-Netlify kunde inte bygga min sida ([Tema, område, del](/projekt/tema-omrade-del/), felmeddelandet var kanske inte supertydligt heller.
+Netlify kunde inte köra byggscriptet för [Tema, område, del](/projekt/tema-omrade-del/). Det felmeddelande som Netlify gav var kanske inte supertydligt heller.
 
 ```bash
 5:53:08 PM: [11ty] Eleventy CLI Fatal Error: (more in DEBUG output)
@@ -17,7 +17,7 @@ Netlify kunde inte bygga min sida ([Tema, område, del](/projekt/tema-omrade-del
 5:53:08 PM: [11ty] 2. Unexpected token '.' (via SyntaxError)
 ```
 
-Som en stjärna ledde detta till ett antal commits för att lösa problemet (som jag inte kunde reproducera lokalt), men inget fungerade. Det fungerade inte eftersom allt berodde på att min lokala node version är 16+ och Netlify använde v12.18.0. Detta gjorde att Netlify failade och inte kunde bygga sidan.
+Som en stjärna ledde detta till att jag gjorde ett antal commits för att lösa problemet (som jag inte kunde reproducera lokalt), men inget fungerade. Det fungerade inte eftersom allt berodde på att min lokala Node version är 16+ och Netlify använde v12.18.0. Detta gjorde att Netlify failade och inte kunde bygga sidan.
 
 ## Lösning
 
