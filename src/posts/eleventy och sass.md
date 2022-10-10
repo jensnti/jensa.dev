@@ -66,6 +66,18 @@ eleventyConfig.addWatchTarget("./src/sass/");
 
 Nu startar du Eleventy med ```npm run start``` och du bör se att din bakgrundsfärg är röd. Detta eftersom vi satt bakgrundsfärgen till röd i ```style.scss```. Ändra färgen till något annat och se att det uppdateras i din webbläsare.
 
+## CSS reset med SASS
+
+En bra sak att ha som de flesta sidor behöver är en [CSS reset](https://meyerweb.com/eric/tools/css/reset/). Det är en CSS-fil som sätter alla element till samma värden. Det gör att du kan vara säker på att alla element har samma utseende oavsett vilken webbläsare du använder. Det finns många olika CSS resets men jag brukar oftast använda mig [Andy Bells modern CSS reset](https://piccalil.li/blog/a-modern-css-reset/) version eller [Stephanie Eckles](https://github.com/5t3ph) modifierade version.
+
+Den reset som jag använder på den här sidan finns på GitHub, [_reset.scss](https://github.com/jensnti/jensa.xyz/blob/main/src/sass/global/_reset.scss). Du kan testa att använda den i din SASS-fil och se att den fungerar. Spara filen som ```_reset.scss```, ett understreck i filnamnet indikerar att det är en partial och att den inte ska kompileras till CSS.
+
+För att använda den så behöver du importera den i din ```style.scss``` fil. Det gör du genom att skriva följande:
+
+```scss
+@use "reset";
+```
+
 ## Nästa steg
 
 Du har nu en grund för att kunna använda SASS med Eleventy, du kan börja med att skriva vanlig CSS i SCSS filen. Det fungerar bra så länge, men du kan nu allt eftersom lära dig mer om SASS och dess funktioner och inludera det i din CSS.
