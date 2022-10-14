@@ -123,6 +123,7 @@ Templaterna till Eleventy sparar du i mappen `src/_includes`. Mappen ```_include
 
 Skapa en ny fil i `src/_includes` och kalla den för `base.njk`. Den här filen kommer att innehålla grundläggande html-taggar för att skapa ett validerande html-dokument. 
 
+{% raw %}
 ```html
 <!DOCTYPE html>
 <html lang="sv">
@@ -137,6 +138,7 @@ Skapa en ny fil i `src/_includes` och kalla den för `base.njk`. Den här filen 
 </body>
 </html>
 ```
+{% endraw %}
 
 Som du ser så är det mer eller mindre ett html-dokument. Det som skiljer sig är att dokumentet använder variabler, `title` och `content`. Variablerna kommer att fyllas med data från markdown filerna. Variablerna är en del av hur Eleventy arbetar med templaterna. Notera att för variabeln ```content``` så används ett filter, `safe`. Detta är för att säkerställa att innehållet i variabeln inte filtreras bort. Det finns ett sort antal inbyggda [filter i Nunjucks](https://mozilla.github.io/nunjucks/templating.html#builtin-filters) och du kallar på dem med `|` följt av filternamnet.
 
