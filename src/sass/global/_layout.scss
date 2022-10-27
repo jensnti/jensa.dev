@@ -1,7 +1,7 @@
 .container {
     // --container-width: 80ch;
     // --container-width: var(--fluid-mid-width);
-    width: min(var(--fluid-mid-width), 100vw - var(--step-1));
+    width: min(var(--fluid-mid-width), 100vw - var(--step-3));
     margin-inline: auto;
 }
 
