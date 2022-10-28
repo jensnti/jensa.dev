@@ -1,17 +1,16 @@
 {
     "name": "jensa.xyz",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "Personal website of Jens Andreasson",
     "scripts": {
-        "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
+        "watch:sass": "sass  --no-source-map --watch src/sass:src/_includes/assets/css",
         "watch:eleventy": "eleventy --serve",
         "watch:rollup": "rollup -c -w",
-        "build:sass": "sass  --no-source-map src/sass:public/css",
+        "build:sass": "sass  --no-source-map src/sass:src/_includes/assets/css",
         "build:eleventy": "eleventy",
         "build:rollup": "rollup -c",
-        "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
-        "start": "cross-env ELEVENTY_ENV=dev npm-run-all --parallel watch:*",
-        "build": "cross-env ELEVENTY_ENV=prod npm-run-all --parallel build:*",
+        "start": "cross-env ELEVENTY_ENV=dev npm-run-all build:sass  --parallel watch:*",
+        "build": "cross-env ELEVENTY_ENV=prod npm-run-all build:sass --parallel build:*",
         "lint": "eslint --fix .",
         "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
     },

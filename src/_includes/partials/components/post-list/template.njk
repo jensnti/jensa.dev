@@ -2,11 +2,11 @@
     {% for item in props.items %}
     <li class="post-list__item">
         <div class="post-list__item--title">
-            <h3 class="post-list__title">
+            <h2 class="post-list__title">
                 <a class="stretched-link" href="{{ item.url }}" rel="bookmark">{{
                     item.data.title
                     }}</a>
-            </h3>
+            </h2>
         </div>
         <div class="post-list__item--date">
             <time class="" datetime="{{ item.date | htmlDateString }}">

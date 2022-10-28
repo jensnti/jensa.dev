@@ -3,8 +3,12 @@
 {% set pagesCheck = page.filePathStem.includes('/pages/') %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ '/css/prism-theme-base.css'}}">
-<link rel="stylesheet" href="{{ '/css/theme-vars.css'}}">
+<!-- <link rel="stylesheet" href="{{ '/css/prism-theme-base.css'}}">
+<link rel="stylesheet" href="{{ '/css/theme-vars.css'}}"> -->
+<style>
+    {% include 'assets/css/prism-theme-base.css' %}
+    {% include 'assets/css/theme-vars.css' %}
+</style>
 {% endblock %}
 
 {% block header %}

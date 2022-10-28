@@ -2,18 +2,14 @@
     <nav class="pagination" aria-label="Pagination links">
         {% if pagination.href.previous %}
         <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
-            <span class="material-symbols-sharp">
-                chevron_left
-            </span>
+            {% svg "chevron_left_FILL0_wght400_GRAD0_opsz24.svg" %}
             <span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
         </a>
         {% endif %}
         {% if pagination.href.next %}
         <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
             <span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
-            <span class="material-symbols-sharp">
-                chevron_right
-            </span>
+            {% svg "chevron_right_FILL0_wght400_GRAD0_opsz24.svg" %}
         </a>
         {% endif %}
     </nav>
