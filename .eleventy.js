@@ -2,24 +2,33 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const markdownIt = require('markdown-it');
 const mila = require('markdown-it-link-attributes');
 const mia = require('markdown-it-attrs');
-// const glob = require('fast-glob');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const fs = require('fs');
 const { format, parseISO } = require('date-fns');
 const { sv } = require('date-fns/locale');
 const Image = require('@11ty/eleventy-img');
-// const path = require('path');
 const markdownItAnchor = require('markdown-it-anchor');
-// const slugify = require('@sindresorhus/slugify');
-
+const htmlmin = require('html-minifier');
 const eleventyPluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
 
-// const prettier = require('prettier');
-// const imageShortcode = require('./src/shortcodes/image');
+// filters and shortcodes
 
-// Import transforms
-// const htmlMinTransform = require('./src/transforms/html-min-transform.js');
-// const parseTransform = require('./src/transforms/parse-transform.js');
+const getSvgContent = (file, classList) => {
+    let relativeFilePath = `./src/_includes/assets/icons/${file}`;
+    let data = fs.readFileSync(relativeFilePath, (err, contents) => {
+        if (err) return err;
+        return contents;
+    });
+    if (classList) {
+        return (
+            data.toString('utf8').slice(0, 4) +
+            ` class="${classList}" ` +
+            data.toString('utf8').slice(4)
+        );
+    } else {
+        return data.toString('utf8');
+    }
+};
 
 const year = () => {
     return `${new Date().getFullYear()}`;
@@ -106,17 +115,8 @@ module.exports = function (eleventyConfig) {
         tags: ['h2', 'h3', 'h4'],
     });
 
-    // eleventyConfig.setDataDeepMerge(true);
-
     eleventyConfig.addWatchTarget('./src/sass/');
     eleventyConfig.addWatchTarget('./src/js/');
-
-    eleventyConfig.addPassthroughCopy('src/robots.txt');
-    eleventyConfig.addPassthroughCopy('./src/js');
-    eleventyConfig.addPassthroughCopy('./src/favicon.ico');
-    eleventyConfig.addPassthroughCopy('./src/assets/');
-
-    eleventyConfig.addPassthroughCopy('./src/images/jens.jpg');
 
     // Filters
 
@@ -134,6 +134,7 @@ module.exports = function (eleventyConfig) {
     // Shortcodes
 
     eleventyConfig.addShortcode('year', year);
+    eleventyConfig.addShortcode('svg', getSvgContent);
     eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
     eleventyConfig.addFilter('filterTagList', filterTagList);
@@ -234,20 +235,24 @@ module.exports = function (eleventyConfig) {
         },
     });
 
-    // eleventyConfig.addTransform('prettier', function (content, outputPath) {
-    //     // https://github.com/11ty/eleventy/issues/1314#issuecomment-657999759
-    //     const extname = path.extname(outputPath);
-    //     switch (extname) {
-    //         case '.html':
-    //         case '.json':
-    //             // Strip leading period from extension and use as the Prettier parser.
-    //             const parser = extname.replace(/^./, '');
-    //             return prettier.format(content, { parser });
+    // Minify
+    eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
+        if (outputPath && outputPath.indexOf('.html') > -1) {
+            let minified = htmlmin.minify(content, {
+                useShortDoctype: true,
+                removeComments: true,
+                collapseWhitespace: true,
+                minifyCSS: true,
+            });
+            return minified;
+        }
+        return content;
+    });
 
-    //         default:
-    //             return content;
-    //     }
-    // });
+    eleventyConfig.addPassthroughCopy('src/robots.txt');
+    eleventyConfig.addPassthroughCopy('./src/js');
+    eleventyConfig.addPassthroughCopy('./src/favicon.ico');
+    eleventyConfig.addPassthroughCopy('./src/assets/');
 
     return {
         dir: {
