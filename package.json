@@ -9,7 +9,6 @@
         "build:sass": "sass  --no-source-map src/sass:src/_includes/assets/css",
         "build:eleventy": "eleventy",
         "build:rollup": "rollup -c",
-        "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
         "start": "cross-env ELEVENTY_ENV=dev npm-run-all build:sass  --parallel watch:*",
         "build": "cross-env ELEVENTY_ENV=prod npm-run-all build:sass --parallel build:*",
         "lint": "eslint --fix .",
