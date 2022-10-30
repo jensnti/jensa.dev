@@ -4,7 +4,7 @@ module.exports = {
     author: {
         name: 'Jens Andreasson',
         email: 'jensandreasson77@gmail.com',
-        url: 'https://jensa.xyz',
+        url: 'https://jensa.dev',
         github: 'jensnti',
     },
     url: process.env.URL || 'http://localhost:8080',
@@ -12,4 +12,5 @@ module.exports = {
     locale: 'sv-SE',
     lang: 'sv',
     theme: '#2d303c',
+    gtag: 'G-RREZWE4VCC',
 };

@@ -21,8 +21,8 @@ tags: ['node', '11ty', 'javascript']
 {{ project.description }}
 
 Webbplatser skapade med TOD:
-* [Programmering](https://programmering.jensa.xyz/)
-* [Webbutveckling](https://webbutveckling.jensa.xyz/)
+* [Programmering](https://programmering.jensa.dev/)
+* [Webbutveckling](https://webbutveckling.jensa.dev/)
 
 ## Hur
 

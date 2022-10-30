@@ -82,7 +82,7 @@ templateEngineOverride: njk, md
 {% endraw %}
 ```
 
-Den utökning jag har gjort ses i javascript/html delarna och formatteringen och för  att se det behöver vi titta på templaten. Den här templaten är uppmärkt med en brappiljard raw taggar för att den faktiska koden ska synas, oklart om allt är rätt men här är den i alla fall. Jag är tveksam till att den går att kopiera eller att använda eftersom den är otroligt petig med whitespace, så om du är intresserad av att faktiskt använda det, kolla på [demo template](https://github.com/jensnti/jensa.xyz/tree/main/src/_includes/partials/components/demo/template.njk).
+Den utökning jag har gjort ses i javascript/html delarna och formatteringen och för  att se det behöver vi titta på templaten. Den här templaten är uppmärkt med en brappiljard raw taggar för att den faktiska koden ska synas, oklart om allt är rätt men här är den i alla fall. Jag är tveksam till att den går att kopiera eller att använda eftersom den är otroligt petig med whitespace, så om du är intresserad av att faktiskt använda det, kolla på [demo template](https://github.com/jensnti/jensa.dev/tree/main/src/_includes/partials/components/demo/template.njk).
 
 ```twig
 <div class="demo">

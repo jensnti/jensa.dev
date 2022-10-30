@@ -30,8 +30,8 @@ Finns jag bland annat på följande platser:
 
 För min undervisning har jag skapat en del material:
 
--   [Webbutveckling](https://webbutveckling.jensa.xyz/)
--   [Programmering](https://programmering.jensa.xyz/)
+-   [Webbutveckling](https://webbutveckling.jensa.dev/)
+-   [Programmering](https://programmering.jensa.dev/)
 -   [Gitbook](https://jens-andreasson.gitbook.io/)
 -   [YouTube](https://www.youtube.com/channel/UCTqbOlkdA_9q-agUM0Hh9Ag)
 

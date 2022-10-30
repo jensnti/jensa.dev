@@ -1,10 +1,12 @@
+<link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+<link href="https://www.googletagmanager.com/gtag/js?id={{ meta.gtag }}" rel="preload" as="script">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RREZWE4VCC"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ meta.gtag }}"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
         dataLayer.push(arguments);
     }
     gtag('js', new Date());
-    gtag('config', 'G-RREZWE4VCC');
+    gtag('config', '{{ meta.gtag }}');
 </script>

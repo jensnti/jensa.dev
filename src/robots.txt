@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jensa.xyz/sitemap.xml
-Sitemap: http://www.jensa.xyz/sitemap.xml
+Sitemap: https://jensa.dev/sitemap.xml
+Sitemap: http://www.jensa.dev/sitemap.xml
