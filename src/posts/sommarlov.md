@@ -11,7 +11,7 @@ För min del så finns det alltid en tanke om ett antal projekt under ~~sommaren
 Projekten som väntar är 🚧
 
 -   [Tema, område, del](https://github.com/jensnti/tod), en form av kurswebb med tydlig struktur. Detta är ett template-repo att bygga ifrån. Byggt med Eleventy.
--   [Webbutveckling 1](https://keen-jones-305b5d.netlify.app/), byggt med TOD och en första test.
+-   [Webbutveckling 1](https://webbutveckling.jensa.dev), byggt med TOD och en första test.
 -   [Måltidsloggen](https://github.com/jensnti/mat-nextjs), bygg i Next.js med en tillhörande [backend](https://github.com/jensnti/mat).
 -   [Learn Eleventy From Scratch](https://piccalil.li/course/learn-eleventy-from-scratch/) och använda det.
 
@@ -25,4 +25,4 @@ Men Netlify har fungerat utmärkt som sagt så vi kör på det. Det är även br
 
 ## Domän
 
-Väl uppe så tänkte jag försöka koppla ihop det med min domän, [jensa.xyz](https://www.jensa.xyz). Jag har än så länge enbart använt den till [Måltidsloggen](https://mat.jensa.xyz).
+Väl uppe så tänkte jag försöka koppla ihop det med min domän, [jensa.dev](https://www.jensa.dev). Jag har än så länge enbart använt den till [Måltidsloggen](/projekt/maltidsloggen/).

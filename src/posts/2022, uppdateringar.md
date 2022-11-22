@@ -20,7 +20,7 @@ Så måltidsloggen är live igen och dess TODO-lista är gigantisk. Det kliar i 
 
 Jag har uppdaterat sidan med bland annat en "cookie-consent" popup, detta av den enkla anledningen att sidan faktiskt sparar info i din localstorage (färgschema) men även använder [Google Analytics](https://analytics.google.com/analytics/web/) för trafik. Utöver det så finns fonter på typekit.
 
-Själva designen på elementet kommer från mitt arbetet med [TOD sidorna](https://programmering.jensa.xyz/) där jag tyckte det var viktigt att få med. 
+Själva designen på elementet kommer från mitt arbetet med [TOD sidorna](https://programmering.jensa.dev/) där jag tyckte det var viktigt att få med. 
 
 ## TOD
 
@@ -31,7 +31,7 @@ Den existerande designen på TOD använder accordions för att begränsa informa
 * Popup med "Du arbetade senast med" som leder användaren till senaste området
 * Toggle för att byta layout, till en struktur med boxar som visar teman och områden. Eleven ser alltså inte delarna.
 
-Den kompaktare layouten med boxar utgår från en spelinspirerad tanke om skilltrees. Resultatet blev sådär och är i högsta grad ett work in progress, men det fungerar och används på [programmering.jensa.xyz](https://programmering.jensa.xyz/).
+Den kompaktare layouten med boxar utgår från en spelinspirerad tanke om skilltrees. Resultatet blev sådär och är i högsta grad ett work in progress, men det fungerar och används på [programmering.jensa.dev](https://programmering.jensa.dev/).
 
 ## TODO
 

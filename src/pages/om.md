@@ -6,7 +6,7 @@ templateEngineOverride: njk, md
 order: 2
 ---
 
-{% image "./src/images/20220720_132435.jpg", "En Jens", "Foto av Marie Malmi." %}
+{% image "./src/images/20220720_132435c.jpg", "En Jens", "Foto av Marie Malmi." %}
 
 Jag är en legitimerad lärare och arbetar på [NTI Gymnasiet Umeå](https://www.ntigymnasiet.se/umea/) sedan 2017. Tidigare har jag arbetat med vuxenutbildning på distans.
 
@@ -30,8 +30,8 @@ Finns jag bland annat på följande platser:
 
 För min undervisning har jag skapat en del material:
 
--   [Webbutveckling](https://webbutveckling.jensa.xyz/)
--   [Programmering](https://programmering.jensa.xyz/)
+-   [Webbutveckling](https://webbutveckling.jensa.dev/)
+-   [Programmering](https://programmering.jensa.dev/)
 -   [Gitbook](https://jens-andreasson.gitbook.io/)
 -   [YouTube](https://www.youtube.com/channel/UCTqbOlkdA_9q-agUM0Hh9Ag)
 

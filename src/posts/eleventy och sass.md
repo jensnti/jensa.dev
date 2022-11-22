@@ -70,7 +70,7 @@ Nu startar du Eleventy med ```npm run start``` och du bör se att din bakgrundsf
 
 En bra sak att ha som de flesta sidor behöver är en [CSS reset](https://meyerweb.com/eric/tools/css/reset/). Det är en CSS-fil som sätter alla element till samma värden. Det gör att du kan vara säker på att alla element har samma utseende oavsett vilken webbläsare du använder. Det finns många olika CSS resets men jag brukar oftast använda mig [Andy Bells modern CSS reset](https://piccalil.li/blog/a-modern-css-reset/) version eller [Stephanie Eckles](https://github.com/5t3ph) modifierade version.
 
-Den reset som jag använder på den här sidan finns på GitHub, [_reset.scss](https://github.com/jensnti/jensa.xyz/blob/main/src/sass/global/_reset.scss). Du kan testa att använda den i din SASS-fil och se att den fungerar. Spara filen som ```_reset.scss```, ett understreck i filnamnet indikerar att det är en partial och att den inte ska kompileras till CSS.
+Den reset som jag använder på den här sidan finns på GitHub, [_reset.scss](https://github.com/jensnti/jensa.dev/blob/main/src/sass/global/_reset.scss). Du kan testa att använda den i din SASS-fil och se att den fungerar. Spara filen som ```_reset.scss```, ett understreck i filnamnet indikerar att det är en partial och att den inte ska kompileras till CSS.
 
 För att använda den så behöver du importera den i din ```style.scss``` fil. Det gör du genom att skriva följande:
 
