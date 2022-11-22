@@ -4,13 +4,13 @@ layout: layouts/project.njk
 project:
     start: 2021-05-31
     end: ?
-    status: kanske
+    status: Aktiv
     title: TOD
     url: https://github.com/jensnti/tod
     licens: CC BY-NC 4.0
-    tech: ['11ty', 'javascript', 'sass']
+    tech: ["[11ty](https://11ty.dev)", "javascript", "[sass](https://sass-lang.com)"]
     hosting: "[Netlify](https://netlify.com/)"
-    description: "En webb-template för att du, jag eller andra ska kunna bygga kurswebbar utifrån en pedagogiska tanke om att dela upp ett ämne i teman, områden och delar." 
+    description: "En 11ty-starter för att du, jag eller andra ska kunna bygga kurswebbar utifrån testbaserat lärande. Materialet struktureras upp i teman, områden och delar." 
 templateEngineOverride: njk, md
 tags: ['node', '11ty', 'javascript']
 ---
@@ -18,12 +18,28 @@ tags: ['node', '11ty', 'javascript']
 {% image "./src/images/toddump-1.png", "Skärmdump av sidan programmering skapad med TOD",  "Skärmdump av sidan programmering skapad med TOD" %}
 
 ## Vad
+
 {{ project.description }}
 
-Webbplatser skapade med TOD:
-* [Programmering](https://programmering.jensa.dev/)
-* [Webbutveckling](https://webbutveckling.jensa.dev/)
+Sidan, eller systemet har en struktur som behöver följas. Kursmaterialet delas upp i övergripande teman, varje tema består i sin tur av områden. De områden som temat består av delas i sin tur upp i ett antal delar. Varje del består av lite information, instruktioner och ett antal uppgifter. Det är i dessa uppgifter som det testbaserade lärandet kommer in.
+
+### Demo
+
+På [tod.jensa.dev](https://tod.jensa.dev) finns ett start-exempel med instruktioner för hur sidan byggs (kan behöva uppdateras).
+
+Webbplatser skapade med systemet:
+
+-   [Programmering](https://programmering.jensa.xyz/)
+-   [Webbutveckling](https://webbutveckling.jensa.dev/)
 
 ## Hur
 
 Sidan är skapad med {{ project.tech.join(", ") }} och hostad med {{ project.hosting }}.
+
+Du som lärare eller skapare behöver inte nödvändigtvis kunna programmera eller 11ty, men det underlättar såklart. Materialet skrivs med markdown och kan lätt modifieras i en vanlig texteditor.
+
+För användaren så fungerar sidan på det stora hela utan javascript, allt material går att använda och ta del av. Med javascript så får användaren möjlighet att markera uppgifter som slutförda, se hur långt de har kommit, anteckna och om så önskas installera sidan som en app.
+
+## Status
+
+Väldigt aktiv och sidan för webbutveckling har fått en hel del nytt material. Tod för programmering ligger lite i träda eftersom jag inte undervisar Programmering 1 längre. Det finns dock en tanke att göra om upplägget för programmering och börja med kod som gör något och sedan leda in vägen på variabler osv.

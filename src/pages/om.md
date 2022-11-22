@@ -24,9 +24,10 @@ Vid sidan av mitt arbete och det som jag skriver om på denna sida så gillar ja
 
 Finns jag bland annat på följande platser:
 
+-   [Discogs](https://www.discogs.com/user/zvorak/collection)
 -   [GitHub](https://github.com/jensnti)
 -   [Goodreads](https://www.goodreads.com/user/show/16975751-jens)
--   [Discogs](https://www.discogs.com/user/zvorak/collection)
+-   [Mastodon](https://fosstodon.org/@jensa)
 
 För min undervisning har jag skapat en del material:
 
