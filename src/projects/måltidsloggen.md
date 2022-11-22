@@ -4,7 +4,7 @@ layout: layouts/project.njk
 project:
     start: 2021-02-13
     end: ?
-    status: tveksamt
+    status: Tveksam
     title: Måltidsloggen
     url: https://mat-jensnti.vercel.app
     licens: MIT
