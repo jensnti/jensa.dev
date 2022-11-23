@@ -1,6 +1,5 @@
 ---
 title: JAnteckningar
-layout: layouts/project.njk
 project:
     start: 2021-06-13
     end: ?

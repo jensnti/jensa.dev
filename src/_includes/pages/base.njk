@@ -1,5 +1,5 @@
-{%- from 'partials/components/site-head/macro.njk' import siteHead -%}
-{%- from 'partials/components/site-foot/macro.njk' import siteFoot -%}
+{%- from 'layouts/site-head/macro.njk' import siteHead -%}
+{%- from 'layouts/site-foot/macro.njk' import siteFoot -%}
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}">
 
@@ -7,13 +7,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    {% include "../partials/global/meta.njk" %}
+    {% include "../components/meta.njk" %}
     <link rel="preconnect" href="https://use.typekit.net" />
     <link rel="alternate" type="application/rss+xml" title="{{ meta.siteName }}" href="{{ meta.url }}/feed.xml" />
     <link rel="stylesheet" href="https://use.typekit.net/hrh0cnz.css" />
     <style>{% include "assets/css/style.css" %}</style>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    {% include "../partials/global/analytics.njk" %}
+    {% include "../components/analytics.njk" %}
     {% block head %}
     {% endblock %}
 </head>
@@ -36,9 +36,9 @@
             url: pkg.homepage
         }) }}
     {% endblock %}
-    {% include "../partials/components/flash-message/template.njk" %}
+    {% include "../components/flash-message/template.njk" %}
     {% block scripts %}
-    <script defer src="/js/bundle.js"></script>
+    <script defer src="/js/bundle.min.js"></script>
     {% endblock %}
 </body>
 

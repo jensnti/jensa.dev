@@ -4,7 +4,7 @@ eleventyExcludeFromCollections: true
 permalink: /cv/
 ---
 
-{% extends 'layouts/base.njk' %}
+{% extends 'pages/base.njk' %}
 
 {% set pagesCheck = page.filePathStem.includes('/pages/') %}
 
@@ -93,7 +93,6 @@ category: category
             <p>Legitimerad lärare i webbteknik(er), gränssnittsdesign, programmering och engelska.</p>
         </header>
         <aside class="sidebar flow">
-            <!-- <img src="/images/jens.jpg" class="sidebar__mug" /> -->
             {% image "./src/images/20220720_132435c.jpg", "Mitt fejs" %}
             <div>
                 <h3>Kontakt</h3>

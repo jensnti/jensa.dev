@@ -1,6 +1,6 @@
 {% set title = 'Hej, jag heter Jens' %}
-{% extends 'layouts/base.njk' %}
-{%- from 'partials/components/post-list/macro.njk' import postList -%}
+{% extends 'pages/base.njk' %}
+{%- from 'layouts/post-list/macro.njk' import postList -%}
 {% block content %}
 <main id="main-content" tabindex="-1">
     <section class="content container site-grid">

@@ -1,6 +1,6 @@
 ---
 title: Arkiv
-layout: layouts/archive.njk
+layout: pages/archive.njk
 pagination:
     data: collections.posts
     size: 10

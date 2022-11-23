@@ -1,7 +1,7 @@
 ---
 title: Om
 permalink: /om/
-layout: layouts/post.njk
+layout: pages/post.njk
 templateEngineOverride: njk, md
 order: 2
 ---
@@ -41,4 +41,4 @@ För min undervisning har jag skapat en del material:
 
 ### Kontakt
 
-{% include "partials/components/contact.njk" %}
+{% include "layouts/contact-form.njk" %}

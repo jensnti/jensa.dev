@@ -1,4 +1,5 @@
 {
     "permalink": "projekt/{{ title | slug }}/index.html",
-    "category": "projekt"
+    "category": "projekt",
+    "layout": "pages/project.njk"
 }
