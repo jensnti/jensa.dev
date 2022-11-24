@@ -1,10 +1,8 @@
-{% extends 'layouts/base.njk' %}
+{% extends 'pages/base.njk' %}
 
 {% set pagesCheck = page.filePathStem.includes('/pages/') %}
 
 {% block head %}
-<!-- <link rel="stylesheet" href="{{ '/css/prism-theme-base.css'}}">
-<link rel="stylesheet" href="{{ '/css/theme-vars.css'}}"> -->
 <style>
     {% include 'assets/css/prism-theme-base.css' %}
     {% include 'assets/css/theme-vars.css' %}
@@ -27,12 +25,6 @@
 {% block content %}
 <main id="main-content" tabindex="-1">
     <article class="content container flow">
-        <!-- {% if date %}
-        <time class="content__date" datetime="{{ date | htmlDateString }}">
-            {{ date | readableDate }}
-        </time>
-        {% endif %} -->
-
         {% if pagesCheck == false %}
         <header class="content__header flow">
             {% if lead %}
@@ -46,7 +38,7 @@
         {{ content | safe }}
 
         {% if pagesCheck == false %}
-            {% include "../partials/components/link-list-footer.njk" %}
+            {% include "../components/link-list-footer.njk" %}
         {% endif %}
     </article>
 </main>

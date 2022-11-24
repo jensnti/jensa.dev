@@ -9,8 +9,8 @@ postsHeading: 'Alla inlägg'
 ---
 
 {% set title = 'Taggat med ' + tag %}
-{% extends 'layouts/base.njk' %}
-{%- from 'partials/components/post-list/macro.njk' import postList -%}
+{% extends 'pages/base.njk' %}
+{%- from 'layouts/post-list/macro.njk' import postList -%}
 
 {% block header %}
 {{
