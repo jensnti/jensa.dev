@@ -10,7 +10,7 @@ lead: Basen för majoriteten av alla webbsidor är någon form av centrerad layo
 {% set demo = collections.orderedDemos | getDemo("Centrerad layout") %}
 <article>
     <h2 id="{{ demo.data.title | slugify }}">
-        <a class="header-anchor" href="#{{ demo.data.title | slugify }}">
+        <a class="anchor" href="#{{ demo.data.title | slugify }}">
             <span aria-hidden="true">#</span></a> {{ demo.data.title }}
     </h2>
   {{ demo.templateContent | safe }}

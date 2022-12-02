@@ -1,14 +1,19 @@
 ---
-
+title: Resurser
 ---
 
+{% extends 'pages/base.njk' %}
 
 {% block content %}
 <main id="main-content" tabindex="-1">
     <section class="content container flow">
-        {% for resource in collections.resources %}
-            {{ resource.data.title }}
-        {% endfor %}
+        <ul>
+            {% for resource in collections.resources %}
+            <li>
+                <a href="{{ resource.url | url }}">{{ resource.data.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
     </section>
 </main>
 {% endblock %}

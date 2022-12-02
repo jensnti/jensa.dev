@@ -8,14 +8,17 @@
     &:hover[class*=yellow] {
         border-bottom: 2px solid var(--color-yellow);
     }
-    &:hover[class*=purple] {
-        border-bottom: 2px solid var(--color-purple);
+    &:hover[class*=magenta] {
+        border-bottom: 2px solid var(--color-magenta);
     }
     &:hover[class*=blue] {
         border-bottom: 2px solid var(--color-blue);
     }
     &:hover[class*=green] {
         border-bottom: 2px solid var(--color-green);
+    }
+    &:hover[class*=cyan] {
+        border-bottom: 2px solid var(--color-cyan);
     }
 }
 
@@ -29,8 +32,8 @@
     &:hover[class*=yellow] {
        color: var(--color-yellow);
     }
-    &:hover[class*=purple] {
-       color: var(--color-purple);
+    &:hover[class*=magenta] {
+       color: var(--color-magenta);
     }
     &:hover[class*=blue] {
        color: var(--color-blue);
@@ -38,4 +41,7 @@
     &:hover[class*=green] {
        color: var(--color-green);
     }
+    &:hover[class*=cyan] {
+        color: var(--color-cyan);
+     }
 }
