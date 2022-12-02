@@ -35,9 +35,8 @@
   --color-cyan-v: #4cbf99;
   --color-green: #d5ff80;
   --color-green-v: #86b300;
-  --color-link-v: #478acc;
-  --color-link: #6dcbfa;
-  --color-link-visited: hsl(270, 45%, 64%);
+  --color-link: hsl(210, 57%, 44%);
+  --color-link-visited: hsl(270, 45%, 44%);
   --shadow-color: 0deg 0% 0%;
   --shadow: 0.1px 0.6px 0.8px hsl(var(--shadow-color) / 0.04),
       0.4px 1.9px 2.5px -0.5px hsl(var(--shadow-color) / 0.05), 0.8px 4.1px 5.4px -1px hsl(var(--shadow-color) / 0.06),
@@ -422,14 +421,17 @@ a:visited {
 .nav__item:hover[class*=yellow] {
   border-bottom: 2px solid var(--color-yellow);
 }
-.nav__item:hover[class*=purple] {
-  border-bottom: 2px solid var(--color-purple);
+.nav__item:hover[class*=magenta] {
+  border-bottom: 2px solid var(--color-magenta);
 }
 .nav__item:hover[class*=blue] {
   border-bottom: 2px solid var(--color-blue);
 }
 .nav__item:hover[class*=green] {
   border-bottom: 2px solid var(--color-green);
+}
+.nav__item:hover[class*=cyan] {
+  border-bottom: 2px solid var(--color-cyan);
 }
 
 .demo__description {
@@ -605,14 +607,17 @@ a:visited {
 .site-head__tags a:hover[class*=yellow] {
   color: var(--color-yellow);
 }
-.site-head__tags a:hover[class*=purple] {
-  color: var(--color-purple);
+.site-head__tags a:hover[class*=magenta] {
+  color: var(--color-magenta);
 }
 .site-head__tags a:hover[class*=blue] {
   color: var(--color-blue);
 }
 .site-head__tags a:hover[class*=green] {
   color: var(--color-green);
+}
+.site-head__tags a:hover[class*=cyan] {
+  color: var(--color-cyan);
 }
 .site-head__inner--left {
   grid-column: 1/span 3;
@@ -742,14 +747,17 @@ a:visited {
 .tag:hover[class*=yellow] {
   color: var(--color-yellow);
 }
-.tag:hover[class*=purple] {
-  color: var(--color-purple);
+.tag:hover[class*=magenta] {
+  color: var(--color-magenta);
 }
 .tag:hover[class*=blue] {
   color: var(--color-blue);
 }
 .tag:hover[class*=green] {
   color: var(--color-green);
+}
+.tag:hover[class*=cyan] {
+  color: var(--color-cyan);
 }
 
 .tag-cloud {
@@ -833,8 +841,8 @@ a:visited {
   color: var(--color-yellow);
 }
 
-.purple {
-  color: var(--color-purple);
+.magenta {
+  color: var(--color-magenta);
 }
 
 .blue {
@@ -843,4 +851,8 @@ a:visited {
 
 .green {
   color: var(--color-green);
+}
+
+.cyan {
+  color: var(--color-cyan);
 }
