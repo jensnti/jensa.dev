@@ -1,5 +1,5 @@
 ---
-title: Advent of code
+title: Advent of code 2021
 date: 2021-12-07
 lead: 'En ytterst kort post om advent of code.'
 tags: ['koda', 'advent of code']
