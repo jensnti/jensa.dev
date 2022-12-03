@@ -2,18 +2,14 @@
     padding: 0;
     margin: 0;
     padding-top: var(--step-0);
-    // padding-bottom: var(--m-300);
+    position: relative;
+
     &__title {
         font-size: var(--step-1);
         margin-bottom: 0;
         a {
             text-decoration: none;
         }
-    }
-    &__tags {
-        list-style: none;
-        padding: 0;
-        margin: 0;
     }
     &__item {
         position: relative;
@@ -23,25 +19,122 @@
         padding-bottom: var(--step--2);
         gap: var(--step--2) var(--step--1);
         grid-auto-rows: auto;
-        border-bottom: 1px solid var(--color-grey-100);
         margin-bottom: var(--step--2);
-        &:hover {
-            border-bottom: 1px solid var(--color-grey-300);
+
+        &--orange {
+            &::before {
+                background-image: linear-gradient(
+                    to right,
+                    var(--color-orange),
+                    var(--color-orange) 50%,
+                    var(--color-dark) 50%
+                  );
+            }
+        }
+        &--red {
+            &::before {
+                background-image: linear-gradient(
+                    to right,
+                    var(--color-red),
+                    var(--color-red) 50%,
+                    var(--color-dark) 50%
+                  );
+            }
+        }
+        &--yellow {
+            &::before {
+                background-image: linear-gradient(
+                    to right,
+                    var(--color-yellow),
+                    var(--color-yellow) 50%,
+                    var(--color-dark) 50%
+                  );
+            }
+        }
+        &--magenta {
+            &::before {
+                background-image: linear-gradient(
+                    to right,
+                    var(--color-magenta),
+                    var(--color-magenta) 50%,
+                    var(--color-dark) 50%
+                  );
+            }
+        }
+        &--blue {
+            &::before {
+                background-image: linear-gradient(
+                    to right,
+                    var(--color-blue),
+                    var(--color-blue) 50%,
+                    var(--color-dark) 50%
+                  );
+            }
+        }
+        &--green {
+            &::before {
+                background-image: linear-gradient(
+                    to right,
+                    var(--color-green),
+                    var(--color-green) 50%,
+                    var(--color-dark) 50%
+                  );
+            }
+        }
+        &--cyan {
+            &::before {
+                background-image: linear-gradient(
+                    to right,
+                    var(--color-cyan),
+                    var(--color-cyan) 50%,
+                    var(--color-dark) 50%
+                  );
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 100%;
+            z-index: -1;
+            background-size: 200% 100%;
+            background-position: -100%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover::before {
+            background-position: 0;
         }
 
         &--category {
             font-size: var(--step--2);
-            text-transform: uppercase;
-            align-self: end;
-            grid-column: 4 / 5;
-            grid-row: 2;
-            text-align: end;
-        }
-        &--date {
             align-self: end;
             grid-column: 1 / 4;
             grid-row: 1;
+        }
+        &--date {
+            align-self: end;
+            grid-column: 4 / 5;
+            grid-row: 1;
             font-size: var(--step--2);
+        }
+        &--tags {
+            align-self: end;
+            grid-column: 4 / 5;
+            grid-row: 1 / 3;
+            font-size: var(--step--2);
+            > ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: end;
+            }
+            @media (max-width: 760px) {
+                display: none;
+            }
         }
         &--title {
             align-self: end;

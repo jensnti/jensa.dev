@@ -6,7 +6,7 @@ $mono: Consolas, Menlo, Monaco, Courier, monospace;
 /* @link https://utopia.fyi/type/calculator?c=320,21,1.333,1140,24,1.333,5,5,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 :root {
     --fluid-min-width: 320px;
-    --fluid-mid-width: 706px;
+    --fluid-mid-width: 760px;
     --fluid-max-width: 1140px;
 
     --step--5: clamp(0.31rem, calc(0.29rem + 0.09vw), 0.36rem);
@@ -65,12 +65,4 @@ $mono: Consolas, Menlo, Monaco, Courier, monospace;
     --font-weight-light: 300;
 
     --flow-space: var(--step-0);
-}
-
-body {
-    // background-image: url("../assets/images/img-noise-400x400.png");
-    background-repeat: repeat;
-    background-color: var(--color-light);
-    color: var(--color-dark);
-    background-image: url("/assets/images/img-noise-200x200.png");
 }

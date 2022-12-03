@@ -1,7 +1,14 @@
-@use "theme";
-@use "utils";
-@use "global";
-@use "components";
+@use 'theme';
+@use 'utils';
+@use 'global';
+@use 'components';
+
+body {
+    // background-image: url("../assets/images/img-noise-400x400.png");
+    background-repeat: repeat;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
 
 [id] {
     scroll-margin-top: var(--step-5); // 1
@@ -33,4 +40,3 @@
 .cyan {
     color: var(--color-cyan);
 }
-
