@@ -4,7 +4,7 @@
 {% block content %}
 <main id="main-content" tabindex="-1">
     <section class="content container site-grid">
-        <aside class="content__info site-grid__full">
+        <header class="content__info site-grid__full">
             <p class="lead">
                 Jag är en lärare på
                 <a href="https://www.ntigymnasiet.se/umea/">NTI Gymnasiet Umeå</a> 
@@ -16,7 +16,7 @@
                 <a href="https://github.com/jensnti">GitHub</a> finns saker jag
                 har kodat. Önskar du veta mer kan du läsa <a href="/om">om</a> mig.
             </p>
-        </aside>
+        </header>
         {% set postListItems = collections.feed %}
         {% if postListItems.length %}
         {{
