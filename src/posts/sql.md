@@ -5,6 +5,7 @@ tags: ['setup', 'sql']
 templateEngineOverride: njk, md
 category: resurs
 lead: En introduktion till att skriva SQL-frågor.
+draft: true
 ---
 
 ## Innan du börjar
