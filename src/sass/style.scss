@@ -4,8 +4,6 @@
 @use 'components';
 
 body {
-    // background-image: url("../assets/images/img-noise-400x400.png");
-    background-repeat: repeat;
     background-color: var(--color-light);
     color: var(--color-dark);
 }
@@ -39,4 +37,8 @@ body {
 }
 .cyan {
     color: var(--color-cyan);
+}
+
+* {
+    box-sizing: border-box;
 }
