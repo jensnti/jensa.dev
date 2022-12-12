@@ -59,7 +59,7 @@ picture {
     float: right;
     margin-inline-start: var(--step--1);
 
-    @media (max-width: var(--fluid-mid-width)) {
+    @media (max-width: 760px) {
         float: none;
         margin-inline-start: 0;
     }

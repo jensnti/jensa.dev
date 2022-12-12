@@ -1,7 +1,12 @@
-@use "theme";
-@use "utils";
-@use "global";
-@use "components";
+@use 'theme';
+@use 'utils';
+@use 'global';
+@use 'components';
+
+body {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
 
 [id] {
     scroll-margin-top: var(--step-5); // 1
@@ -21,12 +26,19 @@
 .yellow {
     color: var(--color-yellow);
 }
-.purple {
-    color: var(--color-purple);
+.magenta {
+    color: var(--color-magenta);
 }
 .blue {
     color: var(--color-blue);
 }
 .green {
     color: var(--color-green);
+}
+.cyan {
+    color: var(--color-cyan);
+}
+
+* {
+    box-sizing: border-box;
 }

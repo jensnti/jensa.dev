@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://jensa.dev/sitemap.xml
-Sitemap: http://www.jensa.dev/sitemap.xml
+Sitemap: https://www.jensa.dev/sitemap.xml

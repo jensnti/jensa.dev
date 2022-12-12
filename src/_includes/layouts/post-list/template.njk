@@ -1,20 +1,31 @@
+{% set colors = ["orange", "red", "blue", "yellow", "magenta", "green", "cyan"] %}
 <ol class="post-list site-grid__full">
     {% for item in props.items %}
-    <li class="post-list__item">
+    <li class="post-list__item  post-list__item--{{ colors | random }}">
+        <div class="post-list__item--category">
+            <span>{{ item.data.category | safe }}</span>
+             <time datetime="{{ item.date | htmlDateString }}">
+                {{ item.date | frontDate }}
+            </time>  
+        </div>
         <div class="post-list__item--title">
             <h2 class="post-list__title">
-                <a class="stretched-link" href="{{ item.url }}" rel="bookmark">{{
+                <a class="stretched-link text-caps" href="{{ item.url }}" rel="bookmark">{{
                     item.data.title
                     }}</a>
             </h2>
         </div>
         <div class="post-list__item--date">
-            <time class="" datetime="{{ item.date | htmlDateString }}">
-                {{ item.date | frontDate }}
-            </time>
+
         </div>
-        <div class="post-list__item--category">
-            {{ item.data.category | safe }}
+        <div class="post-list__item--tags">
+            {% if item.data.tags.length > 0 %}
+                <ul>
+                    {% for tag in item.data.tags | sort %}
+                        <li>{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
     </li>
     {% endfor %}

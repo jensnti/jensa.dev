@@ -3,12 +3,13 @@ $ratio: 1.333 !default;
 $sans-serif: "aktiv-grotesk", sans-serif;
 $mono: Consolas, Menlo, Monaco, Courier, monospace;
 
-/* @link https://utopia.fyi/type/calculator?c=320,21,1.333,1140,24,1.333,5,4,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+/* @link https://utopia.fyi/type/calculator?c=320,21,1.333,1140,24,1.333,5,5,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 :root {
     --fluid-min-width: 320px;
-    --fluid-mid-width: 706px;
+    --fluid-mid-width: 760px;
     --fluid-max-width: 1140px;
 
+    --step--5: clamp(0.31rem, calc(0.29rem + 0.09vw), 0.36rem);
     --step--4: clamp(0.42rem, calc(0.39rem + 0.12vw), 0.48rem);
     --step--3: clamp(0.55rem, calc(0.52rem + 0.15vw), 0.63rem);
     --step--2: clamp(0.74rem, calc(0.70rem + 0.21vw), 0.84rem);
@@ -20,22 +21,32 @@ $mono: Consolas, Menlo, Monaco, Courier, monospace;
     --step-4: clamp(4.14rem, calc(3.91rem + 1.16vw), 4.74rem);
     --step-5: clamp(5.52rem, calc(5.22rem + 1.54vw), 6.31rem);
 
-    --color-dark: hsl(223, 20%, 18%);
+    --color-dark: #1f2430; //hsl(223, 20%, 18%);
     --color-grey-300: hsl(222, 22%, 40%);
     --color-grey-200: hsl(222, 22%, 65%);
-    --color-grey-100: hsl(222, 22%, 90%);
+    --color-grey-100: #cccac2; //hsl(222, 22%, 90%);
     --color-light: hsl(48, 9%, 98%);
     --color-gray: hsl(223, 20%, 60%);
     // --color-primary: hsl(4, 90%, 58%);
-    --color-orange: hsl(28, 100%, 70%);
-    --color-red: hsl(7, 82%, 71%);
-    --color-blue: hsl(190, 73%, 63%);
-    --color-yellow: hsl(40, 100%, 73%);
-    --color-purple: hsl(270, 100%, 87%);
-    --color-green: hsl(80, 100%, 75%);
+    --color-orange: hsl(28, 100%, 70%); // #ffad66;
+    --color-orange-v: #ffaa33;
+    --color-red: #f28779; //hsl(7, 82%, 71%); // #f28778;
+    --color-red-v: #f07171;
+    --color-blue: #73d0ff; //hsl(190, 73%, 63%); // #5ccfe6;
+    --color-blue-v: #399ee6;
+    --color-yellow: #ffd173; // hsl(40, 100%, 73%); // #ffd175;
+    --color-yellow-v: #f2ae49;
+    --color-magenta: #dfbfff; // hsl(270, 100%, 87%); // #debdff;
+    --color-magenta-v: #a37acc;
+    --color-cyan: #95e6cb;
+    --color-cyan-v: #4cbf99;
+    --color-green: #d5ff80; // hsl(80, 100%, 75%); // #d5ff80;
+    --color-green-v: #86b300;
 
     --color-link: hsl(210, 57%, 44%);
-    --color-link-visited: hsl(270, 45%, 64%);
+    // --color-link: #6dcbfa; // hsl(210, 57%, 44%);
+    // --color-link-visited: hsl(270, 45%, 64%);
+    --color-link-visited: hsl(270, 45%, 44%);
 
     --shadow-color: 0deg 0% 0%;
     --shadow: 0.1px 0.6px 0.8px hsl(var(--shadow-color) / 0.04),
@@ -54,11 +65,4 @@ $mono: Consolas, Menlo, Monaco, Courier, monospace;
     --font-weight-light: 300;
 
     --flow-space: var(--step-0);
-}
-
-body {
-    // background-image: url("../assets/images/img-noise-400x400.png");
-    background-repeat: repeat;
-    background-color: var(--color-light);
-    color: var(--color-dark);
 }
