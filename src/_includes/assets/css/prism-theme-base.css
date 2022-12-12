@@ -230,8 +230,8 @@ code[class*=language-] ::selection {
 }
 
 /* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
- */
+   * http://prismjs.com/plugins/line-numbers/
+   */
 .line-numbers .line-numbers-rows {
   border-right-color: var(--prism-line-number);
 }
@@ -241,8 +241,30 @@ code[class*=language-] ::selection {
 }
 
 /* overrides color-values for the Line Highlight plugin
-  * http://prismjs.com/plugins/line-highlight/
-  */
+    * http://prismjs.com/plugins/line-highlight/
+    */
 .line-highlight {
   background: var(--prism-line-highlight-background);
+}
+
+.token.deleted {
+  background-color: hsla(355, 82%, 71%, 0.2);
+}
+
+.token.inserted {
+  background-color: hsla(80, 100%, 75%, 0.2);
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+  display: block;
 }
