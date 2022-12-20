@@ -3,43 +3,39 @@
 <header class="site-head">
     <div class="site-head__inner container">
         {{ nav({
-            siteName: props.siteName,
-            active: props.active,
-            items: props.items
+        siteName: props.siteName,
+        active: props.active,
+        items: props.items
         }) }}
-        <div class="site-grid">
-            {% set heading = props.title | splitHeading %}
-            <h1 class="site-head__title">
-                {% if heading[0] %}
-                    <span class="site-head__title--first {{ c | randomColor }}">{{ heading[0] }}</span>
-                {% endif %}
-                <span class="site-head__title--mid">{{ heading[1] }}</span>
-                {% if heading[2] %}
-                    <span class="site-head__title--last {{ c | randomColor }}">{{ heading[2] }}</span>
-                {% endif %}
+        {% set heading = props.title | splitHeading %}
+        <h1 class="site-head__title">
+            {% if heading[0] %}
+            <span class="site-head__title--first {{ c | randomColor }}">{{ heading[0] }}</span>
+            {% endif %}
+            <span class="site-head__title--mid">{{ heading[1] }}</span>
+            {% if heading[2] %}
+            <span class="site-head__title--last {{ c | randomColor }}">{{ heading[2] }}</span>
+            {% endif %}
+        </h1>
+        <aside class="site-head__meta site-grid">
             {% if props.category %}
-                <h2 class="site-head__category">{{ props.category }}</h2>
+            <h2 class="site-head__category">{{ props.category }}</h2>
             {% endif %}
             {% if props.tags %}
-                <ul class="site-head__tags">
-                    {% for tag in props.tags | sort %}
-                        <li class="tag">
-                            <a class="{{ c | randomColor }}" href="/tagg/{{ tag | slugify }}">
-                                {{ tag }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-            {% if props.link %}
             <ul class="site-head__tags">
+                {% for tag in props.tags | sort %}
                 <li class="tag">
-                    <a href="{{ props.link[1] }}">
-                        {{ props.link[0] }}
+                    <a class="{{ c | randomColor }}" href="/tagg/{{ tag | slugify }}">
+                        {{ tag }}
                     </a>
                 </li>
+                {% endfor %}
             </ul>
             {% endif %}
-        </div>
+        </aside>
+        {% if props.pagination %}
+            {% set pagination = props.pagination %}
+            {% include "../pagination/template.njk" %}
+        {% endif %}
     </div>
 </header>

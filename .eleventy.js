@@ -128,12 +128,12 @@ const splitHeading = (str) => {
         arr = str.split(',');
         first = arr.shift() + ',';
         if (arr[0] !== undefined) {
-            let temp = arr[0].split(' ');
+            let temp = arr[0].trim().split(' ');
             for (let i = 0; i < temp.length; i++) {
-                if (i !== temp.length - 1 && temp.length > 1) {
-                    middle += middle + ' ' + temp[i];
-                } else {
+                if (i === temp.length - 1) {
                     last = temp[i];
+                } else {
+                    middle = middle + ' ' + temp[i];
                 }
             }
         }
@@ -141,14 +141,14 @@ const splitHeading = (str) => {
         arr = str.split(' ');
         first = arr.shift();
         for (let i = 0; i < arr.length; i++) {
-            if (i !== arr.length - 1 && arr.length > 1) {
-                middle = middle + ' ' + arr[i];
-            } else {
+            if (i === arr.length - 1) {
                 last = arr[i];
+            } else {
+                middle = middle + ' ' + arr[i];
             }
         }
     }
-    if (last.length <= 4) {
+    if (last.length <= 3) {
         middle += ' ' + last;
         last = '';
     }

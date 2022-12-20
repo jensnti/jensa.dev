@@ -1,31 +1,26 @@
----
-postsHeading: 'Alla inlägg'
----
-
 {% extends 'pages/base.njk' %}
 {%- from 'layouts/post-list/macro.njk' import postList -%}
 {% set postListItems = pagination.items %}
 
+{% block header %}
+{{ siteHead({
+    title: title,
+    siteName: meta.siteName,
+    active: page.url,
+    items: collections.pages,
+    pagination: pagination
+}) }}
+{% endblock %}
 {% block content %}
 <main id="main-content" tabindex="-1">
     <section class="content container flow">
-        {% if not tag %}
-        <header class="content__info">
-                {% include "../layouts/pagination/template.njk" %}
-        </header>
-        {% endif %}
+        {{ content | safe }}
         {% if postListItems.length %}
         {{
             postList({
                 items: postListItems
             })
         }}
-        {% endif %}
-
-        {% if not tag %}
-        <footer class="content__footer">
-                {% include "../layouts/pagination/template.njk" %}
-        </footer>
         {% endif %}
     </section>
 </main>
