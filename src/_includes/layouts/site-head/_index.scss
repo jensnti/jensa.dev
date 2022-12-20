@@ -55,6 +55,11 @@
             position: relative;
         }
 
+        &--extra {
+            padding-top: var(--step-2);
+            padding-bottom: var(--step-2);
+        }
+
         &--first {
             grid-column: 1 / 5;
             grid-row: 1;

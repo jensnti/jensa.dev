@@ -9,7 +9,7 @@
     </a>
     {% for item in props.items | reverse %}
     <a
-        class="nav__item {{ colors | random }}{% if item.url == props.active %} active{% endif %}"
+        class="nav__item {{ colors | random }} {{ 'active' if item.url == props.active }}"
         href="{{ item.url }}"
         >{{ item.data.title }}
     </a>

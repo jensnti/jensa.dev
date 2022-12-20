@@ -65,6 +65,7 @@ const readableDate = (dateObj) => {
     return format(dateObj, 'PPP', { locale: sv });
 };
 
+
 const frontDate = (dateObj) => {
     if (typeof dateObj === 'string') {
         dateObj = parseISO(dateObj);
@@ -181,7 +182,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('tagCountCss', tagCountCss);
     eleventyConfig.addFilter('readableDate', readableDate);
     eleventyConfig.addFilter('frontDate', frontDate);
-    eleventyConfig.addFilter('yearString', frontDate);
+    eleventyConfig.addFilter('yearString', yearString);
     eleventyConfig.addFilter('htmlDateString', htmlDateString);
     eleventyConfig.addFilter('linebreak', (str) => str.split(' ').join('\n'));
 

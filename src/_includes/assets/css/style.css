@@ -511,8 +511,8 @@ a:visited {
 .post-list {
   padding: 0;
   margin: 0;
-  padding-top: var(--step-0);
   position: relative;
+  list-style: none;
 }
 .post-list__title {
   font-size: var(--step-1);
@@ -520,6 +520,11 @@ a:visited {
 }
 .post-list__title a {
   text-decoration: none;
+}
+.post-list__title--year {
+  font-size: var(--step-2);
+  color: var(--color-light);
+  margin-bottom: 0;
 }
 .post-list__item {
   position: relative;
@@ -530,6 +535,12 @@ a:visited {
   gap: var(--step--2) var(--step--1);
   grid-auto-rows: auto;
   margin-bottom: var(--step--2);
+}
+.post-list__item--year {
+  background-color: var(--color-dark);
+  padding: var(--step-0);
+  margin-bottom: var(--step-0);
+  text-align: end;
 }
 .post-list__item--orange::before {
   background-image: linear-gradient(to right, var(--color-light), var(--color-orange) 25%, var(--color-orange) 75%, var(--color-light) 100%);
@@ -662,6 +673,10 @@ a:visited {
 }
 .site-head__title > * {
   position: relative;
+}
+.site-head__title--extra {
+  padding-top: var(--step-2);
+  padding-bottom: var(--step-2);
 }
 .site-head__title--first {
   grid-column: 1/5;

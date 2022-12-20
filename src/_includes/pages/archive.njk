@@ -1,24 +1,15 @@
 {% extends 'pages/base.njk' %}
 {%- from 'layouts/post-list/macro.njk' import postList -%}
-{% set postListItems = pagination.items %}
+{% set postListItems = collections.posts %}
 
-{% block header %}
-{{ siteHead({
-    title: title,
-    siteName: meta.siteName,
-    active: page.url,
-    items: collections.pages,
-    pagination: pagination
-}) }}
-{% endblock %}
 {% block content %}
 <main id="main-content" tabindex="-1">
-    <section class="content container flow">
-        {{ content | safe }}
+    <section class="content container flow" style="padding-top: 0;">
         {% if postListItems.length %}
         {{
             postList({
-                items: postListItems
+                items: postListItems,
+                displayYears: true
             })
         }}
         {% endif %}
