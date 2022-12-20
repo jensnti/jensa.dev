@@ -1,5 +1,5 @@
 {%- from '../nav/macro.njk' import nav -%}
-{% set colors = ["orange", "red", "blue", "yellow", "magenta", "green", "cyan"] %}
+{% set c = "" %}
 <header class="site-head">
     <div class="site-head__inner container">
         {{ nav({
@@ -8,19 +8,15 @@
             items: props.items
         }) }}
         <div class="site-grid">
-            {% set header = props.title.split(' ') %}
-            <h1 class="site-head__title {{ colors | random }}">
-                {% for word in header %}
-                    {% if loop.index == 1 %}
-                        <span class="site-head__title--first">{{ word }}</span>
-                    {% elif loop.index == header.length %}
-                        <span class="site-head__title--last">{{ word }}</span>
-                    {% else %}
-                        {{ word }}
-                    {% endif %}
-                {% endfor %}
-            </h1>
-            <!-- <h1 class="site-grid__title {{ colors | random }}">{{ props.title | linebreak }}</h1> -->
+            {% set heading = props.title | splitHeading %}
+            <h1 class="site-head__title">
+                {% if heading[0] %}
+                    <span class="site-head__title--first {{ c | randomColor }}">{{ heading[0] }}</span>
+                {% endif %}
+                <span class="site-head__title--mid">{{ heading[1] }}</span>
+                {% if heading[2] %}
+                    <span class="site-head__title--last {{ c | randomColor }}">{{ heading[2] }}</span>
+                {% endif %}
             {% if props.category %}
                 <h2 class="site-head__category">{{ props.category }}</h2>
             {% endif %}
@@ -28,7 +24,7 @@
                 <ul class="site-head__tags">
                     {% for tag in props.tags | sort %}
                         <li class="tag">
-                            <a class="{{ colors | random }}" href="/tagg/{{ tag | slugify }}">
+                            <a class="{{ c | randomColor }}" href="/tagg/{{ tag | slugify }}">
                                 {{ tag }}
                             </a>
                         </li>

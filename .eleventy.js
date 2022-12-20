@@ -106,6 +106,58 @@ const filterTagList = (tags) => {
     );
 };
 
+const randomColor = () => {
+    const colors = [
+        'orange',
+        'red',
+        'blue',
+        'yellow',
+        'magenta',
+        'green',
+        'cyan',
+    ];
+    return colors[Math.floor(Math.random() * colors.length)];
+};
+
+const splitHeading = (str) => {
+    let arr = [];
+    let first = '';
+    let middle = '';
+    let last = '';
+    if (str.includes(',')) {
+        arr = str.split(',');
+        first = arr.shift() + ',';
+        if (arr[0] !== undefined) {
+            let temp = arr[0].split(' ');
+            for (let i = 0; i < temp.length; i++) {
+                if (i !== temp.length - 1 && temp.length > 1) {
+                    middle += middle + ' ' + temp[i];
+                } else {
+                    last = temp[i];
+                }
+            }
+        }
+    } else {
+        arr = str.split(' ');
+        first = arr.shift();
+        for (let i = 0; i < arr.length; i++) {
+            if (i !== arr.length - 1 && arr.length > 1) {
+                middle = middle + ' ' + arr[i];
+            } else {
+                last = arr[i];
+            }
+        }
+    }
+    if (last.length <= 4) {
+        middle += ' ' + last;
+        last = '';
+    }
+    if (middle.length < 1) {
+        middle = last;
+        last = '';
+    }
+    return [first, middle, last];
+};
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(rssPlugin);
     eleventyConfig.addPlugin(syntaxHighlight);
@@ -124,6 +176,8 @@ module.exports = function (eleventyConfig) {
         return demos.find((demo) => demo.data.title === title);
     });
 
+    eleventyConfig.addFilter('randomColor', randomColor);
+    eleventyConfig.addFilter('splitHeading', splitHeading);
     eleventyConfig.addFilter('tagCountCss', tagCountCss);
     eleventyConfig.addFilter('readableDate', readableDate);
     eleventyConfig.addFilter('frontDate', frontDate);
