@@ -8,12 +8,24 @@
             items: props.items
         }) }}
         <div class="site-grid">
-            <h1 class="site-grid__title {{ colors | random }}">{{ props.title | linebreak }}</h1>
+            {% set header = props.title.split(' ') %}
+            <h1 class="site-head__title {{ colors | random }}">
+                {% for word in header %}
+                    {% if loop.index == 1 %}
+                        <span class="site-head__title--first">{{ word }}</span>
+                    {% elif loop.index == header.length %}
+                        <span class="site-head__title--last">{{ word }}</span>
+                    {% else %}
+                        {{ word }}
+                    {% endif %}
+                {% endfor %}
+            </h1>
+            <!-- <h1 class="site-grid__title {{ colors | random }}">{{ props.title | linebreak }}</h1> -->
             {% if props.category %}
-                <h2 class="site-grid__category">{{ props.category }}</h2>
+                <h2 class="site-head__category">{{ props.category }}</h2>
             {% endif %}
             {% if props.tags %}
-                <ul class="site-grid__tags site-head__tags">
+                <ul class="site-head__tags">
                     {% for tag in props.tags | sort %}
                         <li class="tag">
                             <a class="{{ colors | random }}" href="/tagg/{{ tag | slugify }}">
@@ -24,7 +36,7 @@
                 </ul>
             {% endif %}
             {% if props.link %}
-            <ul class="site-grid__tags site-head__tags">
+            <ul class="site-head__tags">
                 <li class="tag">
                     <a href="{{ props.link[1] }}">
                         {{ props.link[0] }}
