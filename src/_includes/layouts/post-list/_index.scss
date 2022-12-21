@@ -45,37 +45,42 @@
             text-align: end;
         }
 
-        &--orange {
-            @include lines(orange);
-        }
-        &--red {
-            @include lines(red);
-        }
-        &--yellow {
-            @include lines(yellow);
-        }
-        &--magenta {
-            @include lines(magenta);
-        }
-        &--blue {
-            @include lines(blue);
-        }
-        &--green {
-            @include lines(green);
-        }
+        // &--orange {
+        //     @include lines(orange);
+        // }
+        // &--red {
+        //     @include lines(red);
+        // }
+        // &--yellow {
+        //     @include lines(yellow);
+        // }
+        // &--magenta {
+        //     @include lines(magenta);
+        // }
+        // &--blue {
+        //     @include lines(blue);
+        // }
+        // &--green {
+        //     @include lines(green);
+        // }
 
-        &--cyan {
-            @include lines(cyan);
-        }
+        // &--cyan {
+        //     @include lines(cyan);
+        // }
 
         &::before {
             content: '';
             position: absolute;
             left: 0;
-            bottom: 20px;
-            height: 8px;
+            bottom: 10px;
+            height: 1px;
             width: 100%;
             z-index: -1;
+            background-image: linear-gradient(
+                to right,
+                var(--color-light),
+                var(--color-dark) 100%
+            );
             background-size: 200% 100%;
             background-position: -100%;
             transition: all 0.3s ease-in-out;

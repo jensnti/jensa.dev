@@ -542,35 +542,15 @@ a:visited {
   margin-bottom: var(--step-0);
   text-align: end;
 }
-.post-list__item--orange::before {
-  background-image: linear-gradient(to right, var(--color-light), var(--color-orange) 25%, var(--color-orange) 75%, var(--color-light) 100%);
-}
-.post-list__item--red::before {
-  background-image: linear-gradient(to right, var(--color-light), var(--color-red) 25%, var(--color-red) 75%, var(--color-light) 100%);
-}
-.post-list__item--yellow::before {
-  background-image: linear-gradient(to right, var(--color-light), var(--color-yellow) 25%, var(--color-yellow) 75%, var(--color-light) 100%);
-}
-.post-list__item--magenta::before {
-  background-image: linear-gradient(to right, var(--color-light), var(--color-magenta) 25%, var(--color-magenta) 75%, var(--color-light) 100%);
-}
-.post-list__item--blue::before {
-  background-image: linear-gradient(to right, var(--color-light), var(--color-blue) 25%, var(--color-blue) 75%, var(--color-light) 100%);
-}
-.post-list__item--green::before {
-  background-image: linear-gradient(to right, var(--color-light), var(--color-green) 25%, var(--color-green) 75%, var(--color-light) 100%);
-}
-.post-list__item--cyan::before {
-  background-image: linear-gradient(to right, var(--color-light), var(--color-cyan) 25%, var(--color-cyan) 75%, var(--color-light) 100%);
-}
 .post-list__item::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 20px;
-  height: 8px;
+  bottom: 10px;
+  height: 1px;
   width: 100%;
   z-index: -1;
+  background-image: linear-gradient(to right, var(--color-light), var(--color-dark) 100%);
   background-size: 200% 100%;
   background-position: -100%;
   transition: all 0.3s ease-in-out;
@@ -928,6 +908,7 @@ a:visited {
 body {
   background-color: var(--color-light);
   color: var(--color-dark);
+  overflow-x: hidden;
 }
 
 [id] {
