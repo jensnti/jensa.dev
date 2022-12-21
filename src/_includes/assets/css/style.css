@@ -630,7 +630,7 @@ a:visited {
 }
 .site-head__inner {
   display: grid;
-  grid-template-areas: "top" "stack";
+  grid-template-areas: "top" "stack" "extra";
 }
 .site-head__inner > .nav {
   grid-area: top;
@@ -744,8 +744,15 @@ a:visited {
   }
 }
 .site-head__pagination {
+  position: relative;
   z-index: 20;
   grid-area: stack;
+  place-self: end;
+}
+.site-head__content {
+  position: relative;
+  z-index: 20;
+  grid-area: extra;
   place-self: end;
 }
 

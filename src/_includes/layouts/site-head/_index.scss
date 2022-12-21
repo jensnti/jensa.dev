@@ -8,7 +8,8 @@
         display: grid;
         grid-template-areas:
             'top'
-            'stack';
+            'stack'
+            'extra';
         > .nav {
             grid-area: top;
         }
@@ -108,8 +109,15 @@
         }
     }
     &__pagination {
+        position: relative;
         z-index: 20;
         grid-area: stack;
+        place-self: end;
+    }
+    &__content {
+        position: relative;
+        z-index: 20;
+        grid-area: extra;
         place-self: end;
     }
 }

@@ -35,5 +35,10 @@
             {% endif %}
         </aside>
         {% endif %}
+        {% if props.year %}
+        <div class="site-head__content">
+            <h2 id="{{ props.year }}" class="post-list__title--year">{{ props.year }}</h2>
+        </div>
+        {% endif %}
     </div>
 </header>

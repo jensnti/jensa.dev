@@ -1,5 +1,5 @@
 {% set colors = ["orange", "red", "blue", "yellow", "magenta", "green", "cyan"] %}
-{% set years = [] %}
+{% set years = props.displayYears %}
 <ol class="post-list {{ 'site-grid__full' if not props.displayYears }}">
     {% for item in props.items %}
     {% if props.displayYears %}

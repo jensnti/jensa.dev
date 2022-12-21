@@ -2,14 +2,27 @@
 {%- from 'layouts/post-list/macro.njk' import postList -%}
 {% set postListItems = collections.posts %}
 
+{% set year = postListItems[0].date | yearString %}
+{% set years = [year] %}
+
+{% block header %}
+{{ siteHead({
+    title: title,
+    siteName: meta.siteName,
+    active: page.url,
+    items: collections.pages,
+    year: year
+}) }}
+{% endblock %}
+
 {% block content %}
 <main id="main-content" tabindex="-1">
-    <section class="content container flow" style="padding-top: 0;">
+    <section class="content container flow">
         {% if postListItems.length %}
         {{
             postList({
                 items: postListItems,
-                displayYears: true
+                displayYears: years
             })
         }}
         {% endif %}
