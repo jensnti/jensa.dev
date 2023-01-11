@@ -45,29 +45,6 @@
             text-align: end;
         }
 
-        // &--orange {
-        //     @include lines(orange);
-        // }
-        // &--red {
-        //     @include lines(red);
-        // }
-        // &--yellow {
-        //     @include lines(yellow);
-        // }
-        // &--magenta {
-        //     @include lines(magenta);
-        // }
-        // &--blue {
-        //     @include lines(blue);
-        // }
-        // &--green {
-        //     @include lines(green);
-        // }
-
-        // &--cyan {
-        //     @include lines(cyan);
-        // }
-
         &::before {
             content: '';
             position: absolute;

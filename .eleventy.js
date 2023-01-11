@@ -120,45 +120,6 @@ const randomColor = () => {
     return colors[Math.floor(Math.random() * colors.length)];
 };
 
-const splitHeading = (str) => {
-    let arr = [];
-    let first = '';
-    let middle = '';
-    let last = '';
-    if (str.includes(',')) {
-        arr = str.split(',');
-        first = arr.shift() + ',';
-        if (arr[0] !== undefined) {
-            let temp = arr[0].trim().split(' ');
-            for (let i = 0; i < temp.length; i++) {
-                if (i === temp.length - 1) {
-                    last = temp[i];
-                } else {
-                    middle = middle + ' ' + temp[i];
-                }
-            }
-        }
-    } else {
-        arr = str.split(' ');
-        first = arr.shift();
-        for (let i = 0; i < arr.length; i++) {
-            if (i === arr.length - 1) {
-                last = arr[i];
-            } else {
-                middle = middle + ' ' + arr[i];
-            }
-        }
-    }
-    if (last.length <= 3) {
-        middle += ' ' + last;
-        last = '';
-    }
-    if (middle.length < 1) {
-        middle = last;
-        last = '';
-    }
-    return [first, middle, last];
-};
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(rssPlugin);
     eleventyConfig.addPlugin(syntaxHighlight);
@@ -178,7 +139,6 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addFilter('randomColor', randomColor);
-    eleventyConfig.addFilter('splitHeading', splitHeading);
     eleventyConfig.addFilter('tagCountCss', tagCountCss);
     eleventyConfig.addFilter('readableDate', readableDate);
     eleventyConfig.addFilter('frontDate', frontDate);

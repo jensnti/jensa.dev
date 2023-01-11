@@ -7,15 +7,8 @@
         active: props.active,
         items: props.items
         }) }}
-        {% set heading = props.title | splitHeading %}
-        <h1 class="site-head__title {{ 'site-head__title--extra' if props.active.includes('om') or props.active.includes('projekt') }}">
-            {% if heading[0] %}
-            <span class="site-head__title--first {{ c | randomColor }}">{{ heading[0] }}</span>
-            {% endif %}
-            <span class="site-head__title--mid">{{ heading[1] }}</span>
-            {% if heading[2] %}
-            <span class="site-head__title--last {{ c | randomColor }}">{{ heading[2] }}</span>
-            {% endif %}
+        <h1 class="site-head__title {{ c | randomColor }} {{ 'site-head__title--extra' if props.active.includes('om') or props.active.includes('projekt') }}">
+            {{ props.title }} 
         </h1>
         {% if props.category or props.tags %}
         <aside class="site-head__meta site-grid">
