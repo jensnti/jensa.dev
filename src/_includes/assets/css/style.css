@@ -649,6 +649,7 @@ a:visited {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(3, min-content);
   width: 100%;
+  word-break: initial;
   z-index: 1;
 }
 .site-head__title > * {

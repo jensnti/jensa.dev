@@ -41,14 +41,16 @@
 
     &__title {
         position: relative;
+
         display: grid;
         grid-column: span 5 / -1;
         grid-row: 1;
-
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(3, min-content);
 
         width: 100%;
+
+        word-break: initial;
 
         z-index: 1;
 
