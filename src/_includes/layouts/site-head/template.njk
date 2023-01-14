@@ -7,11 +7,11 @@
         active: props.active,
         items: props.items
         }) }}
-        <h1 class="site-head__title {{ c | randomColor }} {{ 'site-head__title--extra' if props.active.includes('om') or props.active.includes('projekt') }}">
+        <h1 class="site-head__title {{ c | randomColor }}">
             {{ props.title }} 
         </h1>
         {% if props.category or props.tags %}
-        <aside class="site-head__meta site-grid">
+        <aside class="site-head__meta">
             {% if props.category %}
             <h2 class="site-head__category">{{ props.category }}</h2>
             {% endif %}
@@ -29,9 +29,7 @@
         </aside>
         {% endif %}
         {% if props.year %}
-        <div class="site-head__content">
-            <h2 id="{{ props.year }}" class="post-list__title--year">{{ props.year }}</h2>
-        </div>
+        <h2 id="{{ props.year }}" class="site-head__year post-list__title--year">{{ props.year }}</h2>
         {% endif %}
     </div>
 </header>
