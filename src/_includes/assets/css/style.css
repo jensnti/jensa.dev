@@ -629,7 +629,7 @@ a:visited {
   color: var(--color-light);
 }
 .site-head__inner {
-  grid-template-rows: var(--step-4) auto auto;
+  grid-template-rows: repeat(auto-fit);
   grid-template-columns: auto auto;
   display: grid;
 }
