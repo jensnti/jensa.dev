@@ -65,6 +65,7 @@ const readableDate = (dateObj) => {
     return format(dateObj, 'PPP', { locale: sv });
 };
 
+
 const frontDate = (dateObj) => {
     if (typeof dateObj === 'string') {
         dateObj = parseISO(dateObj);
@@ -106,6 +107,19 @@ const filterTagList = (tags) => {
     );
 };
 
+const randomColor = () => {
+    const colors = [
+        'orange',
+        'red',
+        'blue',
+        'yellow',
+        'magenta',
+        'green',
+        'cyan',
+    ];
+    return colors[Math.floor(Math.random() * colors.length)];
+};
+
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(rssPlugin);
     eleventyConfig.addPlugin(syntaxHighlight);
@@ -124,10 +138,11 @@ module.exports = function (eleventyConfig) {
         return demos.find((demo) => demo.data.title === title);
     });
 
+    eleventyConfig.addFilter('randomColor', randomColor);
     eleventyConfig.addFilter('tagCountCss', tagCountCss);
     eleventyConfig.addFilter('readableDate', readableDate);
     eleventyConfig.addFilter('frontDate', frontDate);
-    eleventyConfig.addFilter('yearString', frontDate);
+    eleventyConfig.addFilter('yearString', yearString);
     eleventyConfig.addFilter('htmlDateString', htmlDateString);
     eleventyConfig.addFilter('linebreak', (str) => str.split(' ').join('\n'));
 

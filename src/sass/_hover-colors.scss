@@ -22,6 +22,30 @@
     }
 }
 
+@mixin border-active {
+    &[class*=orange] {
+        border-bottom: 2px solid var(--color-orange);
+    }
+    &[class*=red] {
+        border-bottom: 2px solid var(--color-red);
+    }
+    &[class*=yellow] {
+        border-bottom: 2px solid var(--color-yellow);
+    }
+    &[class*=magenta] {
+        border-bottom: 2px solid var(--color-magenta);
+    }
+    &[class*=blue] {
+        border-bottom: 2px solid var(--color-blue);
+    }
+    &[class*=green] {
+        border-bottom: 2px solid var(--color-green);
+    }
+    &[class*=cyan] {
+        border-bottom: 2px solid var(--color-cyan);
+    }
+}
+
 @mixin text {
     &:hover[class*=orange] {
        color: var(--color-orange);

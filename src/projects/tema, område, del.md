@@ -1,5 +1,6 @@
 ---
 title: Tema, område, del
+layout: pages/project.njk
 project:
     start: 2021-05-31
     end: ?

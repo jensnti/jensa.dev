@@ -1,5 +1,6 @@
 ---
 title: Journal
+layout: pages/project.njk
 project:
     start: 2021-05-03
     end: ?

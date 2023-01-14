@@ -1,13 +1,14 @@
+{% set c = "" %}
 {% if pagination.href.next or pagination.href.previous %}
-    <nav class="pagination" aria-label="Pagination links">
+    <nav class="site-head__pagination pagination" aria-label="Pagination links">
         {% if pagination.href.previous %}
-        <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
+        <a class="{{ c | randomColor }}" href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
             {% svg "chevron_left_FILL0_wght400_GRAD0_opsz24.svg" %}
             <span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
         </a>
         {% endif %}
         {% if pagination.href.next %}
-        <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
+        <a class="{{ c | randomColor }}" href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
             <span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
             {% svg "chevron_right_FILL0_wght400_GRAD0_opsz24.svg" %}
         </a>

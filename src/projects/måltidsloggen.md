@@ -1,5 +1,6 @@
 ---
 title: Måltidsloggen
+layout: pages/project.njk
 project:
     start: 2021-02-13
     end: ?

@@ -13,14 +13,19 @@
 .post-list {
     padding: 0;
     margin: 0;
-    padding-top: var(--step-0);
     position: relative;
+    list-style: none;
 
     &__title {
         font-size: var(--step-1);
         margin-bottom: 0;
         a {
             text-decoration: none;
+        }
+        &--year {
+            font-size: var(--step-2);
+            color: var(--color-light);
+            margin-bottom: 0;
         }
     }
     &__item {
@@ -33,37 +38,26 @@
         grid-auto-rows: auto;
         margin-bottom: var(--step--2);
 
-        &--orange {
-            @include lines(orange);
-        }
-        &--red {
-            @include lines(red);
-        }
-        &--yellow {
-            @include lines(yellow);
-        }
-        &--magenta {
-            @include lines(magenta);
-        }
-        &--blue {
-            @include lines(blue);
-        }
-        &--green {
-            @include lines(green);
-        }
-
-        &--cyan {
-            @include lines(cyan);
+        &--year {
+            background-color: var(--color-dark);
+            padding: var(--step-0);
+            margin-bottom: var(--step-0);
+            text-align: end;
         }
 
         &::before {
             content: '';
             position: absolute;
             left: 0;
-            bottom: 20px;
-            height: 8px;
+            bottom: 10px;
+            height: 1px;
             width: 100%;
             z-index: -1;
+            background-image: linear-gradient(
+                to right,
+                var(--color-light),
+                var(--color-dark) 100%
+            );
             background-size: 200% 100%;
             background-position: -100%;
             transition: all 0.3s ease-in-out;

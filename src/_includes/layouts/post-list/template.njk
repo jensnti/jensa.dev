@@ -1,6 +1,18 @@
 {% set colors = ["orange", "red", "blue", "yellow", "magenta", "green", "cyan"] %}
-<ol class="post-list site-grid__full">
+{% set years = props.displayYears %}
+<ol class="post-list {{ 'site-grid__full' if not props.displayYears }}">
     {% for item in props.items %}
+    {% if props.displayYears %}
+        {% set year = item.date | yearString %}
+        {% if years.indexOf(year) === -1 %}
+            {% set years = years.concat(year) %}
+            <li class="post-list__item--year full-bleed">
+                <div class="container">
+                    <h2 id="{{ year }}" class="post-list__title--year">{{ year }}</h2>
+                </div>
+            </li>
+        {% endif %}
+    {% endif %}
     <li class="post-list__item  post-list__item--{{ colors | random }}">
         <div class="post-list__item--category">
             <span>{{ item.data.category | safe }}</span>

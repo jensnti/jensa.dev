@@ -1,11 +1,13 @@
+@use '../../../sass/hover-colors';
 .pagination {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: var(--step-1);
 
-    font-size: var(--step-1);
+    // font-size: var(--step-1);
     text-transform: uppercase;
-    line-height: 1.4;
+    line-height: 1.2;
 
     &>[data-direction=forwards] {
         margin-inline-start: auto;
@@ -14,16 +16,9 @@
         display: flex;
         gap: var(--step--1);
         align-items: center;
-        color: var(--color-grey-300);
-        min-height: var(--step-1);
 
-        &:hover {
-            text-decoration: none;
-            color: var(--color-dark);
-        }
-        &:visted {
-            color: var(--color-grey-300);
-        }
-        svg { transform: scale(2.2);}
+        @include hover-colors.text;
+
+        svg { transform: scale(1.2);}
     }
 }
