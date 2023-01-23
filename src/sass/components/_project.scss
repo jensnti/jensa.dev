@@ -1,0 +1,21 @@
+.project-list {
+    --min: 30ch;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+    grid-gap: var(--step-2);
+    display: grid;
+    padding: 0;
+    margin: 0;
+    margin-top: var(--step-2);
+    list-style: none;
+    &__card {
+        --img-ratio: 3/2;
+        flex-direction: column;
+        // justify-content: space-between;
+        display: flex;
+        > img {
+            aspect-ratio: var(--img-ratio);
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+}

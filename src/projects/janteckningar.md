@@ -1,20 +1,11 @@
 ---
 title: JAnteckningar
 layout: pages/project.njk
-project:
-    start: 2021-06-13
-    end: ?
-    status: Aktivt
-    title: JAnteckningar
-    git: https://github.com/jensnti/jensa.dev
-    url: https://jensa.dev
-    licens: GPL-3.0
-    tech: ["[11ty](https://11ty.dev)", "javascript", "[sass](https://sass-lang.com)"]
-    hosting: "[Netlify](https://netlify.com/)"
-    description: "Personlig webbplats med mina anteckningar och projekt. Innehåller även kursmaterial från mina kurser." 
 templateEngineOverride: njk, md
 tags: ['node', '11ty', 'javascript']
 ---
+
+{% set project = projectsData | getProject(title) %}
 
 ## Vad
 

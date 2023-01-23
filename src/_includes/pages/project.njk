@@ -1,6 +1,9 @@
 {% extends 'pages/base.njk' %}
 
 {% block content %}
+
+{% set project = projectsData | getProject(title) %}
+
 <main id="main-content" tabindex="-1">
     <section class="content container flow">
         {% if project %}

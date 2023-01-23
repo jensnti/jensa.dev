@@ -1,0 +1,72 @@
+[
+    {
+        "title": "JAnteckningar",
+        "start": "2021-06-13",
+        "end": false,
+        "status": "Aktivt",
+        "git": "https://github.com/jensnti/jensa.dev",
+        "url": "https://jensa.dev",
+        "thumb": "ja-thumb.png",
+        "licens": "[GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)",
+        "tech": [
+            "[11ty](https://11ty.dev)",
+            "javascript",
+            "[sass](https://sass-lang.com)"
+        ],
+        "hosting": "[Netlify](https://netlify.com/)",
+        "description": "Personlig webbplats med mina anteckningar och projekt. Innehåller även kursmaterial från mina kurser."
+    },
+    {
+        "title": "Journal",
+        "start": "2021-05-03",
+        "end": false,
+        "status": "Kanske",
+        "git": "https: //github.com/jensnti/journal",
+        "url": "https: //github.com/jensnti/journal/releases/tag/1.3",
+        "thumb": "journal-thumb.png",
+        "licens": "[GPL-3.0](https: //www.gnu.org/licenses/gpl-3.0.en.html)",
+        "tech": [
+            "Python",
+            "i18n"
+        ],
+        "hosting": "N/A",
+        "description": "Ett litet program för att skriva journalanteckningar i terminalen. Programmet frågar vanliga standup frågor och sparar svaren i en fil. Om användaren önskar så kan hen lägga till nya frågor. Programmet är skrivet i Python och använder sig av i18n för att hantera språk (engelska och svenska)."
+    },
+    {
+        "title": "Måltidsloggen",
+        "start": "2021-02-13",
+        "end": "2022",
+        "status": "Tveksam",
+        "url": "https://mat-jensnti.vercel.app",
+        "thumb": "mat-thumb.png",
+        "licens": "[MIT](https://opensource.org/licenses/MIT)",
+        "tech": [
+            "react",
+            "nextjs",
+            "javascript",
+            "sass",
+            "bootstrap",
+            "pgsql",
+            "node",
+            "heroku"
+        ],
+        "hosting": "[Vercel](https://vercel.com/) och [Heroku](https://heroku.com/)",
+        "description": "En webbsida / app för att logga dina måltider. Backend: node.js och pgsql. Frontend: Nextjs."
+    },
+    {
+        "title": "Tema, område, del",
+        "start": "2021-05-31",
+        "end": false,
+        "status": "Aktiv",
+        "url": "https://github.com/jensnti/tod",
+        "thumb": "tod-thumb.png",
+        "licens": "[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)",
+        "tech": [
+            "[11ty](https://11ty.dev)",
+            "javascript",
+            "[sass](https://sass-lang.com)"
+        ],
+        "hosting": "[Netlify](https://netlify.com/)",
+        "description": "En 11ty-starter för att du, jag eller andra ska kunna bygga kurswebbar utifrån testbaserat lärande. Materialet struktureras upp i teman, områden och delar."
+    }
+]

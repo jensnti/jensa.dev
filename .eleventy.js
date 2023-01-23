@@ -145,7 +145,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('yearString', yearString);
     eleventyConfig.addFilter('htmlDateString', htmlDateString);
     eleventyConfig.addFilter('linebreak', (str) => str.split(' ').join('\n'));
-
+    eleventyConfig.addFilter('getProject', (projects, title) => {
+        return projects.find((project) => project.title === title);
+    });
     // Shortcodes
 
     eleventyConfig.addShortcode('year', year);
