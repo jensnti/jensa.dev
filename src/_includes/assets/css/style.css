@@ -392,6 +392,13 @@ a:visited {
   font-weight: 300;
   line-height: 1.5;
 }
+.content__header-time {
+  font-size: var(--step--1);
+  color: var(--color-grey-300);
+}
+.content__header-time > span {
+  display: block;
+}
 
 .nav {
   padding-top: var(--step-0);

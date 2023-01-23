@@ -27,6 +27,12 @@
     <article class="content container flow">
         {% if pagesCheck == false %}
         <header class="content__header flow">
+            <h2 class="content__header-time">
+                Postat: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+                {% if update %}
+                <span class="content__header-time--updated">Uppdaterat: <time datetime="{{ update | htmlDateString }}">{{ update | readableDate }}</time></span>
+                {% endif %}
+            </h2>
             {% if lead %}
             <p class="content__lead">{{ lead | safe }}</p>
             {% endif %}

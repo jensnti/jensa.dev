@@ -193,7 +193,7 @@ module.exports = function (eleventyConfig) {
     );
 
     eleventyConfig.addCollection('resources', (collectionApi) =>
-        collectionApi.getAll().filter((item) => item.data.category === 'resurs')
+        collectionApi.getAll().filter((item) => item.data.category === 'resurser')
     );
 
     eleventyConfig.addCollection('feed', (collectionApi) =>

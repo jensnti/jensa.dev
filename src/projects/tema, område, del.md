@@ -17,7 +17,7 @@ Sidan, eller systemet har en struktur som behöver följas. Kursmaterialet delas
 
 ### Demo
 
-På [tod.jensa.dev](https://tod.jensa.dev) finns ett start-exempel med instruktioner för hur sidan byggs (kan behöva uppdateras).
+På [tod.jensa.dev](https://tod.jensa.dev) finns ett demo med instruktioner för hur sidan byggs (och hur du kan använda den). Det är dock inte helt uppdaterat.
 
 Webbplatser skapade med systemet:
 
@@ -34,4 +34,7 @@ För användaren så fungerar sidan på det stora hela utan javascript, allt mat
 
 ## Status
 
-Väldigt aktiv och sidan för webbutveckling har fått en hel del nytt material. Tod för programmering ligger lite i träda eftersom jag inte undervisar Programmering 1 längre. Det finns dock en tanke att göra om upplägget för programmering och börja med kod som gör något och sedan leda in vägen på variabler osv.
+Väldigt aktiv och sidan för [Webbutveckling](https://webbutveckling.jensa.dev) har fått en hel del nytt material. Problemet är väl ofta det att jag fastnar i att uppdatera systemet snarare än innehållet och när jag väl skriver innehåll hittar jag saker att uppdatera i systemet.
+
+Tod för programmering ligger lite i träda eftersom jag inte undervisar Programmering 1 för tillfället. Det finns dock en tanke att göra om upplägget och börja med kod som gör något och sedan leda in vägen på variabler osv.
+Uppgifterna behöver dock skrivas om för att följa den testbaserade lärandemodellen.

@@ -3,7 +3,7 @@ title: SQL
 date: 2022-05-16
 tags: ['setup', 'sql']
 templateEngineOverride: njk, md
-category: resurs
+category: resurser
 lead: En introduktion till att skriva SQL-frågor.
 draft: true
 ---
