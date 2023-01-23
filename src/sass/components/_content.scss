@@ -28,4 +28,14 @@
         font-weight: 300;
         line-height: 1.5;
     }
+
+    &__header {
+        &-time {
+            font-size: var(--step--1);
+            color: var(--color-grey-300);
+            > span {
+                display: block;
+            }
+        }
+    }
 }

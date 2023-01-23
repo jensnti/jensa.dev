@@ -3,7 +3,7 @@ title: Kom igång med Eleventy
 date: 2022-09-29
 tags: ['webbutveckling', 'setup', '11ty', 'wsl']
 templateEngineOverride: njk, md
-category: resurs
+category: resurser
 lead: Eleventy har blivit en av mina favoritverktyg när det handlar om att skapa webbsidor. Det är ett otroligt bra verktyg för att generera html från markdown tillsammans med massa andra praktiska funktioner. I det här inlägget går jag igenom hur du kommer igång med Eleventy.
 ---
 

@@ -2,7 +2,7 @@
 title: Speedrun, centrerad layout
 date: 2022-10-07
 tags: ['webbutveckling', 'css', 'html']
-category: resurs
+category: resurser
 templateEngineOverride: njk, md
 lead: Basen för majoriteten av alla webbsidor är någon form av centrerad layout med en toppnavigation. Detta är en snabbguide för att komma igång med en sådan layout. Kopiera den, lär dig den och ändra!
 ---
