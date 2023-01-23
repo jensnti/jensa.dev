@@ -8,12 +8,12 @@ order: 3
 
 {% block content %}
 <main id="main-content" tabindex="-1">
-    <section class="content container flow">
+    <section class="content container">
         <p class="content__lead">Länkar och eventuell info om projekt jag har/är delaktig i.</p>
         {% if projectsData %}
         <ul class="project-list">
         {% for project in projectsData %}
-            <li class="project-list__card flow">
+            <li class="project-list__card">
                 {% if project.thumb %}
                 <img
                     src="/assets/thumbs/{{ project.thumb }}"

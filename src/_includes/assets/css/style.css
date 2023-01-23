@@ -906,6 +906,10 @@ a:visited {
   aspect-ratio: var(--img-ratio);
   object-fit: cover;
   width: 100%;
+  margin-bottom: var(--step-0);
+}
+.project-list__card > a {
+  margin-top: var(--step--2);
 }
 
 body {
