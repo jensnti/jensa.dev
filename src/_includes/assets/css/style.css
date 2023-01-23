@@ -323,7 +323,7 @@ blockquote {
   font-size: var(--step-0);
   font-weight: var(--font-weight-medium);
   color: var(--color-light);
-  background-color: var(--color-red);
+  background-color: var(--color-cyan);
 }
 blockquote > p::before {
   content: "“";
@@ -379,6 +379,13 @@ a:visited {
 }
 .content__info-card span {
   font-weight: var(--font-weight-medium);
+}
+@media (min-width: 768px) {
+  .content__info--float {
+    float: right;
+    margin: var(--step-0);
+    max-width: 20ch;
+  }
 }
 .content__lead {
   font-size: var(--step-0);

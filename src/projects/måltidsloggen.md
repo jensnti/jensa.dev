@@ -13,6 +13,8 @@ tags: ['node', 'nextjs', 'sql']
 
 En webbsida / app för att logga dina måltider. Backend med node.js och pgsql. Frontend med Nextjs.
 
+Backend är en microservice som hanterar auth och sparar data. Backend finns på [github/jensnti/mat](https://github.com/jensnti/mat).
+
 ## Varför
 
 > Relationships are just two people constantly asking eachother what they want to eat, until one of them dies

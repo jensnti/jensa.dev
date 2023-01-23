@@ -23,7 +23,9 @@ Med den bästa stacken, {{ project.tech.join(", ") }} och hostad med {{ project.
 
 Sidan rullar på som du ser just nu. Jag bytte domän till .dev ganska nyligen. Snart är det väl dags för en redesign igen eftersom det snart är ett nytt år...
 
-## Screeshots
+## Skärmdumpar
+
+Här kommer lite skärmdumpar från olika versioner av sidan.
 
 ### Version 1 - 2021
 
