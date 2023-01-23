@@ -15,8 +15,6 @@ tags: ['python', 'i18n']
 
 Programmet är inspirerat av [JournalBook](https://github.com/trys/JournalBook).
 
-
-
 ## Hur
 
 Programmet är skrivet med [Python](https://www.python.org/), [i18n](https://github.com/danhper/python-i18n) för översättning och [pyinstaller](https://pyinstaller.org/en/stable/) för att skapa en körbar fil.
@@ -25,9 +23,9 @@ Programmet sparar journalerna i JSON format.
 
 ## Status
 
-Hela projektet gick ut på att jag ville skriva ett program som gjorde något mer än absoluta grunderna och packetera ihop det. Detta för att helt enkelt göra lite mer i ett språk som jag annars använder för lite.
+Hela projektet gick ut på att jag ville skriva ett program med Python som gjorde något mer än absoluta grunderna och packetera ihop det. Detta för att helt enkelt göra lite mer i ett språk som jag annars använder för lite.
 
-Jag har använt det själv, men saknar möjligheten att spara i molnet, så hela grejen är lite tveksam.
+Jag har försökt använda programmet själv och det går rätt bra, är trevligt när en kommer ihåg att göra det. Men programmet saknar en del funktionalitet, som att spara i molnet, så hela grejen är lite tveksam.
 
 ## Länkar
 

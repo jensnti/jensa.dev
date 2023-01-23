@@ -9,7 +9,7 @@ tags: ['node', '11ty', 'javascript']
 
 ## Vad
 
-Den här webbsidan!
+Den här webbsidan, ett pågående projekt.
 
 {{ project.description }}
 
@@ -17,15 +17,15 @@ Den här projektsidan är tänkt att husera en dokumentation över de designer d
 
 ## Hur
 
-Med den bästa stacken, {{ project.tech.join(", ") }} och hostad med {{ project.hosting }}.
+Med den bästa stacken, {{ project.tech.join(", ") }} och hostad med {{ project.hosting }}. Jag tycker att [Eleventy](https://11ty.dev) är otroligt trevligt att arbeta med och jag gillar den teknik som det använder. Det är enkelt att komma igång med och det är enkelt att skala upp. Det är också enkelt att dela kod mellan olika sidor och det är enkelt att dela kod mellan olika projekt.
 
 ## Status
 
-Sidan rullar på som du ser just nu. Jag bytte domän till .dev ganska nyligen. Snart är det väl dags för en redesign igen eftersom det snart är ett nytt år...
+Sidan rullar på som du ser just nu. Jag bytte domän till .dev ganska nyligen. ~~Snart är det väl dags för en redesign igen eftersom det snart är ett nytt år...~~
 
 ## Skärmdumpar
 
-Här kommer lite skärmdumpar från olika versioner av sidan.
+Som dokumentation av de olika designerna så kommer här skärmdumpar med lite tankar/information om dem.
 
 ### Version 1 - 2021
 
