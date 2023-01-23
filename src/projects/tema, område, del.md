@@ -1,19 +1,11 @@
 ---
 title: Tema, område, del
 layout: pages/project.njk
-project:
-    start: 2021-05-31
-    end: ?
-    status: Aktiv
-    title: TOD
-    url: https://github.com/jensnti/tod
-    licens: CC BY-NC 4.0
-    tech: ["[11ty](https://11ty.dev)", "javascript", "[sass](https://sass-lang.com)"]
-    hosting: "[Netlify](https://netlify.com/)"
-    description: "En 11ty-starter för att du, jag eller andra ska kunna bygga kurswebbar utifrån testbaserat lärande. Materialet struktureras upp i teman, områden och delar." 
 templateEngineOverride: njk, md
 tags: ['node', '11ty', 'javascript']
 ---
+
+{% set project = projectsData | getProject(title) %}
 
 {% image "./src/images/toddump-1.png", "Skärmdump av sidan programmering skapad med TOD",  "Skärmdump av sidan programmering skapad med TOD" %}
 

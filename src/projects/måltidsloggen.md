@@ -1,25 +1,19 @@
 ---
 title: Måltidsloggen
 layout: pages/project.njk
-project:
-    start: 2021-02-13
-    end: ?
-    status: Tveksam
-    title: Måltidsloggen
-    url: https://mat-jensnti.vercel.app
-    licens: MIT
-    tech: ['react', 'nextjs', 'javascript', 'sass', 'bootstrap', 'pgsql', 'node', 'heroku']
-    hosting: "[Vercel](https://vercel.com/) och [Heroku](https://heroku.com/)"
-    description: "En webbsida / app för att logga dina måltider. Backend: node.js och pgsql. Frontend: Nextjs."
 templateEngineOverride: njk, md
 tags: ['node', 'nextjs', 'sql']
 ---
+
+{% set project = projectsData | getProject(title) %}
 
 {% image "./src/images/matdump-1.png", "Skärmdump av Måltidsloggen",  "Skärmdump av Måltidsloggen" %}
 
 ## Vad
 
 En webbsida / app för att logga dina måltider. Backend med node.js och pgsql. Frontend med Nextjs.
+
+Backend är en microservice som hanterar auth och sparar data. Backend finns på [github/jensnti/mat](https://github.com/jensnti/mat).
 
 ## Varför
 

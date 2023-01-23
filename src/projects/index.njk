@@ -8,19 +8,28 @@ order: 3
 
 {% block content %}
 <main id="main-content" tabindex="-1">
-    <section class="content container flow">
+    <section class="content container">
         <p class="content__lead">Länkar och eventuell info om projekt jag har/är delaktig i.</p>
-        {% set projects = collections.projects %}
-        {% if projects.length %}
+        {% if projectsData %}
         <ul class="project-list">
-            {% for project in projects %}
-                <li><a href="{{ project.url }}">
-                    {{ project.data.title }}
+        {% for project in projectsData %}
+            <li class="project-list__card">
+                {% if project.thumb %}
+                <img
+                    src="/assets/thumbs/{{ project.thumb }}"
+                    alt="Bild för projektet {{ project.title }}"/>
+                {% endif %}
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                <a href="{{ project.title | slug }}">
+                    {{ project.title }}
                 </a>
             </li>
-            {% endfor %}
+        {% endfor %}
         </ul>
         {% endif %}
     </section>
 </main>
 {% endblock %}
+
+
