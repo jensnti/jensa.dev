@@ -320,6 +320,7 @@ blockquote {
   padding: var(--step--2);
   margin-left: var(--step--2);
   margin-right: var(--step--2);
+  width: fit-content;
   font-size: var(--step-0);
   font-weight: var(--font-weight-medium);
   color: var(--color-light);
