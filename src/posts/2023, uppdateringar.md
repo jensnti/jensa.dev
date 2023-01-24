@@ -1,7 +1,7 @@
 ---
 title: 2023, uppdateringar
 date: 2023-01-24
-lead: "Nytt år, nya möjligheter? Jag har fixat lite med den här sida i vanliga ordning och pysslar på med både arbete och projekt."
+lead: "Nytt år, nya möjligheter? Jag har fixat lite med den här sidan i vanlig ordning och pysslar på med både arbete och projekt."
 tags: [ 'reflektion', 'uppdatering', 'lighthouse']
 category: anteckning
 ---
