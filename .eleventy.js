@@ -12,7 +12,6 @@ const htmlmin = require('html-minifier');
 const eleventyPluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
 
 // filters and shortcodes
-
 const getSvgContent = (file, classList) => {
     let relativeFilePath = `./src/_includes/assets/icons/${file}`;
     let data = fs.readFileSync(relativeFilePath, (err, contents) => {
@@ -33,6 +32,7 @@ const getSvgContent = (file, classList) => {
 const year = () => {
     return `${new Date().getFullYear()}`;
 };
+
 const imageShortcode = async (
     src,
     alt,
@@ -65,18 +65,15 @@ const readableDate = (dateObj) => {
     return format(dateObj, 'PPP', { locale: sv });
 };
 
-
 const frontDate = (dateObj) => {
     if (typeof dateObj === 'string') {
         dateObj = parseISO(dateObj);
     }
     return format(dateObj, 'MMM yyyy', { locale: sv });
-    // let arr = temp.split(' ');
-    // return `<span>${arr[0]}</span><span> ${arr[1]} ${arr[2]}</span>`;
 };
 
-// https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
 const htmlDateString = (dateObj) => {
+    // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
     if (typeof dateObj === 'string') {
         dateObj = parseISO(dateObj);
     }
@@ -121,6 +118,10 @@ const randomColor = () => {
 };
 
 module.exports = function (eleventyConfig) {
+    eleventyConfig.addWatchTarget('./src/sass/');
+    eleventyConfig.addWatchTarget('./src/js/');
+
+    // Plugins
     eleventyConfig.addPlugin(rssPlugin);
     eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -129,11 +130,7 @@ module.exports = function (eleventyConfig) {
         tags: ['h2', 'h3', 'h4'],
     });
 
-    eleventyConfig.addWatchTarget('./src/sass/');
-    eleventyConfig.addWatchTarget('./src/js/');
-
     // Filters
-
     eleventyConfig.addFilter('getDemo', function (demos, title) {
         return demos.find((demo) => demo.data.title === title);
     });
@@ -148,14 +145,28 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('getProject', (projects, title) => {
         return projects.find((project) => project.title === title);
     });
-    // Shortcodes
+    eleventyConfig.addFilter('filterTagList', filterTagList);
+    eleventyConfig.addFilter('tagFilter', (posts, tag) => {
+        console.log()
+        return posts.filter((item) => item.data.tags.includes(tag));
+        // return posts.find((item) => item.data.tags.filter((t) => t === tag));
+    });
+    eleventyConfig.addFilter('randomItem', (arr) => {
+        arr.sort(() => {
+            return 0.5 - Math.random();
+        });
+        return arr.slice(0, 1);
+    });
+    eleventyConfig.addFilter('limit', function (arr, limit) {
+        return arr.slice(0, limit);
+    });
 
+    // Shortcodes
     eleventyConfig.addShortcode('year', year);
     eleventyConfig.addShortcode('svg', getSvgContent);
     eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
-    eleventyConfig.addFilter('filterTagList', filterTagList);
-
+    // collections
     // Create an array of all tags
     eleventyConfig.addCollection('tagList', (collection) => {
         const tagSet = new Set();
@@ -164,8 +175,6 @@ module.exports = function (eleventyConfig) {
         });
         return filterTagList([...tagSet]);
     });
-
-    // collections
 
     // Get only content that matches a tag
     eleventyConfig.addCollection('demos', function (collectionApi) {
@@ -185,16 +194,19 @@ module.exports = function (eleventyConfig) {
     );
 
     eleventyConfig.addCollection('posts', (collectionApi) =>
-        collectionApi.getFilteredByGlob('src/posts/*.md').reverse()
+        collectionApi.getFilteredByGlob('src/posts/*.md')
     );
 
     eleventyConfig.addCollection('projects', (collectionApi) =>
-        collectionApi.getFilteredByGlob('src/projects/*.md').reverse()
+        collectionApi.getFilteredByGlob('src/projects/*.md')
     );
 
-    eleventyConfig.addCollection('resources', (collectionApi) =>
-        collectionApi.getAll().filter((item) => item.data.category === 'resurser')
-    );
+    eleventyConfig.addCollection('resources', (collectionApi) => [
+        ...collectionApi
+            .getAll()
+            .filter((item) => item.data.category === 'resurser')
+            .sort((a, b) => b.date - a.date),
+    ]);
 
     eleventyConfig.addCollection('feed', (collectionApi) =>
         [...collectionApi.getFilteredByGlob('src/posts/*.md')]
@@ -272,6 +284,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/assets/');
 
     return {
+        templateForms: ['njk', 'md'],
+        markdownTemplateEngine: 'njk',
         dir: {
             input: 'src',
             output: 'public',

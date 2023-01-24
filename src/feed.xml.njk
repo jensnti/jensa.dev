@@ -8,14 +8,14 @@ permalink: '/feed.xml'
     <link href="{{ meta.url }}{{ permalink }}" rel="self"/>
     <link href="{{ meta.url }}/"/>
     {% if collections.posts | length %}
-    <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+    <updated>{{ collections.posts | reverse |rssLastUpdatedDate }}</updated>
     {% endif %}
     <id>{{ meta.url }}</id>
     <author>
         <name>{{ meta.author.name }}</name>
         <email>{{ meta.author.email }}</email>
     </author>
-    {% for post in collections.posts %}
+    {% for post in collections.posts | reverse %}
     {% set absolutePostUrl %}{{ meta.url }}{{ post.url | url }}{% endset %}
     <entry>
         <title>{{ post.data.title }}</title>

@@ -1,6 +1,6 @@
 {% extends 'pages/base.njk' %}
 {%- from 'layouts/post-list/macro.njk' import postList -%}
-{% set postListItems = collections.posts %}
+{% set postListItems = collections.posts | reverse %}
 
 {% set year = postListItems[0].date | yearString %}
 {% set years = [year] %}
