@@ -2,7 +2,6 @@
 title: Eleventy och sass
 date: 2022-10-07
 tags: ['webbutveckling', '11ty', 'css', 'sass']
-templateEngineOverride: njk, md
 category: resurser
 lead: Hur du kan använda sass i Eleventy. Sass står för "Syntactically Awesome Style Sheets". Läs vidare för att få en grundläggande introduktion.
 ---
