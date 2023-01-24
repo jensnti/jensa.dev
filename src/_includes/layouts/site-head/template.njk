@@ -14,7 +14,11 @@
         <aside class="site-head__meta">
             {% if props.category %}
             <h2 class="site-head__category">
-                <a href="/{{ props.category }}">{{ props.category }}</a>
+                {% if props.category == "resurser" %}
+                    <a href="/{{ props.category }}">{{ props.category }}</a>
+                {% else %}
+                    {{ props.category }}
+                {% endif %}
                 </h2>
             {% endif %}
             {% if props.tags %}
