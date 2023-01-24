@@ -43,7 +43,26 @@
         {{ content | safe }}
 
         {% if pagesCheck == false %}
+        <footer class="content__footer">
             {% include "../components/link-list-footer.njk" %}
+
+            {% if tags %}
+                {% set tag = tags | randomItem %}
+                {% set tagPosts = collections[tag] | limit(3) %}
+                {% if tagPosts.length > 1 %}
+                <section class="content__footer-related">
+                    <h3 class="content__footer-related-title">Läs mer, inlägg taggade med {{ tag }}</h3>
+                    <ul class="content__footer-related-list">
+                        {% for post in tagPosts %}
+                        <li class="content__footer-related-item">
+                            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+                {% endif %}
+            {% endif %}
+        </footer>
         {% endif %}
     </article>
 </main>
