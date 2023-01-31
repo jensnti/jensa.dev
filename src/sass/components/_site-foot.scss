@@ -1,0 +1,16 @@
+.site-foot {
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        gap: var(--gutter);
+        color: var(--color-light);
+    }
+
+    svg {
+        fill: currentcolor;
+    }
+}
