@@ -1,7 +1,7 @@
 ---
 title: Att komma igång
 date: 2021-06-16
-lead: 'Att komma igång och skriva på webben, blogga, är kanske inte det lättaste. Jag har funderat en del på ett varför. Varför ska jag skriva och varför skulle det vara intressant för någon annan.'
+summary: 'Att komma igång och skriva på webben, blogga, är kanske inte det lättaste. Jag har funderat en del på ett varför. Varför ska jag skriva och varför skulle det vara intressant för någon annan.'
 tags: ['reflektion']
 category: anteckning
 ---

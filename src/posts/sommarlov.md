@@ -1,7 +1,7 @@
 ---
 title: Sommarlov
 date: 2021-06-23
-lead: 'Sommarlovet tar sin början och jag tänkte inleda med att publicera den här bloggen. Förhoppningsvis blir det en del skrivet under sommaren.'
+summary: 'Sommarlovet tar sin början och jag tänkte inleda med att publicera den här bloggen. Förhoppningsvis blir det en del skrivet under sommaren.'
 tags: ['hosta', 'projekt']
 category: anteckning
 ---

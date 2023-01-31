@@ -4,7 +4,7 @@ date: 2022-09-30
 tags: ['webbutveckling', '11ty', 'bilder']
 templateEngineOverride: njk, md
 category: resurser
-lead: Det här är fortsättningen på den första delen om Eleventy.
+summary: 'Det här är fortsättningen på texten "Kom igång med Eleventy" och det är en del av resurser för kursen Webbutveckling 2.'
 ---
 
 ## Innan du kör igång

@@ -1,0 +1,29 @@
+<ol>
+    {% for item in collections.feed %}
+    <li>
+        <div>
+            <span>{{ item.data.category | safe }}</span>
+             <time datetime="{{ item.date | htmlDateString }}">
+                {{ item.date | frontDate }}
+            </time>  
+        </div>
+        <div>
+            <h2>
+                <a href="{{ item.url }}">{{ item.data.title }}</a>
+            </h2>
+        </div>
+        <div>
+            {% if item.data.tags.length > 0 %}
+                <ul>
+                    {% for tag in item.data.tags | sort %}
+                        <li>{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div>
+            <p>{{ item.data.summary | safe }}</p>
+        </div>
+    </li>
+    {% endfor %}
+</ol>

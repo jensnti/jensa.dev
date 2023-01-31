@@ -4,7 +4,7 @@ date: 2022-05-16
 tags: ['setup', 'sql']
 templateEngineOverride: njk, md
 category: resurser
-lead: En introduktion till att skriva SQL-frågor.
+summary: En introduktion till att skriva SQL-frågor för användning i kursen Webbserverprogrammering.
 draft: true
 ---
 

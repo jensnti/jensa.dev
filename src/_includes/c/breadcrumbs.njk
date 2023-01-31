@@ -1,0 +1,27 @@
+{% if category or tags %}
+<aside>
+    {% if category %}
+    <h2>
+        {% if category == "resurser" %}
+        <a href="/{{ category }}">{{ category }}</a>
+        {% else %}
+        {{ category }}
+        {% endif %}
+    </h2>
+    {% endif %}
+    {% if tags %}
+    <ul>
+        {% for tag in tags | sort %}
+        <li>
+            <a href="/tagg/{{ tag | slugify }}">
+                {{ tag }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</aside>
+{% endif %}
+{% if year %}
+<h2 id="{{ year }}"><time datetime="{{ year }}">{{ year }}</time></h2>
+{% endif %}

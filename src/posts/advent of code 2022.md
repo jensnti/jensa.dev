@@ -1,7 +1,7 @@
 ---
 title: Advent of code 2022
 date: 2022-12-02
-lead: 'Det är dags igen!'
+summary: 'Det är dags för Advent of Code igen, ta chansen och utmana dig själv!'
 tags: ['koda', 'advent of code']
 category: anteckning
 ---

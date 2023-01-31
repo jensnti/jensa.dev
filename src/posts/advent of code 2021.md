@@ -1,7 +1,7 @@
 ---
 title: Advent of code 2021
 date: 2021-12-07
-lead: 'En ytterst kort post om advent of code.'
+summary: 'En väldigt kort anteckning om Advent of code.'
 tags: ['koda', 'advent of code']
 category: anteckning
 ---

@@ -1,7 +1,7 @@
 ---
 title: Ny domän
 date: 2022-10-30
-lead: "Jag har köpt en ny domän, jensa.dev och håller på att flytta innehåll."
+summary: "Jag har köpt en ny domän, jensa.dev och håller på att flytta innehållet dit."
 tags: [ 'domän']
 category: anteckning
 ---

@@ -1,11 +1,11 @@
 ---
-title: Webbserver programmering
+title: Webbserverprogrammering
 date: 2022-05-16
 update: 2022-06-30
 tags: ['webbserver', 'setup', 'node', 'wsl', 'sql']
 templateEngineOverride: njk, md
 category: resurser
-lead: Istället för att dela upp det jag skriver på flera olika webbplatser (kursböcker) har jag bestämt mig för att samla det här. Det här är alltså en introduktionspost till det du behöver för att kunna arbeta med kursen webbserverprogrammering (i min regi).
+summary: Istället för att dela upp det jag skriver på flera olika webbplatser (kursböcker) har jag bestämt mig för att samla det här. Det här är alltså en introduktionspost till det du behöver för att kunna arbeta med kursen webbserverprogrammering (i min regi).
 ---
 
 För kursen Webbserverprogrammering 1 på gymnasienivå har jag valt tekniken, eller stacken, Node, Mysql och WSL. Jag anser att den är relevant och bra plattform att utgå ifrån. Den här stacken har även fördelen att använda javascript backend, för då använder vi samma programmeringsspråk som för frontend. Hosting, som sista pusselbit, gör vi med molntjänster.

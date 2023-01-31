@@ -4,7 +4,7 @@ date: 2022-10-07
 tags: ['webbutveckling', 'css', 'html']
 category: resurser
 templateEngineOverride: njk, md
-lead: Basen för majoriteten av alla webbsidor är någon form av centrerad layout med en toppnavigation. Detta är en snabbguide för att komma igång med en sådan layout. Kopiera den, lär dig den och ändra!
+summary: Basen för majoriteten av alla webbsidor är någon form av centrerad layout med en toppnavigation. Detta är en snabbguide för att komma igång med en sådan layout. Kopiera den, lär dig den och ändra!
 ---
 
 {% set demo = collections.orderedDemos | getDemo("Centrerad layout") %}

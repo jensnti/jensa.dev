@@ -6,13 +6,7 @@
 {% set years = [year] %}
 
 {% block header %}
-{{ siteHead({
-    title: title,
-    siteName: meta.siteName,
-    active: page.url,
-    items: collections.pages,
-    year: year
-}) }}
+
 {% endblock %}
 
 {% block content %}

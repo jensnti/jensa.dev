@@ -10,16 +10,7 @@
 {% endblock %}
 
 {% block header %}
-{{
-    siteHead({
-        title: title,
-        siteName: meta.siteName,
-        active: page.url,
-        items: collections.pages,
-        tags: tags,
-        category: category
-    })
-}} 
+
 {% endblock %}
 
 {% block content %}

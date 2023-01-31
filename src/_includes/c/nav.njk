@@ -1,0 +1,12 @@
+<nav aria-label="primary navigation">
+    <ul role="list">
+        <li>
+            <a href="/" aria-label="{{ meta.siteName }} - Hem">{{ meta.siteName }}</a>
+        </li>
+        {% for item in collections.pages | reverse %}
+        <li>
+            <a class="{{ 'active' if item.url == page.url }}" href="{{ item.url }}">{{ item.data.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
