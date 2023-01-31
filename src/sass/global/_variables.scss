@@ -34,6 +34,7 @@
 
     /* Custom pairs */
     --space-s-l: clamp(1rem, calc(0.48rem + 2.61vw), 2.5rem);
+    --space-l-2xl: clamp(2.00rem, calc(0.96rem + 5.22vw), 5.00rem);
 
     --gutter: var(--space-s-m);
     --border-radius: var(--step-0);
