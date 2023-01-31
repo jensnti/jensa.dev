@@ -16,7 +16,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jensnti/jensa.dev.git"
+        "url": "https://github.com/jensnti/jensa.dev"
     },
     "keywords": [],
     "author": "",

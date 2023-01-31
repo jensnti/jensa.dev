@@ -173,6 +173,10 @@ svg {
   flex: none;
 }
 
+img {
+  height: auto;
+}
+
 [role=list] {
   padding: 0;
 }
@@ -254,6 +258,10 @@ main:focus {
   justify-content: space-between;
   align-items: center;
   gap: var(--gutter);
+}
+
+.lead {
+  font-size: var(--step-1);
 }
 
 .grid {

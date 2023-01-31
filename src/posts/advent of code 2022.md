@@ -26,8 +26,7 @@ I filen ```package.json``` så under ```scripts``` så lägger du till följande
 
 ```diff-json
 "scripts": {
-    ...
-+    "start": "node index.js"
+    "start": "node index.js"
 }
 ```
 

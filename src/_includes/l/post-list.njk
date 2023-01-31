@@ -1,29 +1,25 @@
-<ol>
+<div class="flow region">
     {% for item in collections.feed %}
-    <li>
-        <div>
-            <span>{{ item.data.category | safe }}</span>
-             <time datetime="{{ item.date | htmlDateString }}">
-                {{ item.date | frontDate }}
-            </time>  
-        </div>
-        <div>
+    <article>
+        <header>
             <h2>
                 <a href="{{ item.url }}">{{ item.data.title }}</a>
             </h2>
-        </div>
-        <div>
+            <span>{{ item.data.category | safe }}</span>
+            <time datetime="{{ item.date | htmlDateString }}">
+                {{ item.date | frontDate }}
+            </time>
+        </header>
+        <p>{{ item.data.summary | safe }}</p>
+        <footer>
             {% if item.data.tags.length > 0 %}
-                <ul>
-                    {% for tag in item.data.tags | sort %}
-                        <li>{{ tag }}</li>
-                    {% endfor %}
-                </ul>
+            <ul>
+                {% for tag in item.data.tags | sort %}
+                <li>{{ tag }}</li>
+                {% endfor %}
+            </ul>
             {% endif %}
-        </div>
-        <div>
-            <p>{{ item.data.summary | safe }}</p>
-        </div>
-    </li>
+        </footer>
+    </article>
     {% endfor %}
-</ol>
+</div>

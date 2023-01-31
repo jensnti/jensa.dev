@@ -1,48 +1,38 @@
 {% extends 'pages/base.njk' %}
 
-{% set pagesCheck = page.filePathStem.includes('/pages/') %}
-
 {% block head %}
 <style>
-    {% include 'assets/css/prism-theme-base.css' %}
-    {% include 'assets/css/theme-vars.css' %}
+{% include 'assets/css/prism-theme-base.css' %}
+{% include 'assets/css/theme-vars.css' %}
 </style>
 {% endblock %}
 
-{% block header %}
-
-{% endblock %}
-
 {% block content %}
-<main id="main-content" tabindex="-1">
-    <article class="content container flow">
-        {% if pagesCheck == false %}
-        <header class="content__header flow">
-            <h2 class="content__header-time">
-                Postat: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+<main id="main-content" tabindex="-1" class="container">
+    <article class="region flow">
+        <header>
+            <h2>
+                <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
                 {% if update %}
                 <span class="content__header-time--updated">Uppdaterat: <time datetime="{{ update | htmlDateString }}">{{ update | readableDate }}</time></span>
                 {% endif %}
             </h2>
-            {% if lead %}
-            <p class="content__lead">{{ lead | safe }}</p>
+            {% if summary %}
+            <p class="lead">{{ summary | safe }}</p>
             {% endif %}
-            {{ content | toc | safe }}
         </header>
-        {% endif %}
-
-        {{ content | safe }}
-
-        {% if pagesCheck == false %}
-        <footer class="content__footer">
+        <div class="flow">
+            {{ content | safe }}
+        </div>
+        <footer>
             {% include "../components/link-list-footer.njk" %}
 
             {% if tags %}
-                {% set tag = tags | randomItem %}
-                {% set tagPosts = collections[tag] | limit(3) %}
+                {% set tag = tags | random %}
+                {% set tagPosts = collections[tag] | limit(3) | shuffle %}
                 {% if tagPosts.length > 1 %}
                 <section class="content__footer-related">
-                    <h3 class="content__footer-related-title">Läs mer, inlägg taggade med {{ tag }}</h3>
+                    <h3 class="content__footer-related-title">Mer från {{ tag }}</h3>
                     <ul class="content__footer-related-list">
                         {% for post in tagPosts %}
                         <li class="content__footer-related-item">
@@ -54,7 +44,6 @@
                 {% endif %}
             {% endif %}
         </footer>
-        {% endif %}
     </article>
 </main>
 {% endblock %}

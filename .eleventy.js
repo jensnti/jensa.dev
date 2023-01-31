@@ -151,11 +151,8 @@ module.exports = function (eleventyConfig) {
         return posts.filter((item) => item.data.tags.includes(tag));
         // return posts.find((item) => item.data.tags.filter((t) => t === tag));
     });
-    eleventyConfig.addFilter('randomItem', (arr) => {
-        arr.sort(() => {
-            return 0.5 - Math.random();
-        });
-        return arr.slice(0, 1);
+    eleventyConfig.addFilter('shuffle', (arr) => {
+        return arr.sort(() => Math.random() - 0.5);
     });
     eleventyConfig.addFilter('limit', function (arr, limit) {
         return arr.slice(0, limit);

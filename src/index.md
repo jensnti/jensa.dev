@@ -1,5 +1,5 @@
 ---
-title: Hej, jag heter Jens
-layout: pages/page.njk
+title: Hej, jag är Jens
+layout: pages/home.njk
 ---
 
