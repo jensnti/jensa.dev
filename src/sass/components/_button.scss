@@ -1,0 +1,15 @@
+.btn {
+    border: none;
+    display: inline-block;
+    padding: var(--space-s);
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 600;
+    text-transform: uppercase;
+}

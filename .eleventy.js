@@ -158,6 +158,17 @@ module.exports = function (eleventyConfig) {
         return arr.slice(0, limit);
     });
 
+    eleventyConfig.addFilter('getYears', (arr) => {
+        const years = [];
+        arr.forEach((item) => {
+            const year = item.data.date.getFullYear();
+            if (!years.includes(year)) {
+                years.push(year);
+            }
+        });
+        return years;
+    });
+
     // Shortcodes
     eleventyConfig.addShortcode('year', year);
     eleventyConfig.addShortcode('svg', getSvgContent);

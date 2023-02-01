@@ -2,6 +2,8 @@
 
 {% block content %}
 <main id="main-content" tabindex="-1" class="container">
-    {{ content | safe }}
+    <article class="region flow">
+        {{ content | safe }}
+    </article>
 </main>
 {% endblock %}

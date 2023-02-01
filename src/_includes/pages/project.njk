@@ -1,14 +1,13 @@
 {% extends 'pages/base.njk' %}
 
-{% block content %}
-
 {% set project = projectsData | getProject(title) %}
 
-<main id="main-content" tabindex="-1">
-    <section class="content container flow">
+{% block content %}
+<main id="main-content" tabindex="-1" class="container">
+    <article class="region flow">
         {% if project %}
-        <aside class="content__info content__info--float">
-            <ul class="content__info-card">
+        <aside class="card">
+            <ul >
                 <li>
                     <span>Titel:</span> {{ project.title }}
                 </li>
@@ -28,6 +27,6 @@
         </aside>
         {% endif %}
         {{ content | safe }}
-    </section>
+    </article>
 </main>
 {% endblock %}

@@ -71,6 +71,55 @@ select {
     scroll-behavior: auto !important;
   }
 }
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Work Sans Light"), local("WorkSans-Light"), url("/assets/fonts/WorkSans-Light.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Work Sans Regular"), local("WorkSans-Regular"), url("/assets/fonts/WorkSans-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Work Sans SemiBold"), local("WorkSans-SemiBold"), url("/assets/fonts/WorkSans-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Work Sans Bold"), local("WorkSans-Bold"), url("/assets/fonts/WorkSans-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Work Sans ExtraBold"), local("WorkSans-ExtraBold"), url("/assets/fonts/WorkSans-ExtraBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Work Sans Black"), local("WorkSans-Black"), url("/assets/fonts/WorkSans-Black.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Work Sans Italic"), local("WorkSans-Italic"), url("/assets/fonts/WorkSans-Italic.ttf") format("truetype");
+  font-display: swap;
+}
 /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 :root {
@@ -111,35 +160,38 @@ select {
   --color-light: #cccac2;
   --color-primary: #f28779;
   --color-secondary: #5ccfe6;
-  --font-base: sans-serif;
+  --font-base: "Work Sans", sans-serif;
+  --min-width: 52rem;
 }
 
 body {
   color: var(--color-light);
   background-color: var(--color-dark);
-  font-size: var(--step-0);
+  font-size: var(--step-1);
   font-family: var(--font-base);
+  font-weight: 400;
   line-height: 1.333;
-  letter-spacing: var(--tracking);
 }
 
 h1,
 h2,
 h3 {
   line-height: 1;
-  letter-spacing: var(--tracking-s);
+  letter-spacing: var(--tracking);
 }
 
 h1 {
-  font-size: var(--step-3);
+  font-size: var(--step-4);
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size: var(--step-2);
+  font-size: var(--step-3);
 }
 
 h3 {
-  font-size: var(--step-1);
+  font-size: var(--step-2);
 }
 
 p,
@@ -175,6 +227,7 @@ svg {
 
 img {
   height: auto;
+  width: 100%;
 }
 
 [role=list] {
@@ -184,6 +237,7 @@ img {
 /* Base interactive elements */
 a {
   color: currentcolor;
+  text-decoration-thickness: from-font;
 }
 
 a:hover {
@@ -211,6 +265,10 @@ main:focus {
 
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
+}
+
+.flow-l {
+  --flow-space: var(--space-l);
 }
 
 .region {
@@ -241,6 +299,10 @@ main:focus {
   white-space: nowrap;
 }
 
+.hidden {
+  display: none;
+}
+
 .site-foot ul {
   list-style: none;
   padding: 0;
@@ -258,10 +320,65 @@ main:focus {
   justify-content: space-between;
   align-items: center;
   gap: var(--gutter);
+  font-weight: 600;
+}
+.navbar a, .navbar ul a {
+  text-decoration: none;
+}
+.navbar a:hover, .navbar ul a:hover {
+  text-decoration: underline;
 }
 
 .lead {
-  font-size: var(--step-1);
+  font-size: var(--step-2);
+  font-weight: 300;
+}
+
+.anchor {
+  text-decoration: none !important;
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  gap: var(--gutter);
+  padding: 0;
+  margin: 0;
+  font-size: var(--step-0);
+  text-transform: uppercase;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: var(--space-s);
+}
+form button {
+  width: 100%;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+.btn {
+  border: none;
+  display: inline-block;
+  padding: var(--space-s);
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .grid {
@@ -272,7 +389,7 @@ main:focus {
 
 .grid[data-layout="50-50"] {
   --grid-placement: auto-fit;
-  --grid-min-item-size: clamp(16rem, 50vw, 26rem);
+  --grid-min-item-size: clamp(16rem, 50vw, 22rem);
 }
 
 .grid[data-rows=masonry] {
@@ -281,6 +398,6 @@ main:focus {
 }
 
 .container {
-  width: min(var(--min-width, 80ch), 100vw - var(--space-l-xl));
+  width: min(var(--min-width, 80ch), 100vw - var(--space-l-xl, 4rem));
   margin-inline: auto;
 }

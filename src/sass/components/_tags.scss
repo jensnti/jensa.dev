@@ -1,0 +1,9 @@
+.tags {
+    list-style: none;
+    display: flex;
+    gap: var(--gutter);
+    padding: 0;
+    margin: 0;
+    font-size: var(--step-0);
+    text-transform: uppercase;
+}
