@@ -1,0 +1,20 @@
+---
+title: Alla taggar
+permalink: /taggar/
+---
+
+{% extends 'pages/page.njk' %}
+{% block content %}
+<main id="main-content" tabindex="-1" class="container">
+    <article class="region flow">
+        <ul>
+            {% for tag in collections.tagList %}
+            {% set tagUrl %}/tagg/{{ tag | slug }}/{% endset %}
+            <li>
+                <a href="{{ tagUrl | url }}">{{ tag | capitalize }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </article>
+</main>
+{% endblock %}
