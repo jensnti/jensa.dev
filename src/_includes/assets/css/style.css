@@ -381,6 +381,13 @@ form button {
   text-transform: uppercase;
 }
 
+.post-list article {
+  margin-bottom: var(--space-m-l);
+}
+.post-list time {
+  font-size: var(--step-0);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr));
