@@ -287,10 +287,6 @@ code {
   padding-bottom: var(--region-bottom-space, var(--space-l-2xl));
 }
 
-main {
-  --region-top-space: var(--space-l-xl);
-}
-
 .sr-only {
   clip: rect(0 0 0 0);
   padding: 0;
@@ -559,6 +555,10 @@ form *:focus {
 .youtube-embed iframe {
   width: 100%;
   height: 100%;
+}
+
+.post {
+  --region-top-space: var(--space-l-xl);
 }
 
 .grid {
