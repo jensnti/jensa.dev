@@ -39,7 +39,7 @@ const {
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget('./src/sass/');
-    eleventyConfig.addWatchTarget('./src/js/');
+    eleventyConfig.addWatchTarget('./src/assets/js/');
 
     // Plugins
     eleventyConfig.addPlugin(rssPlugin);

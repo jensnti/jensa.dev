@@ -1,8 +1,9 @@
 .navbar, .navbar ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: var(--gutter);
+    gap: 0 var(--gutter);
     font-weight: 600;
     a {
         text-decoration: none;
@@ -10,4 +11,8 @@
             text-decoration: underline;
         }
     }
+}
+
+.brand {
+    padding: var(--space-2xs) 0;
 }

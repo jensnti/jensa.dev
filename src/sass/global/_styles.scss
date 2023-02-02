@@ -71,7 +71,6 @@ img {
 
 a {
     color: currentcolor;
-    text-decoration-thickness: from-font;
 }
 
 a:hover {
@@ -93,6 +92,10 @@ main:focus {
 
 /* Base selection styles that invert whatever colours are rendered */
 ::selection {
-    background: var(--color-dark);
+    background: var(--color-selection);
     color: var(--color-light);
+}
+
+code {
+    background-color: var(--color-bg);
 }

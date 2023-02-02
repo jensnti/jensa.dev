@@ -19,7 +19,7 @@ När jag började använda Eleventy för egen del så kodade jag igenom den här
 
 ## Vad är Eleventy då?
 
-{% image "./src/images/11ty-mascot.png", "11ty mascot" %}{.float-right} 
+{% image "./src/images/11ty-mascot.png", "11ty mascot", "20vw" %}{.float-right} 
 
 Eleventy är en static site builder, eleventy bygger statiska webbsidor. Eleventy är ett verktyg som ger dig mer kontroll, bättre arbetssätt och en förbättrad utvecklingsupplevelse (Developer experience, DX) med grundläggande webbtekniker som HTML, CSS och JavaScript. Det utan att förlita sig på stora bygg eller ramverk som påverkar användarens upplevelse (User experience, UX).
 

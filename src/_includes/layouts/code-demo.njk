@@ -1,5 +1,5 @@
 {% macro closeButton(title) %}
-<a class="button demo__close" href="#{{ title | slugify}}"><span class="material-symbols-sharp">close</span></a>
+<a class="btn" href="#{{ title | slugify}}"><span class="sr-only">close</span>&times;</a>
 {% endmacro %}
 
 <div class="demo">
@@ -12,13 +12,13 @@
 <script>{{- javascript | safe }}</script>
 {%- endif -%}
 
-<section class="demo__description flow">
+<div>
 {% if not hideDescription %}
 {{ description | safe }}
 {% endif %}
-</section>
+</div>
 
-<div class="demo__code">
+<div>
 {% if html %}
 <div id="html-{{ title | slugify }}" class="tab">
 {{- closeButton(title) }}
@@ -28,6 +28,7 @@
 ```
 </div>
 {% endif %}
+
 {% if css %}
 <div id="css-{{ title | slugify }}" class="tab">
 {{- closeButton(title) }}
@@ -37,6 +38,7 @@
 ```
 </div>
 {% endif %}
+
 {% if javascript %}
 <div id="js-{{ title | slugify }}" class="tab">
 {{- closeButton(title) }}
@@ -66,7 +68,7 @@
 
 </div>
 {%- if not hideDemo -%}
-<div class="demo__playground">
+<div class="demo-sandbox">
 {{- html | safe }}
 </div>
 {%- endif -%}
@@ -76,8 +78,7 @@
 #html-{{ title | slugify }}:target ~ .tabs li > a[href="#html-{{ title | slugify }}"],
 #css-{{ title | slugify }}:target ~ .tabs li > a[href="#css-{{ title | slugify }}"],
 #js-{{ title | slugify }}:target ~ .tabs li > a[href="#js-{{ title | slugify }}"] {
-    background: var(--color-dark);
-    color: var(--color-light);
-    border-color: var(--color-dark);
+    border-color: var(--color-light);
+    background-color: var(--color-bg);
 }
 </style>

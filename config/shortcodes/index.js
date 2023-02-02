@@ -22,7 +22,7 @@ const year = () => {
     return `${new Date().getFullYear()}`;
 };
 
-const imageShortcode = async (src, alt, title, sizes = '100vw') => {
+const imageShortcode = async (src, alt, sizes = '100vw') => {
     const metadata = await Image(src, {
         widths: [300, 600, 900],
         outputDir: './public/img/',
@@ -30,7 +30,6 @@ const imageShortcode = async (src, alt, title, sizes = '100vw') => {
 
     const imageAttributes = {
         alt,
-        title,
         sizes,
         loading: 'lazy',
         decoding: 'async',

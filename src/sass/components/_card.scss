@@ -1,11 +1,15 @@
 .card {
     position: relative;
     // border-radius: var(--border-radius);
+    border: var(--border);
     max-width: unset;
     padding: var(--space-xs-s);
 
     background-color: var(--color-dark);
     color: var(--color-light);
+    a {
+        text-decoration: none;
+    }
     a:after {
         bottom: 0;
         content: '';
@@ -16,5 +20,8 @@
     }
     &:focus-within a:focus {
         outline: none;
+    }
+    &:hover {
+        border-color: var(--color-selection);
     }
 }

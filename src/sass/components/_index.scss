@@ -7,6 +7,8 @@
 @forward "form";
 @forward "btn";
 @forward "card";
+@forward "code-demo";
+@forward "flash";
 
 .post-list {
     article {
@@ -21,4 +23,8 @@
     text-align: end;
     margin-bottom: 1em;
     font-size: var(--step-0);
+    text-transform: uppercase;
+    @media (max-width: 46rem) {
+        text-align: start;
+    }
 }

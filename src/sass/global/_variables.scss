@@ -38,13 +38,20 @@
 
     --gutter: var(--space-s-m);
     --border-radius: var(--step-0);
+    --border: 2px solid currentcolor;
     --tracking: -0.05ch;
     --tracking-s: -0.075ch;
 
-    --color-dark: #242936;
+    --color-bg: #242936;
+    --color-dark: #1f2430;
+    --color-panel: #1c212b;
+    --color-line: #171b24;
+    --color-gutter: #8a9199cc;
     --color-light: #cccac2;
-    --color-primary: #f28779;
-    --color-secondary: #5ccfe6;
+    --color-red: #f27983;
+    --color-blue: #5ccfe6;
+    --color-alert: #ffad66;
+    --color-selection: #63759926;
 
     --font-base: "Work Sans", sans-serif;
 

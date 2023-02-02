@@ -6,7 +6,7 @@ templateEngineOverride: njk, md
 order: 2
 ---
 
-{% image "./src/images/20220720_132435c.jpg", "En Jens", "Foto av Marie Malmi." %}
+{% image "./src/images/20220720_132435-edit.jpg", "En Jens", "Foto av Marie Malmi." %}
 
 Jag är en legitimerad lärare och arbetar på [NTI Gymnasiet Umeå](https://www.ntigymnasiet.se/umea/) sedan 2017. Tidigare har jag arbetat med vuxenutbildning på distans.
 
@@ -38,4 +38,4 @@ För min undervisning har jag skapat en del material:
 
 ### Kontakt
 
-{% include "l/contact-form.njk" %}
+{% include "layouts/contact-form.njk" %}

@@ -7,4 +7,7 @@ form {
     button {
         width: 100%;
     }
+    *:focus {
+        color: var(--color-light);
+    }
 }

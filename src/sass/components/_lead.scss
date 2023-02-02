@@ -1,4 +1,7 @@
 .lead {
     font-size: var(--step-2);
     font-weight: 300;
+    > a {
+        text-decoration-thickness: from-font;
+    }
 }

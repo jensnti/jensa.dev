@@ -5,7 +5,6 @@ pagination:
     alias: tag
     filter: ['all', 'nav', 'pages', 'tagList']
 permalink: /tagg/{{ tag | slugify }}/
-postsHeading: 'Alla inlägg'
 ---
 
 {% set title = 'Taggat med ' + tag %}
@@ -13,7 +12,7 @@ postsHeading: 'Alla inlägg'
 {% set postListItems = collections[tag] | reverse %}
 
 {% block content %}
-<main id="main-content" tabindex="-1" class="container">
-    {% include "l/post-list.njk" %}
+<main id="main-content" tabindex="-1" class="container region">
+    {% include "layouts/post-list.njk" %}
 </main>
 {% endblock %}

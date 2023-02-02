@@ -12,12 +12,12 @@ templateEngineOverride: njk, md
 {% endset %}
 
 {% set css %}
-.centering {
+.demo-centering {
     display: grid;
     place-content: center;
     min-height: 30vh;
 }
-.centering span {
+.demo-centering span {
     padding: .5em;
     outline: 2px solid;
 }
@@ -26,9 +26,9 @@ templateEngineOverride: njk, md
 {% set javascript = false %}
 
 {% set html %}
-<div class="centering">
+<div class="demo-centering">
     <span>Feeling Centered</span>
 </div>
 {% endset %}
 
-{% include "layouts/demo/template.njk" %}
+{% include "layouts/code-demo.njk" %}

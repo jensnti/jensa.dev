@@ -9,7 +9,7 @@ const flash = () => {
         const inner = flash.querySelector('.flash__inner');
         const message = inner.querySelector('.flash__message');
         const button = document.createElement('button');
-        button.classList.add('flash__button', 'button');
+        button.classList.add('btn', 'button');
         button.textContent = `OK`;
         const p = document.createElement('p');
         p.id = 'flash-message--content';
