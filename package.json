@@ -27,7 +27,7 @@
     "homepage": "https://github.com/jensnti/jensa.dev",
     "dependencies": {
         "@11ty/eleventy": "^2.0.0-beta.1",
-        "@11ty/eleventy-img": "^1.0.0",
+        "@11ty/eleventy-img": "^3.0.0",
         "@11ty/eleventy-plugin-rss": "^1.1.2",
         "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
         "@rollup/plugin-commonjs": "^21.0.3",

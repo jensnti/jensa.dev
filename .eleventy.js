@@ -3,108 +3,39 @@ const markdownIt = require('markdown-it');
 const mila = require('markdown-it-link-attributes');
 const mia = require('markdown-it-attrs');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
-const fs = require('fs');
-const { format, parseISO } = require('date-fns');
-const { sv } = require('date-fns/locale');
-const Image = require('@11ty/eleventy-img');
+
 const markdownItAnchor = require('markdown-it-anchor');
 const htmlmin = require('html-minifier');
 const eleventyPluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
 
-// filters and shortcodes
-const getSvgContent = (file, classList) => {
-    let relativeFilePath = `./src/_includes/assets/icons/${file}`;
-    let data = fs.readFileSync(relativeFilePath, (err, contents) => {
-        if (err) return err;
-        return contents;
-    });
-    if (classList) {
-        return (
-            data.toString('utf8').slice(0, 4) +
-            ` class="${classList}" ` +
-            data.toString('utf8').slice(4)
-        );
-    } else {
-        return data.toString('utf8');
-    }
-};
+//import shortcodes
+const { getSvgContent, year, imageShortcode } = require('./config/shortcodes');
 
-const year = () => {
-    return `${new Date().getFullYear()}`;
-};
+// import filters
+const {
+    getDemo,
+    randomColor,
+    readableDate,
+    frontDate,
+    yearString,
+    htmlDateString,
+    getProject,
+    tagFilter,
+    shuffleArray,
+    limit,
+    getYears,
+} = require('./config/filters');
 
-const imageShortcode = async (
-    src,
-    alt,
-    title,
-    sizes
-) => {
-    const metadata = await Image(src, {
-        widths: [400, 800],
-        outputDir: './public/img/',
-    });
-
-    const imageAttributes = {
-        alt,
-        title,
-        sizes,
-        loading: 'lazy',
-        decoding: 'async',
-    };
-
-    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-    return Image.generateHTML(metadata, imageAttributes, {
-        whitespaceMode: 'inline',
-    });
-};
-
-const readableDate = (dateObj) => {
-    if (typeof dateObj === 'string') {
-        dateObj = parseISO(dateObj);
-    }
-    return format(dateObj, 'PPP', { locale: sv });
-};
-
-const frontDate = (dateObj) => {
-    if (typeof dateObj === 'string') {
-        dateObj = parseISO(dateObj);
-    }
-    return format(dateObj, 'MMM yyyy', { locale: sv });
-};
-
-const htmlDateString = (dateObj) => {
-    // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-    if (typeof dateObj === 'string') {
-        dateObj = parseISO(dateObj);
-    }
-    return format(dateObj, 'yyyy-MM-dd');
-};
-
-const yearString = (dateObj) => {
-    if (typeof dateObj === 'string') {
-        dateObj = parseISO(dateObj);
-    }
-    return format(dateObj, 'yyyy');
-};
-
-const filterTagList = (tags) => {
-    return (tags || []).filter(
-        (tag) => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1
-    );
-};
-
-const randomColor = () => {
-    const colors = [
-        'orange',
-        'red',
-        'blue',
-        'yellow',
-        'magenta',
-        'green',
-        'cyan',
-    ];
-    return colors[Math.floor(Math.random() * colors.length)];
-};
+// import  collections
+const {
+    tagList,
+    demos,
+    orderedDemos,
+    pages,
+    posts,
+    projects,
+    resources,
+} = require('./config/collections');
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget('./src/sass/');
@@ -120,41 +51,17 @@ module.exports = function (eleventyConfig) {
     });
 
     // Filters
-    eleventyConfig.addFilter('getDemo', function (demos, title) {
-        return demos.find((demo) => demo.data.title === title);
-    });
-
+    eleventyConfig.addFilter('getDemo', getDemo);
     eleventyConfig.addFilter('randomColor', randomColor);
     eleventyConfig.addFilter('readableDate', readableDate);
     eleventyConfig.addFilter('frontDate', frontDate);
     eleventyConfig.addFilter('yearString', yearString);
     eleventyConfig.addFilter('htmlDateString', htmlDateString);
-    eleventyConfig.addFilter('getProject', (projects, title) => {
-        return projects.find((project) => project.title === title);
-    });
-    eleventyConfig.addFilter('filterTagList', filterTagList);
-    eleventyConfig.addFilter('tagFilter', (posts, tag) => {
-        console.log()
-        return posts.filter((item) => item.data.tags.includes(tag));
-        // return posts.find((item) => item.data.tags.filter((t) => t === tag));
-    });
-    eleventyConfig.addFilter('shuffle', (arr) => {
-        return arr.sort(() => Math.random() - 0.5);
-    });
-    eleventyConfig.addFilter('limit', function (arr, limit) {
-        return arr.slice(0, limit);
-    });
-
-    eleventyConfig.addFilter('getYears', (arr) => {
-        const years = [];
-        arr.forEach((item) => {
-            const year = item.data.date.getFullYear();
-            if (!years.includes(year)) {
-                years.push(year);
-            }
-        });
-        return years;
-    });
+    eleventyConfig.addFilter('getProject', getProject);
+    eleventyConfig.addFilter('tagFilter', tagFilter);
+    eleventyConfig.addFilter('shuffle', shuffleArray);
+    eleventyConfig.addFilter('limit', limit);
+    eleventyConfig.addFilter('getYears', getYears);
 
     // Shortcodes
     eleventyConfig.addShortcode('year', year);
@@ -162,52 +69,13 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
     // collections
-    // Create an array of all tags
-    eleventyConfig.addCollection('tagList', (collection) => {
-        const tagSet = new Set();
-        collection.getAll().forEach((item) => {
-            (item.data.tags || []).forEach((tag) => tagSet.add(tag));
-        });
-        return filterTagList([...tagSet]);
-    });
-
-    // Get only content that matches a tag
-    eleventyConfig.addCollection('demos', function (collectionApi) {
-        return collectionApi.getFilteredByTag('demos');
-    });
-
-    eleventyConfig.addCollection('orderedDemos', function (collectionApi) {
-        return collectionApi.getFilteredByTag('demos').sort((a, b) => {
-            return a.data.order - b.data.order;
-        });
-    });
-
-    eleventyConfig.addCollection('pages', (collectionApi) =>
-        collectionApi
-            .getFilteredByGlob(['src/pages/*.md', 'src/projects/index.*'])
-            .sort((a, b) => b.data.order - a.data.order)
-    );
-
-    eleventyConfig.addCollection('posts', (collectionApi) =>
-        collectionApi.getFilteredByGlob('src/posts/*.md')
-    );
-
-    eleventyConfig.addCollection('projects', (collectionApi) =>
-        collectionApi.getFilteredByGlob('src/projects/*.md')
-    );
-
-    eleventyConfig.addCollection('resources', (collectionApi) => [
-        ...collectionApi
-            .getAll()
-            .filter((item) => item.data.category === 'resurser')
-            .sort((a, b) => b.date - a.date),
-    ]);
-
-    eleventyConfig.addCollection('feed', (collectionApi) =>
-        [...collectionApi.getFilteredByGlob('src/posts/*.md')]
-            .reverse()
-            .slice(0, 5)
-    );
+    eleventyConfig.addCollection('tagList', tagList);
+    eleventyConfig.addCollection('demos', demos);
+    eleventyConfig.addCollection('orderedDemos', orderedDemos);
+    eleventyConfig.addCollection('pages', pages);
+    eleventyConfig.addCollection('posts', posts);
+    eleventyConfig.addCollection('projects', projects);
+    eleventyConfig.addCollection('resources', resources);
 
     const markdownLibrary = markdownIt({
         html: true,
