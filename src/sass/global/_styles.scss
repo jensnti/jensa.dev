@@ -71,10 +71,11 @@ img {
 
 a {
     color: currentcolor;
+    text-decoration: underline dashed var(--color-gutter);
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 :focus {

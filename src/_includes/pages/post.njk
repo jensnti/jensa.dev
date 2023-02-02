@@ -24,18 +24,7 @@
             {% if tags %}
                 {% set tag = tags | random %}
                 {% set tagPosts = collections[tag] | limit(3) | shuffle %}
-                {% if tagPosts.length > 1 %}
-                <section class="content__footer-related">
-                    <h3 class="content__footer-related-title">Mer från {{ tag }}</h3>
-                    <ul class="content__footer-related-list">
-                        {% for post in tagPosts %}
-                        <li class="content__footer-related-item">
-                            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </section>
-                {% endif %}
+                {% include "../components/tag-related.njk" %}
             {% endif %}
         </footer>
     </article>

@@ -1,12 +1,6 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const markdownIt = require('markdown-it');
-const mila = require('markdown-it-link-attributes');
-const mia = require('markdown-it-attrs');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
-
-const markdownItAnchor = require('markdown-it-anchor');
 const htmlmin = require('html-minifier');
-const eleventyPluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
 
 //import shortcodes
 const { getSvgContent, year, imageShortcode } = require('./config/shortcodes');
@@ -22,6 +16,7 @@ const {
     getProject,
     tagFilter,
     shuffleArray,
+    slug,
     limit,
     getYears,
 } = require('./config/filters');
@@ -37,6 +32,10 @@ const {
     resources,
 } = require('./config/collections');
 
+// plugins
+const eleventyPluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
+const markdownLibrary = require('./config/plugins/markdown');
+
 module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget('./src/sass/');
     eleventyConfig.addWatchTarget('./src/assets/js/');
@@ -44,11 +43,6 @@ module.exports = function (eleventyConfig) {
     // Plugins
     eleventyConfig.addPlugin(rssPlugin);
     eleventyConfig.addPlugin(syntaxHighlight);
-
-    eleventyConfig.addPlugin(eleventyPluginTOC, {
-        headingText: 'På den här sidan',
-        tags: ['h2', 'h3', 'h4'],
-    });
 
     // Filters
     eleventyConfig.addFilter('getDemo', getDemo);
@@ -62,6 +56,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('shuffle', shuffleArray);
     eleventyConfig.addFilter('limit', limit);
     eleventyConfig.addFilter('getYears', getYears);
+    eleventyConfig.addFilter("slug", slug);
 
     // Shortcodes
     eleventyConfig.addShortcode('year', year);
@@ -76,36 +71,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection('posts', posts);
     eleventyConfig.addCollection('projects', projects);
     eleventyConfig.addCollection('resources', resources);
-
-    const markdownLibrary = markdownIt({
-        html: true,
-        breaks: true,
-        linkify: true,
-        typographer: true,
-    })
-        .use(markdownItAnchor, {
-            permalink: markdownItAnchor.permalink.linkInsideHeader({
-                symbol: `<span class="anchor" aria-hidden="true">#</span>`,
-                placement: 'before',
-            }),
-            level: [1, 2, 3, 4],
-            slugify: (s) =>
-                s
-                    .trim()
-                    .toLowerCase()
-                    .replace(/[\s+~\/]/g, '-')
-                    .replace(/[().`,%·'"!?¿:@*]/g, ''),
-        })
-        .use(mila, {
-            pattern: /^https:/,
-            attrs: {
-                target: '_blank',
-                rel: 'noopener',
-            },
-        })
-        .use(mia, {
-            allowedAttributes: ['id', 'class'],
-        });
 
     eleventyConfig.setLibrary('md', markdownLibrary);
 

@@ -244,10 +244,11 @@ img {
 /* Base interactive elements */
 a {
   color: currentcolor;
+  text-decoration: underline dashed var(--color-gutter);
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 :focus {
@@ -360,8 +361,22 @@ main {
   text-decoration-thickness: from-font;
 }
 
+/* Make the '#' anchor visible on your site */
+.anchor > span[hidden] {
+  display: block;
+}
+
+h2:has(a.anchor), h3:has(a.anchor) {
+  display: flex;
+}
+
 .anchor {
   text-decoration: none !important;
+  padding-right: var(--space-3xs);
+  color: var(--color-gutter);
+}
+.anchor:hover {
+  color: var(--color-light);
 }
 
 .tags {

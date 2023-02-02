@@ -1,0 +1,12 @@
+{% if tagPosts.length > 1 %}
+<div>
+    <h3>Mer från <a href="/tagg/{{ tag }}">{{ tag }}</a></h3>
+    <ul>
+        {% for post in tagPosts %}
+        <li>
+            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

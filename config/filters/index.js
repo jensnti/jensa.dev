@@ -1,5 +1,6 @@
 const { format, parseISO } = require('date-fns');
 const { sv } = require('date-fns/locale');
+const slugify = require('slugify');
 
 const readableDate = (dateObj) => {
     if (typeof dateObj === 'string') {
@@ -74,7 +75,20 @@ const getDemo = (demos, title) => {
     return demos.find((demo) => demo.data.title === title);
 };
 
+const slug = (str) => {
+    if (!str) {
+        return;
+    }
+
+    return slugify(str, {
+        lower: true,
+        strict: true,
+        remove: /["]/g,
+    });
+};
+
 module.exports = {
+    slug,
     readableDate,
     frontDate,
     htmlDateString,

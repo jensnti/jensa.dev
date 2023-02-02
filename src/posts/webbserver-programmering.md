@@ -1,5 +1,5 @@
 ---
-title: Webbserverprogrammering
+title: Webbserver-programmering
 date: 2022-05-16
 update: 2022-06-30
 tags: ['webbserver', 'setup', 'node', 'wsl', 'sql']
