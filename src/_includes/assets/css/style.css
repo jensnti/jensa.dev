@@ -537,6 +537,9 @@ form *:focus {
 .post-list time {
   font-size: var(--step-0);
 }
+.post-list h2 {
+  text-transform: lowercase;
+}
 
 .post-date {
   text-align: end;
@@ -548,6 +551,14 @@ form *:focus {
   .post-date {
     text-align: start;
   }
+}
+
+.youtube-embed {
+  aspect-ratio: 16/9;
+}
+.youtube-embed iframe {
+  width: 100%;
+  height: 100%;
 }
 
 .grid {

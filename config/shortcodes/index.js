@@ -41,7 +41,19 @@ const imageShortcode = async (src, alt, sizes = '100vw') => {
     });
 };
 
+const youtube = (id) => {
+    return `<div class="youtube-embed">
+    <iframe 
+        src="https://www.youtube-nocookie.com/embed/${id}"
+        title="YouTube video player"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+    </div>`;
+};
+
 module.exports = {
+    youtube,
     getSvgContent,
     year,
     imageShortcode,

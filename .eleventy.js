@@ -3,7 +3,7 @@ const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const htmlmin = require('html-minifier');
 
 //import shortcodes
-const { getSvgContent, year, imageShortcode } = require('./config/shortcodes');
+const { youtube, getSvgContent, year, imageShortcode } = require('./config/shortcodes');
 
 // import filters
 const {
@@ -37,6 +37,7 @@ const eleventyPluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
 const markdownLibrary = require('./config/plugins/markdown');
 
 module.exports = function (eleventyConfig) {
+
     eleventyConfig.addWatchTarget('./src/sass/');
     eleventyConfig.addWatchTarget('./src/assets/js/');
 
@@ -56,11 +57,12 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('shuffle', shuffleArray);
     eleventyConfig.addFilter('limit', limit);
     eleventyConfig.addFilter('getYears', getYears);
-    eleventyConfig.addFilter("slug", slug);
+    eleventyConfig.addFilter('slug', slug);
 
     // Shortcodes
     eleventyConfig.addShortcode('year', year);
     eleventyConfig.addShortcode('svg', getSvgContent);
+    eleventyConfig.addShortcode('youtube', youtube);
     eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
     // collections
@@ -107,7 +109,7 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addPassthroughCopy('src/robots.txt');
-    eleventyConfig.addPassthroughCopy('./src/js');
+    // eleventyConfig.addPassthroughCopy('./src/js');
     eleventyConfig.addPassthroughCopy('./src/favicon.ico');
     eleventyConfig.addPassthroughCopy('./src/assets/');
 
