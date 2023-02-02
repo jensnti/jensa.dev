@@ -4,7 +4,7 @@ date: 2021-11-16
 summary: 'Kurswebbsystemet jag skapat med namnet TOD, behövde en uppdatering för att tillåta slutuppgifter. Det här handlar om hur en lite feature kan växa sig till ett rätt omfattande refaktorering.'
 tags: ['TOD', '11ty', 'javascript', 'localstorage']
 templateEngineOverride: njk, md
-category: anteckning
+category: anteckningar
 ---
 
 Jag har tidigare skrivit om kurswebbsystemet jag byggt, [Tema, område, del](/tag/tod). Det är ett ständigt work in progress (vad är inte det) och jag har inte riktigt fått till uppgiftsfunktionen som jag önskat.

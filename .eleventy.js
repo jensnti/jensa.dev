@@ -37,10 +37,10 @@ const imageShortcode = async (
     src,
     alt,
     title,
-    sizes = '(min-width: 30em) 50vw, 100vw'
+    sizes
 ) => {
     const metadata = await Image(src, {
-        widths: [400, 800, null],
+        widths: [400, 800],
         outputDir: './public/img/',
     });
 
@@ -87,17 +87,6 @@ const yearString = (dateObj) => {
     return format(dateObj, 'yyyy');
 };
 
-const tagCountCss = (count) => {
-    const prefix = 'tag-cloud__item--';
-    if (count < 2) {
-        return `${prefix}100`;
-    } else if (count < 4) {
-        return `${prefix}200`;
-    } else {
-        return `${prefix}300`;
-    }
-};
-
 const filterTagList = (tags) => {
     return (tags || []).filter(
         (tag) => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1
@@ -136,12 +125,10 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addFilter('randomColor', randomColor);
-    eleventyConfig.addFilter('tagCountCss', tagCountCss);
     eleventyConfig.addFilter('readableDate', readableDate);
     eleventyConfig.addFilter('frontDate', frontDate);
     eleventyConfig.addFilter('yearString', yearString);
     eleventyConfig.addFilter('htmlDateString', htmlDateString);
-    eleventyConfig.addFilter('linebreak', (str) => str.split(' ').join('\n'));
     eleventyConfig.addFilter('getProject', (projects, title) => {
         return projects.find((project) => project.title === title);
     });

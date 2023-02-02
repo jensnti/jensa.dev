@@ -4,7 +4,7 @@ date: 2021-06-24
 update: 2021-07-11
 tags: ['css', 'länkar', '11ty']
 templateEngineOverride: njk, md
-category: anteckning
+category: anteckningar
 summary: 'Kursen Learn Eleventy from Scratch är nu fritt tillgänglig. Läs mer om den och mina intryck efter slutförd kurs.'
 ---
 

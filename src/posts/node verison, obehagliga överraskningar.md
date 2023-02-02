@@ -2,7 +2,7 @@
 title: Node version, obehagliga överraskningar
 date: 2022-10-06
 tags: ['11ty', 'netlify', 'node']
-category: anteckning
+category: anteckningar
 summary: "Det blir inte alltid som en tänkt sig och oväntade fel kan dyka upp som en obehaglig överraskning. Detta hände när jag skulle publicera en sida med 11ty och Netlify."
 ---
 

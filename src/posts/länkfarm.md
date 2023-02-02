@@ -2,7 +2,7 @@
 title: Länkfarm
 date: 2021-09-30
 tags: ['11ty', 'koda']
-category: anteckning
+category: anteckningar
 summary: "Sidan behövde en feature som jag saknade, en summering av alla länkar som presenteras i texten. Detta är en anteckning om hur jag löste det."
 ---
 

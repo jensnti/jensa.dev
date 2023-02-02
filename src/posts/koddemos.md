@@ -4,7 +4,7 @@ date: 2022-05-20
 tags: ['kod', '2.0']
 templateEngineOverride: njk, md
 summary: "Det här är en anteckning med koddemos för att dokumentera mitt arbete med att få igång kodexempel på den här sidan. Grunden är hämtad från 5t3phs sidor (smolcss.dev/moderncss.dev) med lite variation för att kunna visa annan kod är css."
-category: anteckning
+category: anteckningar
 ---
 
 ## Varför

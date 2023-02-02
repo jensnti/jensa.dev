@@ -1,6 +1,7 @@
 ---
 title: Arkiv
 layout: pages/archive.njk
+permalink: arkiv/index.html
 # pagination:
 #     data: collections.posts
 #     size: 1000

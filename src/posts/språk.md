@@ -2,7 +2,7 @@
 title: Språk
 date: 2021-06-20
 tags: ['reflektion']
-category: anteckning
+category: anteckningar
 summary: "På den här sidan har jag valt att skriva på svenska. Det kan verka som en dum ide, när en skriver om kod. Men så får det vara, jag är nöjd med det."
 ---
 

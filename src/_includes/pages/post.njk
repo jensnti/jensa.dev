@@ -8,8 +8,8 @@
 {% endblock %}
 
 {% block content %}
-<main id="main-content" tabindex="-1" class="container">
-    <article class="region flow">
+<main id="main-content" tabindex="-1" class="container region">
+    <article class="flow">
         <header>
             <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
             {% if update %}
