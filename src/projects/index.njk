@@ -2,34 +2,32 @@
 title: Projekt
 permalink: /projekt/
 order: 3
+summary: Länkar och eventuell info om projekt och annat jag driver/är delaktig i/skapat.
+category: ""
 ---
 
-{% extends 'pages/base.njk' %}
+{% extends 'pages/page.njk' %}
 
 {% block content %}
-<main id="main-content" tabindex="-1">
-    <section class="content container">
-        <p class="content__lead">Länkar och eventuell info om projekt jag har/är delaktig i.</p>
+<main id="main-content" tabindex="-1" class="container region">
+    <article>
         {% if projectsData %}
-        <ul class="project-list">
-        {% for project in projectsData %}
-            <li class="project-list__card">
+        <ul class="grid" data-layout="50-50" data-rows="masonry" role="list">
+            {% for project in projectsData %}
+            <li class="card flow">
                 {% if project.thumb %}
-                <img
-                    src="/assets/thumbs/{{ project.thumb }}"
-                    alt="Bild för projektet {{ project.title }}"/>
+                <img src="/assets/thumbs/{{ project.thumb }}" alt="Bild för projektet {{ project.title }}" />
                 {% endif %}
-                <h3>{{ project.title }}</h3>
+                <h3>
+                    <a href="{{ project.title | slug }}">
+                        {{ project.title }}
+                    </a>
+                </h3>
                 <p>{{ project.description }}</p>
-                <a href="{{ project.title | slug }}">
-                    {{ project.title }}
-                </a>
             </li>
-        {% endfor %}
+            {% endfor %}
         </ul>
         {% endif %}
-    </section>
+    </article>
 </main>
 {% endblock %}
-
-

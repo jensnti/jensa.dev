@@ -12,4 +12,7 @@
     white-space: nowrap;
     font-weight: 600;
     text-transform: uppercase;
+    &:hover {
+        background-color: var(--color-secondary);
+    }
 }

@@ -5,27 +5,24 @@
 {% block content %}
 <main id="main-content" tabindex="-1" class="container region">
     <article class="flow">
-        {% if project %}
-        <aside class="card">
-            <ul >
-                <li>
-                    <span>Titel:</span> {{ project.title }}
-                </li>
-                <li>
-                   <span>Start:</span> <time datetime="{{ project.start | htmlDateString }}">{{ project.start | frontDate }}</time>
-                </li>
-                <li>
-                    <span>Status:</span> {{ project.status }}
-                </li>
-                <li>
-                    <span>URL:</span> <a href="{{ project.url | url }}" target="_blank">{{ project.url }}</a>
-                </li>
-                <li>
-                    <span>Git:</span> <a href="{{ project.git | url }}" target="_blank">{{ project.git }}</a>
-                </li>
-            </ul>
-        </aside>
-        {% endif %}
+        <ul>
+            <li>
+                <span>Titel:</span> {{ project.title }}
+            </li>
+            <li>
+                <span>Start:</span> <time datetime="{{ project.start | htmlDateString }}">{{ project.start | frontDate
+                    }}</time>
+            </li>
+            <li>
+                <span>Status:</span> {{ project.status }}
+            </li>
+            <li>
+                <span>URL:</span> <a href="{{ project.url | url }}" target="_blank">{{ project.url }}</a>
+            </li>
+            <li>
+                <span>Git:</span> <a href="{{ project.git | url }}" target="_blank">{{ project.git }}</a>
+            </li>
+        </ul>
         {{ content | safe }}
     </article>
 </main>

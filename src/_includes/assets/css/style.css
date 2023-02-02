@@ -63,8 +63,8 @@ select {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -197,7 +197,7 @@ h3 {
 p,
 li,
 blockquote:not([class]) {
-  max-width: 50ch;
+  max-width: 55ch;
 }
 
 h1,
@@ -353,15 +353,17 @@ main:focus {
 .breadcrumbs a:hover {
   text-decoration: underline;
 }
+.breadcrumbs > .grid {
+  align-items: end;
+}
 
 form input, form textarea {
   width: 100%;
-  padding: var(--space-s);
+  padding: var(--space-2xs);
+  margin-top: var(--space-3xs-2xs);
 }
 form button {
   width: 100%;
-  background-color: var(--color-light);
-  color: var(--color-dark);
 }
 
 .btn {
@@ -379,11 +381,39 @@ form button {
   font-weight: 600;
   text-transform: uppercase;
 }
+.btn:hover {
+  background-color: var(--color-secondary);
+}
+
+.card {
+  position: relative;
+  max-width: unset;
+  padding: var(--space-xs-s);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+.card a:after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.card:focus-within a:focus {
+  outline: none;
+}
 
 .post-list article {
   margin-bottom: var(--space-m-l);
 }
 .post-list time {
+  font-size: var(--step-0);
+}
+
+.post-date {
+  text-align: end;
+  margin-bottom: 1em;
   font-size: var(--step-0);
 }
 

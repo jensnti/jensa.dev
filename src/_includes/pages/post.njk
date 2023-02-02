@@ -11,10 +11,6 @@
 <main id="main-content" tabindex="-1" class="container region">
     <article class="flow">
         <header>
-            <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-            {% if update %}
-                <span class="content__header-time--updated">Uppdaterat: <time datetime="{{ update | htmlDateString }}">{{ update | readableDate }}</time></span>
-            {% endif %}
             {% if summary %}
             <p class="lead">{{ summary | safe }}</p>
             {% endif %}

@@ -1,11 +1,10 @@
 form {
     input, textarea {
         width: 100%;
-        padding: var(--space-s);
+        padding: var(--space-2xs);
+        margin-top: var(--space-3xs-2xs);
     }
     button {
         width: 100%;
-        background-color: var(--color-light);
-        color: var(--color-dark);
     }
 }

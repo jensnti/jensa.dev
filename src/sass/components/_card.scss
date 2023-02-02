@@ -1,8 +1,20 @@
 .card {
-    border-radius: var(--border-radius);
+    position: relative;
+    // border-radius: var(--border-radius);
     max-width: unset;
-    padding: var(--space-m-l);
+    padding: var(--space-xs-s);
 
     background-color: var(--color-dark);
     color: var(--color-light);
+    a:after {
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    &:focus-within a:focus {
+        outline: none;
+    }
 }
