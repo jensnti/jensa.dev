@@ -50,3 +50,9 @@ Ser du här och det är väl inte helt färdigt. Det är monotomt i färgvalet f
 Jag tror att delen med koddemos kommer bli länkar till [Codepen](https://codepen.io/) istället för att ha koden direkt i sidan. Det är enklare att uppdatera och det blir lättare att dela. Sen är jag lur på att flytta resurserna till Git-Repos för att samla/versionshantera dem.
 
 Så i vanlig ordning är cirkeln sluten, jag är tillbaka i det jag tänkte göra om. Men jag har lärt mig en del i processen 😊
+
+Netlifys lighthouse plugin levererade även goda nyheter med uppdateringen:
+
+{% image "./src/images/Screenshot 2023-02-03 131851.png", "Lighthouse score" %}
+
+Det kan nog ha och göra med att jag rensat en hel del, men även bytt font från Typekit hostad till lokalt hostad Work Sans.
