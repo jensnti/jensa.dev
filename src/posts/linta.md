@@ -1,7 +1,7 @@
 ---
 title: Linta
 date: 2021-12-06
-lead: 'Automatisk kodformattering och hjälp med stilen, det kan väl vara trevligt.'
+summary: 'Automatisk kodformattering, hjälp och hitta fel. Det är vad linta är och det rekommenderas starkt.'
 tags: ['eslint', 'praxis', 'prettier']
 category: resurser
 ---

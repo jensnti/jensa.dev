@@ -1,5 +1,3 @@
-{%- from 'layouts/site-head/macro.njk' import siteHead -%}
-{%- from 'layouts/site-foot/macro.njk' import siteFoot -%}
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}">
 
@@ -8,37 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% include "../components/meta.njk" %}
-    <link rel="preconnect" href="https://use.typekit.net" />
     <link rel="alternate" type="application/rss+xml" title="{{ meta.siteName }}" href="{{ meta.url }}/feed.xml" />
-    <link rel="stylesheet" href="https://use.typekit.net/hrh0cnz.css" />
     <style>{% include "assets/css/style.css" %}</style>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     {% include "../components/analytics.njk" %}
-    {% block head %}
-    {% endblock %}
+    {% block head %}{% endblock %}
 </head>
 
 <body>
     <a class="skip-link" href="#main-content">Hoppa till sidans innehåll</a>
     {% block header %}
-        {{ siteHead({
-            title: title,
-            siteName: meta.siteName,
-            active: page.url,
-            items: collections.pages
-        }) }}
+        {% include "../layouts/site-head.njk" %}
     {% endblock %}
-    {% block content %}
-    {% endblock %}
+    {% block content %}{% endblock %}
     {% block footer %}
-        {{ siteFoot({
-            version: pkg.version,
-            url: pkg.homepage
-        }) }}
+        {% include "../components/site-foot.njk" %}
     {% endblock %}
-    {% include "../components/flash-message/template.njk" %}
+    {% include "../components/flash-message.njk" %}
     {% block scripts %}
-    <script defer src="/js/bundle.min.js"></script>
+        <script defer src="/js/bundle.min.js"></script>
     {% endblock %}
 </body>
 

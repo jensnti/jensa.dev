@@ -1,7 +1,7 @@
 ---
 title: Testa med JS
 date: 2022-05-14
-lead: I veckan omarbetade jag en uppgift från det här läsåret. Jag skapade tester som ska fungera som milstolpar i arbetet för eleverna. Att skriva tester är inte något jag gjort i större utsträckning och jag tänkte skriva om några lärdomar.
+summary: I veckan omarbetade jag en uppgift från det här läsåret. Jag skapade tester som ska fungera som milstolpar i arbetet för eleverna. Att skriva tester är inte något jag gjort i större utsträckning och jag tänkte skriva om några lärdomar.
 tags: ['javascript', 'tester']
 category: resurser
 ---

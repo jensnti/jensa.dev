@@ -3,18 +3,11 @@ title: Resurser
 permalink: /resurser/index.html
 ---
 
-{% extends 'pages/base.njk' %}
+{% extends 'pages/page.njk' %}
+{% set postListItems = collections.resources %}
 
 {% block content %}
-<main id="main-content" tabindex="-1">
-    <section class="content container flow">
-        <ul>
-            {% for resource in collections.resources %}
-            <li>
-                <a href="{{ resource.url | url }}">{{ resource.data.title }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </section>
+<main id="main-content" tabindex="-1" class="container region">
+    {% include "layouts/post-list.njk" %}
 </main>
 {% endblock %}

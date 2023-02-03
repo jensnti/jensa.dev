@@ -1,248 +1,78 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const markdownIt = require('markdown-it');
-const mila = require('markdown-it-link-attributes');
-const mia = require('markdown-it-attrs');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
-const fs = require('fs');
-const { format, parseISO } = require('date-fns');
-const { sv } = require('date-fns/locale');
-const Image = require('@11ty/eleventy-img');
-const markdownItAnchor = require('markdown-it-anchor');
 const htmlmin = require('html-minifier');
+
+//import shortcodes
+const { youtube, getSvgContent, year, imageShortcode } = require('./config/shortcodes');
+
+// import filters
+const {
+    getDemo,
+    randomColor,
+    readableDate,
+    frontDate,
+    yearString,
+    htmlDateString,
+    getProject,
+    tagFilter,
+    shuffleArray,
+    slug,
+    limit,
+    getYears,
+} = require('./config/filters');
+
+// import  collections
+const {
+    tagList,
+    demos,
+    orderedDemos,
+    pages,
+    posts,
+    projects,
+    resources,
+} = require('./config/collections');
+
+// plugins
 const eleventyPluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
-
-// filters and shortcodes
-const getSvgContent = (file, classList) => {
-    let relativeFilePath = `./src/_includes/assets/icons/${file}`;
-    let data = fs.readFileSync(relativeFilePath, (err, contents) => {
-        if (err) return err;
-        return contents;
-    });
-    if (classList) {
-        return (
-            data.toString('utf8').slice(0, 4) +
-            ` class="${classList}" ` +
-            data.toString('utf8').slice(4)
-        );
-    } else {
-        return data.toString('utf8');
-    }
-};
-
-const year = () => {
-    return `${new Date().getFullYear()}`;
-};
-
-const imageShortcode = async (
-    src,
-    alt,
-    title,
-    sizes = '(min-width: 30em) 50vw, 100vw'
-) => {
-    const metadata = await Image(src, {
-        widths: [400, 800, null],
-        outputDir: './public/img/',
-    });
-
-    const imageAttributes = {
-        alt,
-        title,
-        sizes,
-        loading: 'lazy',
-        decoding: 'async',
-    };
-
-    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-    return Image.generateHTML(metadata, imageAttributes, {
-        whitespaceMode: 'inline',
-    });
-};
-
-const readableDate = (dateObj) => {
-    if (typeof dateObj === 'string') {
-        dateObj = parseISO(dateObj);
-    }
-    return format(dateObj, 'PPP', { locale: sv });
-};
-
-const frontDate = (dateObj) => {
-    if (typeof dateObj === 'string') {
-        dateObj = parseISO(dateObj);
-    }
-    return format(dateObj, 'MMM yyyy', { locale: sv });
-};
-
-const htmlDateString = (dateObj) => {
-    // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-    if (typeof dateObj === 'string') {
-        dateObj = parseISO(dateObj);
-    }
-    return format(dateObj, 'yyyy-MM-dd');
-};
-
-const yearString = (dateObj) => {
-    if (typeof dateObj === 'string') {
-        dateObj = parseISO(dateObj);
-    }
-    return format(dateObj, 'yyyy');
-};
-
-const tagCountCss = (count) => {
-    const prefix = 'tag-cloud__item--';
-    if (count < 2) {
-        return `${prefix}100`;
-    } else if (count < 4) {
-        return `${prefix}200`;
-    } else {
-        return `${prefix}300`;
-    }
-};
-
-const filterTagList = (tags) => {
-    return (tags || []).filter(
-        (tag) => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1
-    );
-};
-
-const randomColor = () => {
-    const colors = [
-        'orange',
-        'red',
-        'blue',
-        'yellow',
-        'magenta',
-        'green',
-        'cyan',
-    ];
-    return colors[Math.floor(Math.random() * colors.length)];
-};
+const markdownLibrary = require('./config/plugins/markdown');
 
 module.exports = function (eleventyConfig) {
+
     eleventyConfig.addWatchTarget('./src/sass/');
-    eleventyConfig.addWatchTarget('./src/js/');
+    eleventyConfig.addWatchTarget('./src/assets/js/');
 
     // Plugins
     eleventyConfig.addPlugin(rssPlugin);
     eleventyConfig.addPlugin(syntaxHighlight);
 
-    eleventyConfig.addPlugin(eleventyPluginTOC, {
-        headingText: 'På den här sidan',
-        tags: ['h2', 'h3', 'h4'],
-    });
-
     // Filters
-    eleventyConfig.addFilter('getDemo', function (demos, title) {
-        return demos.find((demo) => demo.data.title === title);
-    });
-
+    eleventyConfig.addFilter('getDemo', getDemo);
     eleventyConfig.addFilter('randomColor', randomColor);
-    eleventyConfig.addFilter('tagCountCss', tagCountCss);
     eleventyConfig.addFilter('readableDate', readableDate);
     eleventyConfig.addFilter('frontDate', frontDate);
     eleventyConfig.addFilter('yearString', yearString);
     eleventyConfig.addFilter('htmlDateString', htmlDateString);
-    eleventyConfig.addFilter('linebreak', (str) => str.split(' ').join('\n'));
-    eleventyConfig.addFilter('getProject', (projects, title) => {
-        return projects.find((project) => project.title === title);
-    });
-    eleventyConfig.addFilter('filterTagList', filterTagList);
-    eleventyConfig.addFilter('tagFilter', (posts, tag) => {
-        console.log()
-        return posts.filter((item) => item.data.tags.includes(tag));
-        // return posts.find((item) => item.data.tags.filter((t) => t === tag));
-    });
-    eleventyConfig.addFilter('randomItem', (arr) => {
-        arr.sort(() => {
-            return 0.5 - Math.random();
-        });
-        return arr.slice(0, 1);
-    });
-    eleventyConfig.addFilter('limit', function (arr, limit) {
-        return arr.slice(0, limit);
-    });
+    eleventyConfig.addFilter('getProject', getProject);
+    eleventyConfig.addFilter('tagFilter', tagFilter);
+    eleventyConfig.addFilter('shuffle', shuffleArray);
+    eleventyConfig.addFilter('limit', limit);
+    eleventyConfig.addFilter('getYears', getYears);
+    eleventyConfig.addFilter('slug', slug);
 
     // Shortcodes
     eleventyConfig.addShortcode('year', year);
     eleventyConfig.addShortcode('svg', getSvgContent);
+    eleventyConfig.addShortcode('youtube', youtube);
     eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
     // collections
-    // Create an array of all tags
-    eleventyConfig.addCollection('tagList', (collection) => {
-        const tagSet = new Set();
-        collection.getAll().forEach((item) => {
-            (item.data.tags || []).forEach((tag) => tagSet.add(tag));
-        });
-        return filterTagList([...tagSet]);
-    });
-
-    // Get only content that matches a tag
-    eleventyConfig.addCollection('demos', function (collectionApi) {
-        return collectionApi.getFilteredByTag('demos');
-    });
-
-    eleventyConfig.addCollection('orderedDemos', function (collectionApi) {
-        return collectionApi.getFilteredByTag('demos').sort((a, b) => {
-            return a.data.order - b.data.order;
-        });
-    });
-
-    eleventyConfig.addCollection('pages', (collectionApi) =>
-        collectionApi
-            .getFilteredByGlob(['src/pages/*.md', 'src/projects/index.*'])
-            .sort((a, b) => b.data.order - a.data.order)
-    );
-
-    eleventyConfig.addCollection('posts', (collectionApi) =>
-        collectionApi.getFilteredByGlob('src/posts/*.md')
-    );
-
-    eleventyConfig.addCollection('projects', (collectionApi) =>
-        collectionApi.getFilteredByGlob('src/projects/*.md')
-    );
-
-    eleventyConfig.addCollection('resources', (collectionApi) => [
-        ...collectionApi
-            .getAll()
-            .filter((item) => item.data.category === 'resurser')
-            .sort((a, b) => b.date - a.date),
-    ]);
-
-    eleventyConfig.addCollection('feed', (collectionApi) =>
-        [...collectionApi.getFilteredByGlob('src/posts/*.md')]
-            .reverse()
-            .slice(0, 5)
-    );
-
-    const markdownLibrary = markdownIt({
-        html: true,
-        breaks: true,
-        linkify: true,
-        typographer: true,
-    })
-        .use(markdownItAnchor, {
-            permalink: markdownItAnchor.permalink.linkInsideHeader({
-                symbol: `<span class="anchor" aria-hidden="true">#</span>`,
-                placement: 'before',
-            }),
-            level: [1, 2, 3, 4],
-            slugify: (s) =>
-                s
-                    .trim()
-                    .toLowerCase()
-                    .replace(/[\s+~\/]/g, '-')
-                    .replace(/[().`,%·'"!?¿:@*]/g, ''),
-        })
-        .use(mila, {
-            pattern: /^https:/,
-            attrs: {
-                target: '_blank',
-                rel: 'noopener',
-            },
-        })
-        .use(mia, {
-            allowedAttributes: ['id', 'class'],
-        });
+    eleventyConfig.addCollection('tagList', tagList);
+    eleventyConfig.addCollection('demos', demos);
+    eleventyConfig.addCollection('orderedDemos', orderedDemos);
+    eleventyConfig.addCollection('pages', pages);
+    eleventyConfig.addCollection('posts', posts);
+    eleventyConfig.addCollection('projects', projects);
+    eleventyConfig.addCollection('resources', resources);
 
     eleventyConfig.setLibrary('md', markdownLibrary);
 
@@ -279,7 +109,7 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addPassthroughCopy('src/robots.txt');
-    eleventyConfig.addPassthroughCopy('./src/js');
+    // eleventyConfig.addPassthroughCopy('./src/js');
     eleventyConfig.addPassthroughCopy('./src/favicon.ico');
     eleventyConfig.addPassthroughCopy('./src/assets/');
 

@@ -5,42 +5,14 @@ pagination:
     alias: tag
     filter: ['all', 'nav', 'pages', 'tagList']
 permalink: /tagg/{{ tag | slugify }}/
-postsHeading: 'Alla inlägg'
 ---
 
 {% set title = 'Taggat med ' + tag %}
-{% extends 'pages/base.njk' %}
-{%- from 'layouts/post-list/macro.njk' import postList -%}
-
-{% block header %}
-{{
-    siteHead({
-        title: title,
-        siteName: meta.siteName,
-        active: page.url,
-        items: collections.pages,
-        link: ["Alla taggar", "/taggar/"]
-    })
-}} 
-{% endblock %}
+{% extends 'pages/page.njk' %}
+{% set postListItems = collections[tag] | reverse %}
 
 {% block content %}
-<main id="main-content" tabindex="-1">
-    <section class="content container flow">
-        <aside class="content__info">
-            <p>Här hittar du allt som är taggat med {{ tag }}.</p>
-        </aside>
-        {% set postListItems = collections[tag] | reverse %}
-        {% if postListItems.length %}
-        {{
-            postList({
-                items: postListItems
-            })
-        }}
-        {% endif %}
-        <!-- <footer class="content__footer">
-            <h4><a href="{{ '/taggar/' }}">Alla taggar</a></h4>
-        </footer> -->
-    </section>
+<main id="main-content" tabindex="-1" class="container region">
+    {% include "layouts/post-list.njk" %}
 </main>
 {% endblock %}

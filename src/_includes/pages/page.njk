@@ -1,0 +1,9 @@
+{% extends 'pages/base.njk' %}
+
+{% block content %}
+<main id="main-content" tabindex="-1" class="container region">
+    <article class="flow">
+        {{ content | safe }}
+    </article>
+</main>
+{% endblock %}

@@ -1,9 +1,9 @@
 ---
 title: Advent of code 2021
 date: 2021-12-07
-lead: 'En ytterst kort post om advent of code.'
+summary: 'En väldigt kort anteckning om Advent of code.'
 tags: ['koda', 'advent of code']
-category: anteckning
+category: anteckningar
 ---
 
 Julkalendrar är en stor grej och att koda som en kan vara det med. [Advent of code](https://adventofcode.com/) är en årligt återkommande samling pussel som löses med hjälp av programmering. Svårigheten är varierande och du löser det du klarar av och hinner med.

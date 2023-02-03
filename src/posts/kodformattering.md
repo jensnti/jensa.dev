@@ -3,6 +3,7 @@ title: Kodformattering
 date: 2021-06-21
 tags: ['markdown', 'css']
 category: resurser
+summary: "En stor del av innehållet på den här sidan är tänkt att vara kod. Därför måste sidan kunna visa kod. I den här texten går jag igenom hur jag löst det."
 ---
 
 Att kunna skriva kodexempel och visa kod på den här sidan är ett måste. Som tur är så finns det tillgängligt med Eleventys [Syntax Highlight Plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/). Det använder i sin tur [Prism](https://prismjs.com/) för att stila koden.

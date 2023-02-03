@@ -34,7 +34,7 @@
         'DejaVu Sans Mono', monospace;
     --prism-tab-size: 4;
     --prism-block-radius: 0;
-    --prism-font-size: var(--step--2);
+    --prism-font-size: var(--step-0);
     --prism-line-height: 1.5;
     --prism-block-margin-y: var(--step-0);
     /* --prism-inline-background:#242936; */

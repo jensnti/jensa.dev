@@ -27,7 +27,11 @@ module.exports = {
                         url: link.href,
                         title: link.textContent,
                     };
-                });
+                })
+                .filter(
+                    (link, index, self) =>
+                        index === self.findIndex((t) => t.title === link.title)
+                );
         }
     },
 };

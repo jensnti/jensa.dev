@@ -2,9 +2,9 @@
 title: Github Copilot
 date: 2021-07-12
 update: 2021-09-29
-lead: 'GitHub har i sommar släppt en teknisk förhandstitt på sin nya AI, GItHub Copilot. Den beskrivs som en AI att parprogrammera med. I nuläget finns den endast som VSCode extension.'
+summary: 'GitHub har i sommar släppt en teknisk förhandstitt på sin nya AI, GitHub Copilot. Den beskrivs som en AI att parprogrammera med. I nuläget finns den endast som VSCode extension.'
 tags: ['github', 'ai']
-category: anteckning
+category: anteckningar
 ---
 
 Såhär två månader senare så kommer här en kort uppdatering.

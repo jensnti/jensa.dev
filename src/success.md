@@ -1,6 +1,6 @@
 ---
 title: 'Tack för ditt meddelande!'
-layout: pages/post.njk
+layout: pages/page.njk
 eleventyExcludeFromCollections: true
 ---
 

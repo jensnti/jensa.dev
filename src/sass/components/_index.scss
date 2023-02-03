@@ -1,17 +1,45 @@
-@forward "content";
-@forward "../../_includes/layouts/nav/";
-// @forward "toggle-button";
-// @forward "demo";
-@forward "../../_includes/layouts/demo/";
-// @forward "tags";
-@forward "../../_includes/layouts/post-list/";
-@forward "../../_includes/layouts/site-foot/";
-@forward "../../_includes/layouts/site-head/";
-@forward "../../_includes/components/flash-message/";
-@forward "../../_includes/layouts/pagination/";
-@forward "button";
-@forward "tag";
-@forward "tag-cloud";
-@forward "nav-toc";
-@forward "form";
-@forward "project";
+@forward 'site-foot';
+@forward 'navbar';
+@forward 'lead';
+@forward 'anchor';
+@forward 'tags';
+@forward 'breadcrumbs';
+@forward 'form';
+@forward 'btn';
+@forward 'card';
+@forward 'code-demo';
+@forward 'flash';
+
+.post-list {
+    article {
+        margin-bottom: var(--space-m-l);
+    }
+    time {
+        font-size: var(--step-0);
+    }
+    h2 {
+        text-transform: lowercase;
+    }
+}
+
+.post-date {
+    text-align: end;
+    margin-bottom: 1em;
+    font-size: var(--step-0);
+    text-transform: uppercase;
+    @media (max-width: 46rem) {
+        text-align: start;
+    }
+}
+
+.youtube-embed {
+    aspect-ratio: 16 / 9;
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.post {
+    --region-top-space: var(--space-l-xl);
+}

@@ -2,7 +2,7 @@
 title: CSS, namn och semantik
 date: 2021-06-22
 update: 2021-06-30
-lead: 'Att namnge CSS, att återanvända CSS och hantera cascade är något som de flesta webb-projekt behöver göra. Det finns ett antal olika sätt att närma sig detta.'
+summary: 'Att namnge CSS, att återanvända CSS och hantera cascade är något som de flesta webb-projekt behöver göra. Det finns ett antal olika sätt att närma sig detta.'
 tags: ['css', 'praxis']
 category: resurser
 ---

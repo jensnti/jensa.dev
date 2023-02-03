@@ -2,8 +2,8 @@
 title: Två punkt noll
 date: 2022-06-20
 tags: ['2.0']
-lead: Den här posten började som en kopia av <a href="/posts/sprak">Språk</a>. Orginalet hade samma datum som när jag skriver det här, men ett år framåt. Nu kommer tyvärr inte det slutgiltiga post-datumet vara måndag den 20 juni, men kanske snart.
-category: anteckning
+summary: Den här posten började som en kopia av språkposten från 2021. Orginalet hade samma datum som när jag skriver det här, men ett år framåt. Nu kommer tyvärr inte det slutgiltiga post-datumet vara måndag den 20 juni, men kanske snart.
+category: anteckningar
 ---
 
 ## Vad

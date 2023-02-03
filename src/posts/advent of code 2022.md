@@ -1,9 +1,9 @@
 ---
 title: Advent of code 2022
 date: 2022-12-02
-lead: 'Det är dags igen!'
+summary: 'Det är dags för Advent of Code igen, ta chansen och utmana dig själv!'
 tags: ['koda', 'advent of code']
-category: anteckning
+category: anteckningar
 ---
 
 Igår drog [Advent of Code](https://adventofcode.com/) igång igen och jag kan verkligen rekommendera det. Utmana dig själv och försök lösa så många problem som möjligt. Du kommer att få parsa massor med data och hantera den på olika sätt, supernyttigt.
@@ -26,8 +26,7 @@ I filen ```package.json``` så under ```scripts``` så lägger du till följande
 
 ```diff-json
 "scripts": {
-    ...
-+    "start": "node index.js"
+    "start": "node index.js"
 }
 ```
 

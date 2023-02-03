@@ -1,31 +1,10 @@
 {% extends 'pages/base.njk' %}
-{%- from 'layouts/post-list/macro.njk' import postList -%}
+
 {% set postListItems = collections.posts | reverse %}
-
-{% set year = postListItems[0].date | yearString %}
-{% set years = [year] %}
-
-{% block header %}
-{{ siteHead({
-    title: title,
-    siteName: meta.siteName,
-    active: page.url,
-    items: collections.pages,
-    year: year
-}) }}
-{% endblock %}
+{% set years = postListItems | getYears %}
 
 {% block content %}
-<main id="main-content" tabindex="-1">
-    <section class="content container flow">
-        {% if postListItems.length %}
-        {{
-            postList({
-                items: postListItems,
-                displayYears: years
-            })
-        }}
-        {% endif %}
-    </section>
+<main id="main-content" tabindex="-1" class="container region">
+    {% include "../layouts/post-list.njk" %}
 </main>
 {% endblock %}

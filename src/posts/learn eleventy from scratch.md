@@ -1,11 +1,11 @@
 ---
-title: Learn Eleventy From Scratch
+title: Learn Eleventy from Scratch
 date: 2021-06-24
 update: 2021-07-11
-lead: 'Scrolla ned för att läsa mina intryck efter att jag slutfört kursen .'
 tags: ['css', 'länkar', '11ty']
 templateEngineOverride: njk, md
-category: anteckning
+category: anteckningar
+summary: 'Kursen Learn Eleventy from Scratch är nu fritt tillgänglig. Läs mer om den och mina intryck efter slutförd kurs.'
 ---
 
 Plötsligt händer det. I det [första inlägget](../learn-css/) på bloggen skrev jag om Andy Bells [Learn CSS](https://web.dev/learn/css/) kurs. På sin webbplats [Piccalilli](https://piccalil.li/) har han även en kurs, [Learn Eleventy From Scratch](https://piccalil.li/course/learn-eleventy-from-scratch/). Den kursen har tidigare har kostat pengar, men nu är den gratis.

@@ -1,12 +1,10 @@
 ---
 title: 2022, uppdateringar
 date: 2022-03-13
-lead: "Ett nytt år, ett nytt © datum på sidan och kanske ett slut på pandemin"
-tags: [ 'reflektion', 'uppdatering', 'TOD']
-category: anteckning
+summary: "Ett nytt år, ett nytt © datum på sidan och kanske ett slut på pandemin. Det här är en kort uppdatering om den här sidan och vad jag har arbetat med."
+tags: [ 'reflektion', 'nytt år', 'TOD']
+category: anteckningar
 ---
-
-Här kommer en kort uppdatering om sidan och saker jag arbetat med. Det har varit en period av mindre aktivitet, av olika anledningar men förhoppningsvis kommer det mer nu under våren.
 
 ## Mat
 
