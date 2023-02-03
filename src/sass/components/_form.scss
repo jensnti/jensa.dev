@@ -8,6 +8,7 @@ form {
         width: 100%;
     }
     *:focus {
-        color: var(--color-light);
+        color: var(--color-dark);
+        outline-color: var(--color-light);
     }
 }

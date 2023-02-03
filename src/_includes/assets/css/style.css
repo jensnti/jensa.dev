@@ -412,7 +412,8 @@ form button {
   width: 100%;
 }
 form *:focus {
-  color: var(--color-light);
+  color: var(--color-dark);
+  outline-color: var(--color-light);
 }
 
 .btn {
