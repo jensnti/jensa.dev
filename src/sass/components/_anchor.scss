@@ -3,7 +3,11 @@
     display: block;
 }
 
-h2:has(a.anchor), h3:has(a.anchor) {
+// h2:has(a.anchor), h3:has(a.anchor) {
+//     display: flex;
+// }
+
+.heading-wrapper > h2, .heading-wrapper > h3, #links {
     display: flex;
 }
 
