@@ -1,6 +1,6 @@
 {
     "name": "jensa.dev",
-    "version": "2.1.1",
+    "version": "3.0.0",
     "description": "Personal website of Jens Andreasson",
     "scripts": {
         "watch:sass": "sass  --no-source-map --watch src/sass:src/_includes/assets/css",

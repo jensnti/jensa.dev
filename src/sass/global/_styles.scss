@@ -100,3 +100,9 @@ main:focus {
 code {
     background-color: var(--color-bg);
 }
+
+blockquote {
+    border-left: var(--border);
+    padding-left: 1ch;
+    background-color: var(--color-bg);
+}
