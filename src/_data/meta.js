@@ -1,7 +1,21 @@
 module.exports = {
     siteName: 'J.Anteckningar',
     siteDesc: 'Blog, projekt och anteckningsblock för Jens Andreasson',
-    keyWords: ['blog', 'html', 'jens', 'andreasson', 'jensnti', 'teacher', 'html', 'web', 'css', 'js', 'javascript', 'webbutveckling', 'programmering'],
+    keyWords: [
+        'blog',
+        'html',
+        'jens',
+        'andreasson',
+        'jensnti',
+        'teacher',
+        'html',
+        'web',
+        'css',
+        'js',
+        'javascript',
+        'webbutveckling',
+        'programmering',
+    ],
     author: {
         name: 'Jens Andreasson',
         email: 'jensandreasson77@gmail.com',

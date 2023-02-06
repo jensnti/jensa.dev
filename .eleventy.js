@@ -58,6 +58,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('limit', limit);
     eleventyConfig.addFilter('getYears', getYears);
     eleventyConfig.addFilter('slug', slug);
+    // use js-sha256 to hash the stylesheet
+    eleventyConfig.addFilter('hash', (str) => {
+        return require('js-sha256').sha256(str);
+    });
 
     // Shortcodes
     eleventyConfig.addShortcode('year', year);

@@ -1,0 +1,28 @@
+---
+layout: false
+permalink: _headers
+---
+
+/*
+  X-XSS-Protection: 1;mode=block
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: no-referrer-when-downgrade
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Vary: Accept-Encoding
+
+/*.js
+  Content-Type: application/javascript; charset=utf-8
+
+/*.svg
+  Content-Type: image/svg+xml; charset=utf-8
+
+{% set sha = include "assets/css/style.css" | hash %}
+
+{% set documentHeaders %}
+Content-Security-Policy = "default-src 'self'; style-src 'self' 'sha256-{{ sha }}'; form-action 'self'; script-src 'self' googletagmanager.com *.googletagmanager.com; connect-src 'self'; img-src 'self'; base-uri 'self';"
+{% endset %}
+
+/{{ documentHeaders | safe }}
+
+/*/{{ documentHeaders | safe }}
