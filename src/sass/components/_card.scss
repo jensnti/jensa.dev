@@ -7,14 +7,28 @@
     border-radius: var(--border-radius);
 
     background-color: var(--color-fg);
-    color: var(--color-bg);
+    color: var(--color-fg-accent);
     &-body {
         padding: var(--space-xs-s);
+        h3 {
+            color: var(--color-bg);
+        }
     }
     a {
         color: currentColor;
         text-decoration: none;
     }
+    &:focus-within a:focus {
+        outline: none;
+    }
+
+    > img {
+        // margin-top: calc(var(--space-m-l) * -1);
+        border-radius: var(--border-radius);
+    }
+}
+
+.card[data-clickable='true'] {
     a:after {
         bottom: 0;
         content: '';
@@ -22,16 +36,5 @@
         position: absolute;
         right: 0;
         top: 0;
-    }
-    &:focus-within a:focus {
-        outline: none;
-    }
-    &:hover {
-        border-color: var(--color-selection);
-    }
-
-    > img {
-        // margin-top: calc(var(--space-m-l) * -1);
-        border-radius: var(--border-radius);
     }
 }

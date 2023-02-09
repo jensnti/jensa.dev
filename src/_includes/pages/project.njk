@@ -5,12 +5,13 @@
 {% block content %}
 <main id="main-content" tabindex="-1" class="container region">
     <article class="flow">
-        <ul>
+        <ul class="card">
             <li>
                 <span>Titel:</span> {{ project.title }}
             </li>
             <li>
-                <span>Start:</span> <time datetime="{{ project.start | htmlDateString }}">{{ project.start | frontDate }}</time>
+                <span>Start:</span> <time datetime="{{ project.start | htmlDateString }}">{{ project.start | frontDate
+                    }}</time>
             </li>
             <li>
                 <span>Status:</span> {{ project.status }}

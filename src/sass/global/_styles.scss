@@ -122,5 +122,10 @@ abbr {
 }
 
 li::marker {
+    color: var(--color-bg-accent);
+}
+
+/* sometimes color h2 elements with primary color */
+h2 {
     color: var(--color-primary);
 }

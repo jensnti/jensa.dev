@@ -14,7 +14,7 @@ category: ""
         {% if projectsData %}
         <ul class="grid" data-layout="50-50" data-rows="masonry" role="list">
             {% for project in projectsData %}
-            <li class="card">
+            <li class="card" data-clickable="true">
                 {% if project.thumb %}
                 <img src="/assets/thumbs/{{ project.thumb }}" alt="Bild för projektet {{ project.title }}" />
                 {% endif %}

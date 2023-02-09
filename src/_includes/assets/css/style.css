@@ -174,7 +174,7 @@ select {
   --color-bg: var(--color-dark);
   --color-bg-accent: var(--color-darker);
   --color-fg: var(--color-light);
-  --color-fg-accent: var(--color-light);
+  --color-fg-accent: var(--color-light-accent);
   --color-selection: var(--color-dark-accent);
   --font-base: "Work Sans", sans-serif;
   --min-width: 52rem;
@@ -298,6 +298,11 @@ abbr {
 }
 
 li::marker {
+  color: var(--color-bg-accent);
+}
+
+/* sometimes color h2 elements with primary color */
+h2 {
   color: var(--color-primary);
 }
 
@@ -403,7 +408,7 @@ li::marker {
   color: var(--color-darker);
 }
 .anchor:hover {
-  color: var(--color-primary);
+  color: var(--color-fg-accent);
 }
 
 .tags {
@@ -414,7 +419,7 @@ li::marker {
   padding: 0;
   font-size: var(--step-0);
   text-transform: uppercase;
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .breadcrumbs a {
@@ -467,31 +472,32 @@ form *:focus {
   padding: var(--space-xs-s);
   border-radius: var(--border-radius);
   background-color: var(--color-fg);
-  color: var(--color-bg);
+  color: var(--color-fg-accent);
 }
 .card-body {
   padding: var(--space-xs-s);
+}
+.card-body h3 {
+  color: var(--color-bg);
 }
 .card a {
   color: currentColor;
   text-decoration: none;
 }
-.card a:after {
+.card:focus-within a:focus {
+  outline: none;
+}
+.card > img {
+  border-radius: var(--border-radius);
+}
+
+.card[data-clickable=true] a:after {
   bottom: 0;
   content: "";
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
-}
-.card:focus-within a:focus {
-  outline: none;
-}
-.card:hover {
-  border-color: var(--color-selection);
-}
-.card > img {
-  border-radius: var(--border-radius);
 }
 
 .demo-sandbox {
