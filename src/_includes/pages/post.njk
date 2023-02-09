@@ -1,10 +1,7 @@
 {% extends 'pages/base.njk' %}
 
 {% block head %}
-<style>
-{% include 'assets/css/prism-theme-base.css' %}
-{% include 'assets/css/theme-vars.css' %}
-</style>
+<style>{% include 'assets/css/prism-theme.css' %}</style>
 {% endblock %}
 
 {% block content %}
@@ -22,9 +19,9 @@
             {% include "../components/link-list.njk" %}
 
             {% if tags %}
-                {% set tag = tags | random %}
-                {% set tagPosts = collections[tag] | limit(3) | shuffle %}
-                {% include "../components/tag-related.njk" %}
+            {% set tag = tags | random %}
+            {% set tagPosts = collections[tag] | limit(3) | shuffle %}
+            {% include "../components/tag-related.njk" %}
             {% endif %}
         </footer>
     </article>

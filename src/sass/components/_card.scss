@@ -2,17 +2,17 @@
     position: relative;
 
     max-width: unset;
-    // padding: var(--space-xs-s);
+    padding: var(--space-xs-s);
 
-    border: var(--border);
+    border-radius: var(--border-radius);
 
-    background-color: var(--color-light);
-    color: var(--color-dark);
+    background-color: var(--color-fg);
+    color: var(--color-bg);
     &-body {
         padding: var(--space-xs-s);
     }
     a {
-        color: var(--color-dark);
+        color: currentColor;
         text-decoration: none;
     }
     a:after {
@@ -28,5 +28,10 @@
     }
     &:hover {
         border-color: var(--color-selection);
+    }
+
+    > img {
+        // margin-top: calc(var(--space-m-l) * -1);
+        border-radius: var(--border-radius);
     }
 }

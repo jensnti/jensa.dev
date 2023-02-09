@@ -154,29 +154,35 @@ select {
   --space-s-l: clamp(1rem, calc(0.48rem + 2.61vw), 2.5rem);
   --space-l-2xl: clamp(2rem, calc(0.96rem + 5.22vw), 5rem);
   --gutter: var(--space-s-m);
-  --border-radius: var(--step-0);
+  --border-radius: 0.2rem;
   --border: 2px solid currentcolor;
   --tracking: -0.05ch;
   --tracking-s: -0.075ch;
-  --color-bg: #242936;
-  --color-dark: hsl(220, 20%, 15%);
-  --color-panel: hsl(220, 20%, 10%);
-  --color-line: hsl(220, 20%, 5%);
-  --color-gutter: hsla(220, 20%, 60%, 0.8);
-  --color-light: hsl(50, 40%, 90%);
-  --color-red: hsl(355, 50%, 60%);
-  --color-blue: hsl(190, 50%, 60%);
-  --color-orange: hsl(30, 50%, 60%);
-  --color-green: hsl(160, 50%, 50%);
-  --color-purple: hsl(271, 20%, 40%);
-  --color-selection: hsla(220, 20%, 45%, 0.15);
+  --color-dark: #231e24;
+  --color-dark-accent: #8c7c90;
+  --color-light: #f2f3ee;
+  --color-light-accent: #828184;
+  --color-primary: #868c9b;
+  --color-darker: #24222b;
+  --color-dark: #292731;
+  --color-dark-accent: #2d2b35;
+  --color-light: #f2efe5;
+  --color-light-accent: #3d3b43;
+  --color-primary: #d13738;
+  --color-secondary: #728cab;
+  --color-secondary-accent: var(--color-secondary);
+  --color-bg: var(--color-dark);
+  --color-bg-accent: var(--color-darker);
+  --color-fg: var(--color-light);
+  --color-fg-accent: var(--color-light);
+  --color-selection: var(--color-dark-accent);
   --font-base: "Work Sans", sans-serif;
   --min-width: 52rem;
 }
 
 body {
-  color: var(--color-light);
-  background-color: var(--color-dark);
+  color: var(--color-fg);
+  background-color: var(--color-bg);
   font-size: var(--step-1);
   font-family: var(--font-base);
   font-weight: 400;
@@ -240,8 +246,8 @@ img {
 
 /* Base interactive elements */
 a {
-  color: var(--color-blue);
-  text-decoration: underline dashed var(--color-gutter);
+  color: currentColor;
+  text-decoration: underline dashed var(--color-secondary);
 }
 
 a:hover {
@@ -263,16 +269,18 @@ main:focus {
 
 /* Base selection styles that invert whatever colours are rendered */
 ::selection {
-  background: var(--color-purple);
-  color: var(--color-light);
+  background: var(--color-selection);
+  color: var(--color-fg);
 }
 
-code {
-  background-color: var(--color-bg);
+p > code {
+  color: var(--color-fg);
+  background-color: var(--color-bg-accent);
 }
 
 blockquote {
   padding: var(--space-s-m);
+  color: var(--color-primary);
   background-color: var(--color-selection);
 }
 blockquote > p::before {
@@ -282,6 +290,15 @@ blockquote > p::before {
 blockquote > p::after {
   content: "”";
   font-size: var(--step-2);
+}
+
+abbr {
+  background-color: var(--color-bg-accent);
+  text-decoration: underline dashed currentColor;
+}
+
+li::marker {
+  color: var(--color-primary);
 }
 
 .flow > * + * {
@@ -340,19 +357,24 @@ blockquote > p::after {
   fill: currentcolor;
 }
 
-.navbar, .navbar ul {
+.navbar,
+.navbar ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 0 var(--gutter);
   font-weight: 600;
+  text-transform: uppercase;
 }
-.navbar a, .navbar ul a {
+.navbar a,
+.navbar ul a {
   text-decoration: none;
+  color: currentColor;
 }
-.navbar a:hover, .navbar ul a:hover {
-  text-decoration: underline;
+.navbar a:hover,
+.navbar ul a:hover {
+  text-decoration: underline dashed currentColor;
 }
 
 .brand {
@@ -363,26 +385,25 @@ blockquote > p::after {
   font-size: var(--step-2);
   font-weight: 300;
 }
-.lead > a {
-  text-decoration-thickness: from-font;
-}
 
 /* Make the '#' anchor visible on your site */
 .anchor > span[hidden] {
   display: block;
 }
 
-.heading-wrapper > h2, .heading-wrapper > h3, #links {
+.heading-wrapper > h2,
+.heading-wrapper > h3,
+#links {
   display: flex;
 }
 
 .anchor {
   text-decoration: none !important;
   padding-right: var(--space-3xs);
-  color: var(--color-gutter);
+  color: var(--color-darker);
 }
 .anchor:hover {
-  color: var(--color-light);
+  color: var(--color-primary);
 }
 
 .tags {
@@ -393,6 +414,7 @@ blockquote > p::after {
   padding: 0;
   font-size: var(--step-0);
   text-transform: uppercase;
+  color: var(--color-primary);
 }
 
 .breadcrumbs a {
@@ -408,17 +430,19 @@ blockquote > p::after {
   flex-wrap: wrap;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   width: 100%;
   padding: var(--space-2xs);
   margin-top: var(--space-3xs-2xs);
+  border-radius: var(--border-radius);
 }
 form button {
   width: 100%;
 }
 form *:focus {
-  color: var(--color-dark);
-  outline-color: var(--color-light);
+  color: var(--color-bg);
+  outline-color: var(--color-fg-accent);
 }
 
 .btn {
@@ -433,20 +457,23 @@ form *:focus {
   white-space: nowrap;
   font-weight: 600;
   text-transform: uppercase;
+  color: var(--color-secondary);
+  border-radius: var(--border-radius);
 }
 
 .card {
   position: relative;
   max-width: unset;
-  border: var(--border);
-  background-color: var(--color-light);
-  color: var(--color-dark);
+  padding: var(--space-xs-s);
+  border-radius: var(--border-radius);
+  background-color: var(--color-fg);
+  color: var(--color-bg);
 }
 .card-body {
   padding: var(--space-xs-s);
 }
 .card a {
-  color: var(--color-dark);
+  color: currentColor;
   text-decoration: none;
 }
 .card a:after {
@@ -462,6 +489,9 @@ form *:focus {
 }
 .card:hover {
   border-color: var(--color-selection);
+}
+.card > img {
+  border-radius: var(--border-radius);
 }
 
 .demo-sandbox {
@@ -520,9 +550,9 @@ form *:focus {
 .flash {
   z-index: 1100;
   position: fixed;
-  background: var(--color-alert);
-  color: var(--color-dark);
-  border: 2px solid var(--color-light);
+  background: var(--color-fg);
+  color: var(--color-bg);
+  border: 2px solid var(--color-fg-accent);
   left: 2vmin;
   right: 2vmin;
   bottom: 2vmin;
@@ -543,7 +573,9 @@ form *:focus {
 }
 
 .post-list article {
-  margin-bottom: var(--space-m-l);
+  background-color: var(--color-bg-accent);
+  padding: var(--space-s-m);
+  border-radius: var(--border-radius);
 }
 .post-list time {
   font-size: var(--step-0);

@@ -7,15 +7,17 @@
 //     display: flex;
 // }
 
-.heading-wrapper > h2, .heading-wrapper > h3, #links {
+.heading-wrapper > h2,
+.heading-wrapper > h3,
+#links {
     display: flex;
 }
 
 .anchor {
     text-decoration: none !important;
     padding-right: var(--space-3xs);
-    color: var(--color-gutter);
+    color: var(--color-darker);
     &:hover {
-        color: var(--color-light);
+        color: var(--color-primary);
     }
 }

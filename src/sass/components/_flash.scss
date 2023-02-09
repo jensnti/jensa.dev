@@ -1,9 +1,9 @@
 .flash {
     z-index: 1100;
     position: fixed;
-    background: var(--color-alert);
-    color: var(--color-dark);
-    border: 2px solid var(--color-light);
+    background: var(--color-fg);
+    color: var(--color-bg);
+    border: 2px solid var(--color-fg-accent);
     left: 2vmin;
     right: 2vmin;
     bottom: 2vmin;

@@ -36,23 +36,54 @@
     --space-l-2xl: clamp(2rem, calc(0.96rem + 5.22vw), 5rem);
 
     --gutter: var(--space-s-m);
-    --border-radius: var(--step-0);
+    --border-radius: 0.2rem;
     --border: 2px solid currentcolor;
     --tracking: -0.05ch;
     --tracking-s: -0.075ch;
 
-    --color-bg: #242936;
-    --color-dark: hsl(220, 20%, 15%);
-    --color-panel: hsl(220, 20%, 10%);
-    --color-line: hsl(220, 20%, 5%);
-    --color-gutter: hsla(220, 20%, 60%, 0.8);
-    --color-light: hsl(50, 40%, 90%);
-    --color-red: hsl(355, 50%, 60%);
-    --color-blue: hsl(190, 50%, 60%);
-    --color-orange: hsl(30, 50%, 60%);
-    --color-green: hsl(160, 50%, 50%);
-    --color-purple: hsl(271, 20%, 40%);
-    --color-selection: hsla(220, 20%, 45%, 0.15);
+    --color-dark: #231e24;
+    --color-dark-accent: #8c7c90;
+    --color-light: #f2f3ee;
+    --color-light-accent: #828184;
+    --color-primary: #868c9b; // 45485D
+    // --color-blue--hover: hsl(233, 15%, 63%);
+    // --color-gutter: hsl(3, 13%, 73%);
+    // --color-purple: #8c7c90;
+    // --color-selection: hsla(310, 5%, 44%, 0.15);
+
+    // 302e38 2d2b35
+    // https://huemint.com/website-2/#palette=292731-f2efe5-d13738-728cab
+    --color-darker: #24222b;
+    --color-dark: #292731;
+    --color-dark-accent: #2d2b35;
+    --color-light: #f2efe5;
+    --color-light-accent: #3d3b43;
+    --color-primary: #d13738; // 45485D
+    --color-secondary: #728cab;
+    --color-secondary-accent: var(--color-secondary);
+
+    --color-bg: var(--color-dark);
+    --color-bg-accent: var(--color-darker);
+    --color-fg: var(--color-light);
+    --color-fg-accent: var(--color-light);
+    --color-selection: var(--color-dark-accent);
+
+    // --color-bg: #242936;
+    // --color-dark: #1f242e;
+    // --color-panel: hsl(220, 20%, 10%);
+    // --color-line: hsl(220, 20%, 5%);
+    // --color-gutter: hsla(220, 20%, 60%, 0.8);
+    // --color-light: hsl(50, 40%, 90%);
+    // --color-light: #f0ecdb;
+    // --color-red: hsl(355, 50%, 60%);
+    // --color-red: #ed5f55;
+    // --color-blue: hsl(190, 50%, 60%);
+    // --color-orange: hsl(30, 50%, 60%);
+    // --color-orange: #e9a147;
+    // --color-green: hsl(160, 50%, 50%);
+    // --color-green: #589d74;
+    // --color-purple: hsl(271, 20%, 40%);
+    // --color-selection: hsla(220, 20%, 45%, 0.15);
 
     --font-base: 'Work Sans', sans-serif;
 

@@ -1,6 +1,6 @@
 body {
-    color: var(--color-light);
-    background-color: var(--color-dark);
+    color: var(--color-fg);
+    background-color: var(--color-bg);
     font-size: var(--step-1);
     font-family: var(--font-base);
     font-weight: 400;
@@ -69,8 +69,8 @@ img {
 /* Base interactive elements */
 
 a {
-    color: var(--color-blue);
-    text-decoration: underline dashed var(--color-gutter);
+    color: currentColor;
+    text-decoration: underline dashed var(--color-secondary);
 }
 
 a:hover {
@@ -92,17 +92,19 @@ main:focus {
 
 /* Base selection styles that invert whatever colours are rendered */
 ::selection {
-    background: var(--color-purple);
-    color: var(--color-light);
+    background: var(--color-selection);
+    color: var(--color-fg);
 }
 
-code {
-    background-color: var(--color-bg);
+p > code {
+    color: var(--color-fg);
+    background-color: var(--color-bg-accent);
 }
 
 blockquote {
     // border-left: var(--space-3xs) solid currentColor;
     padding: var(--space-s-m);
+    color: var(--color-primary);
     background-color: var(--color-selection);
     > p::before {
         content: '“';
@@ -112,4 +114,13 @@ blockquote {
         content: '”';
         font-size: var(--step-2);
     }
+}
+
+abbr {
+    background-color: var(--color-bg-accent);
+    text-decoration: underline dashed currentColor;
+}
+
+li::marker {
+    color: var(--color-primary);
 }
