@@ -2,7 +2,7 @@
 title: Design remix
 date: 2023-02-02
 summary: 'Det kliar alltid i fingrarna för att ändra på saker här på sidan och särskilt då jag hittar något nytt intressant. Efter att jag tittat på Andy Bells talk, "Be the browser’s mentor, not its micromanager" och applicerat det på en sida var jag helt enkelt tvungen att applicera det här.'
-tags: [ 'redesign', 'css']
+tags: ['redesign', 'css']
 category: anteckningar
 youtube: true
 ---
@@ -15,13 +15,13 @@ Jag letade bland [Starter projects](https://www.11ty.dev/docs/starter/) och hitt
 
 Nu hade jag chansen att skriva om allt från grunden och använda nya lärdomar. Så jag passade på att titta på Andys talk – Be the browser’s mentor, not its micromanager för att inspireras och det gjorde det verkligen. Det är superintressant, smart och ger en fantastik grund att arbeta utifrån. Till presentationen så har han skapat en en demosida för att visa det han pratar om, [buildexcellentwebsit.es](https://buildexcellentwebsit.es/).
 
-{% youtube '5uhIiI9Ld5M', 'Andy Bell – Be the browser’s mentor, not its micromanager' %} 
+{% youtube '5uhIiI9Ld5M', 'Andy Bell – Be the browser’s mentor, not its micromanager' %}
 
 Utöver detta så finns det även en 11ty starter baserat på presentationen, [eleventy-excellent](https://eleventy-excellent.netlify.app/), skapad av [Lene Saile](https://www.lene.dev/).
 
-## css och att skriva mindre och bättre css
+## Css och att skriva mindre och bättre css
 
-GitHub copilot föreslår att jag ska skriva:
+Det händer att GitHub copilot läser mina tankar...
 
 > Jag har alltid haft en känsla av att jag skriver för mycket css.
 
@@ -37,9 +37,9 @@ Jag började med att ta bort all CSS för sidan och ta bort alla klasser från h
 
 Efter det så kunde arbetet med att applicera den metodik som Andy föreslår börja.
 
-* Fluid type & Space, [Utopia](https://utopia.fyi/)
-* Flexible Layouts, en del eget men också från [Every Layout](https://every-layout.dev/)
-* Progressive Enhancement
+-   Fluid type & Space, [Utopia](https://utopia.fyi/)
+-   Flexible Layouts, en del eget men också från [Every Layout](https://every-layout.dev/)
+-   Progressive Enhancement
 
 Jag har inte följt allt fullt ut, men en hel del och det gör underverk tycker jag. Det jag känner och vill göra att eliminera så många specifika klasser som möjligt. Det kan vara så att jag går för långt, men det känns också som att den tidigarae designen var helt uppbyggd på klasser och undantag och det vill jag undvika.
 
