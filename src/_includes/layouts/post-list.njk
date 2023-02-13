@@ -1,6 +1,10 @@
 {% if postListItems.length > 0 %}
 <div class="post-list flow">
     {% for item in postListItems %}
+    {% set year = item.date | yearString %}
+    {% if year === years[0] %}
+    <h2 id="year-{{ year }}">{{ years.shift() }}</h2>
+    {% endif %}
     <article class="flow">
         <header>
             <h2>

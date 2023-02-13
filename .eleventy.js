@@ -3,12 +3,16 @@ const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const htmlmin = require('html-minifier');
 
 //import shortcodes
-const { youtube, getSvgContent, year, imageShortcode } = require('./config/shortcodes');
+const {
+    youtube,
+    getSvgContent,
+    year,
+    imageShortcode,
+} = require('./config/shortcodes');
 
 // import filters
 const {
     getDemo,
-    randomColor,
     readableDate,
     frontDate,
     yearString,
@@ -37,7 +41,6 @@ const eleventyPluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
 const markdownLibrary = require('./config/plugins/markdown');
 
 module.exports = function (eleventyConfig) {
-
     eleventyConfig.addWatchTarget('./src/sass/');
     eleventyConfig.addWatchTarget('./src/assets/js/');
 
@@ -47,7 +50,6 @@ module.exports = function (eleventyConfig) {
 
     // Filters
     eleventyConfig.addFilter('getDemo', getDemo);
-    eleventyConfig.addFilter('randomColor', randomColor);
     eleventyConfig.addFilter('readableDate', readableDate);
     eleventyConfig.addFilter('frontDate', frontDate);
     eleventyConfig.addFilter('yearString', yearString);

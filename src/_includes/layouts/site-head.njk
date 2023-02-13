@@ -1,6 +1,6 @@
 <header role="banner" class="container flow">
     {% include "../components/nav.njk" %}
-    <h1>
+    <h1 title="{{ title }}">
         {{ title }}
     </h1>
     {% if page.url === "/" %}
@@ -8,4 +8,5 @@
     {% else %}
     {% include "../components/breadcrumbs.njk" %}
     {% endif %}
+    {{ content | safe }}
 </header>
