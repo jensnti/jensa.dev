@@ -23,6 +23,10 @@
     h2 {
         text-transform: lowercase;
     }
+    &--year {
+        color: currentColor;
+        font-size: var(--step-4);
+    }
 }
 
 .post-date {

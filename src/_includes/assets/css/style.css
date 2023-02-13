@@ -590,6 +590,10 @@ form *:focus {
 .post-list h2 {
   text-transform: lowercase;
 }
+.post-list--year {
+  color: currentColor;
+  font-size: var(--step-4);
+}
 
 .post-date {
   text-align: end;

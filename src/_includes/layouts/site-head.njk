@@ -9,4 +9,15 @@
     {% include "../components/breadcrumbs.njk" %}
     {% endif %}
     {{ content | safe }}
+    {% if years %}
+    <div class="breadcrumbs years">
+        <ul class="tags" role="list">
+            {% for year in years %}
+            <li>
+                <a href="#year-{{ year }}">{{ year }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
 </header>
