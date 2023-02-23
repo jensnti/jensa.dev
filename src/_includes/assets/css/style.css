@@ -580,9 +580,13 @@ form *:focus {
 .flash__message {
   grid-row: 1;
 }
-.flash button {
+.flash__button {
   grid-row: 2;
   justify-self: end;
+  background-color: var(--color-bg);
+}
+.flash__button:hover {
+  background-color: var(--color-bg-accent);
 }
 
 .post-list article {

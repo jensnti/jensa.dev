@@ -18,8 +18,12 @@
     &__message {
         grid-row: 1;
     }
-    button {
+    &__button {
         grid-row: 2;
         justify-self: end;
+        background-color: var(--color-bg);
+        &:hover {
+            background-color: var(--color-bg-accent);
+        }
     }
 }
