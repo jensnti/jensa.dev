@@ -1,11 +1,28 @@
 <header role="banner" class="container flow">
     {% include "../components/nav.njk" %}
-    <h1>
+    <h1 title="{{ title }}">
         {{ title }}
     </h1>
     {% if page.url === "/" %}
-        {% include "../components/lead.njk" %}
+    {% include "../components/lead.njk" %}
     {% else %}
-        {% include "../components/breadcrumbs.njk" %}
+    {% include "../components/breadcrumbs.njk" %}
     {% endif %}
 </header>
+{% if years %}
+<div class="container breadcrumbs years">
+    <ul class="tags" role="list">
+        {% for year in years %}
+        <li>
+            <a href="#year-{{ year }}">{{ year }}</a>
+        </li>
+        {% endfor %}
+        <li class="back-to-top">
+            <a href="#">
+                <span class="sr-only">Top</span>
+                {% svg "chevron-up-outline.svg" %}
+            </a>
+        </li>
+    </ul>
+</div>
+{% endif %}

@@ -28,20 +28,7 @@ const yearString = (dateObj) => {
     if (typeof dateObj === 'string') {
         dateObj = parseISO(dateObj);
     }
-    return format(dateObj, 'yyyy');
-};
-
-const randomColor = () => {
-    const colors = [
-        'orange',
-        'red',
-        'blue',
-        'yellow',
-        'magenta',
-        'green',
-        'cyan',
-    ];
-    return colors[Math.floor(Math.random() * colors.length)];
+    return dateObj.getFullYear();
 };
 
 const getProject = (projects, title) => {
@@ -93,7 +80,6 @@ module.exports = {
     frontDate,
     htmlDateString,
     yearString,
-    randomColor,
     getProject,
     tagFilter,
     shuffleArray,

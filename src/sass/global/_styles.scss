@@ -1,11 +1,11 @@
-
 body {
-    color: var(--color-light);
-    background-color: var(--color-dark);
+    color: var(--color-fg);
+    background-color: var(--color-bg);
     font-size: var(--step-1);
     font-family: var(--font-base);
     font-weight: 400;
     line-height: 1.333;
+    font-variant-numeric: oldstyle-nums;
 }
 
 h1,
@@ -16,7 +16,7 @@ h3 {
 }
 
 h1 {
-    font-size: var(--step-4);
+    font-size: var(--step-5);
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -42,15 +42,15 @@ h3 {
 /* More generic elements */
 blockquote:not([class]) {
     font-family: var(--font-serif);
-    font-size: var(--size-step-2);
+    font-size: var(--step-2);
 }
 
 /* Markdown blockquuote:not([class])s aren't ideal, so we're presuming the person quoted is the last p */
-blockquote:not([class]) p:last-of-type {
-    font-family: var(--font-base);
-    font-size: var(--size-step-1);
-    font-weight: normal;
-}
+// blockquote:not([class]) p:last-of-type {
+//     font-family: var(--font-base);
+//     font-size: var(--step-1);
+//     font-weight: normal;
+// }
 
 svg {
     height: 2ex;
@@ -70,12 +70,12 @@ img {
 /* Base interactive elements */
 
 a {
-    color: currentcolor;
-    text-decoration: underline dashed var(--color-gutter);
+    color: currentColor;
+    text-decoration: underline dashed var(--color-secondary);
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration-style: solid;
 }
 
 :focus {
@@ -94,15 +94,39 @@ main:focus {
 /* Base selection styles that invert whatever colours are rendered */
 ::selection {
     background: var(--color-selection);
-    color: var(--color-light);
+    color: var(--color-fg);
 }
 
-code {
-    background-color: var(--color-bg);
+p > code {
+    color: var(--color-fg);
+    background-color: var(--color-bg-accent);
 }
 
 blockquote {
-    border-left: var(--border);
-    padding-left: 1ch;
-    background-color: var(--color-bg);
+    // border-left: var(--space-3xs) solid currentColor;
+    padding: var(--space-s-m);
+    color: var(--color-primary);
+    background-color: var(--color-selection);
+    > p::before {
+        content: '“';
+        font-size: var(--step-2);
+    }
+    > p::after {
+        content: '”';
+        font-size: var(--step-2);
+    }
+}
+
+abbr {
+    background-color: var(--color-bg-accent);
+    text-decoration: underline dashed currentColor;
+}
+
+li::marker {
+    color: var(--color-bg-accent);
+}
+
+/* sometimes color h2 elements with primary color */
+h2 {
+    color: var(--color-primary);
 }

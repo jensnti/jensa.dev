@@ -1,15 +1,43 @@
 .card {
     position: relative;
-    // border-radius: var(--border-radius);
-    border: var(--border);
-    max-width: unset;
-    padding: var(--space-xs-s);
 
-    background-color: var(--color-dark);
-    color: var(--color-light);
+    max-width: unset;
+
+    border-radius: var(--border-radius);
+
+    background-color: var(--color-fg);
+    color: var(--color-fg-accent);
+    &-body {
+        padding: var(--space-xs-s);
+        h3 {
+            color: var(--color-bg);
+        }
+    }
+    &-list {
+        margin: 0;
+    }
     a {
+        color: currentColor;
         text-decoration: none;
     }
+    &:focus-within a:focus {
+        outline: none;
+    }
+
+    > img {
+        // margin-top: calc(var(--space-m-l) * -1);
+        // border-radius: var(--border-radius);
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+    }
+}
+
+.card[data-infobox='true'] {
+    padding: var(--space-xs-s);
+    // padding: var(--space-m-l);
+}
+
+.card[data-clickable='true'] {
     a:after {
         bottom: 0;
         content: '';
@@ -17,11 +45,5 @@
         position: absolute;
         right: 0;
         top: 0;
-    }
-    &:focus-within a:focus {
-        outline: none;
-    }
-    &:hover {
-        border-color: var(--color-selection);
     }
 }

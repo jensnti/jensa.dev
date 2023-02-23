@@ -1,14 +1,16 @@
 form {
-    input, textarea {
+    input,
+    textarea {
         width: 100%;
         padding: var(--space-2xs);
         margin-top: var(--space-3xs-2xs);
+        border-radius: var(--border-radius);
     }
     button {
         width: 100%;
     }
     *:focus {
-        color: var(--color-dark);
-        outline-color: var(--color-light);
+        color: var(--color-bg);
+        outline-color: var(--color-fg-accent);
     }
 }

@@ -1,9 +1,11 @@
 .site-foot {
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: var(--gutter);
 
+    opacity: 0.6;
+    ul {
         display: flex;
         gap: var(--gutter);
         color: var(--color-light);

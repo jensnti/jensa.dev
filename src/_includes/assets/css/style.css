@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Box sizing rules */
 *,
 *::before,
@@ -151,33 +152,37 @@ select {
   --space-2xl-3xl: clamp(4rem, calc(2.78rem + 6.09vw), 7.5rem);
   /* Custom pairs */
   --space-s-l: clamp(1rem, calc(0.48rem + 2.61vw), 2.5rem);
-  --space-l-2xl: clamp(2.00rem, calc(0.96rem + 5.22vw), 5.00rem);
+  --space-l-2xl: clamp(2rem, calc(0.96rem + 5.22vw), 5rem);
   --gutter: var(--space-s-m);
-  --border-radius: var(--step-0);
+  --border-radius: 0.2rem;
   --border: 2px solid currentcolor;
   --tracking: -0.05ch;
   --tracking-s: -0.075ch;
-  --color-bg: #242936;
-  --color-dark: #1f2430;
-  --color-panel: #1c212b;
-  --color-line: #171b24;
-  --color-gutter: #8a9199cc;
-  --color-light: #cccac2;
-  --color-red: #f27983;
-  --color-blue: #5ccfe6;
-  --color-alert: #ffad66;
-  --color-selection: #63759926;
+  --color-darker: #24222b;
+  --color-dark: #292731;
+  --color-dark-accent: #2d2b35;
+  --color-light: #f2efe5;
+  --color-light-accent: #3d3b43;
+  --color-primary: #d13738;
+  --color-secondary: hsl(213, 25%, 60%);
+  --color-secondary-accent: var(--color-secondary);
+  --color-bg: var(--color-dark);
+  --color-bg-accent: var(--color-darker);
+  --color-fg: var(--color-light);
+  --color-fg-accent: var(--color-light-accent);
+  --color-selection: var(--color-dark-accent);
   --font-base: "Work Sans", sans-serif;
   --min-width: 52rem;
 }
 
 body {
-  color: var(--color-light);
-  background-color: var(--color-dark);
+  color: var(--color-fg);
+  background-color: var(--color-bg);
   font-size: var(--step-1);
   font-family: var(--font-base);
   font-weight: 400;
   line-height: 1.333;
+  font-variant-numeric: oldstyle-nums;
 }
 
 h1,
@@ -188,7 +193,7 @@ h3 {
 }
 
 h1 {
-  font-size: var(--step-4);
+  font-size: var(--step-5);
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -216,16 +221,10 @@ h3 {
 /* More generic elements */
 blockquote:not([class]) {
   font-family: var(--font-serif);
-  font-size: var(--size-step-2);
+  font-size: var(--step-2);
 }
 
 /* Markdown blockquuote:not([class])s aren't ideal, so we're presuming the person quoted is the last p */
-blockquote:not([class]) p:last-of-type {
-  font-family: var(--font-base);
-  font-size: var(--size-step-1);
-  font-weight: normal;
-}
-
 svg {
   height: 2ex;
   width: auto;
@@ -243,12 +242,12 @@ img {
 
 /* Base interactive elements */
 a {
-  color: currentcolor;
-  text-decoration: underline dashed var(--color-gutter);
+  color: currentColor;
+  text-decoration: underline dashed var(--color-secondary);
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration-style: solid;
 }
 
 :focus {
@@ -267,17 +266,40 @@ main:focus {
 /* Base selection styles that invert whatever colours are rendered */
 ::selection {
   background: var(--color-selection);
-  color: var(--color-light);
+  color: var(--color-fg);
 }
 
-code {
-  background-color: var(--color-bg);
+p > code {
+  color: var(--color-fg);
+  background-color: var(--color-bg-accent);
 }
 
 blockquote {
-  border-left: var(--border);
-  padding-left: 1ch;
-  background-color: var(--color-bg);
+  padding: var(--space-s-m);
+  color: var(--color-primary);
+  background-color: var(--color-selection);
+}
+blockquote > p::before {
+  content: "“";
+  font-size: var(--step-2);
+}
+blockquote > p::after {
+  content: "”";
+  font-size: var(--step-2);
+}
+
+abbr {
+  background-color: var(--color-bg-accent);
+  text-decoration: underline dashed currentColor;
+}
+
+li::marker {
+  color: var(--color-bg-accent);
+}
+
+/* sometimes color h2 elements with primary color */
+h2 {
+  color: var(--color-primary);
 }
 
 .flow > * + * {
@@ -289,8 +311,8 @@ blockquote {
 }
 
 .region {
-  padding-top: var(--region-top-space, var(--space-l-2xl));
-  padding-bottom: var(--region-bottom-space, var(--space-l-2xl));
+  padding-top: var(--region-top-space, var(--space-l-xl));
+  padding-bottom: var(--region-bottom-space, var(--space-l-xl));
 }
 
 .sr-only {
@@ -324,10 +346,14 @@ blockquote {
   float: right;
 }
 
+.site-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: var(--gutter);
+  opacity: 0.6;
+}
 .site-foot ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   gap: var(--gutter);
   color: var(--color-light);
@@ -336,19 +362,24 @@ blockquote {
   fill: currentcolor;
 }
 
-.navbar, .navbar ul {
+.navbar,
+.navbar ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 0 var(--gutter);
   font-weight: 600;
+  text-transform: uppercase;
 }
-.navbar a, .navbar ul a {
+.navbar a,
+.navbar ul a {
   text-decoration: none;
+  color: currentColor;
 }
-.navbar a:hover, .navbar ul a:hover {
-  text-decoration: underline;
+.navbar a:hover,
+.navbar ul a:hover {
+  text-decoration: underline dashed currentColor;
 }
 
 .brand {
@@ -359,35 +390,36 @@ blockquote {
   font-size: var(--step-2);
   font-weight: 300;
 }
-.lead > a {
-  text-decoration-thickness: from-font;
-}
 
 /* Make the '#' anchor visible on your site */
 .anchor > span[hidden] {
   display: block;
 }
 
-.heading-wrapper > h2, .heading-wrapper > h3, #links {
+.heading-wrapper > h2,
+.heading-wrapper > h3,
+#links {
   display: flex;
 }
 
 .anchor {
   text-decoration: none !important;
   padding-right: var(--space-3xs);
-  color: var(--color-gutter);
+  color: var(--color-secondary);
+  opacity: 0.4;
 }
 .anchor:hover {
-  color: var(--color-light);
+  opacity: 1;
 }
 
 .tags {
-  list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: var(--gutter);
   padding: 0;
   font-size: var(--step-0);
   text-transform: uppercase;
+  color: var(--color-secondary);
 }
 
 .breadcrumbs a {
@@ -403,17 +435,19 @@ blockquote {
   flex-wrap: wrap;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   width: 100%;
   padding: var(--space-2xs);
   margin-top: var(--space-3xs-2xs);
+  border-radius: var(--border-radius);
 }
 form button {
   width: 100%;
 }
 form *:focus {
-  color: var(--color-dark);
-  outline-color: var(--color-light);
+  color: var(--color-bg);
+  outline-color: var(--color-fg-accent);
 }
 
 .btn {
@@ -428,32 +462,49 @@ form *:focus {
   white-space: nowrap;
   font-weight: 600;
   text-transform: uppercase;
+  color: var(--color-secondary);
+  border-radius: var(--border-radius);
 }
 
 .card {
   position: relative;
-  border: var(--border);
   max-width: unset;
+  border-radius: var(--border-radius);
+  background-color: var(--color-fg);
+  color: var(--color-fg-accent);
+}
+.card-body {
   padding: var(--space-xs-s);
-  background-color: var(--color-dark);
-  color: var(--color-light);
+}
+.card-body h3 {
+  color: var(--color-bg);
+}
+.card-list {
+  margin: 0;
 }
 .card a {
+  color: currentColor;
   text-decoration: none;
 }
-.card a:after {
+.card:focus-within a:focus {
+  outline: none;
+}
+.card > img {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.card[data-infobox=true] {
+  padding: var(--space-xs-s);
+}
+
+.card[data-clickable=true] a:after {
   bottom: 0;
   content: "";
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
-}
-.card:focus-within a:focus {
-  outline: none;
-}
-.card:hover {
-  border-color: var(--color-selection);
 }
 
 .demo-sandbox {
@@ -512,9 +563,9 @@ form *:focus {
 .flash {
   z-index: 1100;
   position: fixed;
-  background: var(--color-alert);
-  color: var(--color-dark);
-  border: 2px solid var(--color-light);
+  background: var(--color-fg);
+  color: var(--color-bg);
+  border: 2px solid var(--color-fg-accent);
   left: 2vmin;
   right: 2vmin;
   bottom: 2vmin;
@@ -535,13 +586,19 @@ form *:focus {
 }
 
 .post-list article {
-  margin-bottom: var(--space-m-l);
+  background-color: var(--color-bg-accent);
+  padding: var(--space-s-m);
+  border-radius: var(--border-radius);
 }
 .post-list time {
   font-size: var(--step-0);
 }
 .post-list h2 {
   text-transform: lowercase;
+}
+.post-list--year {
+  color: currentColor;
+  font-size: var(--step-4);
 }
 
 .post-date {
@@ -566,6 +623,26 @@ form *:focus {
 
 .post {
   --region-top-space: var(--space-l-xl);
+}
+
+.years {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(var(--color-bg) 70%, transparent);
+  display: flex;
+}
+
+.back-to-top {
+  display: flex;
+  align-items: center;
+}
+.back-to-top a {
+  display: flex;
+}
+
+.w-33 {
+  width: 33%;
 }
 
 .grid {
