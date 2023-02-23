@@ -2,7 +2,6 @@
     position: relative;
 
     max-width: unset;
-    padding: var(--space-xs-s);
 
     border-radius: var(--border-radius);
 
@@ -14,6 +13,9 @@
             color: var(--color-bg);
         }
     }
+    &-list {
+        margin: 0;
+    }
     a {
         color: currentColor;
         text-decoration: none;
@@ -24,8 +26,15 @@
 
     > img {
         // margin-top: calc(var(--space-m-l) * -1);
-        border-radius: var(--border-radius);
+        // border-radius: var(--border-radius);
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
     }
+}
+
+.card[data-infobox='true'] {
+    padding: var(--space-xs-s);
+    // padding: var(--space-m-l);
 }
 
 .card[data-clickable='true'] {

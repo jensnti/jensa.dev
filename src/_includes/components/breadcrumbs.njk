@@ -11,7 +11,7 @@
     {% endif %}
     <div>
         {% if tags %}
-        <ul class="tags">
+        <ul role="list" class="tags">
             {% for tag in tags | sort %}
             <li>
                 <a href="/tagg/{{ tag | slugify }}">

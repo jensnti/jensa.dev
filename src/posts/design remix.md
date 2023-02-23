@@ -55,4 +55,4 @@ Netlifys lighthouse plugin levererade även goda nyheter med uppdateringen:
 
 {% image "./src/images/Screenshot 2023-02-03 131851.png", "Lighthouse score" %}
 
-Det kan nog ha och göra med att jag rensat en hel del, men även bytt font från Typekit hostad till lokalt hostad Work Sans.
+Det kan nog ha och göra med att jag rensat en hel del, men även bytt font från Typekit hostad till lokalt hostad [Work Sans](https://github.com/weiweihuanghuang/Work-Sans).

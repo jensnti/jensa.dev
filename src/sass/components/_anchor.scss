@@ -16,8 +16,9 @@
 .anchor {
     text-decoration: none !important;
     padding-right: var(--space-3xs);
-    color: var(--color-darker);
+    color: var(--color-secondary);
+    opacity: 0.4;
     &:hover {
-        color: var(--color-fg-accent);
+        opacity: 1;
     }
 }
