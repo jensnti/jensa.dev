@@ -1,4 +1,8 @@
-<link rel="dns-prefetch" href="https://www.googletagmanager.com/">
-<link href="https://www.googletagmanager.com/gtag/js?id={{ meta.gtag }}" rel="preload" as="script">
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ meta.gtag }}"></script>
-<script defer src="/assets/js/analytics.js"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', '{{ meta.gtag }}');
+</script>
