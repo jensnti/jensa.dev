@@ -12,6 +12,8 @@ package = "netlify-plugin-csp-generator"
   [plugins.inputs.policies]
     defaultSrc = "'self'"
     styleSrc = "'unsafe-hashes'"
+    objectSrc = "'none'"
+    baseUri = "'self'"
     scriptSrc = "'self' https://www.google-analytics.com https://ssl.google-analytics.com https://www.googletagmanager.com"
     frameSrc = "'self' https://youtube.com https://www.youtube.com https://www.youtube-nocookie.com"
     frameAncestors = "'none'"
