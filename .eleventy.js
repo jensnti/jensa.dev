@@ -39,6 +39,8 @@ const {
 // plugins
 const eleventyPluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
 const markdownLibrary = require('./config/plugins/markdown');
+const { EleventyI18nPlugin } = require('@11ty/eleventy');
+const translations = require('./src/_data/i18n');
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget('./src/sass/');
@@ -47,6 +49,11 @@ module.exports = function (eleventyConfig) {
     // Plugins
     eleventyConfig.addPlugin(rssPlugin);
     eleventyConfig.addPlugin(syntaxHighlight);
+    eleventyConfig.addPlugin(EleventyI18nPlugin, {
+        // any valid BCP 47-compatible language tag is supported
+        defaultLanguage: 'sv', // Required, this site uses "en"
+        translations,
+    });
 
     // Filters
     eleventyConfig.addFilter('getDemo', getDemo);
