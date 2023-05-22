@@ -1,6 +1,6 @@
 ---
-title: Navbars
-date: 2023-05-26
+title: Navbar exempel
+date: 2023-05-29
 tags: ['webbutveckling', 'css', 'html']
 category: resurser
 templateEngineOverride: njk, md
