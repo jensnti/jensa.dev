@@ -1,9 +1,9 @@
 <nav class="navbar" aria-label="primary navigation">
-    <a class="brand" href="/" aria-label="{{ meta.siteName }} - Hem">{{ meta.siteName }}</a>
+    <a class="brand" href="{{ "/" | locale_url }}" aria-label="{{ meta.siteName }} - Hem">{{ meta.siteName }}</a>
     <ul role="list">
         {% for item in collections.pages | reverse %}
         <li>
-            <a class="{{ 'active' if item.url == page.url }}" href="{{ item.url }}">{{ item.data.title }}</a>
+            <a class="{{ 'active' if item.url == page.url }}" href="{{ item.url | locale_url }}">{{ item.data.title }}</a>
         </li>
         {% endfor %}
     </ul>

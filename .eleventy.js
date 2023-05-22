@@ -53,6 +53,7 @@ module.exports = function (eleventyConfig) {
         // any valid BCP 47-compatible language tag is supported
         defaultLanguage: 'sv', // Required, this site uses "en"
         translations,
+        errorMode: 'warn', // optional, see below
     });
 
     // Filters
