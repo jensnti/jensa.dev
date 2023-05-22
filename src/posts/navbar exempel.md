@@ -4,7 +4,7 @@ date: 2023-05-29
 tags: ['webbutveckling', 'css', 'html']
 category: resurser
 templateEngineOverride: njk, md
-summary: Navbars, eller navigationsfält, är en nödvändig komponent för att navigera på webben. De finns i olika former och har olika funktioner. I denna introduktion introduceras några grundläggande exempel.
+summary: Navigationsfält, navbars på svengelska, är en ofta nödvändig komponent för att navigera på webben. De finns i olika former och har olika funktioner. I denna introduktion introduceras några grundläggande exempel.
 ---
 
 ## Börja här
