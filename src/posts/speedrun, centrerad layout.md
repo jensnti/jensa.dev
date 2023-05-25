@@ -7,12 +7,12 @@ templateEngineOverride: njk, md
 summary: Basen för majoriteten av alla webbsidor är någon form av centrerad layout med en toppnavigation. Detta är en snabbguide för att komma igång med en sådan layout. Kopiera den, lär dig den och ändra!
 ---
 
-{% set demo = collections.orderedDemos | getDemo("Centrerad layout") %}
-<h2 id="{{ demo.data.title | slugify }}">
-    <a class="anchor" href="#{{ demo.data.title | slugify }}">
-        <span aria-hidden="true">#</span></a> {{ demo.data.title }}
-</h2>
-{{ demo.templateContent | safe }}
+<p class="codepen" data-height="593" data-default-tab="html,result" data-slug-hash="BaqbYNP" data-user="jensnti" style="height: 593px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jensnti/pen/BaqbYNP">
+  Centrerad layout</a> by Jens Andreasson (<a href="https://codepen.io/jensnti">@jensnti</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## Fortsättning
 
