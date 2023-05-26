@@ -1,0 +1,10 @@
+.bleed {
+    position: relative;
+    @media (min-width: 52rem) {
+        width: 90vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -45vw;
+        margin-right: -45vw;
+    }
+}
