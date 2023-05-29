@@ -153,6 +153,8 @@ select {
   /* Custom pairs */
   --space-s-l: clamp(1rem, calc(0.48rem + 2.61vw), 2.5rem);
   --space-l-2xl: clamp(2rem, calc(0.96rem + 5.22vw), 5rem);
+  --space-3xs-l: clamp(0.25rem, calc(-0.53rem + 3.91vw), 2.50rem);
+  --space-3xs-2xl: clamp(0.25rem, calc(-1.40rem + 8.26vw), 5.00rem);
   --gutter: var(--space-s-m);
   --border-radius: 0.2rem;
   --border: 2px solid currentcolor;
@@ -340,6 +342,19 @@ h2 {
 
 .hidden, .invisible {
   display: none;
+}
+
+.bleed {
+  position: relative;
+}
+@media (min-width: 52rem) {
+  .bleed {
+    width: 80vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -40vw;
+    margin-right: -40vw;
+  }
 }
 
 .float-right {
