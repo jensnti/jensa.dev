@@ -30,4 +30,4 @@ Med hjälp av css så är det tämligen enkelt att byta placering på sidebaren,
 }
 ```
 
-Testa även att kombinera detta exempel med layout och hjälpklasserna från tidigare exempel. Kombinera centering med sidebar layouten och navbar till exempel.
+Testa även att kombinera detta exempel med layout och hjälpklasserna från tidigare exempel. Kombinera centrering med sidebar layouten och navbar till exempel.

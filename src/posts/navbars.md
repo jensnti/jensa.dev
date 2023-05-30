@@ -1,5 +1,5 @@
 ---
-title: Navbar exempel
+title: Navbars
 date: 2023-05-29
 tags: ['webbutveckling', 'css', 'html']
 category: resurser
@@ -9,7 +9,7 @@ summary: Navigationsfält, navbars på svengelska, är en ofta nödvändig kompo
 
 ## Börja här
 
-Instruktioner för den här sidans exempel visas med codepen, det finns även förklarande text där.
+Instruktioner för den här sidans exempel visas på Codepen, det finns även förklarande text där.
 
 Alla exempel som visas är responsiva, vilket innebär att de anpassar sig efter skärmstorleken på enheten.
 
