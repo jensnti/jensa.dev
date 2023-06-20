@@ -11,7 +11,7 @@ tags: ['node', 'nextjs', 'sql']
 
 ## Vad
 
-En webbsida / app för att logga dina måltider. Backend med node.js och pgsql för auth och att spara data. Backend finns på [github/jensnti/mat](https://github.com/jensnti/mat).Frontend med Nextjs.
+En webbsida / app för att logga dina måltider. Backend med node.js och pgsql för auth och att spara data. Backend finns på [github/jensadev/mat](https://github.com/jensadev/mat).Frontend med Nextjs.
 
 ## Varför
 
@@ -31,7 +31,7 @@ Du kan sedan använda din sparade data för att:
 
 Projektet började med att jag kodade en backend/microservice/api. Grundsyftet där var att skapa en api, testa någon form av auth (först [auth0](https://auth0.com/), sedan egen) och skriva tester (supertest, mocha, chai).
 
-För frontend så var planen att jobba med ett ramverk och lära mig grunderna för det. Först skrev jag en [version 1](https://github.com/jensnti/mat-react) med  [React](https://reactjs.org/), men den kom att ersättas med en [version 2](https://github.com/jensnti/mat-nextjs) där jag använde [Nextjs](https://nextjs.org/) istället.
+För frontend så var planen att jobba med ett ramverk och lära mig grunderna för det. Först skrev jag en [version 1](https://github.com/jensadev/mat-react) med  [React](https://reactjs.org/), men den kom att ersättas med en [version 2](https://github.com/jensadev/mat-nextjs) där jag använde [Nextjs](https://nextjs.org/) istället.
 
 För frontend så är css-grunden gjord med Bootstrap. Jag testade även att göra en hel del animationer med [Framer](https://www.framer.com/motion/).
 

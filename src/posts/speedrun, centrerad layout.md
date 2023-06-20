@@ -8,9 +8,9 @@ summary: Basen för majoriteten av alla webbsidor är någon form av centrerad l
 ---
 
 <div class="bleed">
-  <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="BaqbYNP" data-user="jensnti" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-    <span>See the Pen <a href="https://codepen.io/jensnti/pen/BaqbYNP">
-    Centrerad layout</a> by Jens Andreasson (<a href="https://codepen.io/jensnti">@jensnti</a>)
+  <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="BaqbYNP" data-user="jensadev" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/jensadev/pen/BaqbYNP">
+    Centrerad layout</a> by Jens Andreasson (<a href="https://codepen.io/jensadev">@jensadev</a>)
     on <a href="https://codepen.io">CodePen</a>.</span>
   </p>
   <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>

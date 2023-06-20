@@ -15,7 +15,7 @@ Min testkurs blev [Webbutveckling (obs sökning på skolverket)](https://www.sko
 
 ## TOD
 
-[Projekt templaten](https://github.com/jensnti/tod) kom att döpas till TOD efter just tema, område, del(fiffigare namnförslag är välkomna). Så nu skriver jag om TOD här, eftersom jag nyss gått igenom sidan och gjort en rejäl uppdatering av den. Efter att ha skapat [jensa.dev](https://www.jensa.dev), där du läser detta och sedan kört igenom [Learn eleventy from scratch](/posts/learn-eleventy-from-scratch/) kursen så bestämde jag mig för att arbeta om vissa grunder på sidan.
+[Projekt templaten](https://github.com/jensadev/tod) kom att döpas till TOD efter just tema, område, del(fiffigare namnförslag är välkomna). Så nu skriver jag om TOD här, eftersom jag nyss gått igenom sidan och gjort en rejäl uppdatering av den. Efter att ha skapat [jensa.dev](https://www.jensa.dev), där du läser detta och sedan kört igenom [Learn eleventy from scratch](/posts/learn-eleventy-from-scratch/) kursen så bestämde jag mig för att arbeta om vissa grunder på sidan.
 
 -   Skippa [Bootstrap](https://getbootstrap.com/)
 -   Skriva CSS med struktur och tanke

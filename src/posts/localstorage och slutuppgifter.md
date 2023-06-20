@@ -9,7 +9,7 @@ category: anteckningar
 
 Jag har tidigare skrivit om kurswebbsystemet jag byggt, [Tema, område, del](/tag/tod). Det är ett ständigt work in progress (vad är inte det) och jag har inte riktigt fått till uppgiftsfunktionen som jag önskat.
 
-TOD grunden finns hostad som [Ämnestitel](https://silly-bhaskara-09612e.netlify.app/) på Netlify och för den som vill kolla på koden (eller skapa en egen kurswebb) finns det ett [template repo](https://github.com/jensnti/tod).
+TOD grunden finns hostad som [Ämnestitel](https://silly-bhaskara-09612e.netlify.app/) på Netlify och för den som vill kolla på koden (eller skapa en egen kurswebb) finns det ett [template repo](https://github.com/jensadev/tod).
 
 ## Systemet som fanns
 

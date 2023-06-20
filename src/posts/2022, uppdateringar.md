@@ -8,7 +8,7 @@ category: anteckningar
 
 ## Mat
 
-Ett projekt som legat i träda en längre period är min mat sida, [måltidsloggen](https://mat-jensnti.vercel.app/). Projektet skapades ursprungligen för att jag skulle lära mig mer om en api, men också för att lära mig om [React](https://reactjs.org/). Anledningen till att sidan varit nere är att databasservern (mysql) som den använde inte längre var tillgänglig. [Måltidsloggens api/backend](https://github.com/jensnti/mat) är hostat med [Heroku](https://www.heroku.com/) och Herokus mysql add-on är sådär. Heroku fungerar mycket enklare med deras postgres add-on, så jag tog mig tiden att uppdatera sidans api till att köra postgres. Att migrera till postgres var inte en stor grej eftersom sidan använder en ORM, [Sequelize](https://sequelize.org/).
+Ett projekt som legat i träda en längre period är min mat sida, [måltidsloggen](https://mat-jensnti.vercel.app/). Projektet skapades ursprungligen för att jag skulle lära mig mer om en api, men också för att lära mig om [React](https://reactjs.org/). Anledningen till att sidan varit nere är att databasservern (mysql) som den använde inte längre var tillgänglig. [Måltidsloggens api/backend](https://github.com/jensadev/mat) är hostat med [Heroku](https://www.heroku.com/) och Herokus mysql add-on är sådär. Heroku fungerar mycket enklare med deras postgres add-on, så jag tog mig tiden att uppdatera sidans api till att köra postgres. Att migrera till postgres var inte en stor grej eftersom sidan använder en ORM, [Sequelize](https://sequelize.org/).
 
 När väl api/backend backend delen var uppdaterad så kunde jag fixa frontend delen. Frontenden använder [Next.js](https://nextjs.org/) och är hostat på [Vercel](https://vercel.com). Eftersom sidan varit nere så krävdes det en hel del uppdateringar av frontend-koden för att den skulle fungera igen (Next kräver lintning bla.) men det ordnade sig.
 
@@ -39,7 +39,7 @@ Listan är lång men jag tvingar mig att faktiskt skriva text om det först. �
 
 ### Webbexempel
 
-Jag har börjat samla en del elevarbeten på webbplatser utifrån en "sidmall" jag skapade för att visa exempel i webbutvecklingen. Sidan är byggd med eleventy men jag valde att hosta den på GitHub pages, en test. I nuläget finns [wu-exempel](https://jensnti.github.io/wu-exempel/) hostad där men en tanke jag hade var att flytta exempel hit, till bloggen. Av den anledningen påbörjade jag arbetet med att kunna sandboxa exempel i denna kod, men det blev inte riktigt färdigt.
+Jag har börjat samla en del elevarbeten på webbplatser utifrån en "sidmall" jag skapade för att visa exempel i webbutvecklingen. Sidan är byggd med eleventy men jag valde att hosta den på GitHub pages, en test. I nuläget finns [wu-exempel](https://jensadev.github.io/wu-exempel/) hostad där men en tanke jag hade var att flytta exempel hit, till bloggen. Av den anledningen påbörjade jag arbetet med att kunna sandboxa exempel i denna kod, men det blev inte riktigt färdigt.
 
 ### Elevarbeten, spel
 

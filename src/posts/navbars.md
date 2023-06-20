@@ -17,9 +17,9 @@ I alla exempel används kombinationer av klasser för att styra navbarens beteen
 
 
 <div class="bleed">
-<p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="bGmZypm" data-user="jensnti" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/jensnti/pen/bGmZypm">
-  Navbars</a> by Jens Andreasson (<a href="https://codepen.io/jensnti">@jensnti</a>)
+<p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="bGmZypm" data-user="jensadev" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jensadev/pen/bGmZypm">
+  Navbars</a> by Jens Andreasson (<a href="https://codepen.io/jensadev">@jensadev</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
@@ -40,9 +40,9 @@ Hamburgermenyn är användbar när det finns begränsat utrymme på skärmen, s�
 Betyder det att hamburgermenyn enbart ska användas på små enheter? Inte nödvändigtvis, men designmönstret påverkar tillgängligheten och användbarheten så det bör kunna motiveras.
 
 <div class="bleed">
-<p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="bGmZPPg" data-user="jensnti" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/jensnti/pen/bGmZPPg">
-  Navbars - hamburger</a> by Jens Andreasson (<a href="https://codepen.io/jensnti">@jensnti</a>)
+<p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="bGmZPPg" data-user="jensadev" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/jensadev/pen/bGmZPPg">
+  Navbars - hamburger</a> by Jens Andreasson (<a href="https://codepen.io/jensadev">@jensadev</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>

@@ -8,7 +8,7 @@ category: resurser
 
 Jag tänkte först att jag skulle skriva den här posten för ett par veckor sedan, men tiden försvann till annat. Ibland är det bra att låta saker och texter gro, det är en lärdom från den här sidan, men i det här fallet har jag nog till viss del glömt vad jag ville skriva.
 
-Grunden till en post om att linta var att jag fixat [ESLint](https://eslint.org/) för [Tema, Område, Del](https://github.com/jensnti/tod) och den här sidan. Som ett minnesmärke till skrivandet hade jag lämnat följande rad.
+Grunden till en post om att linta var att jag fixat [ESLint](https://eslint.org/) för [Tema, Område, Del](https://github.com/jensadev/tod) och den här sidan. Som ett minnesmärke till skrivandet hade jag lämnat följande rad.
 
 ```bash
 npm i --save-dev prettier eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-simple-import-sort

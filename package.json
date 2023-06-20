@@ -16,15 +16,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/jensnti/jensa.dev"
+        "url": "https://github.com/jensadev/jensa.dev"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/jensnti/jensa.dev/issues"
+        "url": "https://github.com/jensadev/jensa.dev/issues"
     },
-    "homepage": "https://github.com/jensnti/jensa.dev",
+    "homepage": "https://github.com/jensadev/jensa.dev",
     "dependencies": {
         "@11ty/eleventy": "^2.0.0-beta.1",
         "@11ty/eleventy-img": "^3.0.0",
