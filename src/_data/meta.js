@@ -13,5 +13,4 @@ module.exports = {
     locale: 'sv-SE',
     lang: 'sv',
     theme: '#2d303c',
-    gtag: 'G-RREZWE4VCC',
 };
