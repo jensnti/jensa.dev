@@ -174,7 +174,7 @@ select {
   --color-fg-accent: var(--color-light-accent);
   --color-selection: var(--color-dark-accent);
   --font-base: "Work Sans", sans-serif;
-  --min-width: 52rem;
+  --min-width: 62rem;
 }
 
 body {
