@@ -33,6 +33,10 @@ blockquote:not([class]) {
     max-width: 55ch;
 }
 
+p:has(> picture) {
+  max-width: unset;
+}
+
 h1,
 h2,
 h3 {

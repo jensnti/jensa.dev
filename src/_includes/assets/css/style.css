@@ -174,7 +174,7 @@ select {
   --color-fg-accent: var(--color-light-accent);
   --color-selection: var(--color-dark-accent);
   --font-base: "Work Sans", sans-serif;
-  --min-width: 62rem;
+  --min-width: 58rem;
 }
 
 body {
@@ -212,6 +212,10 @@ p,
 li,
 blockquote:not([class]) {
   max-width: 55ch;
+}
+
+p:has(> picture) {
+  max-width: unset;
 }
 
 h1,
