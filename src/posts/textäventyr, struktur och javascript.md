@@ -147,7 +147,7 @@ Det är en fungerande lösning, men likt den nästlade if-satsen så har den en 
 
 Av den anledningen så är det bättre att använda en variabel som refererar till ett objekt i listan. Ett objekt som identifieras med hjälp av ett id. Datastrukturen som skapas för äventyret är på så sätt inte lika känslig för förändringar.
 
-## Använda objekt.id för spelarens val
+## Använda objekt id för spelarens val
 
 För att använda objektens id för att hålla reda på spelarens position så behöver koden först hitta rätt objekt i listan. Detta kan göras med hjälp av en funktion som tar emot ett id och returnerar ett objekt.
 
