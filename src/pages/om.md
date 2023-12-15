@@ -27,7 +27,6 @@ Finns jag bland annat på följande platser:
 -   [Discogs](https://www.discogs.com/user/zvorak/collection)
 -   [GitHub](https://github.com/jensadev)
 -   [Goodreads](https://www.goodreads.com/user/show/16975751-jens)
--   [Mastodon](https://fosstodon.org/@jensa)
 
 För min undervisning har jag skapat en del material:
 
