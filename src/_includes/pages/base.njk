@@ -2,26 +2,26 @@
 <html lang="{{ meta.lang }}">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    {% include "../components/meta.njk" %}
-    <link rel="alternate" type="application/rss+xml" title="{{ meta.siteName }}" href="{{ meta.url }}/feed.xml" />
-    <style>{% include "assets/css/style.css" %}</style>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    {% block head %}{% endblock %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  {% include "../components/meta.njk" %}
+  <link rel="alternate" type="application/rss+xml" title="{{ meta.siteName }}" href="{{ meta.url }}/feed.xml" />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  {% block head %}{% endblock %}
 </head>
 
 <body>
-    <a class="skip-link" href="#main-content">Hoppa till sidans innehåll</a>
-    {% block header %}
-        {% include "../layouts/site-head.njk" %}
-    {% endblock %}
-    {% block content %}{% endblock %}
-    {% block footer %}
-        {% include "../components/site-foot.njk" %}
-    {% endblock %}
-    {% include "../components/flash-message.njk" %}
+  <a class="skip-link" href="#main-content">Hoppa till sidans innehåll</a>
+  {% block header %}
+  {% include "../layouts/site-head.njk" %}
+  {% endblock %}
+  {% block content %}{% endblock %}
+  {% block footer %}
+  {% include "../components/site-foot.njk" %}
+  {% endblock %}
+  {% include "../components/flash-message.njk" %}
 </body>
 
 </html>

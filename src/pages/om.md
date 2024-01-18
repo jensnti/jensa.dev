@@ -30,7 +30,9 @@ Finns jag bland annat på följande platser:
 
 För min undervisning har jag skapat en del material:
 
+-   [GitHub](https://github.com/jensadev)
 -   [Webbutveckling](https://webbutveckling.jensa.dev/)
+-   [Git och GitHub](https://git.jensa.dev/)
 -   [Programmering](https://programmering.jensa.dev/)
 -   [Gitbook](https://jens-andreasson.gitbook.io/)
 -   [YouTube](https://www.youtube.com/channel/UCTqbOlkdA_9q-agUM0Hh9Ag)

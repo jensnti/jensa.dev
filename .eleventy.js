@@ -41,8 +41,8 @@ const eleventyPluginTOC = require('@thedigitalman/eleventy-plugin-toc-a11y');
 const markdownLibrary = require('./config/plugins/markdown');
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addWatchTarget('./src/sass/');
     eleventyConfig.addWatchTarget('./src/assets/js/');
+    eleventyConfig.addWatchTarget('./src/assets/css/');
 
     // Plugins
     eleventyConfig.addPlugin(rssPlugin);
