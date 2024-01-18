@@ -14,194 +14,191 @@ permalink: /cv/
 
 {% block content %}
 <style>
-    body {
-        color: var(--color-dark);
-        background-color: var(--color-light);
+  body {
+    color: var(--color-dark);
+    background-color: var(--color-light);
+  }
+
+  .sidebar {
+    --sidebar-target-width: 14rem;
+  }
+
+  aside {
+    font-size: var(--step-0);
+  }
+
+  aside>picture>img {
+    border-radius: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  li>p:first-of-type {
+    margin: var(--space-2xs) 0;
+    font-size: var(--step-0);
+  }
+
+  @media print {
+    .adr-link::after {
+      content: " (" attr(href) ") ";
     }
 
-    .sidebar {
-        --sidebar-target-width: 14rem;
+    .anchor {
+      display: none;
     }
-
-    aside {
-        font-size: var(--step-0);
-    }
-
-    aside > picture > img {
-        border-radius: 100%;
-        aspect-ratio: 1;
-        object-fit: cover;
-        object-position: top;
-    }
-
-    li>p:first-of-type {
-        margin: var(--space-2xs) 0;
-        font-size: var(--step-0);
-    }
-
-    @media print {
-        .adr-link::after {
-            content: " (" attr(href) ") ";
-        }
-
-        .anchor {
-            display: none;
-        }
-    }
+  }
 </style>
 <main id="main-content" tabindex="-1" class="container region">
-    <article class="flow">
-        <header class="flow">
-            <h1>Jens Andreasson</h1>
-            <p>Legitimerad lärare i webbteknik(er), gränssnittsdesign, programmering och engelska.</p>
-        </header>
-        <div class="sidebar">
-            <aside class="flow">
-                {% image "./src/images/20220720_132435-edit.jpg", "Mitt fejs" %}
-                <div>
-                    <h3>Kontakt</h3>
-                    <address>
-                        Jens Andreasson<br />
-                        073-7084974<br />
-                        <a href="mailto:jensandreasson77@gmail.com">jensandreasson77@gmail.com</a><br />
-                        Kuratorvägen 25<br />
-                        907 36 Umeå<br />
-                        <a class="adr-link" href="https://www.linkedin.com/in/jens-andreasson-bba4141a2/"
-                            target="_blank" rel="noreferrer noopener">LinkedIn</a><br />
-                        <a class="adr-link" href="https://github.com/jensadev" target="_blank"
-                            rel="noreferrer noopener">GitHub</a>
-                    </address>
-                </div>
-                <div>
-                    <h3>Övriga kompetenser</h3>
-                    <ul class="cv-list">
-                        <li>GitHub Campus Advisor</li>
-                        <li>MTA: Javascript, css, html</li>
-                        <li>UX, användbarhet och tillgänglighet</li>
-                        <li>B körkort</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Språk</h3>
-                    <ul class="cv-list">
-                        <li>Svenska - Modersmål</li>
-                        <li>Engelska - Obehindrat</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Referenser</h3>
-                    <p>Referenser lämnas på begäran.</p>
-                </div>
-            </aside>
-            <div class="flow">
-                <h2>Arbetslivserfarenhet</h2>
-                <ol class="flow" role="list">
-                    <li>
-                        <h3>Förstelärare</h3>
-                        <p>
-                            NTI Gymnasiet Umeå,
-                            <time datetime="2022-08">Augusti 2022</time> -
-                            <time datetime="{% year %}">nu</time>
-                        </p>
-                        <ul>
-                            <li>
-                                Förstelärare med syfte att främja användandet av Git / GitHub på nationell nivå inom NTI
-                                Gymnasiet.
-                            </li>
-                            <li>Utveckling av teknikprogrammet.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>Lärare</h3>
-                        <p>
-                            NTI Gymnasiet Umeå,
-                            <time datetime="2017-08">Augusti 2017</time> -
-                            <time datetime="{% year %}">nu</time>
-                        </p>
-                        <p>
-                            På NTI Gymnasiet är jag lärare inom teknik, webbteknik(er) och
-                            programmering. Jag är även en av de ansvariga för
-                            skolans gymnasieingenjörsutbildning, teknikprogrammets
-                            fjärde år. Här får jag arbeta med att utveckla och styra
-                            våra kursers innehåll och nivå.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Lärare</h3>
-                        <p>
-                            NTI Skolan, <time datetime="2013-04">April 2013</time> -
-                            <time datetime="2017-08">Augusti 2017</time>
-                        </p>
-                        <p>
-                            Vuxenutbildning på distans. Kursutveckling. Ett flertal
-                            olika ämnen och kurser, från datorteknik till
-                            programmering och grafisk form.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Föreläsare</h3>
-                        <p>
-                            Skolverket, <time datetime="2019">2019</time>
-                        </p>
-                        <p>Föreläsning om inspiration och kursupplägg på konferens om Tillämpad programmering.</p>
-                    </li>
-                </ol>
-                <h2>Utbildning</h2>
-                <ol class="flow" role="list">
-                    <li>
-                        <h3>ULF projekt, programmering</h3>
-                        <p>
-                            Uppsala universitet, <time datetime="2022">2022</time> - <time datetime="2023">2023</time>
-                        </p>
-                        <p>Cirkelledare i ett ULF projekt i sammarbete med Uppsala universitet kring programmering på
-                            gymnasiet.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Forskningsprojekt, Active learning classroom</h3>
-                        <p>
-                            Umeå universitet, <time datetime="2018">2018</time> -
-                            <time datetime="2020">2020</time>
-                        </p>
-                        <p>Deltagit i ett forskningsprojekt kring ALC-klassrum i sammarbete med Umeå universitet. </p>
-                    </li>
-                    <li>
-                        <h3>Lärarexamen på avancerad nivå</h3>
-                        <p>
-                            Umeå universitet, <time datetime="2016">2016</time>
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Kurser</h3>
-                        <p>
-                            Luleå tekniska universitet,
-                            <time datetime="2013">2013</time> -
-                            <time datetime="2021">2021</time>
-                        </p>
-                        <ul class="cv-list">
-                            <li>Introduktion till datorspelsskapande</li>
-                            <li>Introduktion till programmering och C#</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>Kurser</h3>
-                        <p>
-                            Umeå universitet, <time datetime="2007">2007</time> -
-                            <time datetime="2007">2012</time>
-                        </p>
-                        <ul class="cv-list">
-                            <li>Webb, css, javascript - flertal kurser</li>
-                            <li>Informatik</li>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
+  <article class="flow">
+    <header class="flow">
+      <h1>Jens Andreasson</h1>
+      <p>Legitimerad lärare i webbteknik(er), gränssnittsdesign, programmering och engelska.</p>
+    </header>
+    <div class="sidebar">
+      <aside class="flow">
+        {% image "./src/images/20220720_132435-edit.jpg", "Mitt fejs" %}
+        <div>
+          <h3>Kontakt</h3>
+          <address>
+            Jens Andreasson<br />
+            <a class="adr-link" href="https://www.linkedin.com/in/jens-andreasson-bba4141a2/" target="_blank"
+              rel="noreferrer noopener">LinkedIn</a><br />
+            <a class="adr-link" href="https://github.com/jensadev" target="_blank" rel="noreferrer noopener">GitHub</a>
+          </address>
         </div>
-    </article>
+        <div>
+          <h3>Övriga kompetenser</h3>
+          <ul class="cv-list">
+            <li>GitHub Campus Advisor</li>
+            <li>MTA: Javascript, css, html</li>
+            <li>UX, användbarhet och tillgänglighet</li>
+            <li>B körkort</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Språk</h3>
+          <ul class="cv-list">
+            <li>Svenska - Modersmål</li>
+            <li>Engelska - Obehindrat</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Referenser</h3>
+          <p>Referenser lämnas på begäran.</p>
+        </div>
+      </aside>
+      <div class="flow">
+        <h2>Arbetslivserfarenhet</h2>
+        <ol class="flow" role="list">
+          <li>
+            <h3>Förstelärare</h3>
+            <p>
+              NTI Gymnasiet Umeå,
+              <time datetime="2022-08">Augusti 2022</time> -
+              <time datetime="{% year %}">nu</time>
+            </p>
+            <ul>
+              <li>Cirkelledare för ULF projekt med fokus på att utveckla programmeringspedagogik. Inriktning på att lära
+                ut felsökning och användande av debugger för att förstå kod.</li>
+              <li>
+                Har lett arbetet med att främja användandet Git / GitHub på nationell nivå inom NTI
+                Gymnasiet. Skapandet av utbildningsmaterial och workshops.
+              </li>
+              <li>Utveckling av teknikprogrammet.</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Lärare</h3>
+            <p>
+              NTI Gymnasiet Umeå,
+              <time datetime="2017-08">Augusti 2017</time> -
+              <time datetime="{% year %}">nu</time>
+            </p>
+            <p>
+              På NTI Gymnasiet är jag lärare inom teknik, webbteknik(er) och
+              programmering. Jag är även en av de ansvariga för
+              skolans gymnasieingenjörsutbildning, teknikprogrammets
+              fjärde år. Här får jag arbeta med att utveckla och styra
+              våra kursers innehåll och nivå.
+            </p>
+          </li>
+          <li>
+            <h3>Lärare</h3>
+            <p>
+              NTI Skolan, <time datetime="2013-04">April 2013</time> -
+              <time datetime="2017-08">Augusti 2017</time>
+            </p>
+            <p>
+              Vuxenutbildning på distans. Kursutveckling. Ett flertal
+              olika ämnen och kurser, från datorteknik till
+              programmering och grafisk form.
+            </p>
+          </li>
+          <li>
+            <h3>Föreläsare</h3>
+            <p>
+              Skolverket, <time datetime="2019">2019</time>
+            </p>
+            <p>Föreläsning om inspiration och kursupplägg på konferens om Tillämpad programmering.</p>
+          </li>
+        </ol>
+        <h2>Utbildning</h2>
+        <ol class="flow" role="list">
+          <li>
+            <h3>ULF projekt, programmering</h3>
+            <p>
+              Uppsala universitet, <time datetime="2022">2022</time> - <time datetime="2023">2023</time>
+            </p>
+            <p>Cirkelledare i ett ULF projekt i sammarbete med Uppsala universitet kring programmering på
+              gymnasiet.
+            </p>
+          </li>
+          <li>
+            <h3>Forskningsprojekt, Active learning classroom</h3>
+            <p>
+              Umeå universitet, <time datetime="2018">2018</time> -
+              <time datetime="2020">2020</time>
+            </p>
+            <p>Deltagit i ett forskningsprojekt kring ALC-klassrum i sammarbete med Umeå universitet. </p>
+          </li>
+          <li>
+            <h3>Lärarexamen på avancerad nivå</h3>
+            <p>
+              Umeå universitet, <time datetime="2016">2016</time>
+            </p>
+          </li>
+          <li>
+            <h3>Kurser</h3>
+            <p>
+              Luleå tekniska universitet,
+              <time datetime="2013">2013</time> -
+              <time datetime="2021">2021</time>
+            </p>
+            <ul class="cv-list">
+              <li>Introduktion till datorspelsskapande</li>
+              <li>Introduktion till programmering och C#</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Kurser</h3>
+            <p>
+              Umeå universitet, <time datetime="2007">2007</time> -
+              <time datetime="2007">2012</time>
+            </p>
+            <ul class="cv-list">
+              <li>Webb, css, javascript - flertal kurser</li>
+              <li>Informatik</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </article>
 </main>
 {% endblock %}
 
