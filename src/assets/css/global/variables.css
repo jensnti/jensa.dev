@@ -33,14 +33,15 @@
     --step-4: clamp(2.7469rem, 2.3295rem + 2.087vw, 3.9469rem);
     --step-5: clamp(3.4331rem, 2.7975rem + 3.1783vw, 5.2606rem);
 
-    --background-color: #5d81ac; /* Horizon */
-    --header-footer-color: #ffa85c; /* Texas Rose */
-    --primary-accent-color: #f76b5e; /* Carnation */
-    --secondary-accent-color: #ffce6b; /* Goldenrod */
-    --cta-color: #62c6b0; /* Downy */
+    --dark-purple: hsla(287, 41%, 7%, 1);
+    --violet-jtc: hsla(297, 31%, 26%, 1);
+    --pomp-and-power: hsla(307, 21%, 52%, 1);
+    --linen: hsla(29, 66%, 92%, 1);
+    --seashell: hsla(25, 55%, 94%, 1);
+    --snow: hsla(21, 44%, 96%, 1);
 
-    --color-fg: light-dark(#fff, #000);
-    --color-bg: light-dark(#000, #fff);
+    --color-fg: light-dark(var(--snow), var(--dark-purple));
+    --color-bg: light-dark(var(--dark-purple), var(--snow));
 
     --gutter: var(--space-s-m);
 }

@@ -9,4 +9,9 @@
         gap: var(--gutter);
         justify-content: space-between;
     }
+
+    a {
+        text-decoration: none;
+        color: var(--dark-purple);
+    }
 }
