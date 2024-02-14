@@ -40,8 +40,16 @@
     --seashell: hsla(25, 55%, 94%, 1);
     --snow: hsla(21, 44%, 96%, 1);
 
-    --color-fg: light-dark(var(--snow), var(--dark-purple));
-    --color-bg: light-dark(var(--dark-purple), var(--snow));
+    --purple: #35135e;
+    --yellow: #f3c16f;
+    --pink: #f3c16f;
+    --blue: #a3c2fd;
+    --violet: #a22e65; /* #dd4665 */
+    --white: #fdf8ea;
+
+
+    --color-fg: light-dark(var(--white), var(--purple));
+    --color-bg: light-dark(var(--purple), var(--white));
 
     --gutter: var(--space-s-m);
 }

@@ -1,6 +1,7 @@
 @import 'global/reset.css';
 @import 'global/variables.css';
 @import 'global/styles.css';
+@import 'global/type.css';
 
 @import 'utilities/wrapper.css';
 @import 'utilities/region.css';

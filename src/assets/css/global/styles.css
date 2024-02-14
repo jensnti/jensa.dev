@@ -6,14 +6,14 @@ body {
 
 .light {
     color-scheme: light;
-    color: var(--violet-jtc);
-    background-color: var(--snow);
+    color: var(--purple);
+    background-color: var(--yellow);
 }
 
 .dark {
     color-scheme: dark;
-    color: var(--snow);
-    background-color: var(--violet-jtc);
+    color: var(--white);
+    background-color: var(--purple);
 }
 
 a {
