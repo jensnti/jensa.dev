@@ -59,7 +59,7 @@
         "start": "2021-05-31",
         "end": false,
         "status": "Pågående",
-        "url": "https://tod.jensa.dev/",
+        "url": "https://tod.jensa.dev",
         "git": "https://github.com/jensadev/tod",
         "thumb": "tod-thumb.png",
         "licens": "[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)",
@@ -70,5 +70,22 @@
         ],
         "hosting": "[Netlify](https://netlify.com/)",
         "description": "En 11ty-starter för att du, jag eller andra ska kunna bygga kurswebbar utifrån testbaserat lärande. Materialet struktureras upp i teman, områden och delar."
-    }
+    },
+    {
+      "title": "Skolbesök - quiz app",
+      "start": "2024-02-23",
+      "end": true,
+      "status": "Klar",
+      "url": "https://skolbesok.netlify.app",
+      "git": "https://github.com/jensadev/skola",
+      "thumb": "skolapp-thumb.png",
+      "licens": "",
+      "tech": [
+          "React",
+          "typescript",
+          "vite"
+      ],
+      "hosting": "[Netlify](https://netlify.com/)",
+      "description": "En webbsida för att spela ett quiz med telefonen. Sidan är skapad inför att vi skulle få besök av 8:de klassare på skolan. Syftet är att på kul sätt försöka visa vad vi pysslar med på teknikprogrammet."
+  }
 ]
