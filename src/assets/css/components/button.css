@@ -9,6 +9,6 @@
     cursor: pointer;
 
     svg {
-        fill: var(--dark-purple);
+        fill: currentColor;
     }
 }

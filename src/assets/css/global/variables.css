@@ -40,8 +40,20 @@
     --seashell: hsla(25, 55%, 94%, 1);
     --snow: hsla(21, 44%, 96%, 1);
 
-    --color-fg: light-dark(var(--snow), var(--dark-purple));
-    --color-bg: light-dark(var(--dark-purple), var(--snow));
+    /*
+    --light: #FAF9F5; /*#f6eee3; 
+     #f7f5ed;
+    --dark: #333333; 31302d;
+
+    */
+    --light-100: hsl(48, 38%, 95%);
+    --dark-100: hsla(48, 8%, 15%, 0.85);
+    --dark-200: hsla(48, 8%, 15%, 0.75);
+    --dark-300: hsla(48, 8%, 15%, 0.4);
+    --primary-100: hsla(48, 100%, 50%, 1);
+
+    --secondary-100: hsla(197, 100%, 50%, 1);
+
 
     --gutter: var(--space-s-m);
 }
