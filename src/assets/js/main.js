@@ -1,21 +1,10 @@
 import flash from './flash';
 
-const consent = localStorage.getItem('consent');
-
-flash(consent);
-
-const togglerMode = (consent) => {
+const toggleMode = () => {
     const toggleButton = document.getElementById('toggleButton');
-    if (!toggleButton) {
-        return;
-    }
-    let mode;
-    if (consent) {
-        mode = localStorage.getItem('mode');
-    }
+    const htmlElement = document.querySelector('html');
 
     toggleButton.addEventListener('click', function () {
-        const htmlElement = document.querySelector('html');
         if (htmlElement.classList.contains('light')) {
             htmlElement.classList.remove('light');
             htmlElement.classList.add('dark');
@@ -34,8 +23,24 @@ const togglerMode = (consent) => {
     // Check if mode is set in localStorage and apply it
     let savedMode = localStorage.getItem('mode');
     if (savedMode) {
-        document.querySelector('html').classList.add(savedMode);
+        if (savedMode === 'dark') {
+            htmlElement.classList.remove('light');
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+            htmlElement.classList.add('light');
+        }
+    } else {
+        // If there's no saved mode, set an initial mode
+        htmlElement.classList.add('light');
+        localStorage.setItem('mode', 'light');
     }
 };
 
-togglerMode(consent);
+const consent = localStorage.getItem('consent');
+
+flash(consent);
+
+if (consent) {
+    toggleMode(consent);
+}
