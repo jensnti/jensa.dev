@@ -1,8 +1,36 @@
-body {
-  font-family: system-ui, sans-serif;
+:root {
+  --bg: var(--light);
+  --fg: var(--dark);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--dark);
+    --fg: var(--light);
+  }
 }
 
-.light {
+html {
+  color-scheme: dark light;
+}
+body {
+  font-family: system-ui, sans-serif;
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: var(--light);
+  --fg: var(--dark);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: var(--dark);
+  --fg: var(--light);
+}
+
+/* .light {
   color-scheme: light;
   color: var(--dark);
   background-color: var(--light);
@@ -12,7 +40,7 @@ body {
   color-scheme: dark;
   color: var(--light);
   background-color: var(--dark);
-}
+} */
 
 a {
   color: currentColor;

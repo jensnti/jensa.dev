@@ -22,6 +22,18 @@
   {% include "../components/site-foot.njk" %}
   {% endblock %}
   {% include "../components/flash-message.njk" %}
+
+  <input id="debug" type="checkbox" />
+  <label for="debug">Show grid lines</label>
+  
+
+  <div class="content debug">
+    <div class="full"></div>
+    <div class="feature"></div>
+    <div class="popout"></div>
+    <div></div>
+  </div>
+
   <script src="{{ '/js/bundle.js' | url }}"></script>
 </body>
 

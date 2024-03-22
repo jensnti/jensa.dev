@@ -3,6 +3,8 @@
 @import 'global/styles.css';
 @import 'global/type.css';
 
+@import 'layout/content.css';
+
 @import 'utilities/wrapper.css';
 @import 'utilities/region.css';
 @import 'utilities/flow.css';
