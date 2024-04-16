@@ -1,7 +1,7 @@
 {% extends 'pages/base.njk' %}
 
 {% block content %}
-<main id="main-content" tabindex="-1" class="content region">
+<main id="main-content" tabindex="-1" class="region">
   {{ content | safe }}
   {% set postListItems = collections.posts | reverse | limit(5) %}
   {% include "../layouts/post-list.njk" %}

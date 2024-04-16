@@ -5,23 +5,26 @@
 {% endblock %}
 
 {% block content %}
-<main id="main-content" tabindex="-1" class="content region">
-    <article class="flow content">
-        <header>
-            {% if summary %}
-            <p class="lead">{{ summary | safe }}</p>
-            {% endif %}
-        </header>
-        {{ content | safe }}
-        <footer>
-            {% include "../components/link-list.njk" %}
+<main id="main-content" tabindex="-1" class="region">
+  <article class="flow content">
+    <header>
+      {% if category == "resurser" %}
+      {{ content | toc | safe }}
+      {% endif %}
+      {% if summary %}
+      <p class="lead">{{ summary | safe }}</p>
+      {% endif %}
+    </header>
+    {{ content | safe }}
+    <footer>
+        {% include "../components/link-list.njk" %}
 
-            {% if tags %}
-              {% set tag = tags | random %}
-              {% set tagPosts = collections[tag] | limit(3) | shuffle %}
-              {% include "../components/tag-related.njk" %}
-            {% endif %}
-        </footer>
-    </article>
+        {% if tags %}
+          {% set tag = tags | random %}
+          {% set tagPosts = collections[tag] | limit(3) | shuffle %}
+          {% include "../components/tag-related.njk" %}
+        {% endif %}
+    </footer>
+  </article>
 </main>
 {% endblock %}

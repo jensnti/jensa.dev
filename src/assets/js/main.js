@@ -1,4 +1,4 @@
-import flash from "./flash";
+import flash from "./flash"
 
 // const toggleMode = () => {
 //     const toggleButton = document.getElementById('toggleButton');
@@ -37,27 +37,27 @@ import flash from "./flash";
 //     }
 // };
 
-const consent = localStorage.getItem("consent");
+const consent = localStorage.getItem("consent")
 
-flash(consent);
+flash(consent)
 
 // if (consent) {
 //     toggleMode(consent);
 // }
 
 if (consent) {
-  const storedTheme = localStorage.getItem("theme");
+  const storedTheme = localStorage.getItem("theme")
   if (storedTheme) {
-    document.documentElement.setAttribute("data-theme", storedTheme);
+    document.documentElement.setAttribute("data-theme", storedTheme)
   }
 
-  const toggleButton = document.getElementById("toggleButton");
+  const toggleButton = document.getElementById("toggleButton")
 
   toggleButton.addEventListener("click", (ev) => {
-    ev.preventDefault();
-    const theme = document.documentElement.getAttribute("data-theme");
-    const newTheme = theme === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-  });
+    ev.preventDefault()
+    const theme = document.documentElement.getAttribute("data-theme")
+    const newTheme = theme === "light" ? "dark" : "light"
+    document.documentElement.setAttribute("data-theme", newTheme)
+    localStorage.setItem("theme", newTheme)
+  })
 }

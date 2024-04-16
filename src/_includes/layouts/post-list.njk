@@ -1,5 +1,5 @@
 {% if postListItems.length > 0 %}
-<div class="post-list flow">
+<div class="content post-list flow">
   {% for item in postListItems %}
     {% set year = item.date | yearString %}
     {% if year === years[0] %}

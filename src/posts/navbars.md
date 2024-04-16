@@ -16,7 +16,7 @@ Alla exempel som visas är responsiva, vilket innebär att de anpassar sig efter
 I alla exempel används kombinationer av klasser för att styra navbarens beteende. Det innebär att många element har flera klasser, och de separeras med mellanslag.
 
 
-<div class="bleed">
+<div class="feature">
 <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="bGmZypm" data-user="jensadev" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/jensadev/pen/bGmZypm">
   Navbars</a> by Jens Andreasson (<a href="https://codepen.io/jensadev">@jensadev</a>)
@@ -39,7 +39,7 @@ Hamburgermenyn är användbar när det finns begränsat utrymme på skärmen, s�
 
 Betyder det att hamburgermenyn enbart ska användas på små enheter? Inte nödvändigtvis, men designmönstret påverkar tillgängligheten och användbarheten så det bör kunna motiveras.
 
-<div class="bleed">
+<div class="feature">
 <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="bGmZPPg" data-user="jensadev" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/jensadev/pen/bGmZPPg">
   Navbars - hamburger</a> by Jens Andreasson (<a href="https://codepen.io/jensadev">@jensadev</a>)

@@ -24,7 +24,7 @@ Jag kör med javascript och tänkte lite kort bara skriva om hur du kan köra me
 
 I filen ```package.json``` så under ```scripts``` så lägger du till följande:
 
-```diff-json
+```json
 "scripts": {
     "start": "node index.js"
 }
