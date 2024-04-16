@@ -1,6 +1,26 @@
 .post-list {
-
-  time {
-    color: var(--dark-200);
+  a {
+    text-decoration-color: var(--color-primary);
   }
+  time {
+    opacity: 0.8;
+  
+  }
+  p {
+    --flow-space: .5em;
+  }
+  footer {
+    --flow-space: .3em;
+  }
+}
+
+.tags {
+
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: var(--gutter);
+
+  font-size: var(--step-0);
 }

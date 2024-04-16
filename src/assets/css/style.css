@@ -4,7 +4,7 @@
 @import 'global/type.css';
 
 @import 'layout/content.css';
-@import 'layout/site-head.css';
+/* @import 'layout/site-head.css'; */
 
 @import 'utilities/wrapper.css';
 @import 'utilities/region.css';
@@ -15,3 +15,5 @@
 @import 'components/navbar.css';
 @import 'components/button.css';
 @import 'components/post-list.css';
+@import 'components/site-head.css';
+@import 'components/site-foot.css';

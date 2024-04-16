@@ -9,6 +9,6 @@
     cursor: pointer;
 
     svg {
-        fill: currentColor;
+        fill: var(--color-bg);
     }
 }

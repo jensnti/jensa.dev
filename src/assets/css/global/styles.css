@@ -1,11 +1,11 @@
 :root {
-  --bg: var(--light);
-  --fg: var(--dark);
+  --color-bg: var(--light);
+  --color-fg: var(--dark);
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: var(--dark);
-    --fg: var(--light);
+    --color-bg: var(--dark);
+    --color-fg: var(--light);
   }
 }
 
@@ -14,20 +14,20 @@ html {
 }
 body {
   font-family: system-ui, sans-serif;
-  color: var(--fg);
-  background-color: var(--bg);
+  color: var(--color-fg);
+  background-color: var(--color-bg);
 }
 
 [data-theme="light"] {
   color-scheme: light;
-  --bg: var(--light);
-  --fg: var(--dark);
+  --color-bg: var(--light);
+  --color-fg: var(--dark);
 }
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --bg: var(--dark);
-  --fg: var(--light);
+  --color-bg: var(--dark);
+  --color-fg: var(--light);
 }
 
 /* .light {
@@ -46,3 +46,11 @@ a {
   color: currentColor;
 }
 
+.primary {
+  color: var(--color-primary);
+}
+
+svg {
+  height: 2ex;
+  width: auto;
+}
