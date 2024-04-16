@@ -54,8 +54,14 @@
 
     --secondary-100: hsla(197, 100%, 50%, 1);
 
-    --dark: #31302d;
-    --light: #f6eee3;
+    /* --dark: #31302d;
+    --light: #f6eee3; */
+
+  --dark: #1D1C1B;
+  --light: #F2F0E4;
+  --orange: #D96B52;
+  --red: #D95E52;
+  --gray: #404E64;
 
     --gutter: var(--space-s-m);
 }

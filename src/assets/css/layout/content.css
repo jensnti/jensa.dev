@@ -1,7 +1,7 @@
 .content {
   --gap: clamp(1rem, 6vw, 3rem);
   --full: minmax(var(--gap), 1fr);
-  --content: min(50ch, 100% - var(--gap) * 2);
+  --content: min(70ch, 100% - var(--gap) * 2);
   --popout: minmax(0, 2rem);
   --feature: minmax(0, 5rem);
 
@@ -30,7 +30,7 @@
 }
 
 /* ---- Debug styles ---- */
-.debug {
+/* .debug {
   position: fixed;
   top: 0;
   left: 0;
@@ -99,8 +99,9 @@
 [id="debug"]:checked ~ .debug {
   opacity: 1;
 }
-
+*/
 /* ---- Other styles ---- */
+/*
 * {
   box-sizing: border-box;
 }
@@ -134,4 +135,4 @@ body {
 .full {
   border-radius: unset;
   background-color: bisque;
-}
+} */
