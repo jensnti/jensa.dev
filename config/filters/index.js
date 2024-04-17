@@ -13,7 +13,7 @@ const frontDate = (dateObj) => {
   if (typeof dateObj === "string") {
     dateObj = parseISO(dateObj)
   }
-  return format(dateObj, "MMM yyyy", { locale: sv })
+  return format(dateObj, "dd MMMM yyyy", { locale: sv })
 }
 
 const htmlDateString = (dateObj) => {

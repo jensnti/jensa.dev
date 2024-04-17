@@ -35,36 +35,15 @@
   --step-4: clamp(2.7469rem, 2.3295rem + 2.087vw, 3.9469rem);
   --step-5: clamp(3.4331rem, 2.7975rem + 3.1783vw, 5.2606rem);
 
-  --dark-purple: hsla(287, 41%, 7%, 1);
-  --violet-jtc: hsla(297, 31%, 26%, 1);
-  --pomp-and-power: hsla(307, 21%, 52%, 1);
-  --linen: hsla(29, 66%, 92%, 1);
-  --seashell: hsla(25, 55%, 94%, 1);
-  --snow: hsla(21, 44%, 96%, 1);
-
-  --color-primary: var(--pomp-and-power);
-  /*
-    --light: #FAF9F5; /*#f6eee3; 
-     #f7f5ed;
-    --dark: #333333; 31302d;
-
-    */
-  --light-100: hsl(48, 38%, 95%);
-  --dark-100: hsla(48, 8%, 15%, 0.85);
-  --dark-200: hsla(48, 8%, 15%, 0.75);
-  --dark-300: hsla(48, 8%, 15%, 0.4);
-  /* --primary-100: hsla(48, 100%, 50%, 1);
-
-  --secondary-100: hsla(197, 100%, 50%, 1); */
-
-  /* --dark: #31302d;
-    --light: #f6eee3; */
-
+  
   --dark: #1d1c1b;
   --light: #f2f0e4;
   --orange: #d96b52;
   --red: #d95e52;
   --gray: #404e64;
+
+  --color-primary: #ff0f54;
+  --color-secondary: #7678ED;
 
   --gutter: var(--space-s-m);
 }

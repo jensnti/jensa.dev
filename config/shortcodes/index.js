@@ -40,7 +40,7 @@ const imageShortcode = async (src, alt, sizes = "100vw") => {
 }
 
 const youtube = (id) => {
-  return `<div class="youtube-embed">
+  return `<div class="feature youtube-embed">
     <iframe 
         src="https://www.youtube-nocookie.com/embed/${id}"
         title="YouTube video player"

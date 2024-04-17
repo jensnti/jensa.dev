@@ -12,7 +12,7 @@ Under hösten har det skett ett antal förbättringar (tror jag) på sidan. Jag 
 
 Men såhär ser det ut för tillfället genom Netlifys Lighthouse-plugin. Bra enlight siffrorna, men 2.3s till interaktiv känns sådär.
 
-{% image "./src/images/lighthouse-ja-v2.png", "Lighthouse poäng för jensa.dev" %} 
+{% image "./src/images/lighthouse-ja-v2.png", "Lighthouse poäng för jensa.dev" %}{.center}
 
 Det finns nu en samlingssida för [resurser](/resurser), men den behöver lite design-kärlek (troligast bara post-list komponenten).
 
@@ -48,4 +48,4 @@ I vår ska jag även köra workshop och försöka hjälpa fler att komma igång 
 
 To be continued...
 
-{% image "./src/images/IMG_20230114_193522.jpg", "Lysande storspov i rådhusparken" %}
+{% image "./src/images/IMG_20230114_193522.jpg", "Lysande storspov i rådhusparken" %}{.full}

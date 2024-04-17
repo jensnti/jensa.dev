@@ -54,3 +54,12 @@ svg {
   height: 2ex;
   width: auto;
 }
+
+img, picture {
+  height: auto;
+}
+
+picture {
+  display: grid;
+  place-items: center;
+}
