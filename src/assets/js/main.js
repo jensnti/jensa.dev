@@ -1,4 +1,5 @@
 import flash from "./flash"
+import { siteSearch } from "./search"
 
 // const toggleMode = () => {
 //     const toggleButton = document.getElementById('toggleButton');
@@ -51,7 +52,7 @@ if (consent) {
     document.documentElement.setAttribute("data-theme", storedTheme)
   }
 
-  const toggleButton = document.getElementById("toggleButton")
+  const toggleButton = document.getElementById("toggleMode")
 
   toggleButton.addEventListener("click", (ev) => {
     ev.preventDefault()
@@ -61,3 +62,7 @@ if (consent) {
     localStorage.setItem("theme", newTheme)
   })
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  siteSearch()
+})

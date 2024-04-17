@@ -26,6 +26,8 @@ const {
   getYears,
 } = require("./config/filters")
 
+const { searchFilter } = require('./config/filters/search-filter.js');
+
 // import  collections
 const {
   tagList,
@@ -40,6 +42,7 @@ const {
 // plugins
 const eleventyPluginTOC = require("@thedigitalman/eleventy-plugin-toc-a11y")
 const markdownLibrary = require("./config/plugins/markdown")
+
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/assets/js/")
@@ -64,6 +67,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("limit", limit)
   eleventyConfig.addFilter("getYears", getYears)
   eleventyConfig.addFilter("slug", slug)
+  eleventyConfig.addFilter("searchFilter", searchFilter)
 
   // Shortcodes
   eleventyConfig.addShortcode("year", year)

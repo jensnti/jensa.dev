@@ -37,6 +37,7 @@
     "cross-env": "^7.0.3",
     "cssnano": "^5.1.12",
     "date-fns": "^2.28.0",
+    "elasticlunr": "^0.9.5",
     "fast-glob": "^3.2.11",
     "html-minifier": "^4.0.0",
     "i": "^0.3.7",
