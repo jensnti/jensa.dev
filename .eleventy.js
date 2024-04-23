@@ -1,5 +1,4 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
-const rssPlugin = require("@11ty/eleventy-plugin-rss")
 const htmlmin = require("html-minifier")
 const { JSDOM } = require("jsdom")
 
@@ -42,7 +41,8 @@ const {
 // plugins
 const eleventyPluginTOC = require("@thedigitalman/eleventy-plugin-toc-a11y")
 const markdownLibrary = require("./config/plugins/markdown")
-
+const rssPlugin = require("@11ty/eleventy-plugin-rss")
+const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/assets/js/")
@@ -54,6 +54,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyPluginTOC, {
     headingText: "Innehållsförteckning",
   })
+  eleventyConfig.addPlugin(emojiReadTime, {
+    emoji: "📕",
+    showEmoji: false,
+    label: "minuters läsning",
+    wpm: 200,
+    bucketSize: 3,
+  });
 
   // Filters
   eleventyConfig.addFilter("getDemo", getDemo)
