@@ -1,0 +1,49 @@
+.card {
+    position: relative;
+
+    max-width: unset;
+
+    border-radius: var(--border-radius);
+
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+
+    a {
+        color: currentColor;
+        text-decoration: none;
+    }
+    &:focus-within a:focus {
+        outline: none;
+    }
+
+    > img {
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+        width: 100%;
+    }
+}
+
+.card-body {
+  padding: var(--space-xs-s);
+  h3 {
+      color: var(--color-bg);
+  }
+}
+.card-list {
+  margin: 0;
+}
+
+.card[data-infobox='true'] {
+    padding: var(--space-xs-s);
+}
+
+.card[data-clickable='true'] {
+    a:after {
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

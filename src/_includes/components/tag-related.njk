@@ -1,6 +1,6 @@
 {% if tagPosts.length > 1 %}
 <div>
-    <h3>Mer från <a href="/tagg/{{ tag }}">{{ tag }}</a></h3>
+    <h3>Läs mer taggat med <a href="/tagg/{{ tag }}">{{ tag }}</a></h3>
     <ul>
         {% for post in tagPosts %}
           {% if post.url != page.url %}

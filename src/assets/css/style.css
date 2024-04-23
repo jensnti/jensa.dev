@@ -4,6 +4,7 @@
 @import 'global/type.css';
 
 @import 'layout/content.css';
+@import 'layout/grid.css';
 /* @import 'layout/site-head.css'; */
 
 @import 'utilities/wrapper.css';
@@ -19,3 +20,6 @@
 @import 'components/site-head.css';
 @import 'components/site-foot.css';
 @import 'components/form.css';
+@import 'components/card.css';
+@import 'components/post.css';
+@import 'components/tags.css';

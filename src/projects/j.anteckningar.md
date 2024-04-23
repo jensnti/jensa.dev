@@ -27,6 +27,14 @@ Sidan rullar på som du ser just nu. Jag bytte domän till .dev ganska nyligen. 
 
 Som dokumentation av de olika designerna så kommer här skärmdumpar med lite tankar/information om dem.
 
+### Version 4 - 2024
+
+Det är dags igen! Den här gången så har jag bytt färger och lite layout. Men de största förändringarna är tekniska.
+
+* Inget mera sass, nu är det bara css.
+* Darkmode och lightmode.
+* Sökfunktion.
+
 ### Version 3 - 2023
 
 {% image "./src/images/Ny-domän-J-Anteckningar.png", "Version 3 av jensa.dev, desktop" %}
@@ -34,6 +42,8 @@ Som dokumentation av de olika designerna så kommer här skärmdumpar med lite t
 Jag har skrivit om vad som ledde till denna [design remix här](/posts/design-remix/). Första steget är rätt färglöst, stealth-edition.
 
 I nuläget så har det tillkommit en del färg, kalla det 3.1. Men som alltid så är det nog en temporär fas.
+
+{% image "./src/images/J-Anteckningar-blauroed.png", "Version 3.1 av jensa.dev, desktop" %}
 
 ### Version 2 - 2022
 
