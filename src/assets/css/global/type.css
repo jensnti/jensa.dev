@@ -24,3 +24,20 @@ body {
   line-height: 1.5;
   font-weight: 400;
 }
+
+blockquote {
+  padding: var(--space-s-m);
+  color: var(--color-primary);
+  /* background-color: var(--color-selection); */
+  > p::before {
+      content: '“';
+  }
+  > p::after {
+      content: '”';
+  }
+}
+
+abbr {
+  background-color: var(--color-bg-accent);
+  text-decoration: underline dashed currentColor;
+}

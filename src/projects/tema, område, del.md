@@ -35,7 +35,7 @@ För användaren så fungerar sidan på det stora hela utan javascript, allt mat
 
 ## Status
 
-Väldigt aktiv och sidan för [Webbutveckling](https://webbutveckling.jensa.dev) har fått en hel del nytt material. Problemet är väl ofta det att jag fastnar i att uppdatera systemet snarare än innehållet och när jag väl skriver innehåll hittar jag saker att uppdatera i systemet.
+Sådär aktiv. Sidan för [Webbutveckling](https://webbutveckling.jensa.dev) har fått en hel del nytt material. Problemet är väl ofta det att jag fastnar i att uppdatera systemet snarare än innehållet och när jag väl skriver innehåll hittar jag saker att uppdatera i systemet.
 
 Tod för programmering ligger lite i träda eftersom jag inte undervisar Programmering 1 för tillfället. Det finns dock en tanke att göra om upplägget och börja med kod som gör något och sedan leda in vägen på variabler osv.
 Uppgifterna behöver dock skrivas om för att följa den testbaserade lärandemodellen.
