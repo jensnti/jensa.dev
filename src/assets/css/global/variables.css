@@ -46,4 +46,6 @@
   --color-secondary: #7678ED;
 
   --gutter: var(--space-s-m);
+
+  --border-radius: 0.25rem;
 }

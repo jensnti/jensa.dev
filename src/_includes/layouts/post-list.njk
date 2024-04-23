@@ -1,12 +1,12 @@
 {% if postListItems.length > 0 %}
 <div class="content post-list flow">
   {% if page.url == '/' %}
-  <h2>Senaste anteckningarna</h2>
+  <h2>Senaste</h2>
   {% endif %}
   {% for item in postListItems %}
   {% set year = item.date | yearString %}
   {% if year === years[0] %}
-  <h2 class="post-list--year" id="year-{{ year }}">{{ years.shift() }}</h2>
+  <h2 class="post-list--year popout" id="year-{{ year }}">{{ years.shift() }}</h2>
   {% endif %}
   <article class="flow">
     <header>

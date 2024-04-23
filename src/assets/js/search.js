@@ -2,11 +2,20 @@ const siteSearch = () => {
   const toggleSearch = () => {
     const searchModal = document.querySelector("#search-modal")
     searchModal.classList.toggle("hidden")
+    const searchInput = document.querySelector("#search-input")
+    searchInput.focus()
   }
 
   document
     .querySelector("#toggleSearch")
     .addEventListener("click", toggleSearch)
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "k" && e.ctrlKey) {
+      e.preventDefault()
+      toggleSearch()
+    }
+  })
 
   const search = (e) => {
     const results = window.searchIndex.search(e.target.value, {
@@ -20,12 +29,12 @@ const siteSearch = () => {
 
     resultElement.innerHTML = ""
     if (results && results.length > 0) {
-      resultElement.classList.remove("d-none")
+      resultElement.classList.remove("hidden")
       results.map((result) => {
         if (i > 10) return
-        const { id, title, excerpt } = result.doc
+        const { id, title, summary } = result.doc
         const li = document.createElement("li")
-        li.classList.add("dropdown__menu-item")
+        // li.classList.add("search-modal-results-item")
         resultElement.appendChild(li)
 
         const a = document.createElement("a")
@@ -34,17 +43,17 @@ const siteSearch = () => {
         li.appendChild(a)
 
         const p = document.createElement("p")
-        p.textContent = excerpt
+        p.textContent = summary || ""
         li.appendChild(p)
 
         i += 1
       })
     } else if (results && results.length < 1) {
-      resultElement.classList.add("d-none")
+      resultElement.classList.add("hidden")
     } else {
-      resultElement.classList.remove("d-none")
+      resultElement.classList.remove("hidden")
       resultElement.innerHTML =
-        '<li class="dropdown__menu-item--disabled">Hittade inga sökresultat, försök igen</li>'
+        '<li class="search-modal-results-item--disabled">Hittade inga sökresultat, försök igen</li>'
     }
   }
 

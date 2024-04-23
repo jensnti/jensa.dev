@@ -1,15 +1,12 @@
 <header role="banner" class="site-head content breakout full">
   {% include "../components/nav.njk" %}
   <div class="site-head--inner region flow popout">
-    {% if page.url === "/" %}
-    <h1 title="{{ title }}">
-      Hej, jag är <span class="primary">Jens</span>
-    </h1>
-    {% include "../components/lead.njk" %}
-    {% else %}
     <h1 title="{{ title }}">
       {{ title }}
     </h1>
+    {% if page.url === "/" %}
+    {% include "../components/lead.njk" %}
+    {% else %}
     {% include "../components/breadcrumbs.njk" %}
     {% endif %}
   </div>

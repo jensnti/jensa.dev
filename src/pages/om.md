@@ -6,7 +6,6 @@ templateEngineOverride: njk, md
 order: 2
 ---
 
-{% image "./src/images/20220720_132435-edit.jpg", "En Jens", "Foto av Marie Malmi." %}{.full .object-top}
 
 Jag är en legitimerad lärare och arbetar på [NTI Gymnasiet Umeå](https://www.ntigymnasiet.se/umea/) sedan 2017. Tidigare har jag arbetat med vuxenutbildning på distans.
 
@@ -15,6 +14,8 @@ Jag undervisar i kurserna webbutveckling, webbserverprogrammering och programmer
 Jag är en [GitHub Campus Advisor](https://education.github.com/teachers/advisors).
 
 Vid sidan av mitt arbete och det som jag skriver om på denna sida så gillar jag att lyssna på och spela musik, laga mat, flugfiska, vandra, dataspel, brädspel, läsa samt nörda om saker.
+
+{% image "./src/images/20220720_132435-edit.jpg", "En Jens", "Foto av Marie Malmi." %}{.full .object-top}
 
 ### Mitt hem
 
