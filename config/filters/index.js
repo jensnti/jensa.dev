@@ -1,6 +1,9 @@
 const { format, parseISO } = require("date-fns")
 const { sv } = require("date-fns/locale")
 const slugify = require("slugify")
+const CleanCSS = require("clean-css")
+
+const minifyCss = (code) => new CleanCSS({}).minify(code).styles
 
 const readableDate = (dateObj) => {
   if (typeof dateObj === "string") {
@@ -86,4 +89,5 @@ module.exports = {
   limit,
   getYears,
   getDemo,
+  minifyCss,
 }

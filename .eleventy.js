@@ -23,6 +23,7 @@ const {
   slug,
   limit,
   getYears,
+  minifyCss,
 } = require("./config/filters")
 
 const { searchFilter } = require('./config/filters/search-filter.js');
@@ -75,6 +76,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("getYears", getYears)
   eleventyConfig.addFilter("slug", slug)
   eleventyConfig.addFilter("searchFilter", searchFilter)
+  eleventyConfig.addFilter('cssmin', minifyCss)
 
   // Shortcodes
   eleventyConfig.addShortcode("year", year)
