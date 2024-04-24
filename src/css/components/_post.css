@@ -5,3 +5,7 @@
 .post-date {
   opacity: 0.8;
 }
+
+article > footer > ul > li {
+  text-transform: capitalize;
+}
