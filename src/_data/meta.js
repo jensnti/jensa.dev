@@ -12,9 +12,13 @@ module.exports = {
     "web",
     "css",
     "js",
+    "git",
+    "github",
     "javascript",
     "webbutveckling",
     "programmering",
+    "gymnasieskola",
+    "skola",
   ],
   author: {
     name: "Jens Andreasson",
@@ -26,5 +30,5 @@ module.exports = {
   time: Date.now(),
   locale: "sv-SE",
   lang: "sv",
-  theme: "#2d303c",
+  theme: "#ff0f54",
 }
