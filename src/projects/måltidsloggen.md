@@ -11,7 +11,7 @@ tags: ['node', 'nextjs', 'sql']
 
 ## Vad
 
-En webbsida / app för att logga dina måltider. Backend med node.js och pgsql för auth och att spara data. Backend finns på [github/jensadev/mat](https://github.com/jensadev/mat).Frontend med Nextjs.
+En webbsida / app för att logga dina måltider. Backend med node.js och pgsql för auth och att spara data. Backend finns på [github/jensadev/mat](https://github.com/jensadev/mat). Frontend med Nextjs.
 
 ## Varför
 
@@ -39,5 +39,7 @@ För frontend så är css-grunden gjord med Bootstrap. Jag testade även att gö
 
 Hela kalaset behöver en gigantisk update och en hel del refactoring. Det var ett projekt där jag lärde mig React medans jag byggde det och det märks.
 
-I nuläget är backend offline efter att Heroku tagit bort sin free-tier. 
+I nuläget är backend offline efter att Heroku tagit bort sin free-tier.
+
+Projektet har dock fått sig en revival genom att vi använt det på te4 för att eleverna ska få öva på att läsa och förstå någon annas kod. På så vis har det fungerat som grunden till en bra övning.
 

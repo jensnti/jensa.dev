@@ -1,32 +1,35 @@
 {% if category or tags %}
-<div class="breadcrumbs">
-    {% if category %}
-    <h2>i
-        {% if category == "resurser" %}
-        <a href="/{{ category }}">{{ category }}</a>
-        {% else %}
-        {{ category }}
-        {% endif %}
-    </h2>
+<div class="post-date">
+  <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+  {% if update %}
+  <p>Uppdaterat: <time datetime="{{ update | htmlDateString }}">{{ update | readableDate }}</time></p>
+  {% endif %}
+</div>
+<h1 class="post-title" title="{{ title }}">
+  {{ title }}
+</h1>
+<div class="breadcrumbs flow">
+  {% if category %}
+  <p class="lead">från 
+    {% if category == "resurser" %}
+    <a href="/{{ category }}">{{ category }}</a>
+    {% else %}
+    {{ category }}
     {% endif %}
-    <div>
-        {% if tags %}
-        <ul role="list" class="tags">
-            {% for tag in tags | sort %}
-            <li>
-                <a href="/tagg/{{ tag | slugify }}">
-                    {{ tag }}
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-        <div class="post-date">
-            <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-            {% if update %}
-            <p>Uppdaterat: <time datetime="{{ update | htmlDateString }}">{{ update | readableDate }}</time></p>
-            {% endif %}
-        </div>
-    </div>
+  , {{ content | emojiReadTime }}.</p>
+  {% endif %}
+  <div>
+    {% if tags %}
+    <ul role="list" class="tags">
+      {% for tag in tags | sort %}
+      <li>
+        <a href="/tagg/{{ tag | slugify }}">
+          {{ tag }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
 </div>
 {% endif %}

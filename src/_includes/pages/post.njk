@@ -1,29 +1,31 @@
 {% extends 'pages/base.njk' %}
 
 {% block head %}
-<style>{% include 'assets/css/prism-theme.css' %}</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-tomorrow.min.css" integrity="sha512-kSwGoyIkfz4+hMo5jkJngSByil9jxJPKbweYec/UgS+S1EgE45qm4Gea7Ks2oxQ7qiYyyZRn66A9df2lMtjIsw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>pre { font-size: var(--step-0); }</style>
 {% endblock %}
 
 {% block content %}
-<main id="main-content" tabindex="-1" class="container region post">
-    <article class="flow">
-        <header>
-            {% if summary %}
-            <p class="lead">{{ summary | safe }}</p>
-            {% endif %}
-        </header>
-        <div class="flow">
-            {{ content | safe }}
-        </div>
-        <footer>
-            {% include "../components/link-list.njk" %}
+<main id="main-content" tabindex="-1" class="region">
+  <article class="flow content">
+    <header>
+      {% if category == "resurser" or toc %}
+      {{ content | toc | safe }}
+      {% endif %}
+      {% if summary %}
+      <p class="lead">{{ summary | safe }}</p>
+      {% endif %}
+    </header>
+    {{ content | safe }}
+    <footer>
+        {% include "../components/link-list.njk" %}
 
-            {% if tags %}
-            {% set tag = tags | random %}
-            {% set tagPosts = collections[tag] | limit(3) | shuffle %}
-            {% include "../components/tag-related.njk" %}
-            {% endif %}
-        </footer>
-    </article>
+        {% if tags %}
+          {% set tag = tags | random %}
+          {% set tagPosts = collections[tag] | limit(3) | shuffle %}
+          {% include "../components/tag-related.njk" %}
+        {% endif %}
+    </footer>
+  </article>
 </main>
 {% endblock %}

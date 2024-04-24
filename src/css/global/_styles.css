@@ -1,0 +1,57 @@
+:root {
+  --color-bg: var(--light);
+  --color-fg: var(--dark);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--dark);
+    --color-fg: var(--light);
+  }
+}
+
+html {
+  color-scheme: dark light;
+}
+body {
+  font-family: system-ui, sans-serif;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --color-bg: var(--light);
+  --color-fg: var(--dark);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: var(--dark);
+  --color-fg: var(--light);
+}
+
+a {
+  color: currentColor;
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+svg {
+  height: 2ex;
+  width: auto;
+}
+
+img, picture {
+  height: auto;
+}
+
+picture {
+  display: grid;
+  place-items: center;
+}
+
+.hidden {
+  display: none;
+}

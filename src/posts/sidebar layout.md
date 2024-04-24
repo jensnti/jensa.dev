@@ -11,7 +11,7 @@ Koden i det här exemplet grundar sig på lösningen som går att finna i [Every
 
 Som du kan se i exemplet så är det ganska mycket innehåll i sidebar delen, men det kan likväl vara enbart navigation.
 
-<div class="bleed">
+<div class="feature">
 <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="YzJggJo" data-user="jensadev" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/jensadev/pen/YzJggJo">
   Sidebar layout</a> by Jens Andreasson (<a href="https://codepen.io/jensadev">@jensadev</a>)

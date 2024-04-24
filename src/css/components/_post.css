@@ -1,0 +1,7 @@
+.post-title {
+  --flow-space: 0;
+}
+
+.post-date {
+  opacity: 0.8;
+}

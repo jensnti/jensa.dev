@@ -1,0 +1,43 @@
+h1, h2, h3, h4 {
+  line-height: 1;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: var(--step-5);
+}
+
+h2 {
+  font-size: var(--step-4);
+}
+
+h3 {
+  font-size: var(--step-3);
+}
+
+h4 {
+  font-size: var(--step-2);
+}
+
+body {
+  font-size: var(--step-1);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+blockquote {
+  padding: var(--space-s-m);
+  color: var(--color-primary);
+  /* background-color: var(--color-selection); */
+  > p::before {
+      content: '“';
+  }
+  > p::after {
+      content: '”';
+  }
+}
+
+abbr {
+  background-color: var(--color-bg-accent);
+  text-decoration: underline dashed currentColor;
+}

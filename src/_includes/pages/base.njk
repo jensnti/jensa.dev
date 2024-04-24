@@ -1,27 +1,34 @@
+{% set assetHash = helpers.random() %}
+
 <!DOCTYPE html>
-<html lang="{{ meta.lang }}">
+<html lang="{{ meta.lang }}" class="dark">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    {% include "../components/meta.njk" %}
-    <link rel="alternate" type="application/rss+xml" title="{{ meta.siteName }}" href="{{ meta.url }}/feed.xml" />
-    <style>{% include "assets/css/style.css" %}</style>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    {% block head %}{% endblock %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  {% include "../components/meta.njk" %}
+  <link rel="alternate" type="application/rss+xml" title="{{ meta.siteName }}" href="{{ meta.url }}/feed.xml" />
+  <link rel="stylesheet" href="/css/style.css?{{ assetHash }}" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  {% block head %}{% endblock %}
 </head>
 
 <body>
-    <a class="skip-link" href="#main-content">Hoppa till sidans innehåll</a>
-    {% block header %}
-        {% include "../layouts/site-head.njk" %}
-    {% endblock %}
-    {% block content %}{% endblock %}
-    {% block footer %}
-        {% include "../components/site-foot.njk" %}
-    {% endblock %}
-    {% include "../components/flash-message.njk" %}
+  <a class="skip-link" href="#main-content">Hoppa till sidans innehåll</a>
+  {% block header %}
+  {% include "../layouts/site-head.njk" %}
+  {% endblock %}
+  {% block content %}{% endblock %}
+  {% block footer %}
+  {% include "../components/site-foot.njk" %}
+  {% endblock %}
+  {% include "../components/flash-message.njk" %}
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"
+  integrity="sha512-0QarUp4p9r5IqUgSRyP89BHga45OpEd7VR8lbRkJkf48p/EhcU742fWUpKpoDyu9N6XYAEq/vz6m6z1OolnsDw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="{{ '/js/bundle.js' | url }}"></script>
 </body>
 
 </html>

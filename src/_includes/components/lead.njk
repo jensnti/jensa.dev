@@ -1,3 +1,31 @@
+{% if "arkiv" in page.url %}
+    <p class="lead">
+      Här hittar du alla tidigare anteckningar som jag har skrivit på den här sidan.
+      De är sorterade efter datum.
+    </p>
+    {% if years %}
+    <ul class="tags tags--year" role="list">
+      {% for year in years %}
+      <li>
+        <a href="#year-{{ year }}">{{ year }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+{% elseif page.url == "/projekt/" %}
+    <p class="lead">
+      Här finns några projekt som jag har skapat.
+    </p>
+{% elseif "resurser" in page.url %}
+    <p class="lead">
+      Här hittar du alla resurser som jag har skapat och publicerat på den här sidan.
+      Resurser är framförallt material skapat för min undervisning.
+    </p>
+    <p>
+      De är sorterade efter datum.
+      Letar du något specifikt så prova sökfunktionen.
+    </p>
+{% elseif page.url  === "/" %}
 <p class="lead">
     Jag är en lärare som gillar webbutveckling, design och att koda.
     Att få kombinera dessa intressen i mitt arbete är ett privilegium.
@@ -6,3 +34,8 @@
     På <a href="https://github.com/jensadev">GitHub</a> finns saker jag
     har kodat.
 </p>
+{% else %}
+<p class="lead">
+  {{ page.data.summary | safe }}
+</p>
+{% endif %}

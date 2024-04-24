@@ -1,0 +1,14 @@
+.button {
+    display: grid;
+    place-items: center;
+}
+
+.button-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    svg {
+        fill: var(--color-bg);
+    }
+}

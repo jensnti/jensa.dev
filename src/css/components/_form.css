@@ -1,0 +1,28 @@
+form {
+    input,
+    textarea {
+        width: 100%;
+        padding: var(--space-2xs);
+        margin-top: var(--space-3xs-2xs);
+        border-radius: var(--border-radius);
+    }
+    button {
+        width: 100%;
+        padding: var(--space-2xs);
+        margin-top: var(--space-3xs-2xs);
+        border-radius: var(--border-radius);
+        background-color: var(--color-primary);
+        color: var(--color-bg);
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    button:hover {
+        color: var(--color-fg);
+    }
+    *:focus {
+        color: var(--color-fg);
+        outline-color: var(--color-secondary);
+    }
+}
