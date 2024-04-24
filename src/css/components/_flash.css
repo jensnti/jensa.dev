@@ -1,0 +1,28 @@
+.flash {
+  z-index: 1100;
+  position: fixed;
+  background: var(--color-fg);
+  color: var(--color-bg);
+  border-radius: var(--border-radius);
+  left: 2vmin;
+  right: 2vmin;
+  bottom: 2vmin;
+  max-width: 40ch;
+  padding: var(--space-s-m);
+}
+
+.flash__inner {
+  display: grid;
+  gap: var(--gutter);
+  grid-auto-rows: auto;
+}
+
+.flash__message {
+  grid-row: 1;
+}
+
+.flash__button {
+  grid-row: 2;
+  justify-self: end;
+}
+
