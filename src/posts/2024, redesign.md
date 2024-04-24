@@ -40,23 +40,6 @@ Nu är det möjligt att välja mellan dark mode och light mode igen. Det finns e
 
 Min ärkefiende, färger. Jag är aldrig nöjd och tycker aldrig att jag lyckas. Nu ville jag ha färger som skulle symbolisera teknik, nyfikenhet och att lära sig. Istället blev det rött och svart, anarki.
 
-<style>
-  .swatches {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: var(--gutter);
-    list-style: none;
-    padding: 0;
-  }
-  .swatches li {
-    aspect-ratio: 1/1;
-    overflow: hidden;
-    border: 1px solid var(--color-fg);
-    border-radius: var(--border-radius);
-    display: grid;
-    place-items: center;
-  }
-</style>
 <ul class="swatches">
   <li style="background-color: var(--dark); color: var(--light);">dark</li>
   <li style="background-color: var(--light); color: var(--dark);">light</li>

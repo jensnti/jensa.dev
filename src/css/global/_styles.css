@@ -55,3 +55,19 @@ picture {
 .hidden {
   display: none;
 }
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--gutter);
+  list-style: none;
+  padding: 0;
+}
+.swatches li {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border: 1px solid var(--color-fg);
+  border-radius: var(--border-radius);
+  display: grid;
+  place-items: center;
+}
