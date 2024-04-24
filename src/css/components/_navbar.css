@@ -17,6 +17,13 @@
     text-decoration: none;
     font-weight: 600;
   }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.active {
+  opacity: 0.9;
 }
 
 .search-modal {

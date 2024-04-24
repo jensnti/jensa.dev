@@ -32,6 +32,15 @@ body {
 
 a {
   color: currentColor;
+  text-decoration-color: var(--color-secondary);
+}
+
+a:hover {
+}
+
+.lead a {
+  color: var(--color-fg);
+  text-decoration: none;
 }
 
 .primary {
