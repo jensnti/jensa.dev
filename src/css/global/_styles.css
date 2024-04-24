@@ -71,3 +71,23 @@ picture {
   display: grid;
   place-items: center;
 }
+
+.dark {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.light {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.primary {
+  color: inherit;
+  background-color: var(--color-primary);
+}
+
+.secondary {
+  color: inherit;
+  background-color: var(--color-secondary);
+}

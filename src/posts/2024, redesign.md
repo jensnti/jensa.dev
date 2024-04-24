@@ -41,10 +41,10 @@ Nu är det möjligt att välja mellan dark mode och light mode igen. Det finns e
 Min ärkefiende, färger. Jag är aldrig nöjd och tycker aldrig att jag lyckas. Nu ville jag ha färger som skulle symbolisera teknik, nyfikenhet och att lära sig. Istället blev det rött och svart, anarki.
 
 <ul class="swatches">
-  <li style="background-color: var(--dark); color: var(--light);">dark</li>
-  <li style="background-color: var(--light); color: var(--dark);">light</li>
-  <li style="background-color: var(--color-primary);">primary</li>
-  <li style="background-color: var(--color-secondary);">secondary</li>
+  <li class="dark">dark</li>
+  <li class="light">light</li>
+  <li class="primary">primary</li>
+  <li class="secondary">secondary</li>
 </ul>
 
 ## Tekniskt
