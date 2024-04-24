@@ -39,7 +39,10 @@ server.listen(port);
 ```
 
 Det är viktigt att förstå att det inte blir riktigt samma process som när du kör igång din egen utvecklarserver och vissa problem kan manifisteras som inte annars märks. Till exempel som att din databaspool ligger och puttrar, din session inte är bortplockad, promises ligger och väntar och så vidare.
-Detta visar sig i att Jest spottar ur sig meddelandet, **Jest has detected the following 1 open handle potentially keeping Jest from exiting**.
+Detta visar sig i att Jest spottar ur sig meddelandet,
+
+>Jest has detected the following 1 open handle potentially keeping Jest from exiting
+
 En googling eller tre på området gav ingen nyttig information och anledningen till detta är (tror jag) att felet inte är Jests, utan en brist på förståelse för processen som Jest kör.
 
 ## Lösning

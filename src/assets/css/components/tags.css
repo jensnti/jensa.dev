@@ -1,0 +1,10 @@
+.tags {
+  a {
+    color: var(--color-fg);
+    text-decoration: none;
+  }
+}
+
+.tags--year {
+  margin-top: 1em;
+}

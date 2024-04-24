@@ -4,6 +4,7 @@ date: 2023-09-28
 summary: Ett textäventyr kan vara många saker, mina tankar går till ett spel i textform, men en bra skönlitterär bok borde väl kunna kvala in som ett textäventyr.
 tags: ['javascript', 'böcker', 'spel']
 category: anteckningar
+toc: true
 ---
 
  I den här texten kommer jag dock fokusera på det förstnämnda, ett spel i textform, och framförallt på hur det kan användas för att arbeta med grunderna i javascript.

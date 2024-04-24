@@ -1,0 +1,9 @@
+.site-head {
+
+  color: var(--color-bg);
+  background-color: var(--color-primary);
+
+}
+
+.site-head--inner {
+}

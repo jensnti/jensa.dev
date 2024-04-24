@@ -9,8 +9,8 @@ category: ""
 {% extends 'pages/page.njk' %}
 
 {% block content %}
-<main id="main-content" tabindex="-1" class="container region">
-    <article>
+<main id="main-content" tabindex="-1" class="region">
+    <article class="content">
         {% if projectsData %}
         <ul class="grid" data-layout="50-50" data-rows="masonry" role="list">
             {% for project in projectsData %}

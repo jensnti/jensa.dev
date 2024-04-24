@@ -1,28 +1,30 @@
-<header role="banner" class="container flow">
-    {% include "../components/nav.njk" %}
-    <h1 title="{{ title }}">
-        {{ title }}
-    </h1>
-    {% if page.url === "/" %}
-    {% include "../components/lead.njk" %}
-    {% else %}
+<header role="banner" class="site-head content breakout full">
+  {% include "../components/nav.njk" %}
+  <div class="site-head--inner region flow popout">
+    {% if "posts" in page.url %}
     {% include "../components/breadcrumbs.njk" %}
+    {% else %}
+    <h1 title="{{ title }}">
+      {{ title }}
+    </h1>
+    {% include "../components/lead.njk" %}
     {% endif %}
+  </div>
 </header>
-{% if years %}
-<div class="container breadcrumbs years">
-    <ul class="tags" role="list">
-        {% for year in years %}
-        <li>
-            <a href="#year-{{ year }}">{{ year }}</a>
-        </li>
-        {% endfor %}
-        <li class="back-to-top">
-            <a href="#">
-                <span class="sr-only">Top</span>
-                {% svg "chevron-up-outline.svg" %}
-            </a>
-        </li>
-    </ul>
+<!-- {% if years %}
+<div class="wrapper breadcrumbs years">
+  <ul class="tags" role="list">
+    {% for year in years %}
+    <li>
+      <a href="#year-{{ year }}">{{ year }}</a>
+    </li>
+    {% endfor %}
+    <li class="back-to-top">
+      <a href="#">
+        <span class="sr-only">Top</span>
+        {% svg "chevron-up-outline.svg" %}
+      </a>
+    </li>
+  </ul>
 </div>
-{% endif %}
+{% endif %} -->

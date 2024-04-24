@@ -1,0 +1,13 @@
+.site-foot {
+  opacity: 0.8;
+  ul {
+      display: flex;
+      gap: var(--gutter);
+
+      padding: 0;
+  }
+
+  svg {
+      fill: currentcolor;
+  }
+}
