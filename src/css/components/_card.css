@@ -24,7 +24,7 @@
 }
 
 .card-body {
-  padding: var(--space-xs-s);
+  padding: var(--space-s);
   h3 {
       color: var(--color-bg);
   }

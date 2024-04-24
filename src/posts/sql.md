@@ -5,7 +5,6 @@ tags: ['setup', 'sql']
 templateEngineOverride: njk, md
 category: resurser
 summary: En introduktion till att skriva SQL-frågor för användning i kursen Webbserverprogrammering.
-draft: true
 ---
 
 ## Innan du börjar
