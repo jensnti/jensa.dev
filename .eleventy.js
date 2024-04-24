@@ -42,7 +42,8 @@ const {
 const eleventyPluginTOC = require("@thedigitalman/eleventy-plugin-toc-a11y")
 const markdownLibrary = require("./config/plugins/markdown")
 const rssPlugin = require("@11ty/eleventy-plugin-rss")
-const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
+const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime")
+const lightningCSS = require("@11tyrocks/eleventy-plugin-lightningcss")
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/assets/js/")
@@ -60,7 +61,8 @@ module.exports = function (eleventyConfig) {
     label: "minuters läsning",
     wpm: 200,
     bucketSize: 3,
-  });
+  })
+  eleventyConfig.addPlugin(lightningCSS)
 
   // Filters
   eleventyConfig.addFilter("getDemo", getDemo)
