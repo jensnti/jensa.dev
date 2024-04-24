@@ -30,18 +30,6 @@ body {
   --color-fg: var(--light);
 }
 
-/* .light {
-  color-scheme: light;
-  color: var(--dark);
-  background-color: var(--light);
-}
-
-.dark {
-  color-scheme: dark;
-  color: var(--light);
-  background-color: var(--dark);
-} */
-
 a {
   color: currentColor;
 }
