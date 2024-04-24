@@ -11,10 +11,10 @@ package = "netlify-plugin-csp-generator"
 
   [plugins.inputs.policies]
     defaultSrc = "'self'"
-    styleSrc = "'unsafe-hashes'"
+    styleSrc = "'self' https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/"
     objectSrc = "'none'"
     baseUri = "'self'"
-    scriptSrc = "'self' https://cpwebassets.codepen.io https://codepen.io"
+    scriptSrc = "'self' https://cpwebassets.codepen.io https://codepen.io https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/"
     frameSrc = "'self' https://youtube.com https://www.youtube.com https://www.youtube-nocookie.com https://cpwebassets.codepen.io https://codepen.io"
     frameAncestors = "'none'"
     imgSrc = "'self' https://i.ytimg.com/"
