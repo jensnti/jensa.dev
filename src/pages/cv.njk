@@ -15,8 +15,12 @@ permalink: /cv/
 {% block content %}
 <style>
   body {
-    color: var(--color-dark);
-    background-color: var(--color-light);
+    color: var(--dark);
+    background-color: var(--light);
+  }
+
+  ol {
+    padding-inline-start: 0;
   }
 
   .sidebar {
@@ -47,10 +51,17 @@ permalink: /cv/
     .anchor {
       display: none;
     }
+
+    .sidebar {
+      display: block;
+    }
+    picture {
+      display: none;
+    }
   }
 </style>
-<main id="main-content" tabindex="-1" class="container region">
-  <article class="flow">
+<main id="main-content" tabindex="-1" class="region">
+  <article class="content flow">
     <header class="flow">
       <h1>Jens Andreasson</h1>
       <p>Legitimerad lärare i webbteknik(er), gränssnittsdesign, programmering och engelska.</p>
@@ -108,8 +119,8 @@ permalink: /cv/
               <time datetime="{% year %}">nu</time>
             </p>
             <p>Som förstelärare på NTI Gymnasiet Umeå har jag haft ansvar för och lett två grupper inom ULF-projektet i
-              samarbete med Uppsala universitet. Projekten har haft ett tydligt fokus på att utveckla
-              programmeringspedagogiken genom att bland annat undervisa i felsökning och användning av debugger för att
+              samarbete med Uppsala universitet. Projekten har fokuserat på att utveckla
+              programmerings-pedagogiken genom att bland annat undervisa i felsökning och användning av debugger för att
               förstå kod.</p>
             <p>Jag har även haft uppdraget att främja användningen av Git/GitHub på nationell nivå inom NTI Gymnasiet,
               vilket har inkluderat skapandet av utbildningsmaterial och workshops.</p>
@@ -134,7 +145,7 @@ permalink: /cv/
               <time datetime="2017-08">Augusti 2017</time>
             </p>
             <p>
-              Ppå NTI Skolan arbetade jag med vuxenutbildning på distans. Jag var involverad i kursutveckling och
+              På NTI Skolan arbetade jag med vuxenutbildning på distans. Jag var involverad i kursutveckling och
               undervisade i en rad olika ämnen och kurser, från datorteknik till programmering och grafisk form.
             </p>
           </li>
@@ -188,9 +199,10 @@ permalink: /cv/
             <h3>Kurser</h3>
             <p>
               Umeå universitet, <time datetime="2007">2007</time> -
-              <time datetime="2007">2012</time>
+              <time datetime="2021">2021</time>
             </p>
             <ul class="cv-list">
+              <li>Handledarkurs för lärarstudenter</li>
               <li>Webb, css, javascript - flertal kurser</li>
               <li>Informatik</li>
             </ul>
