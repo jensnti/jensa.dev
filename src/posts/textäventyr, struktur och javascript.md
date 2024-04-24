@@ -13,7 +13,7 @@ toc: true
 
 Ett textäventyr är ett spel där du får en beskrivning av en situation och sedan får du välja vad du vill göra. Beroende på dina val så kan du hamna i nya situationer och så fortsätter berättelsen. Det som skiljer textäventyret från en bok är att händelserna inte är linjära, handlingen är inte förutbestämd. Det är du som spelare som styr handlingen. Det kan liknas vid ett träd där varje val du gör leder till en ny situation.
 
-När jag var lite så spelade jag en del textäventyr i bokform, det kallades för [soloäventyr](https://sv.wikipedia.org/wiki/Solo%C3%A4ventyr) eller [Choose Your Own Adventure](https://en.wikipedia.org/wiki/Choose_Your_Own_Adventure) på engelska. Det var en bok där du läste en beskrivning av en situation och sedan fick du välja vad du ville göra. Beroende på ditt val så fick du hoppa till en ny sida i boken och läsa en ny beskrivning av en situation. Fler av böckerna jag läste var i serien om [Ensamma vargen](http://www.ensamma-vargen.se/), en fantasyserie där du var hjälten.
+När jag var en liten, liten, parvel så spelade jag en del textäventyr i bokform, det kallades för [soloäventyr](https://sv.wikipedia.org/wiki/Solo%C3%A4ventyr) eller [Choose Your Own Adventure](https://en.wikipedia.org/wiki/Choose_Your_Own_Adventure) på engelska. Det var en bok där du läste en beskrivning av en situation och sedan fick du välja vad du ville göra. Beroende på ditt val så fick du hoppa till en ny sida i boken och läsa en ny beskrivning av en situation. Fler av böckerna jag läste var i serien om [Ensamma vargen](http://www.ensamma-vargen.se/), en fantasyserie där du var hjälten.
 
 ## Men javascript då
 
@@ -21,7 +21,7 @@ Premissen för denna text är kopplingen till kod och javascript, så nog om bö
 
 Ett linjärt äventyr behöver i sig inte så mycket kod, du läser en linjär berättelse just nu (kanske en kan argumentera). Men när läsaren presenteras val och dessa val inte bara leder vidare till nästa sida i boken, utan till en ny situation, då behövs det kod. Det behövs kod för att hålla reda på vilken situation läsaren befinner sig i, vilka val som finns och vilka situationer som valen leder till.
 
-En stor del av uppgiften att översätta äventyret till kod landar naturligt i att skapa en struktur för äventyret och i förlängningen en struktur för koden. Detta är en viktig del av programmering, att kunna skapa strukturer för att hantera data.
+En stor del av uppgiften att översätta äventyret till kod landar naturligt i att skapa en struktur för äventyret och i förlängningen en struktur för koden. Detta är en viktig del av programmering, att strukturera din data för att koden ska kunna hantera den.
 
 ## Kom igång
 
@@ -36,15 +36,16 @@ console.log("2. Gå till fönstret");
 let val = prompt("Vad väljer du? ");
 ```
 
-Nästa steg är en if-sats som hanterar valet. Denna if-sats har en tendens att växa och växa och sedan leder den till nästlade if-satser. Byt ut fear mot if-satser...
-
->Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.
+Äventyret skrivs ut med ett antal print statements och sedan får spelaren göra ett val med hjälp av `prompt`. Detta är en naturlig start och en bra början.
+Nästa steg är en if-sats för att hantera spelarens val. Denna if-sats har en tendens att växa och växa och sedan leder den till nästlade if-satser.
 
 Detta är ett exempel där kodaren börjar med att koda utan att tänka på strukturen. Det är inget konstigt och ett naturligt steg i att lära sig lösa problem med kod.
 
+Det är även mycket svårt för äventyret att växa utan att det blir mycket repetition i koden.
+
 ## Struktur
 
-Om en istället börjar med att tänka på strukturen så kan en komma fram till att det finns ett antal saker som behöver hanteras.
+Om en istället börjar med att tänka på textens (data/spelet) struktur så kan en komma fram till att det finns ett antal saker som behöver hanteras.
 
 - Situationer
 - Val
@@ -53,7 +54,7 @@ Om en istället börjar med att tänka på strukturen så kan en komma fram till
 
 Men för att kunna översätta detta i kod så krävs det kunskap och förståelse om flera koncept. 
 
-Äventyret i sig, berättelsen är en händelse som upprepas om och om igen. Spelaren får en text presenterad för sig, sedan utför spelaren ett val som leder till en ny situation. Detta är en loop som upprepas tills äventyret är över.
+Äventyret i sig, berättelsen är en händelse som upprepas om och om igen (tänk sidor i en bok). Spelaren får en text presenterad för sig, sedan utför spelaren ett val som leder till en ny situation. Detta är en loop som upprepas tills äventyret är över.
 
 ```js
 while (spelet ska fortsätta) {
@@ -155,12 +156,14 @@ För att använda objektens id för att hålla reda på spelarens position så b
 ```js
 function findPage(id) {
   return book.find((page) => {
-    return page.id === id;
+    return page.id === parsenInt(id);
   })
 }
 ```
 
 Funktionen använder sig av array-metoden `find` för att hitta rätt objekt i listan. `find` tar emot en funktion som parameter och denna funktion körs för varje objekt i listan. Om funktionen returnerar `true` så returneras objektet som `find` hittade. I funktionen som skickas till `find` så jämförs objektets id med id som skickades in som parameter. Om id matchar så returneras objektet.
+
+Viktigt här är att vi måste konvertera `id` till ett heltal med `parseInt` för att jämföra med objektets id, detta eftersom prompt returnerar en sträng.
 
 Med den koden så kan spelarens position i äventyret uppdateras med hjälp av objektets id.
 
