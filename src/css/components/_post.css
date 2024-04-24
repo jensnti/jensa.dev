@@ -9,3 +9,7 @@
 article > footer > ul > li {
   text-transform: capitalize;
 }
+
+article > footer > .tags {
+  flex-wrap: wrap;
+}
