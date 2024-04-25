@@ -1,11 +1,7 @@
 .tags {
+  flex-wrap: wrap;
   a {
-    color: var(--color-fg);
+    /* color: var(--color-fg); */
     text-decoration: none;
   }
-}
-
-.tags--year {
-  margin-top: 1em;
-  font-size: var(--step-1);
 }
