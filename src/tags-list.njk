@@ -7,7 +7,7 @@ cover: "Firefly cover illustration a cloud of keywords, icons and symbols keepin
 ---
 
 {% block content %}
-<ul role="list">
+<ul role="list" class="tags-list">
     {% for tag in collections.tagList %}
     {% set tagUrl %}/tagg/{{ tag | slug }}/{% endset %}
     <li>
