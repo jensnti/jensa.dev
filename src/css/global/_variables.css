@@ -43,6 +43,7 @@
   --gray: #404e64;
 
   --color-primary: #ff0f54;
+  --color-primary-transparent: rgba(255, 15, 84, 0.8);
   --color-secondary: #7678ED;
 
   --gutter: var(--space-s-m);
