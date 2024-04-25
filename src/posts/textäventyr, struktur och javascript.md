@@ -5,6 +5,7 @@ summary: Ett textäventyr kan vara många saker, mina tankar går till ett spel 
 tags: ['javascript', 'böcker', 'spel']
 category: anteckningar
 toc: true
+cover: cyoa.jpg
 ---
 
  I den här texten kommer jag dock fokusera på det förstnämnda, ett spel i textform, och framförallt på hur det kan användas för att arbeta med grunderna i javascript.

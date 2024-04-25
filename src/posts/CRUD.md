@@ -5,6 +5,7 @@ tags: ['webbserver', 'säkerhet', 'node', 'video', 'sql']
 templateEngineOverride: njk, md
 category: resurser
 summary: Create, read, update, delete och lite REST i videoformat.
+cover: crud_1.jpg
 ---
 
 En kort post med lite material för kursen Webbserverprogrammering 1. Jag har tidigare gjort en video-serie om en filmdatabas som ligger på youtube, men den kändes lite utdaterad (jag har lärt mig nya saker och arbetar lite annorlunda).
