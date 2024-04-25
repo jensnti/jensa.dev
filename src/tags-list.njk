@@ -1,20 +1,18 @@
 ---
 title: Alla taggar
 permalink: /taggar/
+layout: pages/page.njk
+lead: Här hittar du en lista över samtliga taggar som används på webbplatsen.
+cover: "Firefly cover illustration a cloud of keywords, icons and symbols keeping the knowledge in between.jpg"
 ---
 
-{% extends 'pages/page.njk' %}
 {% block content %}
-<main id="main-content" tabindex="-1" class="container">
-    <article class="region flow">
-        <ul>
-            {% for tag in collections.tagList %}
-            {% set tagUrl %}/tagg/{{ tag | slug }}/{% endset %}
-            <li>
-                <a href="{{ tagUrl | url }}">{{ tag | capitalize }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </article>
-</main>
+<ul role="list">
+    {% for tag in collections.tagList %}
+    {% set tagUrl %}/tagg/{{ tag | slug }}/{% endset %}
+    <li>
+        <a href="{{ tagUrl | url }}">{{ tag | capitalize }}</a>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock %}
