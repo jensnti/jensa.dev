@@ -4,6 +4,7 @@ date: 2023-02-07
 summary: "Säkerhet på webben alltid aktuellt och alltid viktigt. Content Security Policy är ett sätt att säkra webbplatsen från attacker."
 tags: [ 'säkerhet', 'csp']
 category: anteckningar
+cover: csp.jpg
 ---
 
 *[CSP]: Content Security Policy

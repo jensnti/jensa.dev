@@ -1,4 +1,10 @@
 .navbar {
+  background-color: var(--color-primary);
+  z-index: 100;
+  opacity: 0.9;
+}
+
+.navbar-inner {
   position: relative;
   display: flex;
   align-items: center;

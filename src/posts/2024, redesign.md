@@ -1,9 +1,11 @@
 ---
 title: 2024, redesign
 date: 2024-04-25
+update: 2024-04-30
 summary: "Klart det ska bli en redesign i år igen."
 tags: [ 'reflektion', 'redesign']
 category: anteckningar
+cover: redesign24.jpg
 ---
 
 Som titeln och inledningen antyder och som du förmodligen ser så har jag gjort en redesign av sidan.
@@ -15,6 +17,12 @@ Sidans huvudsyfte är ändå att samla ihop det material jag skapat och publicer
 ## Grafiskt
 
 För utseendet, eller designen av sidan så är det inga större förändringar. Jag har joxat med fonter, storlek och lite färg, men på det stora hela är det samma. Jag har ändrat i hur listan över poster ser ut och skruvat lite i layouten, men det är mer ett resultat av teknik än design.
+
+### Uppdatering
+
+Jag har nu lagt till möjligheten att använda cover bilder för poster. Det är något som länge varit på TODO listan och nu finns det på plats. Bilderna är i form av bakgrunder i sidhuvudet och de fungerar förhoppningsvis bra på alla enheter och med tillräcklig kontrast.
+
+Själva bilderna och vad de föreställer, det är lite slumpat. Hittills är det en del blommor och abstrakta grunkor. Av någon anledning så tyckte Firefly att det passade med blommor och webbservrar när jag började generera. Jag har använt mig av [Adobe Firefly](https://firefly.adobe.com/) för att skapa dem. Det är AI och det är vad det är, jag gör inget anspråk på att vara konstnär.
 
 ## css
 

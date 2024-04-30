@@ -5,6 +5,7 @@ tags: ['webbutveckling', 'css', 'html']
 category: resurser
 templateEngineOverride: njk, md
 summary: Navigationsfält, navbars på svengelska, är en ofta nödvändig komponent för att navigera på webben. De finns i olika former och har olika funktioner. I denna introduktion introduceras några grundläggande exempel.
+cover: navbar.jpg
 ---
 
 ## Börja här
