@@ -87,5 +87,23 @@
       ],
       "hosting": "[Netlify](https://netlify.com/)",
       "description": "En webbsida för att spela ett quiz med telefonen. Sidan är skapad inför att vi skulle få besök av 8:de klassare på skolan. Syftet är att på kul sätt försöka visa vad vi pysslar med på teknikprogrammet."
-  }
+  },
+  {
+    "title": "Spelsite - En samlingsida för elevarbeten",
+    "start": "2021-12-17",
+    "end": false,
+    "status": "Fylls på löpande",
+    "url": "https://spelsite.netlify.app",
+    "git": "https://github.com/NTIG-Umea/spelsite",
+    "thumb": "spelsite-thumb.png",
+    "licens": "MIT",
+    "tech": [
+        "javascript",
+        "11ty",
+        "vite",
+        "phaser"
+    ],
+    "hosting": "[Netlify](https://netlify.com/)",
+    "description": "En webbsida för att samla elevarbeten inom spelutveckling."
+}
 ]

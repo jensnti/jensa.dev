@@ -1,5 +1,5 @@
 .navbar {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-transparent);
   z-index: 100;
   opacity: 0.9;
 }
