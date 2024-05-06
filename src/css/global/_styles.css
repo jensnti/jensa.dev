@@ -1,11 +1,13 @@
 :root {
   --color-bg: var(--light);
   --color-fg: var(--dark);
+  --cover-gradient: linear-gradient(to right, var(--color-fg), var(--color-primary));
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: var(--dark);
     --color-fg: var(--light);
+    --cover-gradient: linear-gradient(to right, var(--color-primary), var(--color-bg));
   }
 }
 
