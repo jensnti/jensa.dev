@@ -42,8 +42,11 @@
   --red: #d95e52;
   --gray: #404e64;
 
-  --color-primary: #ff0f54;
-  --color-primary-transparent: rgba(255, 15, 84, 0.8);
+  --color-primary-light: #ff0f54;
+  --color-primary-light-transparent: rgba(255, 15, 84, 0.8);
+  --color-primary-dark: hsl(343, 80%, 53%);
+  --color-primary-dark-transparent: hsla(343, 80%, 53%, 0.8);
+  
   --color-secondary: #7678ED;
 
   --gutter: var(--space-s-m);

@@ -42,3 +42,11 @@ abbr {
   background-color: var(--color-bg-accent);
   text-decoration: underline dashed currentColor;
 }
+
+.lead a {
+  text-decoration: none;
+}
+
+.lead a:hover {
+  text-decoration: underline;
+}

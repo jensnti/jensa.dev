@@ -1,8 +1,10 @@
 .tags {
   flex-wrap: wrap;
   a {
-    /* color: var(--color-fg); */
     text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 }
 

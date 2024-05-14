@@ -39,3 +39,7 @@
   font-size: var(--step-1);
   margin-top: var(--space-s);
 }
+
+.site-head .tags a :hover {
+  text-decoration: underline;
+}
