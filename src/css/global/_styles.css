@@ -3,7 +3,11 @@
   --color-fg: var(--dark);
   --color-primary: var(--color-primary-light);
   --color-primary-transparent: var(--color-primary-light-transparent);
-  --cover-gradient: linear-gradient(to right, var(--color-fg), var(--color-primary));
+  --cover-gradient: linear-gradient(
+    to right,
+    var(--color-fg),
+    var(--color-primary)
+  );
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -11,7 +15,11 @@
     --color-fg: var(--light);
     --color-primary: var(--color-primary-dark);
     --color-primary-transparent: var(--color-primary-dark-transparent);
-    --cover-gradient: linear-gradient(to right, var(--color-primary), var(--color-bg));
+    --cover-gradient: linear-gradient(
+      to right,
+      var(--color-primary),
+      var(--color-bg)
+    );
   }
 }
 
@@ -24,13 +32,38 @@ body {
   background-color: var(--color-bg);
 }
 
+body {
+  animation: fadeInAnimation ease-out .25s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .body {
+    animation: none;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 [data-theme="light"] {
   color-scheme: light;
   --color-bg: var(--light);
   --color-fg: var(--dark);
   --color-primary: var(--color-primary-light);
   --color-primary-transparent: var(--color-primary-light-transparent);
-  --cover-gradient: linear-gradient(to right, var(--color-fg), var(--color-primary));
+  --cover-gradient: linear-gradient(
+    to right,
+    var(--color-fg),
+    var(--color-primary)
+  );
 }
 
 [data-theme="dark"] {
@@ -39,7 +72,11 @@ body {
   --color-fg: var(--light);
   --color-primary: var(--color-primary-dark);
   --color-primary-transparent: var(--color-primary-dark-transparent);
-  --cover-gradient: linear-gradient(to right, var(--color-primary), var(--color-bg));
+  --cover-gradient: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-bg)
+  );
 }
 
 a {
@@ -60,7 +97,8 @@ svg {
   width: auto;
 }
 
-img, picture {
+img,
+picture {
   height: auto;
 }
 

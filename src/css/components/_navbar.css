@@ -1,7 +1,39 @@
 .navbar {
+  position: relative;
   background-color: var(--color-primary-transparent);
   z-index: 100;
   opacity: 0.9;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background: var(--color-bg);
+  animation: loading 0.5s ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar::after {
+    animation: none;
+  }
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  99% {
+    width: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .navbar-inner {
@@ -37,6 +69,7 @@
   width: 100%;
   flex-grow: 1;
   z-index: 1000;
+  margin-bottom: 1em;
 }
 .search-modal--open {
   height: 100%;
@@ -55,7 +88,7 @@
     display: block;
     width: 100%;
     :hover:not(p) {
-        text-decoration: underline;
-      }
+      text-decoration: underline;
+    }
   }
 }
