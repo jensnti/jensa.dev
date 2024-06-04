@@ -4,10 +4,21 @@ const filterTagList = (tags) => {
   )
 }
 
+// const tagList = (collection) => {
+//   const tagSet = new Set()
+//   collection.getAll().forEach((item) => {
+//     ;(item.data.tags || []).forEach((tag) => tagSet.add(tag))
+//   })
+//   return filterTagList([...tagSet])
+// }
+
 const tagList = (collection) => {
   const tagSet = new Set()
   collection.getAll().forEach((item) => {
-    ;(item.data.tags || []).forEach((tag) => tagSet.add(tag))
+    if (!item.data.draft) {
+      // Skip draft items
+      ;(item.data.tags || []).forEach((tag) => tagSet.add(tag))
+    }
   })
   return filterTagList([...tagSet])
 }
