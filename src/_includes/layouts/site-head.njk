@@ -6,13 +6,15 @@
   {% endif %}
   {% include "../components/nav.njk" %}
   <div class="region site-head--inner flow popout">
-    {% if "posts" in page.url %}
-    {% include "../components/breadcrumbs.njk" %}
-    {% else %}
-    <h1 title="{{ title }}">
-      {{ title }}
-    </h1>
-    {% include "../components/lead.njk" %}
+    {% if page.url %}
+      {% if "posts" in page.url %}
+      {% include "../components/breadcrumbs.njk" %}
+      {% else %}
+      <h1 title="{{ title }}">
+        {{ title }}
+      </h1>
+      {% include "../components/lead.njk" %}
+      {% endif %}
     {% endif %}
   </div>
 </header>
