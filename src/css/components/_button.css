@@ -1,12 +1,16 @@
 .button {
     display: grid;
     place-items: center;
+
+    font-weight: bold;
+    padding: var(--space-xs) var(--space-s-m);
 }
 
 .button-icon {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
 
     svg {
         fill: var(--color-bg);

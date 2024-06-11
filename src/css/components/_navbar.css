@@ -17,15 +17,20 @@
     gap: var(--gutter);
     justify-content: space-between;
     padding: 0;
-  }
+    }
+    
+    a {
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
 
-  a {
-    text-decoration: none;
-    font-weight: 600;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+.navbar-icons {
+  flex-grow: 1;
+  justify-content: flex-end !important;
 }
 
 .active {
