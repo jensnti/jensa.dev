@@ -37,25 +37,26 @@ console.log("2. Gå till fönstret");
 let val = prompt("Vad väljer du? ");
 ```
 
-Äventyret skrivs ut med ett antal print statements och sedan får spelaren göra ett val med hjälp av `prompt`. Detta är en naturlig start och en bra början.
-Nästa steg är en if-sats för att hantera spelarens val. Denna if-sats har en tendens att växa och växa och sedan leder den till nästlade if-satser.
+Äventyret skrivs ut med ett antal print statements och sedan får spelaren göra ett val med hjälp av `prompt`. Detta är en naturlig start och en bra början.  Nästa steg är en if-sats för att hantera spelarens val. Denna if-sats har en tendens att växa och växa och sedan leder den till nästlade if-satser.
 
 Detta är ett exempel där kodaren börjar med att koda utan att tänka på strukturen. Det är inget konstigt och ett naturligt steg i att lära sig lösa problem med kod.
 
-Det är även mycket svårt för äventyret att växa utan att det blir mycket repetition i koden.
+Äventyret växer så fram och if-satsen blir större och större. Det fungerar helt ok, ett tag, men allteftersom blir äventyret hopplöst svårt att överblicka och koden svårläst. Det är även mycket svårt för äventyret att växa utan att det blir mycket repetition i koden.
 
 ## Struktur
 
-Om en istället börjar med att tänka på textens (data/spelet) struktur så kan en komma fram till att det finns ett antal saker som behöver hanteras.
+Om en istället börjar med att tänka på textens (data/spelet) struktur så kan en komma fram till att det finns ett antal element som behöver hanteras. Du kan öva att identifiera dessa genom att först skriva ned en del av äventyret på papper och sedan identifiera vad som behöver hanteras.
 
-- Situationer
-- Val
-- Spelarens val
-- Spelarens position
+Om vi använder exemplet ovan så kan vi identifiera följande element:
 
-Men för att kunna översätta detta i kod så krävs det kunskap och förståelse om flera koncept. 
+- Situationer (Du vaknar upp i ett rum. Du ser en dörr och ett fönster. Det  vill säga sidans text)
+- Val (Gå till dörren, Gå till fönstret)
+- Spelarens val (Spelaren förväntas välja ett av valen, bläddra i boken)
+- Spelarens position (Spelaren befinner sig i en situation, sidan i boken)
 
-Äventyret i sig, berättelsen är en händelse som upprepas om och om igen (tänk sidor i en bok). Spelaren får en text presenterad för sig, sedan utför spelaren ett val som leder till en ny situation. Detta är en loop som upprepas tills äventyret är över.
+För att kunna översätta detta i kod så krävs det kunskap och förståelse om flera koncept. 
+
+Äventyret i sig, berättelsen består av situationer som följer ett mönster där de upprepas om och om igen (tänk sidor i en bok). Spelaren får en text presenterad för sig, situationen, sedan utför spelaren ett val som leder till en ny situation. Detta är en loop som upprepas tills äventyret är över.
 
 ```js
 while (spelet ska fortsätta) {
@@ -66,7 +67,11 @@ while (spelet ska fortsätta) {
 }
 ```
 
-Om spelet är linjärt som en bok så kan vi till exempel spara innehållet i en array, där varje position innehåller en sida i boken.
+För att veta vad spelaren väljer så behöver vi spara informationen om valet och för att veta vilken situation spelaren befinner sig i så behöver vi spara informationen om situationen.
+
+### Linjär struktur
+
+Om spelet är linjärt som en bok så kan vi spara innehållet i en lista, där varje position i listan är en sida i boken. Då kan vi loopa igenom listan och presentera varje sida för spelaren.
 
 Du kan provköra koden genom att klistra in den i din webbläsares konsol.
 
@@ -84,9 +89,9 @@ book.forEach((page) => {
 
 ## Situationer och val
 
-Textäventyret är inte ett linjärt äventyr och spelaren presenteras löpande val och behöver fatta beslut. Den delen behöver koden hantera och med en genomtänkt struktur så kan en undvika att hamna i en stor if-sats.
+Textäventyret är däremot inte linjärt och spelaren presenteras löpande val och behöver fatta beslut, som i sin tur leder till nya situationer. Den delen behöver koden hantera och med en genomtänkt struktur så kan en undvika att hamna i en stor if-sats.
 
-En situation kan beskrivas som en text och en lista med val. Varje val består av en text och en referens till en annan situation. Detta kan översättas till kod med hjälp av objekt.
+En situation kan beskrivas som en text och en lista med val. Varje val består av en text och en referens till en annan situation. Detta kan översättas till kod genom att använda en lista med objekt.
 
 ```js
 let book = [
@@ -130,50 +135,50 @@ let book = [
 
 ## Spelarens val
 
-När spelaren gör ett val så behöver koden veta vilken situation som spelaren befinner sig i. Detta kan lösas med en variabel som håller reda på spelarens position i äventyret. I enlighet med att äventyrets lista kallas book så deklareras variabeln som `page`.
+När spelaren gör ett val så behöver koden veta vilken situation som spelaren befinner sig i. Detta kan lösas med en variabel som håller reda på spelarens position i äventyret. I enlighet med att äventyrets lista kallas book så deklareras variabeln som `currentPage`.
 
 ```js
-let page = 0;
+let currentPage = 0;
 ```
 
 ### Index i arrayer
 
-Ett sätt att lösa äventyrets sidor på och hålla reda på spelarens position är att använda `page` variabeln och leta reda på "rätt" sida med hjälp av listans index.
+Ett sätt att lösa äventyrets sidor på och hålla reda på spelarens position är att använda `currentPage` variabeln och leta reda på "rätt" sida med hjälp av listans index.
 
 ```js
-let page = 0;
+let currentPage = 0;
 
-console.log(book[page].description);
+console.log(book[currentPage].description);
 ```
 
 Det är en fungerande lösning, men likt den nästlade if-satsen så har den en tendens att växa och växa. Det är inte en lösning som är lätt att utöka och underhålla. Vad händer när en vill lägga till en ny situation, när val ändras och när sidor tas bort?
 
 Av den anledningen så är det bättre att använda en variabel som refererar till ett objekt i listan. Ett objekt som identifieras med hjälp av ett id. Datastrukturen som skapas för äventyret är på så sätt inte lika känslig för förändringar.
 
-## Använda objekt id för spelarens val
+## Använda ett objekt-id för spelarens val
 
 För att använda objektens id för att hålla reda på spelarens position så behöver koden först hitta rätt objekt i listan. Detta kan göras med hjälp av en funktion som tar emot ett id och returnerar ett objekt.
 
 ```js
-function findPage(id) {
+const findPage = (id) => {
   return book.find((page) => {
-    return page.id === parsenInt(id);
+    return page.id === parseInt(id);
   })
 }
 ```
 
 Funktionen använder sig av array-metoden `find` för att hitta rätt objekt i listan. `find` tar emot en funktion som parameter och denna funktion körs för varje objekt i listan. Om funktionen returnerar `true` så returneras objektet som `find` hittade. I funktionen som skickas till `find` så jämförs objektets id med id som skickades in som parameter. Om id matchar så returneras objektet.
 
-Viktigt här är att vi måste konvertera `id` till ett heltal med `parseInt` för att jämföra med objektets id, detta eftersom prompt returnerar en sträng.
+För att undvika problem konverterar vi `id` till ett heltal med `parseInt` för att jämföra med objektets id. Det kan här vara klokt att fundera på hur eventuella fel ska hanteras.
 
-Med den koden så kan spelarens position i äventyret uppdateras med hjälp av objektets id.
+Med koden ovan så kan spelarens position i äventyret uppdateras med hjälp av objektets id. Vi har med andra ord ett state som håller reda på spelarens position.
 
 ## Använda strukturen för att presentera äventyret
 
-Med en tydlig struktur på plats blir det nu mycket enklare att presentera äventyret för spelaren. Detta kan göras med hjälp av en funktion som tar emot ett objekt och presenterar objektets beskrivning och val.
+Med en tydlig struktur på plats blir det nu mycket enklare att presentera äventyret för spelaren. Detta kan göras med hjälp av en funktion som tar emot ett objekt och skriver ut objektets beskrivning och val.
 
 ```js
-function presentPage(page) {
+const printPage = (page) => {
   console.log(page.description);
   page.choices.forEach((choice) => {
     console.log(choice.description);
@@ -181,26 +186,28 @@ function presentPage(page) {
 }
 ```
 
-Funktionen presenterar först objektets beskrivning och sedan presenteras varje val. Detta görs med hjälp av en `forEach`-loop som loopar igenom objektets `choices`-lista. Varje val presenteras med hjälp av `console.log`. Här kan en istället använda `prompt` för att låta spelaren göra ett val.
+Funktionen skriver först ut objektets beskrivning och sedan varje val. Koden för att göra det använder en `forEach`-loop som itererar igenom objektets `choices`-lista. Varje val presenteras med hjälp av `console.log`. 
 
 ## Presentera äventyret för spelaren
 
-Med funktionerna på plats så kan äventyret presenteras för spelaren. Detta görs med hjälp av en loop som upprepas tills äventyret är över.
+Med funktionerna på plats så kan äventyret presenteras för spelaren. Detta görs med hjälp av en loop som upprepas tills äventyret är över. Här passar det alltså väl in att använda en while loop, så länge spelet ska fortsätta så presenteras situationen och valen för spelaren.
 
 ```js
-let page = 0;
+let currentPage = 0;
 
-while (page !== null) {
-  let currentPage = findPage(page);
-  presentPage(currentPage);
-  page = prompt("Vad väljer du? ");
+while (currentPage !== null) {
+  let pageObject = findPage(currentPage);
+  printPage(pageObject);
+  currentPage = prompt("Vad väljer du? ");
 }
 ```
 
-I loopen så hämtas objektet som spelaren befinner sig i med hjälp av `findPage`-funktionen. Objektet presenteras sedan för spelaren med hjälp av `presentPage`-funktionen. Till sist så uppdateras spelarens position med hjälp av `prompt`.
+I loopen så hämtas objektet som spelaren befinner sig i med hjälp av `findPage`-funktionen. Objektet presenteras sedan för spelaren med hjälp av `printPage`-funktionen. Till sist så uppdateras spelarens position med hjälp av den inbyggda javascript-metoden `prompt`.
 
 ## Sammanfattning
 
 Pust, det är en sak att tänka sig en artikel som detta, en annan att skriva den. Texten kräver en del två och det ska ordnas, för att presentera ett äventyr med `console.log()` och `prompt()` är inte så kul.
 
 Presentationen för spelaren kan göras mycket bättre med hjälp av en webbsida och DOM-manipulation. I äventyrets struktur finns också en god grund för att introducera JSON.
+
+Så nu har du läste den första delen, vad är ditt val? [Läs sida två](/posts/textaventyr-sida-tva/).
