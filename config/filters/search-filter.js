@@ -12,18 +12,14 @@ const search = (collection) => {
 
   // loop through each page and add it to the index
   collection.forEach((page) => {
-    const summary = page.template.frontMatter.data.summary
-      ? page.template.frontMatter.data.summary
-      : ""
-    let tags = page.template.frontMatter.data.tags
-      ? page.template.frontMatter.data.tags.toString()
-      : ""
+    const summary = page.data.summary ? page.data.summary : ""
+    let tags = page.data.tags ? page.data.tags.toString() : ""
     index.addDoc({
       id: page.url,
       tags: tags,
       summary: summary,
-      title: page.template.frontMatter.data.title,
-      category: page.template.frontMatter.data.category,
+      title: page.data.title,
+      category: page.data.category,
     })
   })
 
