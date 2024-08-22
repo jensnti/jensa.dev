@@ -1,0 +1,28 @@
+.search-modal {
+  position: absolute;
+  top: var(--space-xl-2xl);
+  width: 100%;
+  flex-grow: 1;
+  z-index: 1000;
+}
+.search-modal--open {
+  height: 100%;
+}
+
+.search-modal-results {
+  /* position: absolute; */
+  color: fieldtext;
+  background-color: field;
+  width: 100%;
+  border: 1px solid var(--color-fg);
+  padding: var(--space-xs);
+  border-radius: var(--border-radius);
+
+  li {
+    display: block;
+    width: 100%;
+    :hover:not(p) {
+        text-decoration: underline;
+      }
+  }
+}
