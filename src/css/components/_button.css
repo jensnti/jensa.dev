@@ -1,6 +1,23 @@
-.button {
+/* .button {
     display: grid;
     place-items: center;
+} */
+
+.button {
+  width: 100%;
+  padding: var(--space-2xs);
+  margin-top: var(--space-3xs-2xs);
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.button:hover {
+  color: var(--color-fg);
 }
 
 .button-icon {

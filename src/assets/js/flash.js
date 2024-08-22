@@ -7,7 +7,7 @@ const flash = (consent) => {
     const inner = flash.querySelector(".flash__inner")
     const message = inner.querySelector(".flash__message")
     const button = document.createElement("button")
-    button.classList.add("btn", "flash__button")
+    button.classList.add("button", "flash__button")
     button.textContent = `OK`
     const p = document.createElement("p")
     p.id = "flash-message--content"
