@@ -56,6 +56,12 @@ const resources = (collectionApi) => {
   ]
 }
 
+const drafts = (collectionApi) => {
+  return collectionApi.getAll().filter(function (item) {
+    return item.data.draft === true
+  })
+}
+
 module.exports = {
   tagList,
   demos,
@@ -64,4 +70,5 @@ module.exports = {
   posts,
   projects,
   resources,
+  drafts,
 }

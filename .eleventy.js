@@ -36,6 +36,7 @@ const {
   posts,
   projects,
   resources,
+  drafts
 } = require("./config/collections")
 
 // plugins
@@ -92,6 +93,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("posts", posts)
   eleventyConfig.addCollection("projects", projects)
   eleventyConfig.addCollection("resources", resources)
+  eleventyConfig.addCollection("drafts", drafts)
 
   eleventyConfig.setLibrary("md", markdownLibrary)
 
