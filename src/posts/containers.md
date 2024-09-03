@@ -9,11 +9,15 @@ draft: false
 
 Containers har funnits i olika former på webben i evigheter, men deras funktion och användning har varierat över tid. När jag tittade tillbaka på en webbsida jag kodade <time datetime="1999-01-01">1999</time>, så var innehållet i en container. Den containern var förvisso en `<div>` med `align="center"` som innehöll ett `<center>`-element som i sin tur innehöll ett table med `width="800px"`, men det tjänade samma syfte. Tack och lov har mycket förändrats sedan dess!
 
+Syftet med en container, eller med en `.container`-klass är att kunna justera och placera innehåll på en webbplats. Innehållet ska med fördel då även anpassa sig efter skärmens storlek (ett måste idag).
+
+{% image "./src/images/Screenshot 2024-09-03 122610.png", "Screenshot av containers på den här webbplatsen" %}
+
 ## Ord och begrepp
 
 Ord är viktiga och ibland kallas även containers på webben för wrappers. Det är inte riktigt samma sak, men de används ibland synonymt. En container är en behållare för innehåll, medan en wrapper omsluter innehållet. Det är upp till dig att välja den semantik som passar ditt arbete bäst
 
-## Containers
+## Exempel
 
 Jag har skapat några exempel på CodePen för att illustrera olika containers. Jag har använt dem i olika projekt, och de har tjänat mig väl. `.container`-klassens utveckling har följt med nya möjligheter i CSS och blir bara bättre och bättre.
 
