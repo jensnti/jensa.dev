@@ -27,7 +27,7 @@ Jag har skapat några exempel på CodePen för att illustrera olika containers. 
 <div class="feature">
 <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="rNEqLEQ" data-user="jensadev" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/jensadev/pen/rNEqLEQ">
-  Navbars</a> by Jens Andreasson (<a href="https://codepen.io/jensadev">@jensadev</a>)
+  Containers</a> by Jens Andreasson (<a href="https://codepen.io/jensadev">@jensadev</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
