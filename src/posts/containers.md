@@ -11,7 +11,10 @@ Containers har funnits i olika former på webben i evigheter, men deras funktion
 
 Syftet med en container, eller med en `.container`-klass är att kunna justera och placera innehåll på en webbplats. Innehållet ska med fördel då även anpassa sig efter skärmens storlek (ett måste idag).
 
+Om vi öppnar utvecklar-verktygen och aktiverar grid-linjer så ser vi dels de linjer som sidans innehåll anpassar sig efter. Vi kan även se måtten för padding och margin för det valda elementet (finns under computed).
+
 {% image "./src/images/Screenshot 2024-09-03 122610.png", "Screenshot av containers på den här webbplatsen" %}
+
 
 ## Ord och begrepp
 
