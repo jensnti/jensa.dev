@@ -4,7 +4,6 @@ date: 2024-09-10
 category: resurser
 summary: "Här är en samlad start för att komma igång med Node.js och Express."
 tags: [ 'node', 'express', 'nunjucks', 'webbserver']
-draft: true
 ---
 
 I kursen webbserverprogramering så kör jag `Node.js` och `Express` för att skapa en server. Här är en snabbstart för att komma igång.

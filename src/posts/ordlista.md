@@ -4,7 +4,6 @@ date: 2024-09-10
 category: resurser
 summary: "En ordlista för webbserverprogrammering."
 tags: [ 'webbserver', 'node', 'express', 'linux']
-draft: true
 ---
 
 I kursen webbserverprogramering så är det väldigt mycket nya ord och begrepp som dyker upp. Så under en lektion började vi tillsammans att skapa en ordlista. Här är den.
