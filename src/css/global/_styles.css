@@ -109,3 +109,21 @@ picture {
   color: inherit;
   background-color: var(--color-secondary);
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  thead {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    text-align: left;
+    th {
+      padding-left: var(--gutter);
+    }
+  }
+
+  td {
+    border-top: 1px solid var(--color-fg);
+  }
+}
