@@ -127,3 +127,21 @@ table {
     border-top: 1px solid var(--color-fg);
   }
 }
+
+body {
+  background-image: url("/assets/images/waves.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.portrait img {
+  -webkit-mask: url("/assets/images/blobb.svg") center / 150% no-repeat;
+          mask: url("/assets/images/blobb.svg") center / 150% no-repeat;
+}
+
+.portrait {
+  background-image: url("/assets/images/blobbg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 180%;
+}

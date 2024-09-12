@@ -15,7 +15,7 @@ Jag är en [GitHub Campus Advisor](https://education.github.com/teachers/advisor
 
 Vid sidan av mitt arbete och det som jag skriver om på denna sida så gillar jag att lyssna på och spela musik, laga mat, flugfiska, vandra, dataspel, brädspel, läsa samt nörda om saker.
 
-{% image "./src/images/20220720_132435-edit.jpg", "En Jens", "Foto av Marie Malmi." %}{.full .object-top}
+{% image "./src/images/IMG_20240621_134855-.png", "En Jens", "Foto av Marie Malmi." %}{.full .object-top .portrait}
 
 ### Mitt hem
 
