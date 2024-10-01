@@ -1,9 +1,11 @@
-<header role="banner" class="site-head content full {{ 'site-head--cover' if cover }}">
+<header role="banner" class="site-head content full">
+  <!-- 
+  {{ 'site-head--cover' if cover }}
   {% if cover %}
   <div class="site-head--cover-image full">
     {% image "./src/images/covers/" + cover, "cover" %}
   </div>
-  {% endif %}
+  {% endif %} -->
   {% include "../components/nav.njk" %}
   <div class="region site-head--inner flow popout">
     {% if page.url %}

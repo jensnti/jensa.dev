@@ -5,6 +5,7 @@
   time {
     opacity: 0.8;
     font-size: var(--step-0);
+    font-family: var(--font-heading);
   }
   p {
     --flow-space: .5em;
@@ -32,4 +33,6 @@
   gap: var(--gutter);
 
   font-size: var(--step-0);
+  font-family: var(--font-heading);
+  opacity: 0.8;
 }

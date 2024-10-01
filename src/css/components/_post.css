@@ -4,6 +4,7 @@
 
 .post-date {
   opacity: 0.8;
+  font-family: var(--font-heading);
 }
 
 article > footer > ul > li {
