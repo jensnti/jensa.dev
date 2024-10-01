@@ -58,6 +58,22 @@ Här hamnar en del ord kopplade till webbserver och ganska många protokoll.
 | UDP | User Datagram Protocol | Protokoll för att överföra data över internet. Till skillnad från TCP skickar det bara data, hanterar inte eventuella fel. |
 | DNS | Domain Name System | Protokoll för att översätta domännamn till IP-adresser |
 | URL | Uniform Resource Locator | Adress till en resurs på internet |
+| REST | Representational State Transfer | Arkitektur för att bygga webbtjänster |
+
+## Express
+
+| Ord | Förkortning | Förklaring |
+|--|--|--|
+| Express | | Ett ramverk för att bygga webbapplikationer i Node.js |
+| Middleware | | Funktioner som körs innan en route |
+| Route | | En endpoint i en webbapplikation |
+| View | | En representation av en webbsida |
+| Nunjucks | | Ett templating-språk för att skapa dynamiska webbsidor |
+| Static | | Statiska filer som bilder, css och javascript, sparas i /public |
+| GET | | En HTTP-metod för att hämta data |
+| POST | | En HTTP-metod för att skicka data |
+| query | | En del av URL:en som innehåller data, skriv med ?v=id |
+| params | | En del av URL:en som innehåller data, skriv med /:id |
 
 ## Node
 
@@ -67,6 +83,18 @@ Här hamnar en del ord kopplade till webbserver och ganska många protokoll.
 | nvm | Node Version Manager | Verktyg för att hantera olika versioner av Node.js |
 | npm | Node Package Manager | Pakethanterare för Node.js |
 | package.json | | Fil som innehåller metadata om ett npm-paket |
+
+## Säkerhet
+
+| Ord | Förkortning | Förklaring |
+|--|--|--|
+| XSS | Cross-Site Scripting | En attack där en angripare injicerar skadlig kod i en webbsida |
+| Stored XSS | | En typ av XSS-attack där skadlig kod lagras på servern och skickas till alla användare |
+| Reflected XSS | | En typ av XSS-attack där skadlig kod skickas till en användare via en länk |
+| Self XSS | | En typ av XSS-attack där en användare injicerar skadlig kod i sin egen webbläsare |
+| CSRF | Cross-Site Request Forgery | En attack där en angripare får en användare att utföra en oönskad handling på en webbplats där användaren är inloggad |
+| SQL Injection | | En attack där en angripare injicerar skadlig SQL-kod i en webbapplikation |
+
 
 ## Viktiga vscode shortcuts
 
