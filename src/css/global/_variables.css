@@ -52,4 +52,7 @@
   --gutter: var(--space-s-m);
 
   --border-radius: 0.25rem;
+
+  --font-body: 'Nunito', sans-serif;
+  --font-heading: 'Bebas Neue', sans-serif;
 }

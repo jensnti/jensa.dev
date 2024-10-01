@@ -19,7 +19,6 @@ html {
   color-scheme: dark light;
 }
 body {
-  font-family: system-ui, sans-serif;
   color: var(--color-fg);
   background-color: var(--color-bg);
 }
