@@ -11,7 +11,7 @@ package = "netlify-plugin-csp-generator"
 
   [plugins.inputs.policies]
     defaultSrc = "'self'"
-    fontSrc = "'self' https://api.fontshare.com/v2/ https://cdn.fontshare.com/"
+    fontSrc = "'self' https://cdn.fontshare.com/"
     styleSrc = "'self' https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/ https://api.fontshare.com/v2/"
     objectSrc = "'none'"
     baseUri = "'self'"
