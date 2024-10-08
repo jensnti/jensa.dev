@@ -22,12 +22,8 @@ Det är inte första eller sista gången jag vänder mig till Eleventy-community
 
 Det första exemplet som jag arbetade med är kopierat från den sidan. Jag har dock bytt ut ```<details>``` elementet för att skapa tabbar. Jag ville kunna använda tabbar för koden eftersom jag vill kunna visa html, css och javascript.
 
-{% set demo = collections.orderedDemos | getDemo("CSS Centering") %}
-<h2 id="{{ demo.data.title | slugify }}">
-    <a class="header-anchor" href="#{{ demo.data.title | slugify }}">
-        <span aria-hidden="true">#</span></a> {{ demo.data.title }}
-</h2>
-{{ demo.templateContent | safe }}
+**Jag har tagit bort demos funktion och använder codepen istället.**
+
 
 Lösningen kombinerar en massa olika delar, på den här sidan laddas exemplet med följande kod.
 

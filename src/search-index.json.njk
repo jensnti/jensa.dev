@@ -3,4 +3,6 @@ permalink: /search-index.json
 eleventyExcludeFromCollections: true
 ---
 
-{{ collections.all | searchFilter | dump | safe }}
+{% asyncAll item in collections.all %}
+  {{ item | log }}
+{% endall %}

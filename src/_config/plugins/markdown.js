@@ -1,9 +1,9 @@
-import markdownIt from "markdown-it"
-import markdownitAbbr from "markdown-it-abbr"
-import markdownItAnchor from "markdown-it-anchor"
-import markdownItAttrs from "markdown-it-attrs"
-import markdownItLinkAttributes from "markdown-it-link-attributes"
-import slugify from "slugify"
+import markdownIt from "markdown-it";
+import markdownitAbbr from "markdown-it-abbr";
+import markdownItAnchor from "markdown-it-anchor";
+import markdownItAttrs from "markdown-it-attrs";
+import markdownItLinkAttributes from "markdown-it-link-attributes";
+import slugify from "slugify";
 
 // https://11ty.rocks/eleventyjs/slugs-anchors/
 
@@ -11,7 +11,7 @@ const linkInsideHeader = markdownItAnchor.permalink.linkInsideHeader({
   class: "anchor",
   symbol: "<span hidden>#</span>",
   style: "aria-labelledby",
-})
+});
 
 const markdownItAnchorOptions = {
   level: [1, 2, 3],
@@ -30,20 +30,20 @@ const markdownItAnchorOptions = {
         // Add class "header-wrapper [h1 or h2 or h3]"
         attrs: [["class", `heading-wrapper ${state.tokens[idx].tag}`]],
         block: true,
-      }),
-    )
+      })
+    );
 
     state.tokens.splice(
       idx + 4,
       0,
       Object.assign(new state.Token("div_close", "div", -1), {
         block: true,
-      }),
-    )
+      })
+    );
 
-    linkInsideHeader(slug, opts, state, idx + 1)
+    linkInsideHeader(slug, opts, state, idx + 1);
   },
-}
+};
 
 const markdownLibrary = markdownIt({
   html: true,
@@ -54,7 +54,7 @@ const markdownLibrary = markdownIt({
   .use(markdownItAnchor)
   .use(markdownItLinkAttributes, {
     matcher(href) {
-      return href.match(/^https?:\/\//)
+      return href.match(/^https?:\/\//);
     },
     attrs: {
       target: "_blank",
@@ -64,46 +64,7 @@ const markdownLibrary = markdownIt({
   .use(markdownItAttrs, {
     allowedAttributes: ["id", "class"],
   })
-  .use(markdownitAbbr)
+  .use(markdownitAbbr);
 
-export { markdownLibrary }
-
-// const markdownLib = markdownIt({
-//     html: true,
-//     breaks: true,
-//     linkify: true,
-//     typographer: true,
-// })
-//     .disable('code')
-//     .use(markdownItPrism, {
-//         defaultLanguage: 'plaintext',
-//     })
-//     .use(markdownItAnchor, {
-//         slugify: slugifyString,
-//         tabIndex: false,
-//         permalink: markdownItAnchor.permalink.headerLink({
-//             class: 'heading-anchor',
-//         }),
-//     })
-//     .use(markdownItClass, {
-//         ol: 'list',
-//         ul: 'list',
-//     })
-//     .use(markdownItLinkAttributes, [
-//         {
-//             // match external links
-//             matcher(href) {
-//                 return href.match(/^https?:\/\//);
-//             },
-//             attrs: {
-//                 target: '_blank',
-//                 rel: 'noopener',
-//             },
-//         },
-//     ])
-//     .use(markdownItEmoji)
-//     .use(markdownItFootnote)
-//     .use(markdownitMark)
-//     .use(markdownitAbbr);
-
-// module.exports = markdownLib;
+export { markdownLibrary };
+export default markdownLibrary;

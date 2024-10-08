@@ -1,7 +1,8 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import { minify as htmlmin } from "html-minifier";
+import { minify as htmlmin } from "html-minifier-terser";
 import { JSDOM } from "jsdom";
 import fs from "fs";
+import UpgradeHelper from "@11ty/eleventy-upgrade-help";
 
 // Import shortcodes
 import {
@@ -51,6 +52,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/assets/css/");
 
   // Plugins
+  eleventyConfig.addPlugin(UpgradeHelper);
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyPluginTOC, {
@@ -66,7 +68,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(lightningCSS);
 
   // Filters
-  eleventyConfig.addFilter("getDemo", getDemo);
   eleventyConfig.addFilter("readableDate", readableDate);
   eleventyConfig.addFilter("frontDate", frontDate);
   eleventyConfig.addFilter("yearString", yearString);
@@ -87,8 +88,6 @@ export default function (eleventyConfig) {
 
   // Collections
   eleventyConfig.addCollection("tagList", tagList);
-  eleventyConfig.addCollection("demos", demos);
-  eleventyConfig.addCollection("orderedDemos", orderedDemos);
   eleventyConfig.addCollection("pages", pages);
   eleventyConfig.addCollection("posts", posts);
   eleventyConfig.addCollection("projects", projects);

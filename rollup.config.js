@@ -1,7 +1,7 @@
-const commonjs = require('@rollup/plugin-commonjs');
-const json = require('@rollup/plugin-json');
-const { nodeResolve } = require('@rollup/plugin-node-resolve');
-import { terser } from 'rollup-plugin-terser';
+import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import terser from '@rollup/plugin-terser';
 
 export default {
     input: 'src/assets/js/main.js',
@@ -13,10 +13,12 @@ export default {
             file: 'public/js/bundle.js',
         },
         {
+            sourcemap: true,
             file: 'public/js/bundle.min.js',
             format: 'iife',
             name: 'main',
+            plugins: [terser()],
         },
     ],
-    plugins: [nodeResolve(), commonjs(), json(), terser()],
+    plugins: [nodeResolve(), commonjs(), json()],
 };

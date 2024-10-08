@@ -11,33 +11,21 @@ const searchFilter = async (collection) => {
   })
 
   // loop through each page and add it to the index
-  // collection.forEach((page) => {
-  //   const summary = page.template.frontMatter.data.summary
-  //     ? page.template.frontMatter.data.summary
-  //     : ""
-  //   let tags = page.template.frontMatter.data.tags
-  //     ? page.template.frontMatter.data.tags.toString()
-  //     : ""
-  //   index.addDoc({
-  //     id: page.url,
-  //     tags: tags,
-  //     summary: summary,
-  //     title: page.template.frontMatter.data.title,
-  //     category: page.template.frontMatter.data.category,
-  //   })
-  // })
-  for (const page of collection) {
-    const data = await page.template.frontMatter.data.read()
-    const summary = data.summary ? data.summary : ""
-    let tags = data.tags ? data.tags.toString() : ""
+  collection.forEach((page) => {
+    const summary = page.template.frontMatter.data.summary
+      ? page.template.frontMatter.data.summary
+      : ""
+    let tags = page.template.frontMatter.data.tags
+      ? page.template.frontMatter.data.tags.toString()
+      : ""
     index.addDoc({
       id: page.url,
       tags: tags,
       summary: summary,
-      title: data.title,
-      category: data.category,
+      title: page.template.frontMatter.data.title,
+      category: page.template.frontMatter.data.category,
     })
-  }
+  })
 
   return index.toJSON()
 }
