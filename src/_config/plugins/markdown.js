@@ -1,19 +1,9 @@
-// const markdownIt = require('markdown-it');
-// const markdownItPrism = require('markdown-it-prism');
-// const markdownItAnchor = require('markdown-it-anchor');
-// const markdownItClass = require('@toycode/markdown-it-class');
-// const markdownItLinkAttributes = require('markdown-it-link-attributes');
-// const markdownItEmoji = require('markdown-it-emoji');
-// const markdownItFootnote = require('markdown-it-footnote');
-// const markdownitMark = require('markdown-it-mark');
-const markdownitAbbr = require("markdown-it-abbr")
-// const { slugifyString } = require('../utils');
-
-const markdownIt = require("markdown-it")
-const markdownItLinkAttributes = require("markdown-it-link-attributes")
-const markdownItAttrs = require("markdown-it-attrs")
-const markdownItAnchor = require("markdown-it-anchor")
-const slugify = require("slugify")
+import markdownIt from "markdown-it"
+import markdownitAbbr from "markdown-it-abbr"
+import markdownItAnchor from "markdown-it-anchor"
+import markdownItAttrs from "markdown-it-attrs"
+import markdownItLinkAttributes from "markdown-it-link-attributes"
+import slugify from "slugify"
 
 // https://11ty.rocks/eleventyjs/slugs-anchors/
 
@@ -21,8 +11,8 @@ const linkInsideHeader = markdownItAnchor.permalink.linkInsideHeader({
   class: "anchor",
   symbol: "<span hidden>#</span>",
   style: "aria-labelledby",
-  placement: "before",
 })
+
 const markdownItAnchorOptions = {
   level: [1, 2, 3],
   slugify: (str) =>
@@ -40,7 +30,7 @@ const markdownItAnchorOptions = {
         // Add class "header-wrapper [h1 or h2 or h3]"
         attrs: [["class", `heading-wrapper ${state.tokens[idx].tag}`]],
         block: true,
-      })
+      }),
     )
 
     state.tokens.splice(
@@ -48,7 +38,7 @@ const markdownItAnchorOptions = {
       0,
       Object.assign(new state.Token("div_close", "div", -1), {
         block: true,
-      })
+      }),
     )
 
     linkInsideHeader(slug, opts, state, idx + 1)
@@ -76,7 +66,7 @@ const markdownLibrary = markdownIt({
   })
   .use(markdownitAbbr)
 
-module.exports = markdownLibrary
+export { markdownLibrary }
 
 // const markdownLib = markdownIt({
 //     html: true,

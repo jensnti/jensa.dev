@@ -1,7 +1,35 @@
 [build]
   publish = "public"
   command = "npm run build"
-  environment = { NODE_VERSION = "18" }
+  environment = { NODE_VERSION = "20" }
+
+
+
+# Content negotiation for home page
+[[redirects]]
+  from = "/"
+  to = "/sv/"
+  status = 200
+  conditions = {Language = ["sv"]}
+
+# Content negotiation for home page
+[[redirects]]
+  from = "/"
+  to = "/sv/"
+  status = 200
+
+# Redirect for end-user’s browser preference override
+[[redirects]]
+  from = "/*"
+  to = "/en/:splat"
+  status = 302
+  conditions = {Language = ["en"]}
+
+# Default
+[[redirects]]
+  from = "/*"
+  to = "/sv/:splat"
+  status = 302
 
 [[plugins]]
 package = "netlify-plugin-csp-generator"

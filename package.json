@@ -2,6 +2,7 @@
   "name": "jensa.dev",
   "version": "3.0.0",
   "description": "Personal website of Jens Andreasson",
+  "type": "module",
   "scripts": {
     "watch:eleventy": "eleventy --serve",
     "watch:rollup": "rollup -c -w",
@@ -24,10 +25,11 @@
   },
   "homepage": "https://github.com/jensadev/jensa.dev",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy-upgrade-help": "^3.0.1",
     "@11tyrocks/eleventy-plugin-emoji-readtime": "^1.0.1",
     "@11tyrocks/eleventy-plugin-lightningcss": "^1.4.0",
     "@rollup/plugin-commonjs": "^21.0.3",

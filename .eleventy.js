@@ -1,17 +1,18 @@
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
-const htmlmin = require("html-minifier")
-const { JSDOM } = require("jsdom")
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { minify as htmlmin } from "html-minifier";
+import { JSDOM } from "jsdom";
+import fs from "fs";
 
-//import shortcodes
-const {
+// Import shortcodes
+import {
   youtube,
   getSvgContent,
   year,
   imageShortcode,
-} = require("./config/shortcodes")
+} from "./src/_config/shortcodes.js";
 
-// import filters
-const {
+// Import filters
+import {
   getDemo,
   readableDate,
   frontDate,
@@ -23,109 +24,108 @@ const {
   slug,
   limit,
   getYears,
-} = require("./config/filters")
+} from "./src/_config/filters/index.js";
 
-const { searchFilter } = require("./config/filters/search-filter.js")
+import { searchFilter } from "./src/_config/filters/search-filter.js";
 
-// import  collections
-const {
+// Import collections
+import {
   tagList,
-  demos,
-  orderedDemos,
   pages,
   posts,
   projects,
   resources,
-  drafts
-} = require("./config/collections")
+  drafts,
+} from "./src/_config/collections.js";
 
-// plugins
-const eleventyPluginTOC = require("@thedigitalman/eleventy-plugin-toc-a11y")
-const markdownLibrary = require("./config/plugins/markdown")
-const rssPlugin = require("@11ty/eleventy-plugin-rss")
-const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime")
-const lightningCSS = require("@11tyrocks/eleventy-plugin-lightningcss")
+// Plugins
+import markdownLibrary from "./src/_config/plugins/markdown.js";
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addWatchTarget("./src/assets/js/")
-  eleventyConfig.addWatchTarget("./src/assets/css/")
+import eleventyPluginTOC from "@thedigitalman/eleventy-plugin-toc-a11y";
+import rssPlugin from "@11ty/eleventy-plugin-rss";
+import emojiReadTime from "@11tyrocks/eleventy-plugin-emoji-readtime";
+import lightningCSS from "@11tyrocks/eleventy-plugin-lightningcss";
+
+export default function (eleventyConfig) {
+  eleventyConfig.addWatchTarget("./src/assets/js/");
+  eleventyConfig.addWatchTarget("./src/assets/css/");
 
   // Plugins
-  eleventyConfig.addPlugin(rssPlugin)
-  eleventyConfig.addPlugin(syntaxHighlight)
+  eleventyConfig.addPlugin(rssPlugin);
+  eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyPluginTOC, {
     headingText: "Innehållsförteckning",
-  })
+  });
   eleventyConfig.addPlugin(emojiReadTime, {
     emoji: "📕",
     showEmoji: false,
     label: "minuters läsning",
     wpm: 200,
     bucketSize: 3,
-  })
-  eleventyConfig.addPlugin(lightningCSS)
+  });
+  eleventyConfig.addPlugin(lightningCSS);
 
   // Filters
-  eleventyConfig.addFilter("getDemo", getDemo)
-  eleventyConfig.addFilter("readableDate", readableDate)
-  eleventyConfig.addFilter("frontDate", frontDate)
-  eleventyConfig.addFilter("yearString", yearString)
-  eleventyConfig.addFilter("htmlDateString", htmlDateString)
-  eleventyConfig.addFilter("getProject", getProject)
-  eleventyConfig.addFilter("tagFilter", tagFilter)
-  eleventyConfig.addFilter("shuffle", shuffleArray)
-  eleventyConfig.addFilter("limit", limit)
-  eleventyConfig.addFilter("getYears", getYears)
-  eleventyConfig.addFilter("slug", slug)
-  eleventyConfig.addFilter("searchFilter", searchFilter)
+  eleventyConfig.addFilter("getDemo", getDemo);
+  eleventyConfig.addFilter("readableDate", readableDate);
+  eleventyConfig.addFilter("frontDate", frontDate);
+  eleventyConfig.addFilter("yearString", yearString);
+  eleventyConfig.addFilter("htmlDateString", htmlDateString);
+  eleventyConfig.addFilter("getProject", getProject);
+  eleventyConfig.addFilter("tagFilter", tagFilter);
+  eleventyConfig.addFilter("shuffle", shuffleArray);
+  eleventyConfig.addFilter("limit", limit);
+  eleventyConfig.addFilter("getYears", getYears);
+  eleventyConfig.addFilter("slug", slug);
+  eleventyConfig.addNunjucksAsyncFilter("searchFilter", searchFilter);
 
   // Shortcodes
-  eleventyConfig.addShortcode("year", year)
-  eleventyConfig.addShortcode("svg", getSvgContent)
-  eleventyConfig.addShortcode("youtube", youtube)
-  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode)
+  eleventyConfig.addShortcode("year", year);
+  eleventyConfig.addShortcode("svg", getSvgContent);
+  eleventyConfig.addShortcode("youtube", youtube);
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
-  // collections
-  eleventyConfig.addCollection("tagList", tagList)
-  eleventyConfig.addCollection("demos", demos)
-  eleventyConfig.addCollection("orderedDemos", orderedDemos)
-  eleventyConfig.addCollection("pages", pages)
-  eleventyConfig.addCollection("posts", posts)
-  eleventyConfig.addCollection("projects", projects)
-  eleventyConfig.addCollection("resources", resources)
-  eleventyConfig.addCollection("drafts", drafts)
+  // Collections
+  eleventyConfig.addCollection("tagList", tagList);
+  eleventyConfig.addCollection("demos", demos);
+  eleventyConfig.addCollection("orderedDemos", orderedDemos);
+  eleventyConfig.addCollection("pages", pages);
+  eleventyConfig.addCollection("posts", posts);
+  eleventyConfig.addCollection("projects", projects);
+  eleventyConfig.addCollection("resources", resources);
+  eleventyConfig.addCollection("drafts", drafts);
 
-  eleventyConfig.setLibrary("md", markdownLibrary)
+  eleventyConfig.setLibrary("md", markdownLibrary);
 
   // 404
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: function (err, bs) {
         bs.addMiddleware("*", (req, res) => {
-          const content_404 = fs.readFileSync("public/404.html")
+          const content_404 = fs.readFileSync("public/404.html");
           // Add 404 http status code in request header.
           res.writeHead(404, {
             "Content-Type": "text/html; charset=UTF-8",
-          })
+          });
           // Provides the 404 content without redirect.
-          res.write(content_404)
-          res.end()
-        })
+          res.write(content_404);
+          res.end();
+        });
       },
     },
-  })
+  });
 
   // When `permalink` is false, the file is not written to disk
   eleventyConfig.addGlobalData("eleventyComputed.permalink", function () {
     return (data) => {
       // Always skip during non-watch/serve builds
       if (data.draft && !process.env.BUILD_DRAFTS) {
-        return false
+        return false;
       }
 
-      return data.permalink
-    }
-  })
+      return data.permalink;
+    };
+  });
 
   // When `eleventyExcludeFromCollections` is true, the file is not included in any collections
   eleventyConfig.addGlobalData(
@@ -134,62 +134,61 @@ module.exports = function (eleventyConfig) {
       return (data) => {
         // Always exclude from non-watch/serve builds
         if (data.draft && !process.env.BUILD_DRAFTS) {
-          return true
+          return true;
         }
 
-        return data.eleventyExcludeFromCollections
-      }
+        return data.eleventyExcludeFromCollections;
+      };
     }
-  )
+  );
 
   eleventyConfig.on("eleventy.before", ({ runMode }) => {
     // Set the environment variable
     if (runMode === "serve" || runMode === "watch") {
-      process.env.BUILD_DRAFTS = true
+      process.env.BUILD_DRAFTS = true;
     }
-  })
+  });
 
   // Minify
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (outputPath && outputPath.indexOf(".html") > -1) {
-      let minified = htmlmin.minify(content, {
+      let minified = htmlmin(content, {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true,
         minifyCSS: true,
-      })
-      return minified
+      });
+      return minified;
     }
-    return content
-  })
+    return content;
+  });
 
   // markdown-it-attrs add class to code element rather than pre
   // this adds the popout class to the pre element
   eleventyConfig.addTransform("addPreClass", function (content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
-      const dom = new JSDOM(content)
-      const document = dom.window.document
-      const preElements = document.querySelectorAll("pre")
+      const dom = new JSDOM(content);
+      const document = dom.window.document;
+      const preElements = document.querySelectorAll("pre");
       preElements.forEach((pre) => {
-        pre.classList.add("popout")
-      })
-      content = dom.serialize()
+        pre.classList.add("popout");
+      });
+      content = dom.serialize();
     }
-    return content
-  })
+    return content;
+  });
 
-  eleventyConfig.addPassthroughCopy("src/robots.txt")
-  // eleventyConfig.addPassthroughCopy('./src/js');
-  eleventyConfig.addPassthroughCopy("./src/favicon.ico")
-  eleventyConfig.addPassthroughCopy("./src/assets/")
+  eleventyConfig.addPassthroughCopy("./src/robots.txt");
+  eleventyConfig.addPassthroughCopy("./src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("./src/assets/");
 
   return {
-    templateForms: ["njk", "md"],
+    templateFormats: ["njk", "md"],
     markdownTemplateEngine: "njk",
     dir: {
       input: "src",
       output: "public",
     },
     passthroughFileCopy: true,
-  }
+  };
 }

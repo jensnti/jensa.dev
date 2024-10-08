@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const filterTagList = (tags) => {
   return (tags || []).filter(
     (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1,
@@ -21,16 +22,6 @@ const tagList = (collection) => {
     }
   })
   return filterTagList([...tagSet])
-}
-
-const demos = (collectionApi) => {
-  return collectionApi.getFilteredByTag("demos")
-}
-
-const orderedDemos = (collectionApi) => {
-  return collectionApi.getFilteredByTag("demos").sort((a, b) => {
-    return a.data.order - b.data.order
-  })
 }
 
 const pages = (collectionApi) => {
@@ -62,13 +53,4 @@ const drafts = (collectionApi) => {
   })
 }
 
-module.exports = {
-  tagList,
-  demos,
-  orderedDemos,
-  pages,
-  posts,
-  projects,
-  resources,
-  drafts,
-}
+export { drafts, pages, posts, projects, resources, tagList }

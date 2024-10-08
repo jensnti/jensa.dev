@@ -1,6 +1,6 @@
-const { format, parseISO } = require("date-fns")
-const { sv } = require("date-fns/locale")
-const slugify = require("slugify")
+import { format, parseISO } from "date-fns"
+import { sv } from "date-fns/locale"
+import slugify from "slugify"
 
 const readableDate = (dateObj) => {
   if (typeof dateObj === "string") {
@@ -21,7 +21,7 @@ const htmlDateString = (dateObj) => {
   if (typeof dateObj === "string") {
     dateObj = parseISO(dateObj)
   }
-  return format(dateObj, "yyyy-MM-dd")
+  return dateObj.toISOString().split("T")[0]
 }
 
 const yearString = (dateObj) => {
@@ -74,16 +74,17 @@ const slug = (str) => {
   })
 }
 
-module.exports = {
-  slug,
-  readableDate,
+export {
   frontDate,
-  htmlDateString,
-  yearString,
-  getProject,
-  tagFilter,
-  shuffleArray,
-  limit,
-  getYears,
   getDemo,
+  getProject,
+  getYears,
+  htmlDateString,
+  limit,
+  readableDate,
+  shuffleArray,
+  slug,
+  slugify,
+  tagFilter,
+  yearString,
 }
