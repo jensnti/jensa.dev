@@ -14,7 +14,6 @@ import {
 
 // Import filters
 import {
-  getDemo,
   readableDate,
   frontDate,
   yearString,
@@ -26,8 +25,6 @@ import {
   limit,
   getYears,
 } from "./src/_config/filters/index.js";
-
-import { searchFilter } from "./src/_config/filters/search-filter.js";
 
 // Import collections
 import {
@@ -78,7 +75,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("limit", limit);
   eleventyConfig.addFilter("getYears", getYears);
   eleventyConfig.addFilter("slug", slug);
-  eleventyConfig.addNunjucksAsyncFilter("searchFilter", searchFilter);
 
   // Shortcodes
   eleventyConfig.addShortcode("year", year);

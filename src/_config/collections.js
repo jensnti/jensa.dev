@@ -1,3 +1,5 @@
+import elasticlunr from "elasticlunr";
+
 /* eslint-disable no-undef */
 const filterTagList = (tags) => {
   return (tags || []).filter(
