@@ -31,6 +31,16 @@
   to = "/sv/:splat"
   status = 302
 
+[[redirects]]
+  from = "/sv/*"
+  to = "/sv/404"
+  status = 404
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/404"
+  status = 404
+
 [[plugins]]
 package = "netlify-plugin-csp-generator"
 
