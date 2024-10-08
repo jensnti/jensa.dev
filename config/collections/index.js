@@ -1,6 +1,6 @@
 const filterTagList = (tags) => {
   return (tags || []).filter(
-    (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
+    (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1,
   )
 }
 
@@ -40,7 +40,7 @@ const pages = (collectionApi) => {
 }
 
 const posts = (collectionApi) => {
-  return collectionApi.getFilteredByGlob("src/posts/*.md")
+  return collectionApi.getFilteredByGlob("src/posts/**/*.md")
 }
 
 const projects = (collectionApi) => {

@@ -1,4 +1,5 @@
 {
-    "layout": "pages/post.njk",
-    "permalink": "posts/{{ title | slug }}/"
+  "tags": "posts",
+  "layout": "pages/post.njk",
+  "permalink": "posts/{{ title | slug }}/"
 }
