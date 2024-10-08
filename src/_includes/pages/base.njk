@@ -1,7 +1,7 @@
 {% set assetHash = helpers.random() %}
 
 <!DOCTYPE html>
-<html lang="{{ meta.lang }}" class="dark">
+<html lang="{{ locale }}" dir="{{ dir }}" class="dark">
 
 <head>
   <link rel="preconnect" href="https://api.fontshare.com">
@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main-content">Hoppa till sidans innehåll</a>
+  <a class="skip-link" href="#main-content">{{ languages[page.lang].skipText }}</a>
   {% block header %}
   {% include "../layouts/site-head.njk" %}
   {% endblock %}

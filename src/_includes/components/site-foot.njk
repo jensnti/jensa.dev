@@ -1,18 +1,28 @@
 <footer role="contentinfo" class="content region flow site-foot">
-  <p>Sidan är skapad med <a href="https://11ty.dev">11ty</a> av Jens Andreasson, © {% year %}. Publicerad på <a
-          href="https://netlify.com">Netlify</a>.</p>
+  <p>{{ languages[page.lang].availableText }}</p>
+
+  <nav id="footer" aria-label="{{ languages[page.lang].ariaLang }}">
+    {% for link in page.url | locale_links %} {%- if not loop.first %}/{% endif %}
+    <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">{{
+      link.label
+      }}</a>
+    {% endfor %}
+  </nav>
+  <p>Sidan är skapad med <a href="https://11ty.dev">11ty</a> av Jens Andreasson,
+    © {% year %}. Publicerad på <a href="https://netlify.com">Netlify</a>.
+  </p>
   <ul role="list">
-      <li>
-          <a href="{{ pkg.repository.url }}">
-              <span class="sr-only">GitHub</span>
-              {% svg "logo-github.svg" %}
-          </a>
-      </li>
-      <li>
-          <a href="/feed.xml">
-              <span class="sr-only">RSS</span>
-              {% svg "logo-rss.svg" %}
-          </a>
-      </li>
+    <li>
+      <a href="{{ pkg.repository.url }}">
+        <span class="sr-only">GitHub</span>
+        {% svg "logo-github.svg" %}
+      </a>
+    </li>
+    <li>
+      <a href="/feed.xml">
+        <span class="sr-only">RSS</span>
+        {% svg "logo-rss.svg" %}
+      </a>
+    </li>
   </ul>
 </footer>

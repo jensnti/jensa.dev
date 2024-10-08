@@ -18,7 +18,6 @@ export default {
   },
   url: process.env.URL || "http://localhost:8080",
   time: Date.now(),
-  locale: "sv-SE",
-  lang: "sv",
   theme: "#ff0f54",
+  siteName: "J.Anteckningar",
 }

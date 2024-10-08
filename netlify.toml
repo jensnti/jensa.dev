@@ -3,20 +3,16 @@
   command = "npm run build"
   environment = { NODE_VERSION = "20" }
 
-
-
-# Content negotiation for home page
+# Redirect any URLs with the language code in them already
 [[redirects]]
-  from = "/"
-  to = "/sv/"
-  status = 200
-  conditions = {Language = ["sv"]}
+  from = "/sv/*"
+  to = "/:splat"
+  status = 301
+  force = true
 
-# Content negotiation for home page
-[[redirects]]
-  from = "/"
-  to = "/sv/"
-  status = 200
+# Important: Per shadowing rules, URLs for the
+# _non-default_ language-specific content files
+# are served without redirects.
 
 # Redirect for end-user’s browser preference override
 [[redirects]]
@@ -29,7 +25,7 @@
 [[redirects]]
   from = "/*"
   to = "/sv/:splat"
-  status = 302
+  status = 200
 
 [[plugins]]
 package = "netlify-plugin-csp-generator"

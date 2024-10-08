@@ -12,7 +12,7 @@
   {% if category %}
   <p class="lead">från 
     {% if category == "resurser" %}
-    <a href="/{{ category }}">{{ category }}</a>
+    <a href="/{{ category | locale_links }}">{{ category }}</a>
     {% else %}
     {{ category }}
     {% endif %}
@@ -23,7 +23,7 @@
     <ul role="list" class="tags">
       {% for tag in tags | sort %}
       <li>
-        <a href="/tagg/{{ tag | slugify }}">
+        <a href="/tagg/{{ tag | slugify | locale_links }}">
           {{ tag }}
         </a>
       </li>

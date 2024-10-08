@@ -1,11 +1,10 @@
-<nav class="navbar full content" aria-label="primary navigation">
+<nav class="navbar full content" aria-label="{{ languages[page.lang].ariaPrimary }}">
   <div class="navbar-inner">
-
-    <a class="brand" href="/" aria-label="{{ meta.siteName }} - Hem">J.Anteckningar</a>
+    <a class="brand" href="/{{ page.lang }}" aria-label="{{ meta.siteName }} - {{ languages[page.lang].home }}">{{ meta.siteName }}</a>
     <ul role="list">
-      {% for item in collections.pages | reverse %}
+      {% for item in navigation[page.lang] %}
       <li>
-        <a class="{{ 'active' if item.url == page.url }}" href="{{ item.url }}">{{ item.data.title }}</a>
+        <a class="{{ 'active' if item.url == page.url }}" href="{{ item.url }}">{{ item.text }}</a>
       </li>
       {% endfor %}
       <li>

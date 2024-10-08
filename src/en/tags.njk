@@ -4,10 +4,10 @@ pagination:
     size: 1
     alias: tag
     filter: ['all', 'nav', 'pages', 'tagList']
-permalink: /tagg/{{ tag | slugify }}/
+permalink: /en/tagg/{{ tag | slugify }}/
 ---
 
-{% set title = 'Taggat med ' + tag %}
+{% set title = 'Tagged with ' + tag %}
 {% extends 'pages/page.njk' %}
 {% set postListItems = collections[tag] | reverse %}
 

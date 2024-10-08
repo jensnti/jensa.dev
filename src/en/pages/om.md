@@ -1,6 +1,6 @@
 ---
-title: Om
-permalink: /om/
+title: About
+permalink: /en/about/
 layout: pages/page.njk
 templateEngineOverride: njk, md
 order: 2
