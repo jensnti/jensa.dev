@@ -1,5 +1,5 @@
 <h3>{{ languages[page.lang].contact }}</h3>
-<form class="flow" name="contact" action="/success" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+<form class="flow" name="contact" action="/{{ page.lang }}/success" method="POST" netlify-honeypot="bot-field" data-netlify="true">
     <p class="hidden">
         <label>
             {{ languages[page.lang].human}}: <input name="bot-field" />
@@ -10,9 +10,9 @@
         <input name="name" type="text" id="yourName" required="true">
     </div>
     <div>
-        <label for="yourEmail">{{ languages[page.lang].email}}</label>
-        <input name="email" type="email" id="yourEmail" required="true">
-    </div>
+      <label for="yourEmail">{{ languages[page.lang].email }} {{ languages[page.lang].email_reply }}</label>
+      <input name="email" type="email" id="yourEmail">
+  </div>
     <div>
         <label for="message">{{ languages[page.lang].message}}</label>
         <textarea name="message" id="message" rows="4" required="true"></textarea>

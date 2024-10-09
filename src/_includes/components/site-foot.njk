@@ -1,8 +1,9 @@
 <footer role="contentinfo" class="content region flow site-foot">
   <p>{{ languages[page.lang].availableText }}</p>
   {% include "components/language-switcher.njk" %}
-  <p>Sidan är skapad med <a href="https://11ty.dev">11ty</a> av Jens Andreasson,
-    © {% year %}. Publicerad på <a href="https://netlify.com">Netlify</a>.
+  <p>{{ languages[page.lang].footer.created_with }} <a href="https://11ty.dev">
+    11ty</a> {{ languages[page.lang].footer.by_me }},
+    © {% year %}. {{ languages[page.lang].footer.published }} <a href="https://netlify.com">Netlify</a>.
   </p>
   <ul role="list">
     <li>
