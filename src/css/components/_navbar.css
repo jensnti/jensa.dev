@@ -8,6 +8,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   column-gap: var(--gutter);
 
@@ -30,4 +31,30 @@
 
 .active {
   opacity: 0.9;
+}
+
+.language-switcher {
+  .active {
+    text-decoration: underline;
+  }
+}
+
+/* css for the theme switcher */
+.darkIcon {
+  display: none;
+}
+.lightIcon {
+  display: block;
+}
+html[data-theme="dark"] .darkIcon {
+  display: block;
+}
+html[data-theme="dark"] .lightIcon {
+  display: none;
+}
+html[data-theme="light"] .darkIcon {
+  display: none;
+}
+html[data-theme="light"] .lightIcon {
+  display: block;
 }
