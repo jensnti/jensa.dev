@@ -7,6 +7,8 @@ tags: [ 'i18n', 'english', 'translation']
 
 Det är en sanning med modifikation att allt innehåll på den här sidan är tillgängligt, men nu finns i alla fall möjligheten för mig att skriva på engelska.
 
+Så på grund av detta så kommer det förmodligen att bli 404:or. Vi får se hur Netlify hanterar mina omdirigeringar.
+
 ## Hur fungerar det?
 
 Eleventy har stöd för att skapa flerspråkiga sidor och det är det jag har använt för att skapa en engelsk version av den här sidan. Om du är intresserad så går det att läsa mer på den [officiella dokumentationen](https://www.11ty.dev/docs/i18n/). Men på en sida som den här som faktiskt växt en hel del (innehållsmässigt) sen jag startade så var det inte helt enkelt. Av den anledningen så letade jag runt lite efter material och hittade en bra guide på Lene Sailes blogg, [Internationalization with Eleventy 2.0 and Netlify](https://www.lenesaile.com/en/blog/internationalization-with-eleventy-20-and-netlify/).
@@ -19,12 +21,12 @@ src
 │   ├── index.md
 │   ├── posts
 │   │   ├── 2024
-            ├── den-engelska-versionen-har-landat.md
+            ├── den engelska versionen har landat.md
 └── sv
     ├── index.md
     ├── posts
         ├── 2024
-            ├── den-engelska-versionen-har-landat.md
+            ├── den engelska versionen har landat.md
 ```
 
 Sen skapas collections utifrån vilket språk som är det aktiva. Det gör att jag kan visa enbart de poster som är på det aktiva språket.
