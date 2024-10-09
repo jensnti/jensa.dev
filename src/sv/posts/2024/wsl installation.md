@@ -4,6 +4,7 @@ date: 2024-10-09
 tags: ['wsl', 'ohmyz']
 category: anteckningar
 lead: En guide till att installera WSL, konfigurera Oh my Zsh och lite annat smått och gott.
+draft: true
 ---
 
 Så mitt WSL började bete sig väldigt konstigt häromdagen. Främst så var det filsystemet som knappt reagerade, filer kunde inte skrivas och det var allmänt segt. Det började med uppgraderingen av Eleventy till version 3 och npm som tuggade i evigheter. Vad det berodde på, det är oklart, men jag tog och avinstallerade WSL och installerade om allt från början. 
