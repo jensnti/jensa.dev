@@ -11,7 +11,6 @@
 .tags-list {
   --min: 16rem;
   display: grid;
-  /* grid-gap: var(--gutter); */
   grid-gap-column: var(--gutter);
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 }

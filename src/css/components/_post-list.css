@@ -12,7 +12,10 @@
   }
   footer {
     --flow-space: .3em;
-  } 
+  }
+  h2 {
+    font-size: var(--step-3);
+  }
 }
 
 .post-list--right {

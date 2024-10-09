@@ -13,9 +13,9 @@
       <time datetime="{{ item.date | htmlDateString }}">
         {{ item.date | frontDate }}
       </time>
-      <h3>
+      <h2>
         <a href="{{ item.url }}">{{ item.data.title }}</a>
-      </h3>
+      </h2>
     </header>
     <p>{{ item.data.summary | safe }}</p>
     <footer>

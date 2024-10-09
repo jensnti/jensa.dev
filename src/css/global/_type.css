@@ -58,5 +58,7 @@ abbr {
 }
 
 .important {
-  color: var(--color-primary)
+  padding: var(--space-s-m);
+  color: var(--color-primary);
+  font-weight: 600;  
 }
