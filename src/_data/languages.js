@@ -13,6 +13,7 @@ export default {
     message: "Message",
     send: "Send",
     contact: "Contact",
+    dark_light: "Toggle between dark/light mode"
   },
   sv: {
     dir: "ltr",
@@ -28,5 +29,6 @@ export default {
     message: "Meddelande",
     send: "Skicka",
     contact: "Kontakt",
+    dark_light: "Växla mellan mörkt/ljust läge"
   },
 }
