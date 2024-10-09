@@ -3,9 +3,8 @@ title: About
 permalink: /en/about/
 layout: pages/page.njk
 templateEngineOverride: njk, md
-lead: A little about me.
+lead: So who am I and why?
 ---
-
 
 Jag är en legitimerad lärare och arbetar på [NTI Gymnasiet Umeå](https://www.ntigymnasiet.se/umea/) sedan 2017. Tidigare har jag arbetat med vuxenutbildning på distans.
 
