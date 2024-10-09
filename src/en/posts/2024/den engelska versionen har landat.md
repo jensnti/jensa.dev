@@ -35,4 +35,12 @@ For the content, it will often be a translation made by a machine, it is not som
 
 When using AI to translate it is important to not loose your voice, and that is something I will try to keep in mind when editing the text.
 
+## Återkoppling
+
+If you find something that is incorrect or if you have something to say about the translation, please feel free to contact me. I am open to receiving feedback and to improve the content.
+
+{% include "layouts/contact-form.njk" %}
+
+<aside>
 This translation is done in Visual Studio Code, with the help of GitHub Copilot and [Code spell checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker).
+</aside>

@@ -34,3 +34,9 @@ Sen skapas collections utifrån vilket språk som är det aktiva. Det gör att j
 När det gäller innehållet så kommer det ofta vara en översättning gjord av en maskin, det är inget jag kommer att låtsas att jag har gjort. Men det betyder inte att jag inte kommer ändra i texten och redigera texten för att göra den mer läsbar. Med tanke på det så tänker jag att jag kommer ange källa för översättningen.
 
 Det finns en viktig kvalite att behålla när en använder AI och det är en den personliga rösten. Det är något som väldigt lätt kan försvinna och det är inget AI kan skapa.
+
+## Återkoppling
+
+Om du hittar något som inte stämmer eller om du har något att säga om översättningen så får du gärna kontakta mig. Jag är öppen för att ta emot feedback och för att förbättra innehållet.
+
+{% include "layouts/contact-form.njk" %}

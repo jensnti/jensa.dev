@@ -36,8 +36,7 @@ Som alla spel är det svåraste att göra det engagerande och roligt. Här är n
 
 ## Exempel på ett Inkrementellt Clicker-spel
 
-
-> Om du har svårt med att komma på ett spel så kan du använda mallen ovan som input för prompt till en generativ AI. Det kan hjälpa med kreativiteten och att komma igång. Fråga också efter flera förslag.
+Om du har svårt med att komma på ett spel så kan du använda mallen ovan som input för prompt till en generativ AI. Det kan hjälpa med kreativiteten och att komma igång. Fråga också efter flera förslag.{.important}
 
 Här hittar du [min prompt och Chat-GPTs svar](https://chatgpt.com/share/6703bf1f-9728-8002-aaed-78fead50ddc2).
 

@@ -1,5 +1,5 @@
 ---
-title: 'Tack för ditt meddelande!'
+title: Tack för ditt meddelande!
 layout: pages/page.njk
 eleventyExcludeFromCollections: true
 ---
