@@ -1,9 +1,10 @@
 {% set assetHash = helpers.random() %}
 
 <!DOCTYPE html>
-<html lang="{{ meta.lang }}" class="dark">
+<html lang="{{ locale }}" dir="{{ dir }}" class="dark">
 
 <head>
+  <base href="{{ page.url }}">
   <link rel="preconnect" href="https://api.fontshare.com">
   <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=nunito@400&f[]=bebas-neue@400&display=swap" as="style">
   <meta charset="UTF-8" />
@@ -18,11 +19,10 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main-content">Hoppa till sidans innehåll</a>
+  <a class="skip-link" href="#main-content">{{ languages[page.lang].skipText }}</a>
   {% block header %}
   {% include "../layouts/site-head.njk" %}
   {% endblock %}
-  {% include "../components/search-modal.njk" %}
   {% block content %}{% endblock %}
   {% block footer %}
   {% include "../components/site-foot.njk" %}

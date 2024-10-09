@@ -1,0 +1,4 @@
+{
+    "permalink": "/en/projekt/{{ title | slug }}/index.html",
+    "category": "projekt"
+}

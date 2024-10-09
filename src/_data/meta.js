@@ -1,22 +1,7 @@
-module.exports = {
-  siteName: "J.Anteckningar",
-  siteDesc:
-    "Blog, projekt, resurser och anteckningsblock för Jens Andreasson. Innehåll kopplat till teknikämnen inom gymnasieskolan. Främst programmering och webbutveckling.",
+export default {
   keyWords: [
-    "blog",
-    "html",
-    "jens andreasson",
-    "jensadev",
-    "teacher",
-    "html",
-    "web",
-    "web development",
-    "learn web development",
-    "programming",
-    "css",
-    "pedagogik",
-    "front end development",
-    "back end development",
+    "backend",
+    "frontend",
     "js",
     "javascript",
     "git",
@@ -26,6 +11,7 @@ module.exports = {
     "gymnasieskola",
     "skola",
   ],
+  siteDesc: "J.Anteckningar är en blogg om webbutveckling, programmering och skola.",
   author: {
     name: "Jens Andreasson",
     email: "jensandreasson77@gmail.com",
@@ -34,7 +20,6 @@ module.exports = {
   },
   url: process.env.URL || "http://localhost:8080",
   time: Date.now(),
-  locale: "sv-SE",
-  lang: "sv",
   theme: "#ff0f54",
+  siteName: "J.Anteckningar",
 }

@@ -1,0 +1,18 @@
+---
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter: ['all', 'nav', 'pages', 'tagList']
+permalink: /en/tagg/{{ tag | slugify }}/
+---
+
+{% set title = 'Tagged with ' + tag %}
+{% extends 'pages/page.njk' %}
+{% set postListItems = collections[tag] | reverse %}
+
+{% block content %}
+<main id="main-content" tabindex="-1" class="region">
+    {% include "layouts/post-list.njk" %}
+</main>
+{% endblock %}

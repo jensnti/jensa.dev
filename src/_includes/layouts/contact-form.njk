@@ -1,20 +1,21 @@
-<form class="flow" name="contact" action="/success" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+<h3>{{ languages[page.lang].contact }}</h3>
+<form class="flow" name="contact" action="/{{ page.lang }}/success" method="POST" netlify-honeypot="bot-field" data-netlify="true">
     <p class="hidden">
         <label>
-            Om du är en människa så lämna detta fält tomt: <input name="bot-field" />
+            {{ languages[page.lang].human}}: <input name="bot-field" />
         </label>
     </p>
     <div>
-        <label for="yourName">Namn</label>
+        <label for="yourName">{{ languages[page.lang].name}}</label>
         <input name="name" type="text" id="yourName" required="true">
     </div>
     <div>
-        <label for="yourEmail">Email</label>
-        <input name="email" type="email" id="yourEmail" required="true">
-    </div>
+      <label for="yourEmail">{{ languages[page.lang].email }} {{ languages[page.lang].email_reply }}</label>
+      <input name="email" type="email" id="yourEmail">
+  </div>
     <div>
-        <label for="message">Meddelande</label>
+        <label for="message">{{ languages[page.lang].message}}</label>
         <textarea name="message" id="message" rows="4" required="true"></textarea>
     </div>
-    <button class="button" type="submit">Skicka</button>
+    <button class="button" type="submit">{{ languages[page.lang].send}}</button>
 </form>

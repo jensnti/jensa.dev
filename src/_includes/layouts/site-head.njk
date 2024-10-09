@@ -1,39 +1,15 @@
 <header role="banner" class="site-head content full">
-  <!-- 
-  {{ 'site-head--cover' if cover }}
-  {% if cover %}
-  <div class="site-head--cover-image full">
-    {% image "./src/images/covers/" + cover, "cover" %}
-  </div>
-  {% endif %} -->
   {% include "../components/nav.njk" %}
   <div class="region site-head--inner flow popout">
     {% if page.url %}
       {% if "posts" in page.url %}
-      {% include "../components/breadcrumbs.njk" %}
+        {% include "../components/breadcrumbs.njk" %}
       {% else %}
-      <h1 title="{{ title }}">
-        {{ title }}
-      </h1>
-      {% include "../components/lead.njk" %}
+        <h1 title="{{ title }}">
+          {{ title }}
+        </h1>
+        <p class="lead">{{ lead | safe }}</p>
       {% endif %}
     {% endif %}
   </div>
 </header>
-<!-- {% if years %}
-<div class="wrapper breadcrumbs years">
-  <ul class="tags" role="list">
-    {% for year in years %}
-    <li>
-      <a href="#year-{{ year }}">{{ year }}</a>
-    </li>
-    {% endfor %}
-    <li class="back-to-top">
-      <a href="#">
-        <span class="sr-only">Top</span>
-        {% svg "chevron-up-outline.svg" %}
-      </a>
-    </li>
-  </ul>
-</div>
-{% endif %} -->
