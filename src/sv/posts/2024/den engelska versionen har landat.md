@@ -1,7 +1,7 @@
 ---
-title: Den engelska versionen har landat – fortsätt koda!
+title: Den engelska versionen har landat
 date: 2024-10-08
-summary: "Nu finns innehållet på den här sidan tillgängligt på engelska."
+summary: "Känn lugnet och koda vidare!"
 tags: [ 'i18n', 'english', 'translation']
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: The English version has landed – keep on coding!
+title: The English version has landed
 date: 2024-10-08
-summary: "Now the content on this page is available in English."
+summary: "Carry on coding!"
 tags: [ 'i18n', 'english', 'translation']
 ---
 
