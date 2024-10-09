@@ -1,9 +1,9 @@
 ---
-title: Om
-permalink: /sv/om/
+title: About
+permalink: /en/about/
 layout: pages/page.njk
 templateEngineOverride: njk, md
-order: 2
+lead: A little about me.
 ---
 
 
@@ -37,7 +37,5 @@ För min undervisning har jag skapat en del material:
 -   [Programmering](https://programmering.jensa.dev/)
 -   [Gitbook](https://jens-andreasson.gitbook.io/)
 -   [YouTube](https://www.youtube.com/channel/UCTqbOlkdA_9q-agUM0Hh9Ag)
-
-### Kontakt
 
 {% include "layouts/contact-form.njk" %}

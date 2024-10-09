@@ -1,7 +1,9 @@
 ---
 title: Resurser
-permalink: /resurser/index.html | locale_url
-cover: resurser.jpg
+permalink: /sv/resurser/
+lead: |
+  Här hittar du alla resurser som jag har skapat och publicerat på den här sidan. Resurser är framförallt material skapat för min undervisning.
+  Letar du något specifikt så prova sökfunktionen.
 ---
 
 {% extends 'pages/page.njk' %}

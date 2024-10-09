@@ -1,11 +1,10 @@
 ---
-title: About
-permalink: /en/about/
+title: Om
+permalink: /sv/om/
 layout: pages/page.njk
 templateEngineOverride: njk, md
-order: 2
+lead: En kort presentation av mig själv.
 ---
-
 
 Jag är en legitimerad lärare och arbetar på [NTI Gymnasiet Umeå](https://www.ntigymnasiet.se/umea/) sedan 2017. Tidigare har jag arbetat med vuxenutbildning på distans.
 
@@ -37,7 +36,5 @@ För min undervisning har jag skapat en del material:
 -   [Programmering](https://programmering.jensa.dev/)
 -   [Gitbook](https://jens-andreasson.gitbook.io/)
 -   [YouTube](https://www.youtube.com/channel/UCTqbOlkdA_9q-agUM0Hh9Ag)
-
-### Kontakt
 
 {% include "layouts/contact-form.njk" %}

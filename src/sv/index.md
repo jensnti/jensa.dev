@@ -4,7 +4,7 @@ layout: pages/home.njk
 lead: |
   Jag är en lärare som gillar webbutveckling, design och att koda.
   Att få kombinera dessa intressen i mitt arbete är ett privilegium.
-  På den här webbplatsen samlar jag <a href="/arkiv">anteckningar</a>, <a href="/projekt">projekt</a> och <a href="/resurser">resurser</a>.
+  På den här webbplatsen samlar jag <a href="/sv/arkiv">anteckningar</a>, <a href="/sv/projekt">projekt</a> och <a href="/sv/resurser">resurser</a>.
   På <a href="https://github.com/jensadev">GitHub</a> finns saker jag har kodat.
 ---
 

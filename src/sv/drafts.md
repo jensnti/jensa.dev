@@ -1,7 +1,8 @@
 ---
 title: Draft list
 draft: true
-permalink: /en/drafts/
+eleventyExcludeFromCollections: true
+permalink: /sv/drafts/
 layout: pages/page.njk
 ---
 
