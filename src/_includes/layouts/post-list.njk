@@ -21,7 +21,9 @@
     <footer>
       {% if item.data.tags.length > 0 %}
       <ul class="tags">
-        <li>{{ item.data.category | safe }}</li>
+        {% if item.data.category %}
+          <li>{{ item.data.category | safe }}</li>
+        {% endif %}
         {% for tag in item.data.tags | sort %}
         <li>{{ tag }}</li>
         {% endfor %}
