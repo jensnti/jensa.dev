@@ -33,12 +33,6 @@
   opacity: 0.9;
 }
 
-.language-switcher {
-  .active {
-    text-decoration: underline;
-  }
-}
-
 /* css for the theme switcher */
 .darkIcon {
   display: none;

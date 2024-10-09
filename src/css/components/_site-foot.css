@@ -10,4 +10,10 @@
   svg {
       fill: currentcolor;
   }
+  
+  .language-switcher {
+    a {
+      text-decoration: none;
+    }
+  }
 }
