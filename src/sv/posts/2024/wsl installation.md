@@ -38,6 +38,40 @@ Sedan kan vi följa instruktioner från [Oh my Zsh](https://ohmyz.sh/#install).
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+Nu kan nästan det roliga börja. 
+
+### Men först behöver vi fixa en font i Windows
+
+Vi behöver en font som stödjer alla tecken som vi vill använda, alltså programmeringsrelaterade tecken. Jag använder [Fira Code](https://www.nerdfonts.com/font-downloads) från Nerdfonts och har den installerad i Windows. 
+
+Jag använder mig av [Windows terminal](https://www.microsoft.com/store/productId/9N0DX20HK701?ocid=pdpshare) och där kan jag ställa in vilken font som ska användas. Så i settings för Ubuntu profilen så ställer jag in Fira Code som font.
+
+Och så behöver terminalen ett tema, [Windows Terminal Themes](https://windowsterminalthemes.dev/). Jag gillar [Mirage](https://windowsterminalthemes.dev/?theme=Mirage) vilket jag även använder i min [VS Code](https://marketplace.visualstudio.com/items?itemName=gerane.Theme-Mirage).
+
+När du hämtar ett tema från Windows Terminal Themes så får du ett JSON objekt som du kan importera i Windows Terminal. Öppna settings och ladda json-filen. Leta reda på `schemes` och klistra sedan in din kopierade json i arrayen. Välj sedan ditt nya tema i profilen för Ubuntu.
+
 ## Konfigurera Oh my Zsh
 
-Nu kan det roliga börja. 
+Eftersom vi redan har ett tema från windows terminalen så behöver vi inte använda ett tema från Oh my Zsh annat än för att få andra funktioner. Jag använder ett tema som heter [Spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt). Installationsinstruktioner finns på deras GitHub. 
+
+1. Kontrollera så att du kör `zsh > 5.8.1` genom att köra `echo $ZSH_VERSION`.
+2. Se till att du har en Nerd Font installerad.
+3. Klona repot, `git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1`.
+4. Skapa en symbolisk länk, `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`.
+5. Ange temat i din `.zshrc`-fil, `ZSH_THEME="spaceship"`.
+
+Genom att köra `omz reload` så ska du se det nya temat.
+
+För att konfigurera temat så följer vi instruktionerna på [Spaceship config](https://spaceship-prompt.sh/config/intro/). Det börjar med att skapa en configurationsfil, `touch ~/.spaceshiprc.zsh` där vi kan konfigurera temat som vi önskar.
+
+Jag har just nu bara ändrat färgerna på git-statusen och lagt till en emoji för att visa vilken branch jag är på. 
+
+```bash
+# Do not truncate path in repos
+SPACESHIP_DIR_TRUNC_REPO=false
+```
+
+### Plugins
+
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/tree/master)
+- [K](https://github.com/supercrabtree/k)
