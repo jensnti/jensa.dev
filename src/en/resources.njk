@@ -1,0 +1,17 @@
+---
+title: Resources
+permalink: /en/resources/
+lead: |
+  Here you can find all the resources that I have created and published on this site. Resources are primarily materials created for my teaching.
+  If you are looking for something specific, try the search function.
+  This will mostly be in Swedish.
+---
+
+{% extends 'pages/page.njk' %}
+{% set postListItems = collections.resources %}
+
+{% block content %}
+<main id="main-content" tabindex="-1" class="container region">
+    {% include "layouts/post-list.njk" %}
+</main>
+{% endblock %}
