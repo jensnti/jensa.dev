@@ -1,6 +1,7 @@
 export default {
-  tags: [
-    "back end development",
+  keyWords: [
+    "backend",
+    "frontend",
     "js",
     "javascript",
     "git",
@@ -10,6 +11,7 @@ export default {
     "gymnasieskola",
     "skola",
   ],
+  siteDesc: "J.Anteckningar är en blogg om webbutveckling, programmering och skola.",
   author: {
     name: "Jens Andreasson",
     email: "jensandreasson77@gmail.com",
