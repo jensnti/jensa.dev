@@ -3,7 +3,7 @@ title: (om)Installera WSL
 date: 2024-10-09
 tags: ['wsl', 'ohmyz']
 category: anteckningar
-lead: En guide till att installera WSL, konfigurera Oh my Zsh och lite annat smått och gott.
+summary: En guide till att installera WSL, konfigurera Oh my Zsh och lite annat smått och gott.
 draft: true
 ---
 
