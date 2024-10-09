@@ -56,3 +56,7 @@ abbr {
 .lead a:hover {
   text-decoration: underline;
 }
+
+.important {
+  color: var(--color-primary)
+}

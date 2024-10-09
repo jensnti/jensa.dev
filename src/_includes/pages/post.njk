@@ -8,7 +8,7 @@
 {% block content %}
 <main id="main-content" tabindex="-1" class="region">
   <article class="flow content">
-    <header>
+    <header class="flow">
       {% if category == "resurser" or toc %}
       {{ content | toc | safe }}
       {% endif %}
