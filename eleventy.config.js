@@ -47,7 +47,6 @@ import lightningCSS from "@11tyrocks/eleventy-plugin-lightningcss"
 
 export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/assets/js/")
-  eleventyConfig.addWatchTarget("./src/assets/css/")
 
   // Plugins
   eleventyConfig.addPlugin(rssPlugin)
@@ -148,18 +147,18 @@ export default function (eleventyConfig) {
 
   // markdown-it-attrs add class to code element rather than pre
   // this adds the popout class to the pre element
-  eleventyConfig.addTransform("addPreClass", function (content, outputPath) {
-    if (outputPath && outputPath.endsWith(".html")) {
-      const dom = new JSDOM(content)
-      const document = dom.window.document
-      const preElements = document.querySelectorAll("pre")
-      preElements.forEach((pre) => {
-        pre.classList.add("popout")
-      })
-      content = dom.serialize()
-    }
-    return content
-  })
+  // eleventyConfig.addTransform("addPreClass", function (content, outputPath) {
+  //   if (outputPath && outputPath.endsWith(".html")) {
+  //     const dom = new JSDOM(content)
+  //     const document = dom.window.document
+  //     const preElements = document.querySelectorAll("pre")
+  //     preElements.forEach((pre) => {
+  //       pre.classList.add("popout")
+  //     })
+  //     content = dom.serialize()
+  //   }
+  //   return content
+  // })
 
   eleventyConfig.addPassthroughCopy("./src/robots.txt")
   eleventyConfig.addPassthroughCopy("./src/favicon.ico")
