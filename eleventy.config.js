@@ -29,7 +29,9 @@ import {
 import {
   tagList,
   pages,
-  posts,
+  postsAllLang,
+  postsSv,
+  postsEn,
   projects,
   resources,
   drafts,
@@ -87,7 +89,9 @@ export default function (eleventyConfig) {
   // Collections
   eleventyConfig.addCollection("tagList", tagList)
   eleventyConfig.addCollection("pages", pages)
-  eleventyConfig.addCollection("posts", posts)
+  eleventyConfig.addCollection("posts", postsAllLang)
+  eleventyConfig.addCollection("postsSv", postsSv)
+  eleventyConfig.addCollection("postsEn", postsEn)
   eleventyConfig.addCollection("projects", projects)
   eleventyConfig.addCollection("resources", resources)
   eleventyConfig.addCollection("drafts", drafts)
