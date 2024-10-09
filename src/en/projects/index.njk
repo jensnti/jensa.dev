@@ -1,7 +1,7 @@
 ---
-title: Projekt
-permalink: /sv/projekt/
-lead: Länkar och eventuell info om projekt och annat jag driver, är delaktig i, eller har skapat.
+title: Projects
+permalink: /en/projects/
+lead: Links and any information about projects and other things I run, am involved in, or have created. Currently in swedish only.
 category: ""
 ---
 
@@ -19,7 +19,7 @@ category: ""
                 {% endif %}
                 <div class="card-body flow">
                     <h3>
-                        <a href="{{ project.title | slug }}">
+                      <a href="{% if page.lang == 'en' %}/sv/projekt/{{ project.title | slug }}{% else %}{{ project.title | slug }}{% endif %}">
                             {{ project.title }}
                         </a>
                     </h3>
