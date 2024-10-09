@@ -6,6 +6,7 @@ export default {
     ariaPrimary: 'Primary',
     ariaLang: 'Change language',
     home: 'Home',
+    no_content: 'No posts to show',
   },
   sv: {
     dir: 'ltr',
@@ -14,5 +15,6 @@ export default {
     ariaPrimary: 'Primär',
     ariaLang: 'Byt språk',
     home: 'Hem',
+    no_content: 'Inga inlägg att visa',
   }
 }
