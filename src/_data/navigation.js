@@ -1,6 +1,10 @@
 export default {
   en: [
     {
+      text: 'Archive',
+      url: '/en/archive/'
+    },
+    {
       text: 'About',
       url: '/en/about/'
     },
@@ -8,12 +12,12 @@ export default {
       text: 'Projects',
       url: '/en/projects/'
     },
-    {
-      text: 'Archive',
-      url: '/en/archive/'
-    }
   ],
   sv: [
+    {
+      text: 'Arkiv',
+      url: '/sv/arkiv/'
+    },
     {
       text: 'Om',
       url: '/sv/om/'
@@ -22,9 +26,5 @@ export default {
       text: 'Projekt',
       url: '/sv/projekt/'
     },
-    {
-      text: 'Arkiv',
-      url: '/sv/arkiv/'
-    }
   ]
 }
