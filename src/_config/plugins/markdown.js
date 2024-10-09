@@ -51,7 +51,7 @@ const markdownLibrary = markdownIt({
   linkify: true,
   typographer: true,
 })
-  .use(markdownItAnchor)
+  .use(markdownItAnchor, markdownItAnchorOptions)
   .use(markdownItLinkAttributes, {
     matcher(href) {
       return href.match(/^https?:\/\//);
@@ -64,7 +64,8 @@ const markdownLibrary = markdownIt({
   .use(markdownItAttrs, {
     allowedAttributes: ["id", "class"],
   })
-  .use(markdownitAbbr);
+  .use(markdownitAbbr)
+  
 
 export { markdownLibrary };
 export default markdownLibrary;
