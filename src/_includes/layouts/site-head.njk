@@ -3,12 +3,12 @@
   <div class="region site-head--inner flow popout">
     {% if page.url %}
       {% if "posts" in page.url %}
-      {% include "../components/breadcrumbs.njk" %}
+        {% include "../components/breadcrumbs.njk" %}
       {% else %}
-      <h1 title="{{ title }}">
-        {{ title }}
-      </h1>
-      {% include "../components/lead.njk" %}
+        <h1 title="{{ title }}">
+          {{ title }}
+        </h1>
+        <p class="lead">{{ lead }}</p>
       {% endif %}
     {% endif %}
   </div>
