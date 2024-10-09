@@ -7,7 +7,7 @@ tags: [ 'i18n', 'english', 'translation']
 
 Det är en sanning med modifikation att allt innehåll på den här sidan är tillgängligt, men nu finns i alla fall möjligheten för mig att skriva på engelska.
 
-Så på grund av detta så kommer det förmodligen att bli 404:or. Vi får se hur Netlify hanterar mina omdirigeringar.
+Om allt fungerar som det ska så kommer innehållet för ditt valda språk att visas, startsidan kommer även att finnas på `/`, övriga sidor kommer att finnas på `/sv/` eller `/en/`. Så på grund av detta så kommer det förmodligen att bli 404:or. Vi får se hur Netlify hanterar mina omdirigeringar.
 
 ## Hur fungerar det?
 

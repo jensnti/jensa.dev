@@ -7,7 +7,7 @@ tags: [ 'i18n', 'translation']
 
 It is a half-truth that all content on this page is available, but now I have the opportunity to write in English. 
 
-And because of this, there probably will be 404's. We shall see how Netlify handles my redirects.
+If everything works as it should, the content for your chosen language will be displayed. The homepage will also be available at `/`, while other pages will be available at `/sv/` or `/en/`. Because of this, there will probably be 404 errors. We'll see how Netlify handles my redirects.
 
 ## How does it work?
 
