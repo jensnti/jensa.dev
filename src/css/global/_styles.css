@@ -1,8 +1,8 @@
 :root {
   --color-bg: var(--light);
   --color-fg: var(--dark);
-  --color-primary: var(--color-primary-light);
-  --color-primary-transparent: var(--color-primary-light-transparent);
+  --color-primary: var(--color-primary-dark);
+  --color-primary-transparent: var(--color-primary-dark-transparent);
   --cover-gradient: linear-gradient(to right, var(--color-fg), var(--color-primary));
 }
 @media (prefers-color-scheme: dark) {
@@ -27,8 +27,8 @@ body {
   color-scheme: light;
   --color-bg: var(--light);
   --color-fg: var(--dark);
-  --color-primary: var(--color-primary-light);
-  --color-primary-transparent: var(--color-primary-light-transparent);
+  --color-primary: var(--color-primary-dark);
+  --color-primary-transparent: var(--color-primary-dark-transparent);
   --cover-gradient: linear-gradient(to right, var(--color-fg), var(--color-primary));
 }
 
