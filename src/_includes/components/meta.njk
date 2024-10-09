@@ -16,10 +16,21 @@
 <meta property="og:description" content="{{ meta.siteDesc }}"/>
 <meta property="article:author" content="{{ meta.author.name }}" />
 
-{% if page.fileSlug == "" %}
-    <title>{{ meta.siteName }}</title>
-{% else %}
-    <title>{{ pageTitle }}</title>
-{% endif %}
 
+<link rel="alternate" hreflang="{{ page.lang }}" href="{{ meta.url }}{{ page.url }}" />
+
+{% for link in page.url | locale_links %}
+  <link
+    rel="alternate"
+    hreflang="{{ link.lang }}"
+    href="{{ meta.url }}{{ link.url }}"
+    />
+{% endfor %}
+      
 <link rel="canonical" href="{{ currentUrl }}"/>
+
+{% if page.fileSlug == "" %}
+  <title>{{ meta.siteName }}</title>
+{% else %}
+  <title>{{ pageTitle }}</title>
+{% endif %}
