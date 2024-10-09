@@ -7,14 +7,6 @@ const filterTagList = (tags) => {
   )
 }
 
-// const tagList = (collection) => {
-//   const tagSet = new Set()
-//   collection.getAll().forEach((item) => {
-//     ;(item.data.tags || []).forEach((tag) => tagSet.add(tag))
-//   })
-//   return filterTagList([...tagSet])
-// }
-
 const tagList = (collection) => {
   const tagSet = new Set()
   collection.getAll().forEach((item) => {
@@ -30,10 +22,6 @@ const pages = (collectionApi) => {
   return collectionApi
     .getFilteredByGlob(["src/pages/*.md", "src/projects/index.*"])
     .sort((a, b) => b.data.order - a.data.order)
-}
-
-const posts = (collectionApi) => {
-  return collectionApi.getFilteredByGlob("src/posts/**/*.md")
 }
 
 const projects = (collectionApi) => {
@@ -55,4 +43,16 @@ const drafts = (collectionApi) => {
   })
 }
 
-export { drafts, pages, posts, projects, resources, tagList }
+const postsSv = (collectionApi) => {
+  return collectionApi.getFilteredByGlob("src/sv/posts/**/*.md")
+}
+
+const postsEn = (collectionApi) => {
+  return collectionApi.getFilteredByGlob("src/en/posts/**/*.md")
+}
+
+const postsAllLang = (collectionApi) => {
+  return collectionApi.getFilteredByGlob("src/*/posts/**/*.md")
+}
+
+export { drafts, pages, postsAllLang, postsEn, postsSv, projects, resources, tagList }
