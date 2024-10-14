@@ -3,7 +3,11 @@
   --color-fg: var(--dark);
   --color-primary: var(--color-primary-dark);
   --color-primary-transparent: var(--color-primary-dark-transparent);
-  --cover-gradient: linear-gradient(to right, var(--color-fg), var(--color-primary));
+  --cover-gradient: linear-gradient(
+    to right,
+    var(--color-fg),
+    var(--color-primary)
+  );
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -11,7 +15,11 @@
     --color-fg: var(--light);
     --color-primary: var(--color-primary-dark);
     --color-primary-transparent: var(--color-primary-dark-transparent);
-    --cover-gradient: linear-gradient(to right, var(--color-primary), var(--color-bg));
+    --cover-gradient: linear-gradient(
+      to right,
+      var(--color-primary),
+      var(--color-bg)
+    );
   }
 }
 
@@ -29,7 +37,11 @@ body {
   --color-fg: var(--dark);
   --color-primary: var(--color-primary-dark);
   --color-primary-transparent: var(--color-primary-dark-transparent);
-  --cover-gradient: linear-gradient(to right, var(--color-fg), var(--color-primary));
+  --cover-gradient: linear-gradient(
+    to right,
+    var(--color-fg),
+    var(--color-primary)
+  );
 }
 
 [data-theme="dark"] {
@@ -38,7 +50,11 @@ body {
   --color-fg: var(--light);
   --color-primary: var(--color-primary-dark);
   --color-primary-transparent: var(--color-primary-dark-transparent);
-  --cover-gradient: linear-gradient(to right, var(--color-primary), var(--color-bg));
+  --cover-gradient: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-bg)
+  );
 }
 
 a {
@@ -59,7 +75,8 @@ svg {
   width: auto;
 }
 
-img, picture {
+img,
+picture {
   height: auto;
 }
 

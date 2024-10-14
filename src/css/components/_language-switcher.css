@@ -1,7 +1,13 @@
 .language-switcher {
   a {
     text-decoration: none;
+    padding-inline: .2em;
   }
+
+  .active {
+    text-decoration: underline;
+  }
+
 }
 .language {
   display: flex;

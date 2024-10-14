@@ -1,5 +1,9 @@
 .site-foot {
   opacity: 0.8;
+  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
+  background-color: var(--dark);
+  color: var(--light);
+
   ul {
       display: flex;
       gap: var(--gutter);
