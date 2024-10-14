@@ -1,49 +1,45 @@
+import { EleventyI18nPlugin } from "@11ty/eleventy"
+import rssPlugin from "@11ty/eleventy-plugin-rss"
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight"
+import emojiReadTime from "@11tyrocks/eleventy-plugin-emoji-readtime"
+import lightningCSS from "@11tyrocks/eleventy-plugin-lightningcss"
+import eleventyPluginTOC from "@thedigitalman/eleventy-plugin-toc-a11y"
 import { minify as htmlmin } from "html-minifier-terser"
 import { JSDOM } from "jsdom"
-import { EleventyI18nPlugin } from "@11ty/eleventy"
-
-// Import shortcodes
-import {
-  youtube,
-  getSvgContent,
-  year,
-  imageShortcode,
-} from "./src/_config/shortcodes.js"
-
-// Import filters
-import {
-  readableDate,
-  frontDate,
-  yearString,
-  htmlDateString,
-  getProject,
-  tagFilter,
-  shuffleArray,
-  slug,
-  limit,
-  getYears,
-} from "./src/_config/filters/index.js"
 
 // Import collections
 import {
-  tagList,
+  drafts,
   pages,
   postsAllLang,
-  postsSv,
   postsEn,
+  postsSv,
   projects,
   resources,
-  drafts,
+  tagList,
 } from "./src/_config/collections.js"
-
+// Import filters
+import {
+  frontDate,
+  getProject,
+  getYears,
+  htmlDateString,
+  limit,
+  readableDate,
+  shuffleArray,
+  slug,
+  tagFilter,
+  yearString,
+} from "./src/_config/filters/index.js"
 // Plugins
 import markdownLibrary from "./src/_config/plugins/markdown.js"
-
-import eleventyPluginTOC from "@thedigitalman/eleventy-plugin-toc-a11y"
-import rssPlugin from "@11ty/eleventy-plugin-rss"
-import emojiReadTime from "@11tyrocks/eleventy-plugin-emoji-readtime"
-import lightningCSS from "@11tyrocks/eleventy-plugin-lightningcss"
+// Import shortcodes
+import {
+  getSvgContent,
+  imageShortcode,
+  year,
+  youtube,
+} from "./src/_config/shortcodes.js"
 
 export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/assets/js/")
@@ -162,6 +158,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./src/robots.txt")
   eleventyConfig.addPassthroughCopy("./src/favicon.ico")
+  eleventyConfig.addPassthroughCopy("./src/_redirects")
   eleventyConfig.addPassthroughCopy("./src/assets/")
 
   return {
