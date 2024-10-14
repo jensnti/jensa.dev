@@ -28,6 +28,12 @@
   border-bottom: 4px solid var(--color-fg);
 }
 
+.post-list--more {
+  --flow-space: 2em;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .tags {
   display: flex;
   list-style: none;

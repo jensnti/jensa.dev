@@ -32,9 +32,9 @@
     </footer>
   </article>
   {% endfor %}
-  {% if page.url == '/' %}
-  <div class="post-list--right">
-    <a href="/arkiv">Läs mer i arkivet</a>
+  {% if page.url == '/' or page.url == '/en/' or page.url == '/sv/' %}
+  <div class="post-list--more">
+    <a href="/{{ page.lang }}/{% if page.lang == 'sv' %}arkiv{% else %}archive{% endif %}">{{ languages[page.lang].read_more }}</a>
   </div>
   {% endif %}
 </div>

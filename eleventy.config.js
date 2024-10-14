@@ -5,7 +5,6 @@ import emojiReadTime from "@11tyrocks/eleventy-plugin-emoji-readtime"
 import lightningCSS from "@11tyrocks/eleventy-plugin-lightningcss"
 import eleventyPluginTOC from "@thedigitalman/eleventy-plugin-toc-a11y"
 import { minify as htmlmin } from "html-minifier-terser"
-import { JSDOM } from "jsdom"
 
 // Import collections
 import {

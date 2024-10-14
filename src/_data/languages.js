@@ -15,11 +15,12 @@ export default {
     send: "Send",
     contact: "Contact",
     dark_light: "Toggle between dark/light mode",
+    read_more: "Read more in the archive",
     footer: {
       created_with: "Site created with",
       by_me: "by Jens Andreasson",
       published: "Published on",
-    }
+    },
   },
   sv: {
     dir: "ltr",
@@ -37,10 +38,11 @@ export default {
     send: "Skicka",
     contact: "Kontakt",
     dark_light: "Växla mellan mörkt/ljust läge",
+    read_more: "Läs mer i arkivet",
     footer: {
       created_with: "Sidan är skapad med",
       by_me: "av Jens Andreasson",
       published: "Publicerad på",
-    }
+    },
   },
 }
