@@ -1,15 +1,14 @@
 ---
 title: (om)Installera WSL
-date: 2024-10-09
+date: 2024-10-14
 tags: ['wsl', 'ohmyz']
 category: anteckningar
 summary: En guide till att installera WSL, konfigurera Oh my Zsh och lite annat smått och gott.
-draft: true
 ---
 
 Så mitt WSL började bete sig väldigt konstigt häromdagen. Främst så var det filsystemet som knappt reagerade, filer kunde inte skrivas och det var allmänt segt. Det började med uppgraderingen av Eleventy till version 3 och npm som tuggade i evigheter. Vad det berodde på, det är oklart, men jag tog och avinstallerade WSL och installerade om allt från början. 
 
-Så här är en minnesanteckning för mig själv, det kan även kallas en guide.
+Så här är en minnesanteckning för mig själv, med fantasi kanske det kan även kan kallas en guide.
 
 ## Installera WSL
 
@@ -63,6 +62,8 @@ Eftersom vi redan har ett tema från windows terminalen så behöver vi inte anv
 
 Genom att köra `omz reload` så ska du se det nya temat.
 
+{% image "./src/images/Screenshot 2024-10-14 191816.png", "Windows terminal med Zsh och Spaceship-prompt" %}
+
 För att konfigurera temat så följer vi instruktionerna på [Spaceship config](https://spaceship-prompt.sh/config/intro/). Det börjar med att skapa en configurationsfil, `touch ~/.spaceshiprc.zsh` där vi kan konfigurera temat som vi önskar.
 
 Jag har just nu bara ändrat färgerna på git-statusen och lagt till en emoji för att visa vilken branch jag är på. 
@@ -73,6 +74,8 @@ SPACESHIP_DIR_TRUNC_REPO=false
 ```
 
 ### Plugins
+
+Det finns ett stort antal plugins, för zsh och Oh my Zsh. Jag använder mig av.
 
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/tree/master)
 - [K](https://github.com/supercrabtree/k)
