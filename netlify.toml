@@ -19,30 +19,3 @@ package = "netlify-plugin-csp-generator"
     frameSrc = "'self' https://youtube.com https://www.youtube.com https://www.youtube-nocookie.com https://cpwebassets.codepen.io https://codepen.io"
     frameAncestors = "'none'"
     imgSrc = "'self' https://i.ytimg.com/"
-
-# redirect to english, swedish
-
-[[redirects]]
-  from = "/"
-  to = "/en"
-  status = 302
-  force = true
-  conditions = {Language = ["en"]}
-
-[[redirects]]
-  from = "/"
-  to = "/sv"
-  status = 302
-  force = true
-
-# redirect the 404 pages to your specific variant.
-
-[[redirects]]
-  from = "/en/*"
-  to = "/en/404"
-  status = 404
-
-[[redirects]]
-  from = "/sv/*"
-  to = "/sv/404"
-  status = 404
