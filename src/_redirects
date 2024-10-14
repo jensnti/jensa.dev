@@ -1,6 +1,6 @@
+/en/* /en/404   404
+/sv/* /sv/404   404
 /   /en/        200   Language=en
 /   /sv/        200
 /*  /en/:splat  302   Language=en
 /*  /sv/:splat  302
-/en/* /en/404   404
-/sv/* /sv/404   404
