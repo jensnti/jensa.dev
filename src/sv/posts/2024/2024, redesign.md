@@ -28,7 +28,9 @@ Själva bilderna och vad de föreställer, det är lite slumpat. Hittills är de
 
 En ganska stor förändring är att jag har slopat sass och istället bara skriver css. Med de förändringar som skett det senaste året med css så känns det som att jag inte behöver sass. Detta har även medfört att jag försökt rensa ut css som är onödig eller överflödig och i många fall även onödigt komplicerad.
 
-> Enkelt och tillgängligt
+> Enkelt och tillgängligt.
+>
+> Jens
 
 Sen finns det en del kvar att göra i frågan om att skriva css och städa, men det kommer.
 
