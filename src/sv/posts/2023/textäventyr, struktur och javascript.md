@@ -1,6 +1,7 @@
 ---
 title: Textäventyr, struktur och javascript
 date: 2023-09-28
+update: 2024-10-17
 summary: Ett textäventyr kan vara många saker, mina tankar går till ett spel i textform, men en bra skönlitterär bok borde väl kunna kvala in som ett textäventyr.
 tags: ['javascript', 'böcker', 'spel']
 category: anteckningar
@@ -157,7 +158,7 @@ För att använda objektens id för att hålla reda på spelarens position så b
 ```js
 function findPage(id) {
   return book.find((page) => {
-    return page.id === parsenInt(id);
+    return page.id === parseInt(id);
   })
 }
 ```
@@ -173,7 +174,7 @@ Med den koden så kan spelarens position i äventyret uppdateras med hjälp av o
 Med en tydlig struktur på plats blir det nu mycket enklare att presentera äventyret för spelaren. Detta kan göras med hjälp av en funktion som tar emot ett objekt och presenterar objektets beskrivning och val.
 
 ```js
-function presentPage(page) {
+function displayPage(page) {
   console.log(page.description);
   page.choices.forEach((choice) => {
     console.log(choice.description);
@@ -192,15 +193,46 @@ let page = 0;
 
 while (page !== null) {
   let currentPage = findPage(page);
-  presentPage(currentPage);
+  displayPage(currentPage);
   page = prompt("Vad väljer du? ");
 }
 ```
 
 I loopen så hämtas objektet som spelaren befinner sig i med hjälp av `findPage`-funktionen. Objektet presenteras sedan för spelaren med hjälp av `presentPage`-funktionen. Till sist så uppdateras spelarens position med hjälp av `prompt`.
 
+Problemet här är att vi inte ännu använder valets targetId, utan att vi istället använder prompt för att låta spelaren göra ett val. Detta är en del som behöver implementeras för att äventyret ska fungera.
+
+## Implementera spelarens val
+
+För att implementera spelarens val så behöver vi använda valets targetId för att uppdatera spelarens position. Detta kan göras med hjälp av en funktion som tar emot ett val och uppdaterar spelarens position.
+
+```js
+function makeChoice(choice) {
+  return choice.target;
+}
+```
+
+Funktionen tar emot ett val och returnerar valens targetId. Funktionen används sedan för att uppdatera spelarens position.
+
+```js
+let page = 0;
+
+while (page !== null) {
+  let currentPage = findPage(page);
+  displayPage(currentPage);
+  let choice = prompt("Vad väljer du? ");
+  page = makeChoice(currentPage.choices[choice]);
+}
+```
+
+Med den koden så kan spelaren göra ett val och hamna i en ny situation. Detta upprepas tills äventyret är över. Det är dock en ganska bräcklig lösning, vad händer om spelaren skriver in ett felaktigt val? Vad händer om spelaren skriver in ett val som inte finns?
+
 ## Sammanfattning
 
 Pust, det är en sak att tänka sig en artikel som detta, en annan att skriva den. Texten kräver en del två och det ska ordnas, för att presentera ett äventyr med `console.log()` och `prompt()` är inte så kul.
 
-Presentationen för spelaren kan göras mycket bättre med hjälp av en webbsida och DOM-manipulation. I äventyrets struktur finns också en god grund för att introducera JSON.
+Jag har uppdaterat koden något eftersom exemplet var ofullständigt.
+
+Vill du testa koden så kan du klistra in den i din webbläsares konsol. Eller så hittar du koden på [github](https://gist.github.com/jensadev/f09fd3d980929a512d8981a480883885). Prova gärna att utöka book objektet med fler sidor och val, då ser du en del av styrkan i att använda objekt för att strukturera data.
+
+Presentationen för spelaren kan göras mycket bättre med hjälp av en webbsida och DOM-manipulation, och det ska vi titta på i [nästa del](/sv/posts/textaventyr-med-javascript-en-fortsattning).
