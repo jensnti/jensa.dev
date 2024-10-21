@@ -26,6 +26,12 @@ h4 {
   font-size: var(--step-2);
 }
 
+p,
+li,
+blockquote:not([class]) {
+  max-width: 65ch;
+}
+
 body {
   font-size: var(--step-1);
   line-height: 1.5;
@@ -35,13 +41,21 @@ body {
 blockquote {
   padding: var(--space-s-m);
   color: var(--color-primary);
-  /* background-color: var(--color-selection); */
-  > p::before {
+  font-style: italic;
+  border-left:8px solid var(--color-primary);
+  font-size: var(--step-2);
+
+  > p:first-of-type::before {
       content: '“';
   }
-  > p::after {
+  > p:first-of-type::after {
       content: '”';
   }
+}
+
+blockquote:not([class]) p:last-of-type {
+  font-style: normal;
+  color: var(--color-fg);
 }
 
 abbr {
@@ -61,4 +75,9 @@ abbr {
   padding: var(--space-s-m);
   color: var(--color-primary);
   font-weight: 600;  
+}
+
+::selection {
+  background: var(--color-dark);
+  color: var(--color-light);
 }
