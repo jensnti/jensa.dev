@@ -1,5 +1,6 @@
 ---
 title: Sommarlov 2023
+emphasis: 1
 date: 2023-06-20
 summary: 'Lärdomar är något som alltid fortsätter komma, till exempel att döpa en post med datum för att inte ha 11 st sommarlov poster i framtiden.'
 tags: ['reflektion', 'sommar']

@@ -1,5 +1,6 @@
 ---
 title: Sidebar layout
+emphasis: 1
 date: 2023-05-26
 tags: ['webbutveckling', 'css', 'html']
 category: resurser

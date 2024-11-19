@@ -1,5 +1,6 @@
 ---
 title: (om)Installera WSL
+emphasis: 2
 date: 2024-10-14
 tags: ['wsl', 'ohmyz']
 category: anteckningar

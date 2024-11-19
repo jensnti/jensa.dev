@@ -1,5 +1,6 @@
 ---
 title: Textäventyr med javascript, en fortsättning
+emphasis: 1
 date: 2024-10-17
 summary: Så vad händer på den andra sidan i textäventyret? I den här delen så använder vi den skapade strukturen för att presentera äventyret.
 tags: ['javascript', 'böcker', 'spel']
