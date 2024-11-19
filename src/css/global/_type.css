@@ -63,14 +63,6 @@ abbr {
   text-decoration: underline dashed currentColor;
 }
 
-.lead a {
-  text-decoration: none;
-}
-
-.lead a:hover {
-  text-decoration: underline;
-}
-
 .important {
   padding: var(--space-s-m);
   color: var(--color-primary);

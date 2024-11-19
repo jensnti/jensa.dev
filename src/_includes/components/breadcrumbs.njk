@@ -5,7 +5,7 @@
   <p>Uppdaterat: <time datetime="{{ update | htmlDateString }}">{{ update | readableDate }}</time></p>
   {% endif %}
 </div>
-<h1 class="post-title {{ class }}" title="{{ title }}">
+<h1 class="post-title {{ class }}">
   {% for word in splitTitle %}
     <span {% if emphasis == loop.index %}class="word"{% endif %}>{{ word }}</span>
   {% endfor %}

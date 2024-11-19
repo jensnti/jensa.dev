@@ -46,6 +46,16 @@
   text-decoration: underline;
 }
 
+.site-head .lead a {
+  color: var(--color-fg);
+  text-decoration: underline;
+}
+
+.site-head .lead a:hover {
+  color: inherit;
+  opacity: 0.9;
+}
+
 .word {
   color: var(--color-fg);
 }

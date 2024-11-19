@@ -6,7 +6,7 @@
     {% if "posts" in page.url %}
     {% include "../components/breadcrumbs.njk" %}
     {% else %}
-    <h1 class="{{ class }}" title="{{ title }}">
+    <h1 class="{{ class }}">
       {% for word in splitTitle %}
           <span {% if emphasis == loop.index %}class="word"{% endif %}>{{ word }}</span>
         {% endfor %}
