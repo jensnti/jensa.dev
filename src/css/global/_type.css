@@ -70,6 +70,6 @@ abbr {
 }
 
 ::selection {
-  background: var(--color-dark);
-  color: var(--color-light);
+  background-color: var(--color-secondary);
+  color: var(--color-fg);
 }
