@@ -1,5 +1,6 @@
 ---
 title: The English version has landed
+emphasis: 2
 date: 2024-10-08
 summary: "Carry on coding!"
 tags: [ 'i18n', 'translation']
