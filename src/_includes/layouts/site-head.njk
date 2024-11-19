@@ -1,3 +1,6 @@
+{% set splitTitle = title.split(" ") %}
+{% set randomNumber = helpers.randInt(1, splitTitle.length) %}
+{% set class = "site-head-heading--" + randomNumber %}
 <header role="banner" class="site-head content full">
   {% include "../components/nav.njk" %}
   <div class="region site-head--inner flow popout">
@@ -5,8 +8,10 @@
       {% if "posts" in page.url %}
         {% include "../components/breadcrumbs.njk" %}
       {% else %}
-        <h1 title="{{ title }}">
-          {{ title }}
+        <h1 class="{{ class }}" title="{{ title }}">
+          {% for word in splitTitle %}
+            <span>{{ word }}</span>
+          {% endfor %}
         </h1>
         <p class="lead">{{ lead | safe }}</p>
       {% endif %}

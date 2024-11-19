@@ -7,6 +7,10 @@ const random = () => {
   return `${segment()}-${segment()}-${segment()}`;
 };
 
+const randInt = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 const getReadingTime = (text) => {
   const wordsPerMinute = 200;
   const numberOfWords = text.split(/\s/g).length;
@@ -64,5 +68,5 @@ const getLinkActiveState = (itemUrl, pageUrl) => {
   return response;
 }
 
-export { random, getReadingTime, getPageLinks, getLinkActiveState };
-export default { random, getReadingTime, getPageLinks, getLinkActiveState };
+export { random, randInt, getReadingTime, getPageLinks, getLinkActiveState };
+export default { random, randInt, getReadingTime, getPageLinks, getLinkActiveState };
