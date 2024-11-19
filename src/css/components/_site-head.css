@@ -48,13 +48,31 @@
 
 .site-head .lead a {
   color: var(--color-fg);
-  text-decoration: underline;
+  text-decoration: none;
+  position: relative;
 }
 
 .site-head .lead a:hover {
   color: inherit;
+  text-decoration: underline;
   opacity: 0.9;
 }
+
+/* .site-head .lead a::after {
+  content: " ";
+  position: absolute;
+  bottom: 0px;
+  left: 15%;
+  width: 80%;
+  height: 8px;
+  background-color: var(--color-secondary);
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+
+.site-head .lead a:hover::after {
+  opacity: 0.1;
+} */
 
 .word {
   color: var(--color-fg);
