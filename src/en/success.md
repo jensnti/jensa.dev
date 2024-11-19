@@ -1,5 +1,6 @@
 ---
 title: Thanks for your message!
+emphasis: 1
 layout: pages/page.njk
 eleventyExcludeFromCollections: true
 ---

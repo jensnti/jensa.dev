@@ -1,5 +1,6 @@
 ---
 title: Tack för ditt meddelande!
+emphasis: 1
 layout: pages/page.njk
 eleventyExcludeFromCollections: true
 ---
