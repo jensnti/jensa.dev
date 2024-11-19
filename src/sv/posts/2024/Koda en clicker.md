@@ -1,5 +1,6 @@
 ---
 title: Incremental spel med javascript
+emphasis: 1
 date: 2024-10-07
 summary: "En introduktion till javascript genom att skapa ett inkrementellt clicker-spel."
 tags: [ "javascript", "webbutveckling", "spel"]

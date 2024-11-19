@@ -46,10 +46,6 @@
   text-decoration: underline;
 }
 
-.site-head-heading--1 span:nth-child(1),
-.site-head-heading--2 span:nth-child(2),
-.site-head-heading--3 span:nth-child(3),
-.site-head-heading--4 span:nth-child(4),
-.site-head-heading--5 span:nth-child(5) {
+.word {
   color: var(--color-fg);
 }

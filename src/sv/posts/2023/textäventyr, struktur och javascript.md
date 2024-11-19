@@ -1,5 +1,6 @@
 ---
 title: Textäventyr, struktur och javascript
+
 date: 2023-09-28
 update: 2024-10-17
 summary: Ett textäventyr kan vara många saker, mina tankar går till ett spel i textform, men en bra skönlitterär bok borde väl kunna kvala in som ett textäventyr.

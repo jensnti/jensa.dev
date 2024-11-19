@@ -1,5 +1,6 @@
 ---
 title: Kom igång med express
+emphasis: 4
 date: 2024-09-10
 category: resurser
 summary: "Här är en samlad start för att komma igång med Node.js och Express."

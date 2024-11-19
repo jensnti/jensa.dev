@@ -1,5 +1,6 @@
 ---
 title: 2024, redesign
+emphasis: 2
 date: 2024-04-25
 update: 2024-04-30
 summary: "Klart det ska bli en redesign i år igen."

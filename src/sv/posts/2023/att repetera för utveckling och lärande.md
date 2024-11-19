@@ -1,5 +1,6 @@
 ---
 title: Att repetera för utveckling och lärande
+emphasis: 2
 date: 2023-08-24
 summary: "En blir bättre av att göra, vilket häpnadsväckande koncept."
 tags: [ 'repetition', 'vite', 'webbutveckling', 'github', 'javascript']

@@ -7,7 +7,7 @@
 </div>
 <h1 class="post-title {{ class }}" title="{{ title }}">
   {% for word in splitTitle %}
-    <span>{{ word }}</span>
+    <span {% if emphasis == loop.index %}class="word"{% endif %}>{{ word }}</span>
   {% endfor %}
 </h1>
 <div class="breadcrumbs flow">

@@ -1,5 +1,6 @@
 ---
 title: Node version, obehagliga överraskningar
+emphasis: 2
 date: 2022-10-06
 tags: ['11ty', 'netlify', 'node']
 category: anteckningar

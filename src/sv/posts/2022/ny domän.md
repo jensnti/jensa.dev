@@ -1,5 +1,6 @@
 ---
 title: Ny domän
+emphasis: 2
 date: 2022-10-30
 summary: "Jag har köpt en ny domän, jensa.dev och håller på att flytta innehållet dit."
 tags: [ 'domän']

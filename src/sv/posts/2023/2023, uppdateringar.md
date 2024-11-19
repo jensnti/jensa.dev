@@ -1,5 +1,6 @@
 ---
 title: 2023, uppdateringar
+emphasis: 2
 date: 2023-01-24
 summary: "Nytt år, nya möjligheter? Jag har fixat lite med den här sidan i vanlig ordning och pysslar på med både arbete och projekt."
 tags: [ 'reflektion', 'nytt år', 'lighthouse']

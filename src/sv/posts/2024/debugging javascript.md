@@ -1,5 +1,6 @@
 ---
 title: Debugging javaScript
+emphasis: 1
 date: 2024-01-23
 summary: "Debugging med javascript, node och vscode. Ofta en del i undervisningen som får alldeles för lite tid."
 tags: [ 'debugging', 'node', 'vscode', 'javascript']

@@ -1,5 +1,6 @@
 ---
 title: Kom igång med Eleventy
+emphasis: 4
 date: 2022-09-29
 tags: ['webbutveckling', 'setup', '11ty', 'wsl']
 templateEngineOverride: njk, md

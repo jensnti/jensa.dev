@@ -1,5 +1,6 @@
 ---
 title: Design remix
+emphasis: 1
 date: 2023-02-02
 summary: 'Det kliar alltid i fingrarna för att ändra på saker här på sidan och särskilt då jag hittar något nytt intressant. Efter att jag tittat på Andy Bells talk, "Be the browser’s mentor, not its micromanager" och applicerat det på en sida var jag helt enkelt tvungen att applicera det här.'
 tags: ['redesign', 'css']

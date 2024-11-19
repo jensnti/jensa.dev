@@ -1,5 +1,6 @@
 ---
 title: Den engelska versionen har landat
+emphasis: 2
 date: 2024-10-08
 summary: "Känn lugnet och koda vidare!"
 tags: [ 'i18n', 'english', 'translation']
