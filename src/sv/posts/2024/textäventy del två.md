@@ -6,7 +6,6 @@ summary: Så vad händer på den andra sidan i textäventyret? I den här delen 
 tags: ["javascript", "böcker", "spel"]
 category: anteckningar
 toc: true
-draft: true
 ---
 
 När jag avslutade den föregående texten om textäventyr med JavaScript hade vi skapat en struktur för äventyret och två funktioner för att presentera det. I den här delen bygger vi vidare på detta.
