@@ -1,10 +1,11 @@
 <nav class="language-switcher">
-  <a href="{{ page.url }}" lang="{{ page.lang }}" hreflang="{{ page.lang }}" class="active">
-    {{ page.lang }}
-  </a>
+  <a href="{{ page.url }}"
+    lang="{{ page.lang | trim }}"
+    hreflang="{{ page.lang }}"
+    class="active">{{ page.lang }}</a>
   {% for link in page.url | locale_links %}
-  <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">
-    {{ link.lang }}
-  </a>
+  <a href="{{ link.url }}"
+    lang="{{ link.lang }}"
+    hreflang="{{ link.lang }}">{{ link.lang }}</a>
   {% endfor %}
 </nav>

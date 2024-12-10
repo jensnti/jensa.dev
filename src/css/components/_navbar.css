@@ -4,6 +4,13 @@
   opacity: 0.9;
 }
 
+svg.lightIcon, svg.darkIcon {
+  transition: transform 0.3s ease-in-out;
+}
+svg.lightIcon:hover, svg.darkIcon:hover {
+  transform: rotate(360deg);
+}
+
 .navbar-inner {
   position: relative;
   display: flex;
