@@ -38,6 +38,7 @@ import {
   imageShortcode,
   year,
   youtube,
+  codepen,
 } from "./src/_config/shortcodes.js"
 
 export default function (eleventyConfig) {
@@ -79,6 +80,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addShortcode("svg", getSvgContent)
   eleventyConfig.addShortcode("youtube", youtube)
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode)
+  eleventyConfig.addShortcode("codepen", codepen)
 
   // Collections
   eleventyConfig.addCollection("tagList", tagList)

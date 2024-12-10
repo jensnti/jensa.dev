@@ -52,4 +52,27 @@ const youtube = (id) => {
     </div>`;
 };
 
-export { youtube, getSvgContent, year, imageShortcode };
+const codepen = (id, title) => {
+  return `<div class="feature region">
+    <p class="codepen" 
+      data-height="600"
+      data-default-tab="html,result"
+      data-slug-hash="${id}" 
+      data-user="jensadev"
+      style="height: 600px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid;
+        margin: 1em 0;
+        padding: 1em;">
+      <span>See the Pen <a href="https://codepen.io/jensadev/pen/${id}">
+        ${title}</a> by Jens Andreasson (<a href="https://codepen.io/jensadev">@jensadev</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+    </p>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  </div>`
+}
+
+export { youtube, getSvgContent, year, imageShortcode, codepen };
