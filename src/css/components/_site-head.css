@@ -1,14 +1,9 @@
 .site-head {
-  position: relative;
   overflow: hidden;
   color: var(--color-bg);
   background-color: var(--color-primary);
 
   clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
-}
-
-.site-head--inner {
-  position: relative;
 }
 
 .site-head--cover {

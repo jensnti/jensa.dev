@@ -152,3 +152,10 @@ pre[class*="language-"] {
 .feature.region {
   --region-space: var(--space-m-l);
 }
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
