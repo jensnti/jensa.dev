@@ -1,6 +1,6 @@
 ---
 title: Jul och partikelsnö
-emphasis: 2
+emphasis: 3
 date: 2024-12-17
 summary: "Det måste såklart snöa och förr eller senare så skriver vi alla en partikelgenerator."
 tags: [ 'javascript', 'jul']

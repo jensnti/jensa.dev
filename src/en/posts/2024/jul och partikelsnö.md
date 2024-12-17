@@ -1,6 +1,6 @@
 ---
 title: Christmas and Particle Snow
-emphasis: 2
+emphasis: 3
 date: 2024-12-17
 summary: "It has to snow, of course, and sooner or later we all write a particle generator."
 tags: [ 'javascript', 'christmas']
