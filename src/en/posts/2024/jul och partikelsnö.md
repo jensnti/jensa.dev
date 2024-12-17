@@ -28,6 +28,14 @@ We have also made a Christmas card variant for Web Server Programming 1, where w
 
 The submission here is also a link with a Christmas greeting.
 
+## Security
+
+To ensure a bit of security, the value on the frontend version of the page is changed with element.textContent instead of innerHTML. This is to prevent someone from injecting malicious code into the query parameters.
+
+In the backend version, the query parameters are used to create the greeting, but since it goes through Nunjucks, the content is secured. If you want to test the insecure version, you need to use the `safe` filter in your Nunjucks template.
+
+A [safe christmas](https://perfect-delirious-mambo.glitch.me/?r=20&g=250&b=190&title=%3Cscript%3Ealert(%22xss%22)%3C/script%3E&message=%3Cscript%3Ealert(%22xss%22)%3C/script%3E) to you all.
+
 ## Summary
 
 So with that said, I wish you all a very Merry Christmas and a Happy New Year!

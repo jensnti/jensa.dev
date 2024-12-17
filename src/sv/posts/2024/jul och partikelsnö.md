@@ -28,8 +28,16 @@ Vi har även gjort en julkorts-variant för webbserverprogrammering 1, där vi a
 
 Inlämningen är även här en länk med julhälsning.
 
+## Säkerhet
+
+För att ha ett uns säkerhet så ändras värdet på frontend varianten av sidan med element.textContent istället för innerHTML. Detta för att undvika att någon skickar in skadlig kod i query parametrarna.
+
+På backend varianten så används query parametrarna för att skapa hälsningen, men eftersom det går genom nunjucks så säkras innehållet. Vill du testa den osäkra varianten så behöver du använda `safe` filtret i din nunjucks-template.
+
+En [säker jul](https://perfect-delirious-mambo.glitch.me/?r=20&g=250&b=190&title=%3Cscript%3Ealert(%22xss%22)%3C/script%3E&message=%3Cscript%3Ealert(%22xss%22)%3C/script%3E) till er alla.
+
 ## Sammanfattning
 
 Så med det sagt, jag önskar er alla en riktigt god jul och ett gott nytt år!
 
-Letar du koden så finns det på GitHub.
+Letar du koden så finns den på GitHub.
