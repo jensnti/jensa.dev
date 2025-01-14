@@ -1,12 +1,12 @@
 import flash from "./flash"
 import { siteSearch } from "./search"
-import snow from "./particles"
+// import snow from "./particles"
 
 const consent = localStorage.getItem("consent")
 
 flash(consent)
 
-snow(document.querySelector("header"), false, 200)
+// snow(document.querySelector("header"), false, 200)
 
 // if (consent) {
 //     toggleMode(consent);

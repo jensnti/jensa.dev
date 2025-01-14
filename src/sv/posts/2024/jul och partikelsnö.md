@@ -2,9 +2,12 @@
 title: Jul och partikelsnö
 emphasis: 3
 date: 2024-12-17
+update: 2025-01-14
 summary: "Det måste såklart snöa och förr eller senare så skriver vi alla en partikelgenerator."
 tags: [ 'javascript', 'jul']
 ---
+
+Uppdatering, nytt år, mindre snö. Snön har slutat falla och partiklarna har plockats undan för året. Koden finns fortfarande tillgänglig på [Github - wu1-vinter](https://github.com/jensadev/wu1-vinter).
 
 I flera år har vi avslutat terminen med att skapa någon form av julkort (eller vinterkort). Korten har kommit i lite olika former men de flesta har inkluderat någon form av partikelsnö. Så även i år och nu har jag använt koden på den här sidan också.
 

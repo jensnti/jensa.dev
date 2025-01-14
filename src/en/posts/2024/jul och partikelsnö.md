@@ -2,9 +2,12 @@
 title: Christmas and Particle Snow
 emphasis: 3
 date: 2024-12-17
+update: 2025-01-14
 summary: "It has to snow, of course, and sooner or later we all write a particle generator."
 tags: [ 'javascript', 'christmas']
 ---
+
+Update, new year, less snow. The snow has stopped falling, and the particles have been put away for the year. The code is still available on [Github - wu1-vinter](https://github.com/jensadev/wu1-vinter).
 
 For several years, we have ended the term by creating some form of Christmas card (or winter card). The cards have come in various forms, but most have included some form of particle snow. This year is no different, and now I have used the code on this page as well.
 
